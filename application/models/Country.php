@@ -14,6 +14,12 @@ class Country extends Model {
 	 */
 	protected $_id;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 100
+	 */
 	protected $_name; 
 }
 

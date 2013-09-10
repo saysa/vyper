@@ -15,4 +15,8 @@ class Artist extends Model {
 	protected $_id;
 	
 	protected $_status; // online, update, offline, incomplete, locked
+	
+	protected $_name;
+	
+	protected $_keywords;
 }

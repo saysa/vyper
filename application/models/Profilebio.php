@@ -12,5 +12,7 @@ class Profilebio extends Model {
 	
 	protected $_biography;
 	
-	protected $_authorID;
+	protected $_authorID; // id's
+	
+	protected $_translator;
 }

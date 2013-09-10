@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\Country;
+
 use application\models\Text;
 
 use application\models\News;
@@ -46,8 +48,8 @@ class Index extends \Framework\Shared\Controller {
 	{	
 		$view = $this->getActionView();
 		$db = Registry::get("database");
-		
 	
+		
 		
 	}
 	
