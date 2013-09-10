@@ -52,7 +52,12 @@
 		
 		
 		
-        
+        <!-- container -->
+		<section id="container">
+			<div class="container">
+				{{ template }}
+			</div>
+		</section>
 
         
 		
