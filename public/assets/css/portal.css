@@ -1,0 +1,146 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	color: #292929;
+	background-color: #B5C0C6;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 20px;
+}
+
+.container {
+	width: 1170px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*
+ * top-menu
+ */
+#top-menu {
+	background: #333 url(../img/nav.png);
+}
+
+#top-menu ul.top-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#top-menu li {
+	float: left;
+	list-style: none;
+	margin-right: 20px;
+	line-height: 33px;
+}
+
+#top-menu a {
+	color: #FFF;
+	font-size: 14px;
+}
+
+/*
+ * header
+ */
+#header .container {
+	background: white url(../img/header.jpg);
+	height: 80px;
+	position: relative;
+}
+#header #title-position {
+	position: absolute;
+	left: 25px;
+	top: 16px;
+}
+#header h1 {
+	font-style: italic;
+	font-size: 24px;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	color: #000 !important;
+	font-weight: bold;
+}
+#header h1 a {
+	color: #000;
+	text-decoration: none;
+}
+#header #subtitle {
+	font-weight: bold;
+}
+
+/*
+ * container
+ */
+#container .container {
+	background: white;
+	padding: 8px 8px;
+}
+
+/*
+ * components
+ */
+.title-divider {
+	position: relative;
+	height: 36px;
+	color: white;
+	background: black url(../img/title-divider.png);
+	padding: 1px 0; /* avoids margin fusion */
+
+	font-size:12px;
+	font-weight: bold;
+	line-height: 36px;
+}
+.title-divider h3 {
+	margin: 0;
+	font-size:12px;
+	font-weight: bold;
+	line-height: 36px;
+	margin-left: 23px;
+}
+section.widget {
+	background: #DEDEDE;
+	padding: 5px;
+	margin-bottom: 8px;
+}
+
+/*
+ * Form
+ */
+form div.controls {
+	margin-bottom: 20px;
+}
+input[type="text"] {
+	border-color: #E0E0E0;
+	color: #777;
+	padding: 10px 15px;
+	font-size: 13px;
+	width: 90%;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear .2s, box-shadow linear .2s;
+	transition: border linear .2s, box-shadow linear .2s;
+	height: 20px;
+	line-height: 20px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+textarea {
+	
+}
+.ferror {
+	padding-left: 15px;
+	color: #dc3f35;
+	font-size: 13px;
+}
+
+/*
+ * footer
+ */
+#footer .container {
+	background: white url(../img/footer_b.png);
+	height: 50px;
+	position: relative;
+	-webkit-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+}
