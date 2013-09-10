@@ -14,6 +14,8 @@ class Article extends Model {
 	 */
 	protected $_id;
 	
+	protected $_continent;
+	
 	/**
 	 * @column
 	 * @readwrite
@@ -54,14 +56,52 @@ class Article extends Model {
 	 * @validate required
 	 * @label text
 	 */
-	protected $_text;
+	protected $_releaseDate;
+	
+	protected $_releaseTime;
+	
+	protected $_highlightDate;
+	
+	protected $_highlightTime;
+	
+	protected $_endDate;
+	
+	protected $_endTime;
 	
 	/**
 	 * @column
 	 * @readwrite
 	 * @type integer
 	 */
-	protected $_user;
+	protected $_author;
+	
+	protected $_translator;
+	
+	protected $_source;
+	
+	protected $_sourceURL;
+	
+	protected $_type;
+	
+	protected $_metaKeywords;
+	
+	protected $_artistsKeywords;
+	
+	protected $_relatedPicture;
+	
+	protected $_relatedGallery;
+	
+	protected $_relatedVideo;
+	
+	protected $_relatedTheme;
+	
+	protected $_relatedItem;
+	
+	protected $_relatedEvent;
+	
+	protected $_relatedTour;
+	
+	protected $_forumURL;
 	
 	
 }
