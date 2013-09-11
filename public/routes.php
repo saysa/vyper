@@ -5,16 +5,23 @@
 $routes = array(
 		
 		
+		
+		array(
+				"name" 		 => "admin_showPictures",
+				"pattern"    => "_admin_/pictures",
+				"controller" => "admin",
+				"action" 	 => "showPictures"
+		),
 		array(
 				"name" 		 => "admin_login",
 				"pattern"    => "_admin_/login",
-				"controller" => "admin",
+				"controller" => "auth",
 				"action" 	 => "login"
 		),
 		array(
 				"name" 		 => "admin_register",
 				"pattern"    => "_admin_/register",
-				"controller" => "admin",
+				"controller" => "auth",
 				"action" 	 => "register"
 		),
 		array(
