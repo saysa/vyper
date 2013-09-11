@@ -1,0 +1,1 @@
+<a href="pictures/add">add</a>
