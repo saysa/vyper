@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 10 Septembre 2013 à 16:01
+-- Généré le: Mer 11 Septembre 2013 à 16:06
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.4.3
 
@@ -280,6 +280,87 @@ INSERT INTO `country` (`id`, `name`, `live`, `deleted`, `created`, `modified`) V
 (235, 'Zimbabwe', 1, 0, '2013-09-10 15:13:03', '2013-09-10 15:13:03'),
 (236, 'Côte d''Ivoire', 1, 0, '2013-09-10 16:00:00', '2013-09-10 16:00:00'),
 (237, 'Åland', 1, 0, '2013-09-10 16:00:01', '2013-09-10 16:00:01');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `picture`
+--
+
+CREATE TABLE IF NOT EXISTS `picture` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` int(11) DEFAULT NULL,
+  `filename` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `mime` varchar(32) DEFAULT NULL,
+  `size` int(11) DEFAULT NULL,
+  `width` int(11) DEFAULT NULL,
+  `height` int(11) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `category` (`category`),
+  KEY `name` (`name`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `picture`
+--
+
+INSERT INTO `picture` (`id`, `category`, `filename`, `name`, `mime`, `size`, `width`, `height`, `live`, `deleted`, `created`, `modified`) VALUES
+(2, NULL, '9536-1378915367.jpg', 'ozozozoz', 'image/jpeg', 68473, 800, 600, 1, 0, '2013-09-11 16:02:47', '2013-09-11 16:02:47'),
+(3, NULL, '6105-1378915431.jpg', 'saysa', 'image/jpeg', 55544, 480, 640, 1, 0, '2013-09-11 16:03:51', '2013-09-11 16:03:51');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first` varchar(100) DEFAULT NULL,
+  `last` varchar(100) DEFAULT NULL,
+  `nickname` varchar(100) DEFAULT NULL,
+  `gender` tinyint(4) DEFAULT NULL,
+  `birthdate` datetime DEFAULT NULL,
+  `login` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `notes` text,
+  `admin` tinyint(4) DEFAULT NULL,
+  `gmail` varchar(255) DEFAULT NULL,
+  `mobile` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `country` int(11) DEFAULT NULL,
+  `language` int(11) DEFAULT NULL,
+  `timeDifference` int(11) DEFAULT NULL,
+  `aboutYourself` text,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nickname` (`nickname`),
+  UNIQUE KEY `login_2` (`login`),
+  KEY `login` (`login`),
+  KEY `email` (`email`),
+  KEY `admin` (`admin`),
+  KEY `country` (`country`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `user`
+--
+
+INSERT INTO `user` (`id`, `first`, `last`, `nickname`, `gender`, `birthdate`, `login`, `email`, `password`, `notes`, `admin`, `gmail`, `mobile`, `address`, `country`, `language`, `timeDifference`, `aboutYourself`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 'Diego', 'Lopez', 'diego', NULL, NULL, 'diego', NULL, 'azerty77', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-11 12:50:37', '2013-09-11 12:50:37');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
