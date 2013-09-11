@@ -6,10 +6,16 @@ $routes = array(
 		
 		
 		array(
-				"name" 		 => "toto",
-				"pattern"    => "page1",
-				"controller" => "dynamic",
-				"action" 	 => "index"
+				"name" 		 => "admin_login",
+				"pattern"    => "_admin_/login",
+				"controller" => "admin",
+				"action" 	 => "login"
+		),
+		array(
+				"name" 		 => "admin_register",
+				"pattern"    => "_admin_/register",
+				"controller" => "admin",
+				"action" 	 => "register"
 		),
 		array(
 				"name" 		 => "news",

@@ -77,10 +77,10 @@ class Controller extends Base {
 			$defaultPath = $this->getDefaultPath();
 			$defaultLayout = $this->getDefaultLayout();
 			$defaultExtension = $this->getDefaultExtension();
-				
+			
 			$view = new View(array(
 					"file" => APP_PATH."/{$defaultPath}/{$defaultLayout}.{$defaultExtension}",
-					"filename" => "layouts/standard.tpl",
+					"filename" => $defaultLayout . "." . $defaultExtension,
 					"path" =>  APP_PATH."/{$defaultPath}/",
 			));
 				
