@@ -198,5 +198,18 @@ class Router extends Base {
 		// unset controller
 		Registry::erase("controller");
 	}
+	
+	public function getPath($name)
+	{
+		//var_dump($this->getRoutesByName());
+		
+		$aRoutes = $this->getRoutesByName();
+		if (array_key_exists($name, $aRoutes))
+		{
+			return $aRoutes[$name]->pattern;
+		}
+		
+		return false;
+	}
 
 }

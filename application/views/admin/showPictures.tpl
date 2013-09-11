@@ -1,1 +1,2 @@
-<a href="pictures/add">add</a>
+<a href="{{ base_url ~ link_admin_add_picture }}">add</a>
+

@@ -5,7 +5,12 @@
 $routes = array(
 		
 		
-		
+		array(
+				"name" 		 => "admin_add_picture",
+				"pattern"    => "_admin_/pictures/add",
+				"controller" => "admin",
+				"action" 	 => "addPicture"
+		),
 		array(
 				"name" 		 => "admin_showPictures",
 				"pattern"    => "_admin_/pictures",

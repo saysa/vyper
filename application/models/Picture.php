@@ -14,6 +14,12 @@ class Picture extends Model {
 	 */
 	protected $_id;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 * @index
+	 */
 	protected $_category; // artist, concert, interview, event, other, contest
 	
 	/**
@@ -21,6 +27,18 @@ class Picture extends Model {
 	 * @readwrite
 	 * @type text
 	 * @length 255
+	 *
+	 * @validate required, min(3)
+	 * @label name
+	 */
+	protected $_filename;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 255
+	 * @index
 	 *
 	 * @validate required, min(3)
 	 * @label name
