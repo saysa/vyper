@@ -11,12 +11,12 @@ use Framework\Registry;
 use Framework\Router as Router;
 
 class Controller extends \Framework\Controller {
-	
+
 	/**
 	 * @readwrite
 	 */
 	protected $_user;
-	
+
 	/**
 	 * Overrrides the $_user setter method
 	 * @param unknown_type $user
@@ -25,7 +25,7 @@ class Controller extends \Framework\Controller {
 	public function setUser($user)
 	{
 		$session = Registry::get("session");
-		
+
 		if ($user)
 		{
 			$session->set("user", $user->id);
@@ -34,33 +34,33 @@ class Controller extends \Framework\Controller {
 		{
 			$session->erase("user");
 		}
-		
+
 		$this->_user = $user;
 		return $this;
 	}
-	
+
 	public function __construct($options=array())
 	{
 		parent::__construct($options);
-		
+
 		// connect to database
 		$database = \Framework\Registry::get("database");
 		$database->connect();
-		
-		// schedule: load user from session into the controller 
+
+		// schedule: load user from session into the controller
 		// retrives a user row based on session data
 		// it will occur before any action hooks or actions are executed
 		Events::add("framework.router.beforehooks.before", function($parameters) {
-			
+
 			// var_dump("framework.router.beforehooks.before");
-			
+
 			$session = Registry::get("session");
 			$controller = Registry::get("controller");
 			$user = $session->get("user");
 			// var_dump($user);
-			
+
 			//$user = unserialize($session->get("user", null));
-			
+
 			if ($user)
 			{
 				//echo "load user $user from session";
@@ -70,16 +70,16 @@ class Controller extends \Framework\Controller {
 				));
 			}
 		});
-		
+
 		// schedule: save user to session
 		// stores a user reference to the session
 		// it will occur after all the action hooks and actions are executed
 		Events::add("framework.router.afterhooks.after", function($parameters) {
-			
+
 			//var_dump("framework.router.afterhooks.after");
-			
+
 			$controller = Registry::get("controller");
-			
+
 			if ($controller->user)
 			{
 				//echo "save user to session";
@@ -88,20 +88,20 @@ class Controller extends \Framework\Controller {
 				$session->set("user", $controller->user->id);
 			}
 		});
-			
+
 		Events::add("framework.router.afterhooks.after", function($parameters) {
-			
-			if ($this->getUser())
+			$controller = Registry::get("controller");
+			if ($controller->getUser())
 			{
-				$view = $this->getActionView();
+				$view = $controller->getActionView();
 				$account = new \application\components\Account\Account;
 				$account->initialize(
 					"Mon Compte",
-					$this->getUser()->first,
-					$this->getUser()->last,
-					$this->getUser()->admin
+					$controller->getUser()->first,
+					$controller->getUser()->last,
+					$controller->getUser()->admin
 				);
-				
+
 				foreach ($account->templateVar() as $template_var => $var)
 				{
 					$view->set($template_var, $var);
@@ -109,60 +109,60 @@ class Controller extends \Framework\Controller {
 			}
 
 			// set genreric path to the view
-			$this->getLayoutView()->set("base_url", BASE_URL);
-			$this->getActionView()->set("base_url", BASE_URL);
-			$this->getLayoutView()->set("path_css", CSS);
-			$this->getLayoutView()->set("path_js" , JS);
+			$controller->getLayoutView()->set("base_url", BASE_URL);
+			$controller->getActionView()->set("base_url", BASE_URL);
+			$controller->getLayoutView()->set("path_css", CSS);
+			$controller->getLayoutView()->set("path_js" , JS);
 
 		});
-		
+
 		// schedule: disconnect from database
 		Events::add("framework.controller.destruct.after", function($name) {
 			$database = Registry::get("database");
-			$database->disconnect(); 
+			$database->disconnect();
 		});
-		
-		
-		
-		
-	
-		
+
+
+
+
+
+
 	}
-	
+
 	public function render()
 	{
 		/* if the user and view(s) are defined,
 		 * assign the user session to the view(s)
 		 */
-		
-		if ($this->getUser())    
-		{        
-			if ($this->getActionView())       
-			{   
+
+		if ($this->getUser())
+		{
+			if ($this->getActionView())
+			{
 				$key = "user";
 				if ($this->actionView->get($key, false))
 				{
 					$key = "__user";
-				}         
-				$this->getActionView()                
-					->set($key, $this->getUser());        
+				}
+				$this->getActionView()
+					->set($key, $this->getUser());
 			}
-		
-			if ($this->getLayoutView())        
-			{            
+
+			if ($this->getLayoutView())
+			{
 				$key = "user";
 				if ($this->layoutView->get($key, false))
 				{
 					$key = "__user";
 				}
-				$this->getLayoutView()                
-					->set($key, $this->getUser());        
-			}    
+				$this->getLayoutView()
+					->set($key, $this->getUser());
+			}
 		}
-		
+
 		parent::render();
 	}
-	
+
 	/**
 	 * @protected
 	 */
@@ -175,7 +175,7 @@ class Controller extends \Framework\Controller {
 			exit();
 		}
 	}
-	
+
 	/**
 	 * @protected
 	 */
