@@ -45,10 +45,33 @@ class User extends \Framework\Shared\Model {
 	 */
 	protected $_nickname;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type boolean
+	 */
 	protected $_gender;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type datetime
+	 *
+	 * @validate required
+	 * @label birthdate
+	 */
 	protected $_birthdate;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 100
+	 * @index
+	 *
+	 * @validate required, min(3), max(32)
+	 * @label login
+	 */
 	protected $_login;
 	
 	/**
@@ -68,7 +91,6 @@ class User extends \Framework\Shared\Model {
 	 * @readwrite
 	 * @type text
 	 * @length 100
-	 * @index
 	 * 
 	 * @validate required, min(8), max(32)
 	 * @label password
@@ -88,46 +110,59 @@ class User extends \Framework\Shared\Model {
 	 * @type boolean
 	 * @index
 	 */
-	protected $_live;
-	
-	/**
-	 * @column
-	 * @readwrite
-	 * @type boolean
-	 * @index
-	 */
-	protected $_deleted;
-	
-	/**
-	 * @column
-	 * @readwrite
-	 * @type datetime
-	 */
-	protected $_created;
-	
-	/**
-	 * @column
-	 * @readwrite
-	 * @type datetime
-	 */
-	protected $_modified;
-	
-	/**
-	 * @column
-	 * @readwrite
-	 * @type boolean
-	 */
 	protected $_admin = false;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 255
+	 */
 	protected $_gmail;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 255
+	 */
 	protected $_mobile;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 255
+	 */
 	protected $_address;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 * @index
+	 */
 	protected $_country;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_language;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_timeDifference;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 */
 	protected $_aboutYourself;
 	
 	public function isFriend($id)

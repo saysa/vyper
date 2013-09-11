@@ -6,24 +6,24 @@ use application\models\User;
 
 class Auth {
 	
-	protected $_error_email = false;
+	protected $_error_login = false;
 	protected $_error_password = false;
 	
-	public function getError_email() {return $this->_error_email;}
+	public function getError_login() {return $this->_error_login;}
 	public function getError_password() {return $this->_error_password;}
-	public function setError_email($_error_email) {$this->_error_email = $_error_email;}
+	public function setError_login($_error_login) {$this->_error_login = $_error_login;}
 	public function setError_password($_error_password) {$this->_error_password = $_error_password;}
 
 	/**
 	 * 
-	 * @param string $email
+	 * @param string $login
 	 * @param string $password
 	 */
-	public function validate($email, $password)
+	public function validate($login, $password)
 	{
-		if (empty($email))
+		if (empty($login))
 		{
-			$this->setError_email(true);
+			$this->setError_login(true);
 		}
 			
 		if (empty($password))
@@ -31,7 +31,7 @@ class Auth {
 			$this->setError_password(true);
 		}
 		
-		if ($this->_error_email || $this->_error_password)
+		if ($this->_error_login || $this->_error_password)
 		{
 			return false;
 		}
@@ -39,10 +39,10 @@ class Auth {
 		return true;
 	}
 	
-	public function match($email, $password)
+	public function match($login, $password)
 	{
 		$user = User::first(array(
-				"email = ?" => $email,
+				"login = ?" => $login,
 				"password = ?" => $password,
 				"live = ?" => true,
 				"deleted = ?" => false
