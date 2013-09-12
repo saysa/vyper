@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\PictureCategory;
+
 use application\models\Picture;
 
 use Framework\RequestMethods;
@@ -64,6 +66,7 @@ class Admin extends \Framework\Shared\Controller {
 							
 							$picture = new Picture(array(
 								"filename" => $filename,
+								"category" => RequestMethods::post("category"),
 								"name" => RequestMethods::post("name"),
 								"mime" => $file["type"],
 								"size" => $file["size"],
@@ -75,11 +78,15 @@ class Admin extends \Framework\Shared\Controller {
 					}
 				}
 			}
-			
+
 			$view
 				->set("error_name", \Framework\Shared\Markup::errors($picture->getErrors(), "name"));
-			
-			
 		}
+		
+		// tableau de models
+		$categories = PictureCategory::all($where = array(), $fields = array("*"), $order = "name");
+		$view->set("categories", $categories);
+		
+		
 	}
 }

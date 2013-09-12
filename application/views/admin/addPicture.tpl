@@ -12,6 +12,17 @@
 	
 	<div>
 		<label>
+		Category:
+		<select name="category">
+			{% for category in categories %}
+				<option value="{{ category.getId }}">{{ category.getName }}</option> 
+			{% endfor %}
+		</select>
+		</label>
+	</div>
+	
+	<div>
+		<label>
 			picture :
 			<input type="file" name="picture" />
 		</label>
