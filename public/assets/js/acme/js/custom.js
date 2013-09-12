@@ -209,10 +209,13 @@ function template_functions(){
 	});
 	
 	/* ---------- Text editor ---------- */
-	$('.cleditor').cleditor();
+	$('.cleditor').cleditor({width:1000});
 	
 	/* ---------- Datapicker ---------- */
-	$('.datepicker').datepicker();
+	$('.datepicker').datepicker({ dateFormat: "yy-mm-dd" });
+	
+	/* ---------- Timepicker ---------- */
+	$('.timepicker').timepicker();
 	
 	/* ---------- Notifications ---------- */
 	$('.noty').click(function(e){

@@ -307,6 +307,7 @@
 			<div id="sidebar-left" class="col-sm-1">
 				<div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
 					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li{% if active_article %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_article }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
 						<li{% if active_picture %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_picture }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
 						<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-sm"> Dashboard</span></a></li>	
 						<li><a href="infrastructure.html"><i class="icon-hdd"></i><span class="hidden-sm"> Infrastructure</span></a></li>
@@ -614,8 +615,12 @@
 		<script src="{{ path_js }}acme/js/core.min.js"></script>
 	
 		<script src="{{ path_js }}acme/js/charts.min.js"></script>
-	
+		
+		<script src="{{ path_js }}timepicker-ui.js"></script>
+		
 		<script src="{{ path_js }}acme/js/custom.min.js"></script>
+		
+		
 	<!-- end: JavaScript-->
 	
 </body>

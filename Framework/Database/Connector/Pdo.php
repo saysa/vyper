@@ -280,6 +280,16 @@ array(\PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8')
 						$lines[] = "`{$name}` datetime DEFAULT NULL";
 						break;
 					}
+				case "date":
+					{
+						$lines[] = "`{$name}` date DEFAULT NULL";
+						break;
+					}
+				case "time":
+					{
+						$lines[] = "`{$name}` time DEFAULT NULL";
+						break;
+					}
 			}
 		}
 	

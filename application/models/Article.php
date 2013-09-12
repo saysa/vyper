@@ -14,6 +14,18 @@ class Article extends Model {
 	 */
 	protected $_id;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
+	protected $_user;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_continent;
 	
 	/**
@@ -31,7 +43,6 @@ class Article extends Model {
 	 * @column
 	 * @readwrite
 	 * @type text
-	 * @length 255
 	 *
 	 * @validate required
 	 * @label description
@@ -51,56 +62,139 @@ class Article extends Model {
 	/**
 	 * @column
 	 * @readwrite
-	 * @type text
+	 * @type date
 	 *
 	 * @validate required
-	 * @label text
+	 * @label Release Date
 	 */
 	protected $_releaseDate;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type time
+	 *
+	 * @validate required
+	 * @label Release time
+	 */
 	protected $_releaseTime;
 	
-	protected $_highlightDate;
+	/**
+	 * @column
+	 * @readwrite
+	 * @length 50
+	 * @type text
+	 * 
+	 * @validate required
+	 * @label Author
+	 */
+	protected $_author;
 	
-	protected $_highlightTime;
+	/**
+	 * @column
+	 * @readwrite
+	 * @length 50
+	 * @type text
+	 */
+	protected $_translator;
 	
-	protected $_endDate;
+	/**
+	 * @column
+	 * @readwrite
+	 * @length 255
+	 * @type text
+	 */
+	protected $_source;
 	
-	protected $_endTime;
+	/**
+	 * @column
+	 * @readwrite
+	 * @length 255
+	 * @type text
+	 */
+	protected $_sourceURL;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 * 
+	 * @validate required
+	 */
+	protected $_type;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * 
+	 * @validate required
+	 */
+	protected $_metaKeywords;
+	
+	/**
+	 * @column
+	 * @readwrite
+	 * @length 255
+	 * @type text
+	 */
+	protected $_artistsKeywords;
 	
 	/**
 	 * @column
 	 * @readwrite
 	 * @type integer
 	 */
-	protected $_author;
-	
-	protected $_translator;
-	
-	protected $_source;
-	
-	protected $_sourceURL;
-	
-	protected $_type;
-	
-	protected $_metaKeywords;
-	
-	protected $_artistsKeywords;
-	
 	protected $_relatedPicture;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_relatedGallery;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_relatedVideo;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_relatedTheme;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_relatedItem;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_relatedEvent;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 */
 	protected $_relatedTour;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @length 255
+	 * @type text
+	 */
 	protected $_forumURL;
 	
 	

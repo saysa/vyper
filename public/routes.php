@@ -6,6 +6,18 @@ $routes = array(
 		
 		
 		array(
+				"name" 		 => "admin_add_article",
+				"pattern"    => "_admin_/articles/add",
+				"controller" => "admin",
+				"action" 	 => "addArticle"
+		),
+		array(
+				"name" 		 => "admin_show_articles",
+				"pattern"    => "_admin_/articles",
+				"controller" => "admin",
+				"action" 	 => "showArticles"
+		),
+		array(
 				"name" 		 => "admin_add_picture",
 				"pattern"    => "_admin_/pictures/add",
 				"controller" => "admin",

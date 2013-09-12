@@ -27,7 +27,9 @@ class Model extends Base {
 			"integer",
 			"decimal",
 			"boolean",
-			"datetime"
+			"datetime",
+			"date",
+			"time"
 	);
 	
 	protected $_columns;
