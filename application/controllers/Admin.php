@@ -17,19 +17,19 @@ use Framework\RequestMethods;
 use Framework\Registry;
 
 class Admin extends \Framework\Shared\Controller {
-	
+
 	public function __construct($options = array())
 	{
 		parent::__construct(array(
 				"defaultLayout" => "layouts/admin/admin"
 		));
-		
+
 		$layout = $this-> getLayoutView();
-		
+
 		$layout->set("link_admin_show_picture", Registry::get("router")->getPath("admin_show_pictures"));
 		$layout->set("link_admin_show_article", Registry::get("router")->getPath("admin_show_articles"));
 	}
-	
+
 	/**
 	 * @before _secure, _admin
 	 */
@@ -37,59 +37,59 @@ class Admin extends \Framework\Shared\Controller {
 	{
 		$view = $this-> getActionView();
 		$pictures = Picture::all();
-		
+
 		foreach ($pictures as $picture)
 		{
 			$category = PictureCategory::first(array("id=?"=>$picture->category))->name;
 			$picture->category = $category;
 		}
-		
+
 		// action
 		$view->set("pictures", $pictures);
 		$view->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
-		
+
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_picture", true);
 	}
-	
+
 	/**
 	 * @before _secure, _admin
 	 */
 	public function addPicture()
 	{
-		
+
 		$view   = $this-> getActionView();
-	
+
 		if (RequestMethods::post("add"))
 		{
 			$name = "picture";
-			
+
 			$picture = new Picture(array(
 				"name" => RequestMethods::post("name")
 			));
-			
+
 			if ($picture->validate())
 			{
 				if (isset($_FILES[$name]))
 				{
 					$file = $_FILES[$name];
 					$path = APP_PATH . "/public/uploads/pic/";
-						
+
 					$time = time();
 					$rd = rand(0, 9999);
 					$extension = pathinfo($file["name"], PATHINFO_EXTENSION);
 					$filename = "{$rd}-{$time}.{$extension}";
-						
+
 					if (move_uploaded_file($file["tmp_name"], $path.$filename))
 					{
 						$meta = getimagesize($path.$filename);
-				
+
 						if ($meta)
 						{
 							$width = $meta[0];
 							$height = $meta[1];
-							
+
 							$picture = new Picture(array(
 								"filename" => $filename,
 								"category" => RequestMethods::post("category"),
@@ -108,18 +108,18 @@ class Admin extends \Framework\Shared\Controller {
 			$view
 				->set("error_name", \Framework\Shared\Markup::errors($picture->getErrors(), "name"));
 		}
-		
+
 		// tableau de models
 		$categories = PictureCategory::all($where = array(), $fields = array("*"), $order = "name");
 		$view->set("categories", $categories);
-		
-		
-		
+
+
+
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_picture", true);
 	}
-	
+
 	/**
 	 * @before _secure, _admin
 	 */
@@ -127,14 +127,16 @@ class Admin extends \Framework\Shared\Controller {
 	{
 		// code
 		$view = $this-> getActionView();
-		
+
+
+
 		if (RequestMethods::post("add"))
 		{
 			$article = new Article(array(
 				"user" => $this->user->id,
 				"continent" => RequestMethods::post("continent"),
 				"title" => RequestMethods::post("title"),
-				"description" => RequestMethods::post("description"),
+				"description" => filter_var(RequestMethods::post("description"), FILTER_SANITIZE_MAGIC_QUOTES),
 				"text" => RequestMethods::post("text"),
 				"releaseDate" => RequestMethods::post("release_date"),
 				"releaseTime" => RequestMethods::post("release_time"),
@@ -145,12 +147,12 @@ class Admin extends \Framework\Shared\Controller {
 				"type" => RequestMethods::post("type"),
 				"metaKeywords" => RequestMethods::post("meta_keywords")
 			));
-			
+
 			if ($article->validate())
 			{
 				$article->save();
 			}
-			
+
 			$view
 			->set("error_title", \Framework\Shared\Markup::errors($article->getErrors(), "title"))
 			->set("error_description", \Framework\Shared\Markup::errors($article->getErrors(), "description"))
@@ -159,7 +161,7 @@ class Admin extends \Framework\Shared\Controller {
 			->set("error_rel_time", \Framework\Shared\Markup::errors($article->getErrors(), "releaseTime"))
 			->set("error_author", \Framework\Shared\Markup::errors($article->getErrors(), "author"))
 			->set("error_meta_keywords", \Framework\Shared\Markup::errors($article->getErrors(), "metaKeywords"))
-			
+
 			->set("post_title", RequestMethods::post("title"))
 			->set("post_description", RequestMethods::post("description"))
 			->set("post_text", RequestMethods::post("text"))
@@ -169,44 +171,44 @@ class Admin extends \Framework\Shared\Controller {
 			->set("post_meta_keywords", RequestMethods::post("meta_keywords"))
 			;
 		}
-		
+
 		$continents = Continent::all();
 		$typeArticles = ArticleType::all();
-		
-		
+
+
 		// view
 		$view->set("continents", $continents);
 		$view->set("typeArticles", $typeArticles);
-		
-		
+
+
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_article", true);
 	}
-	
+
 	/**
 	 * @before _secure, _admin
 	 */
 	public function showArticles()
 	{
 		$view = $this-> getActionView();
-		
+
 		$articles = Article::all();
-		
+
 		foreach ($articles as $article)
 		{
 			$type = ArticleType::first(array("id=?"=>$article->type))->name;
 			$article->type = $type;
 		}
-		
+
 		// view
 		$view->set("articles", $articles);
 		$view->set("link_admin_add_article", Registry::get("router")->getPath("admin_add_article"));
-		
+
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_article", true);
-		
-		
+
+
 	}
 }

@@ -3,17 +3,17 @@
 namespace Framework;
 
 class RequestMethods {
-	
+
 	private function __construct()
 	{
 		// do nothing
 	}
-	
+
 	private function __clone()
 	{
 		// do nothing
 	}
-	
+
 	public static function get($key, $default = "")
 	{
 		if (!empty($_GET[$key]))
@@ -22,16 +22,16 @@ class RequestMethods {
 		}
 		return $default;
 	}
-	
+
 	public static function post($key, $default = "")
 	{
 		if (!empty($_POST[$key]))
 		{
-			return $_POST[$key];
+			return filter_var($_POST[$key], FILTER_SANITIZE_MAGIC_QUOTES);
 		}
 		return $default;
 	}
-	
+
 	public static function server($key, $default = "")
 	{
 		if (!empty($_SERVER[$key]))
