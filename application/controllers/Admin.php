@@ -17,6 +17,10 @@ class Admin extends \Framework\Shared\Controller {
 		parent::__construct(array(
 				"defaultLayout" => "layouts/admin/admin"
 		));
+		
+		$view = $this-> getLayoutView();
+		
+		$view->set("link_admin_show_picture", Registry::get("router")->getPath("admin_show_pictures"));
 	}
 	
 	/**
@@ -24,7 +28,17 @@ class Admin extends \Framework\Shared\Controller {
 	 */
 	public function showPictures()
 	{
-		$this->actionView->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
+		$view = $this-> getActionView();
+		$pictures = Picture::all();
+		
+		foreach ($pictures as $picture)
+		{
+			$category = PictureCategory::first(array("id=?"=>$picture->category))->name;
+			$picture->category = $category;
+		}
+		
+		$view->set("pictures", $pictures);
+		$view->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
 	}
 	
 	/**
@@ -33,7 +47,7 @@ class Admin extends \Framework\Shared\Controller {
 	public function addPicture()
 	{
 		
-		$view = $this-> getActionView();
+		$view   = $this-> getActionView();
 	
 		if (RequestMethods::post("add"))
 		{
@@ -87,6 +101,7 @@ class Admin extends \Framework\Shared\Controller {
 		$categories = PictureCategory::all($where = array(), $fields = array("*"), $order = "name");
 		$view->set("categories", $categories);
 		
-		
+		$layout = $this-> getLayoutView();
+		$layout->set("active_picture", true);
 	}
 }
