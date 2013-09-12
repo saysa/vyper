@@ -14,5 +14,15 @@ class Continent extends Model {
 	 */
 	protected $_id;
 	
+	/**
+	 * @column
+	 * @readwrite
+	 * @type text
+	 * @length 255
+	 * @index
+	 *
+	 * @validate required
+	 * @label name
+	 */
 	protected $_name;
 }
