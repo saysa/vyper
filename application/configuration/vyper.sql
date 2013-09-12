@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mer 11 Septembre 2013 à 16:06
+-- Généré le: Jeu 12 Septembre 2013 à 16:06
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.4.3
 
@@ -19,6 +19,117 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `vyper`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `article`
+--
+
+CREATE TABLE IF NOT EXISTS `article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` int(11) DEFAULT NULL,
+  `continent` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `description` text,
+  `text` text,
+  `releaseDate` date DEFAULT NULL,
+  `releaseTime` time DEFAULT NULL,
+  `author` varchar(50) DEFAULT NULL,
+  `translator` varchar(50) DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `sourceURL` varchar(255) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL,
+  `metaKeywords` text,
+  `artistsKeywords` varchar(255) DEFAULT NULL,
+  `relatedPicture` int(11) DEFAULT NULL,
+  `relatedGallery` int(11) DEFAULT NULL,
+  `relatedVideo` int(11) DEFAULT NULL,
+  `relatedTheme` int(11) DEFAULT NULL,
+  `relatedItem` int(11) DEFAULT NULL,
+  `relatedEvent` int(11) DEFAULT NULL,
+  `relatedTour` int(11) DEFAULT NULL,
+  `forumURL` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `article`
+--
+
+INSERT INTO `article` (`id`, `user`, `continent`, `title`, `description`, `text`, `releaseDate`, `releaseTime`, `author`, `translator`, `source`, `sourceURL`, `type`, `metaKeywords`, `artistsKeywords`, `relatedPicture`, `relatedGallery`, `relatedVideo`, `relatedTheme`, `relatedItem`, `relatedEvent`, `relatedTour`, `forumURL`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 1, 1, 'Nouveau single de Misaruka', 'au revoir, nouveau single du groupe, paraîtra le 20 novembre.', '<span style="font-weight: normal;">Le news avec </span><b>gras</b><div><b><br></b></div><div><font color="#ff6666"><b>Et couleur</b></font></div>', '2013-09-12', '17:51:00', 'Tomo', 'Aude', 'Site officiel', 'http://dlonline.ocnk.net/product/775', 8, 'Misaruka, single, au revoir, 20 novembre 2013, reprise, MALICE MIZER', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-12 15:54:29', '2013-09-12 15:54:29'),
+(2, 1, 1, 'Interview avec Una', 'Peu avant sa prestation au J.E Live House, JaME a eu l occasion de s entretenir avec la mannequin et chanteuse Una.', '<i>JaME tenait à remercier <b>Una</b> ainsi que l équipe de Japan Expo pour avoir rendu cette interview possible.</i>\r\n\r\n\r\n<center><iframe width="640" height="360" src="http://www.youtube.com/embed/ECx8qlJk6j4?feature=player_detailpage" frameborder="0" allowfullscreen=""></iframe></center>', '2013-09-10', '09:32:00', 'Aude Kasperski et Cyrielle', '', '', '', 6, 'Japan Expo 2013, Una, single, Juicy Juicy, 14 août 2013, Ura-Harajuku', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-12 15:58:28', '2013-09-12 15:58:28');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `articletype`
+--
+
+CREATE TABLE IF NOT EXISTS `articletype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Contenu de la table `articletype`
+--
+
+INSERT INTO `articletype` (`id`, `name`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 'contest', 1, 0, '2013-09-12 14:56:02', '2013-09-12 14:56:02'),
+(2, 'file', 1, 0, '2013-09-12 14:56:02', '2013-09-12 14:56:02'),
+(3, 'glossary', 1, 0, '2013-09-12 14:56:02', '2013-09-12 14:56:02'),
+(4, 'guide', 1, 0, '2013-09-12 14:56:02', '2013-09-12 14:56:02'),
+(5, 'information', 1, 0, '2013-09-12 14:56:02', '2013-09-12 14:56:02'),
+(6, 'interview', 1, 0, '2013-09-12 14:56:02', '2013-09-12 14:56:02'),
+(7, 'live report', 1, 0, '2013-09-12 14:56:03', '2013-09-12 14:56:03'),
+(8, 'news', 1, 0, '2013-09-12 14:56:03', '2013-09-12 14:56:03'),
+(9, 'review', 1, 0, '2013-09-12 14:56:03', '2013-09-12 14:56:03');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `continent`
+--
+
+CREATE TABLE IF NOT EXISTS `continent` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `name` (`name`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `continent`
+--
+
+INSERT INTO `continent` (`id`, `name`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 'World', 1, 0, '2013-09-12 10:27:21', '2013-09-12 10:27:21'),
+(2, 'Africa', 1, 0, '2013-09-12 10:27:21', '2013-09-12 10:27:21'),
+(3, 'America', 1, 0, '2013-09-12 10:27:21', '2013-09-12 10:27:21'),
+(4, 'East-Asia & Oceania', 1, 0, '2013-09-12 10:27:21', '2013-09-12 10:27:21'),
+(5, 'Europe', 1, 0, '2013-09-12 10:27:21', '2013-09-12 10:27:21'),
+(6, 'Middle East', 1, 0, '2013-09-12 10:27:21', '2013-09-12 10:27:21');
 
 -- --------------------------------------------------------
 
@@ -305,15 +416,49 @@ CREATE TABLE IF NOT EXISTS `picture` (
   KEY `name` (`name`),
   KEY `live` (`live`),
   KEY `deleted` (`deleted`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `picture`
 --
 
 INSERT INTO `picture` (`id`, `category`, `filename`, `name`, `mime`, `size`, `width`, `height`, `live`, `deleted`, `created`, `modified`) VALUES
-(2, NULL, '9536-1378915367.jpg', 'ozozozoz', 'image/jpeg', 68473, 800, 600, 1, 0, '2013-09-11 16:02:47', '2013-09-11 16:02:47'),
-(3, NULL, '6105-1378915431.jpg', 'saysa', 'image/jpeg', 55544, 480, 640, 1, 0, '2013-09-11 16:03:51', '2013-09-11 16:03:51');
+(2, 2, '9536-1378915367.jpg', 'ozozozoz', 'image/jpeg', 68473, 800, 600, 1, 0, '2013-09-11 16:02:47', '2013-09-11 16:02:47'),
+(3, 2, '6105-1378915431.jpg', 'saysa', 'image/jpeg', 55544, 480, 640, 1, 0, '2013-09-11 16:03:51', '2013-09-11 16:03:51'),
+(4, 5, '654-1378976236.jpg', 'leo', 'image/jpeg', 99998, 500, 600, 1, 0, '2013-09-12 08:57:16', '2013-09-12 08:57:16'),
+(5, 6, '8910-1378978734.jpg', 'Bobby', 'image/jpeg', 1555, 48, 48, 1, 0, '2013-09-12 09:38:54', '2013-09-12 09:38:54');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `picturecategory`
+--
+
+CREATE TABLE IF NOT EXISTS `picturecategory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_2` (`name`),
+  KEY `name` (`name`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `picturecategory`
+--
+
+INSERT INTO `picturecategory` (`id`, `name`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 'artist', 1, 0, '2013-09-12 08:44:23', '2013-09-12 08:44:23'),
+(2, 'concert', 1, 0, '2013-09-12 08:44:23', '2013-09-12 08:44:23'),
+(3, 'interview', 1, 0, '2013-09-12 08:44:23', '2013-09-12 08:44:23'),
+(4, 'event', 1, 0, '2013-09-12 08:44:23', '2013-09-12 08:44:23'),
+(5, 'other', 1, 0, '2013-09-12 08:44:23', '2013-09-12 08:44:23'),
+(6, 'contest', 1, 0, '2013-09-12 08:44:23', '2013-09-12 08:44:23');
 
 -- --------------------------------------------------------
 
@@ -361,6 +506,16 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `first`, `last`, `nickname`, `gender`, `birthdate`, `login`, `email`, `password`, `notes`, `admin`, `gmail`, `mobile`, `address`, `country`, `language`, `timeDifference`, `aboutYourself`, `live`, `deleted`, `created`, `modified`) VALUES
 (1, 'Diego', 'Lopez', 'diego', NULL, NULL, 'diego', NULL, 'azerty77', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-11 12:50:37', '2013-09-11 12:50:37');
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `picture`
+--
+ALTER TABLE `picture`
+  ADD CONSTRAINT `picture_ibfk_1` FOREIGN KEY (`category`) REFERENCES `picturecategory` (`id`) ON DELETE SET NULL;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
