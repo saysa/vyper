@@ -212,11 +212,12 @@ class Admin extends \Framework\Shared\Controller {
 		// view
 		$view->set("articles", $articles)
 			->set("themes", $themes)
-			->set("link_admin_add_article", Registry::get("router")->getPath("admin_add_article"))
-			->set("link_admin_add_theme", Registry::get("router")->getPath("admin_add_theme"))
+			->set("link_admin_add_article",    Registry::get("router")->getPath("admin_add_article"))
+			->set("link_admin_add_theme", 	   Registry::get("router")->getPath("admin_add_theme"))
 			->set("link_admin_update_article", Registry::get("router")->getPath("admin_update_article"))
-			->set("link_admin_update_theme", Registry::get("router")->getPath("admin_update_theme"))
-			->set("link_admin_delete_theme", Registry::get("router")->getPath("admin_delete_theme"))
+			->set("link_admin_update_theme",   Registry::get("router")->getPath("admin_update_theme"))
+			->set("link_admin_delete_theme",   Registry::get("router")->getPath("admin_delete_theme"))
+			->set("link_admin_delete_article", Registry::get("router")->getPath("admin_delete_article"))
 		;
 
 		// layout
@@ -375,6 +376,28 @@ class Admin extends \Framework\Shared\Controller {
 		
 		$theme->deleted = true;
 		$theme->save();
+		self::redirect("admin_show_articles");
+	}
+	
+	/**
+	 * @before _secure, _admin
+	 */
+	public function deleteArticle($id)
+	{
+		$article = Article::first(array("id=?" => $id));
+	
+		if (!$article)
+		{
+			self::redirect("admin_show_articles");
+		}
+	
+		$article->deleted = true;
+		if ($article->relatedTheme == null) 
+		{
+			$article->relatedTheme = "-1";
+		}
+		
+		$article->save();
 		self::redirect("admin_show_articles");
 	}
 }

@@ -26,6 +26,12 @@ $routes = array(
 		
 		// Admin Article
 		array(
+				"name" 		 => "admin_delete_article",
+				"pattern" 	 => "_admin_/article/delete/:id",
+				"controller" => "admin",
+				"action" 	 => "deleteArticle"
+		),
+		array(
 				"name" 		 => "admin_update_article",
 				"pattern" 	 => "_admin_/article/update/:id",
 				"controller" => "admin",
