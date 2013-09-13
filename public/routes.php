@@ -4,6 +4,20 @@
 
 $routes = array(
 		
+		// Admin Artist
+		array(
+				"name" 		 => "admin_add_artist",
+				"pattern"    => "_admin_/artist/add",
+				"controller" => "admin_artist",
+				"action" 	 => "addArtist"
+		),
+		array(
+				"name" 		 => "admin_show_artists",
+				"pattern"    => "_admin_/artists",
+				"controller" => "admin_artist",
+				"action" 	 => "showArtists"
+		),
+		
 		// Admin Theme
 		array(
 				"name" 		 => "admin_delete_theme",

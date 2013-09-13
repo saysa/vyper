@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\Artist;
+
 use application\models\Theme;
 
 use application\models\ArticleType;
@@ -18,19 +20,8 @@ use Framework\RequestMethods;
 
 use Framework\Registry;
 
-class Admin extends \Framework\Shared\Controller {
+class Admin extends Admin_common {
 
-	public function __construct($options = array())
-	{
-		parent::__construct(array(
-				"defaultLayout" => "layouts/admin/admin"
-		));
-
-		$layout = $this-> getLayoutView();
-
-		$layout->set("link_admin_show_picture", Registry::get("router")->getPath("admin_show_pictures"));
-		$layout->set("link_admin_show_article", Registry::get("router")->getPath("admin_show_articles"));
-	}
 
 	/**
 	 * @before _secure, _admin
@@ -400,4 +391,6 @@ class Admin extends \Framework\Shared\Controller {
 		$article->save();
 		self::redirect("admin_show_articles");
 	}
+	
+	
 }

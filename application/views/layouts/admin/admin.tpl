@@ -309,7 +309,7 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li{% if active_article %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_article }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
 						<li{% if active_picture %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_picture }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
-						<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-sm"> Dashboard</span></a></li>	
+						<li{% if active_artist %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_artist }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
 						<li><a href="infrastructure.html"><i class="icon-hdd"></i><span class="hidden-sm"> Infrastructure</span></a></li>
 						<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-sm"> Messages</span></a></li>
 						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-sm"> Tasks</span></a></li>
