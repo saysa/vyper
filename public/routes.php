@@ -22,19 +22,19 @@ $routes = array(
 		array(
 				"name" 		 => "admin_delete_theme",
 				"pattern" 	 => "_admin_/theme/delete/:id",
-				"controller" => "admin",
+				"controller" => "admin_theme",
 				"action" 	 => "deleteTheme"
 		),
 		array(
 				"name" 		 => "admin_update_theme",
 				"pattern" 	 => "_admin_/theme/update/:id",
-				"controller" => "admin",
+				"controller" => "admin_theme",
 				"action" 	 => "updateTheme"
 		),
 		array(
 				"name" 		 => "admin_add_theme",
 				"pattern"    => "_admin_/themes/add",
-				"controller" => "admin",
+				"controller" => "admin_theme",
 				"action" 	 => "addTheme"
 		),
 		
@@ -42,39 +42,43 @@ $routes = array(
 		array(
 				"name" 		 => "admin_delete_article",
 				"pattern" 	 => "_admin_/article/delete/:id",
-				"controller" => "admin",
+				"controller" => "admin_article",
 				"action" 	 => "deleteArticle"
 		),
 		array(
 				"name" 		 => "admin_update_article",
 				"pattern" 	 => "_admin_/article/update/:id",
-				"controller" => "admin",
+				"controller" => "admin_article",
 				"action" 	 => "updateArticle"
 		),
 		array(
 				"name" 		 => "admin_add_article",
 				"pattern"    => "_admin_/articles/add",
-				"controller" => "admin",
+				"controller" => "admin_article",
 				"action" 	 => "addArticle"
 		),
 		array(
 				"name" 		 => "admin_show_articles",
 				"pattern"    => "_admin_/articles",
-				"controller" => "admin",
+				"controller" => "admin_article",
 				"action" 	 => "showArticles"
 		),
+		
+		// Admin picture
 		array(
 				"name" 		 => "admin_add_picture",
 				"pattern"    => "_admin_/pictures/add",
-				"controller" => "admin",
+				"controller" => "admin_picture",
 				"action" 	 => "addPicture"
 		),
 		array(
 				"name" 		 => "admin_show_pictures",
 				"pattern"    => "_admin_/pictures",
-				"controller" => "admin",
+				"controller" => "admin_picture",
 				"action" 	 => "showPictures"
 		),
+		
+		
 		array(
 				"name" 		 => "admin_login",
 				"pattern"    => "_admin_/login",
