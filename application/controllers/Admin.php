@@ -138,7 +138,7 @@ class Admin extends \Framework\Shared\Controller {
 				"user" => $this->user->id,
 				"continent" => RequestMethods::post("continent"),
 				"title" => RequestMethods::post("title"),
-				"description" => filter_var(RequestMethods::post("description"), FILTER_SANITIZE_MAGIC_QUOTES),
+				"description" => RequestMethods::post("description"),
 				"text" => RequestMethods::post("text"),
 				"releaseDate" => RequestMethods::post("release_date"),
 				"releaseTime" => RequestMethods::post("release_time"),
@@ -147,6 +147,7 @@ class Admin extends \Framework\Shared\Controller {
 				"source" => RequestMethods::post("source"),
 				"sourceURL" => RequestMethods::post("source_url"),
 				"type" => RequestMethods::post("type"),
+				"relatedTheme" => RequestMethods::post("theme"),
 				"metaKeywords" => RequestMethods::post("meta_keywords")
 			));
 
@@ -163,24 +164,29 @@ class Admin extends \Framework\Shared\Controller {
 			->set("error_rel_time", \Framework\Shared\Markup::errors($article->getErrors(), "releaseTime"))
 			->set("error_author", \Framework\Shared\Markup::errors($article->getErrors(), "author"))
 			->set("error_meta_keywords", \Framework\Shared\Markup::errors($article->getErrors(), "metaKeywords"))
-
+			
+			->set("post_continent", RequestMethods::post("continent"))
 			->set("post_title", RequestMethods::post("title"))
 			->set("post_description", RequestMethods::post("description"))
 			->set("post_text", RequestMethods::post("text"))
 			->set("post_rel_date", RequestMethods::post("release_date"))
 			->set("post_rel_time", RequestMethods::post("release_time"))
 			->set("post_author", RequestMethods::post("author"))
+			->set("post_type", RequestMethods::post("type"))
 			->set("post_meta_keywords", RequestMethods::post("meta_keywords"))
 			;
 		}
 
 		$continents = Continent::all();
 		$typeArticles = ArticleType::all();
+		$themes = Theme::all();
 
 
 		// view
-		$view->set("continents", $continents);
-		$view->set("typeArticles", $typeArticles);
+		$view
+		->set("continents", $continents)
+		->set("themes", $themes)
+		->set("typeArticles", $typeArticles);
 
 
 		// layout
@@ -209,6 +215,7 @@ class Admin extends \Framework\Shared\Controller {
 			->set("themes", $themes)
 			->set("link_admin_add_article", Registry::get("router")->getPath("admin_add_article"))
 			->set("link_admin_add_theme", Registry::get("router")->getPath("admin_add_theme"))
+			->set("link_admin_update_article", Registry::get("router")->getPath("admin_update_article"))
 			->set("link_admin_update_theme", Registry::get("router")->getPath("admin_update_theme"));
 
 		// layout
@@ -284,6 +291,70 @@ class Admin extends \Framework\Shared\Controller {
 		
 		
 		
+		// layout
+		$layout = $this-> getLayoutView();
+		$layout->set("active_article", true);
+	}
+	
+	/**
+	 * @before _secure, _admin
+	 */
+	public function updateArticle($id)
+	{
+		$view = $this-> getActionView();
+		$article = Article::first(array("id=?" => $id));
+	
+		if (!$article)
+		{
+			self::redirect("admin_show_articles");
+		}
+	
+	
+		if (RequestMethods::post("update"))
+		{	
+			
+			$article->title = RequestMethods::post("title");
+			$article->continent = RequestMethods::post("continent");
+			$article->title = RequestMethods::post("title");
+			$article->description = RequestMethods::post("description");
+			$article->text = RequestMethods::post("text");
+			$article->releaseDate = RequestMethods::post("release_date");
+			$article->releaseTime = RequestMethods::post("release_time");
+			$article->author = RequestMethods::post("author");
+			$article->translator = RequestMethods::post("translator");
+			$article->source = RequestMethods::post("source");
+			$article->sourceURL = RequestMethods::post("source_url");
+			$article->type = RequestMethods::post("type");
+			$article->relatedTheme = RequestMethods::post("theme");
+			$article->metaKeywords = RequestMethods::post("meta_keywords");
+			
+			if ($article->validate())
+			{
+				$article->save();
+			}
+				
+			$view
+			->set("error_title", \Framework\Shared\Markup::errors($article->getErrors(), "title"))
+			->set("error_description", \Framework\Shared\Markup::errors($article->getErrors(), "description"))
+			->set("error_text", \Framework\Shared\Markup::errors($article->getErrors(), "text"))
+			->set("error_rel_date", \Framework\Shared\Markup::errors($article->getErrors(), "releaseDate"))
+			->set("error_rel_time", \Framework\Shared\Markup::errors($article->getErrors(), "releaseTime"))
+			->set("error_author", \Framework\Shared\Markup::errors($article->getErrors(), "author"))
+			->set("error_meta_keywords", \Framework\Shared\Markup::errors($article->getErrors(), "metaKeywords"))
+			;
+			
+		}
+		
+		
+		$continents = Continent::all();
+		$typeArticles = ArticleType::all();
+		$themes = Theme::all();
+		
+		$view->set("article", $article)
+			->set("continents", $continents)
+			->set("themes", $themes)
+			->set("typeArticles", $typeArticles);
+	
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_article", true);

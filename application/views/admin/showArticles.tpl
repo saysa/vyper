@@ -43,9 +43,7 @@
 			<td>{{ article.getType }}</td>
 			<td>{{ article.getTitle }}</td>
 			<td><a class="btn btn-success" href="{{ base_url }}"><i class="icon-zoom-in "></i></a></td>
-			<td><a class="btn btn-info" href="#">
-											<i class="icon-edit "></i>  
-										</a></td>
+			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_article ~ article.getId }}"><i class="icon-edit "></i></a></td>
 			<td><a class="btn btn-danger" href="#">
 											<i class="icon-trash "></i> 
 										</a></td>

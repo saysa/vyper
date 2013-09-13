@@ -245,7 +245,16 @@ class Query extends Base {
 		foreach ($data as $field => $value)
 		{
 			$fields[] = $field;
-			$values[] = $this->_quote($value);
+			if ($value == "-1")
+			{
+				$values[] = "NULL";
+			}
+			else
+			{
+				$values[] = $this->_quote($value);
+			}
+			
+			
 		}
 		
 		$fields = join("`, `", $fields);
@@ -262,7 +271,15 @@ class Query extends Base {
 		
 		foreach ($data as $field => $value)
 		{
-			$parts[] = "{$field}=".$this->_quote($value);
+			if ($value == "-1")
+			{
+				$parts[] = "{$field}= NULL";
+			}	
+			else 
+			{
+				$parts[] = "{$field}=".$this->_quote($value);
+			}
+			
 		}
 		
 		$parts = join(", ", $parts);
@@ -308,6 +325,10 @@ class Query extends Base {
 	
 	public function save($data)
 	{
+		foreach ($data as $key => $value)
+		{
+			$data[$key] = filter_var($value, FILTER_SANITIZE_MAGIC_QUOTES);
+		}
 		
 		$isInsert=sizeof($this->_where) == 0;
 		

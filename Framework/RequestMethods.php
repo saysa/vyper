@@ -23,11 +23,13 @@ class RequestMethods {
 		return $default;
 	}
 
-	public static function post($key, $default = "")
+	public static function post($key, $raw=null, $default = "")
 	{
 		if (!empty($_POST[$key]))
 		{
-			return filter_var(trim($_POST[$key]), FILTER_SANITIZE_MAGIC_QUOTES);
+			
+			return trim($_POST[$key]);
+			
 		}
 		return $default;
 	}

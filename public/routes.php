@@ -4,6 +4,7 @@
 
 $routes = array(
 		
+		// Admin Theme
 		array(
 				"name" 		 => "admin_update_theme",
 				"pattern" 	 => "_admin_/theme/update/:id",
@@ -15,6 +16,14 @@ $routes = array(
 				"pattern"    => "_admin_/themes/add",
 				"controller" => "admin",
 				"action" 	 => "addTheme"
+		),
+		
+		// Admin Article
+		array(
+				"name" 		 => "admin_update_article",
+				"pattern" 	 => "_admin_/article/update/:id",
+				"controller" => "admin",
+				"action" 	 => "updateArticle"
 		),
 		array(
 				"name" 		 => "admin_add_article",
