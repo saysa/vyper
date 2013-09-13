@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\Theme;
+
 use application\models\ArticleType;
 
 use application\models\Article;
@@ -194,6 +196,7 @@ class Admin extends \Framework\Shared\Controller {
 		$view = $this-> getActionView();
 
 		$articles = Article::all();
+		$themes = Theme::all();
 
 		foreach ($articles as $article)
 		{
@@ -202,13 +205,87 @@ class Admin extends \Framework\Shared\Controller {
 		}
 
 		// view
-		$view->set("articles", $articles);
-		$view->set("link_admin_add_article", Registry::get("router")->getPath("admin_add_article"));
+		$view->set("articles", $articles)
+			->set("themes", $themes)
+			->set("link_admin_add_article", Registry::get("router")->getPath("admin_add_article"))
+			->set("link_admin_add_theme", Registry::get("router")->getPath("admin_add_theme"))
+			->set("link_admin_update_theme", Registry::get("router")->getPath("admin_update_theme"));
 
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_article", true);
 
 
+	}
+	
+	/**
+	 * @before _secure, _admin
+	 */
+	public function addTheme()
+	{
+		// code
+		$view = $this-> getActionView();
+		
+		if (RequestMethods::post("add"))
+		{
+			$theme = new Theme(array(
+					"title" => RequestMethods::post("title")
+			));
+		
+			if ($theme->validate())
+			{
+				$theme->save();
+			}
+		
+			$view
+			->set("error_title", \Framework\Shared\Markup::errors($theme->getErrors(), "title"))
+			
+			->set("post_title", RequestMethods::post("title"))
+			;
+		}
+		
+		
+		// layout
+		$layout = $this-> getLayoutView();
+		$layout->set("active_article", true);
+	}
+	
+	/**
+	 * @before _secure, _admin
+	 */
+	public function updateTheme($id)
+	{
+		$view = $this-> getActionView();
+		$theme = Theme::first(array("id=?" => $id));
+		
+		if (!$theme)
+		{
+			self::redirect("admin_show_articles");
+		}
+		
+		if (RequestMethods::post("update"))
+		{
+			$theme->title = RequestMethods::post("title");
+			
+			if ($theme->validate())
+			{
+				$theme->save();
+			}
+			
+			$view
+			->set("error_title", \Framework\Shared\Markup::errors($theme->getErrors(), "title"))
+				
+			->set("post_title", RequestMethods::post("title"))
+			;
+		}
+		
+		
+		$view->set("theme", $theme);
+		
+		
+		
+		// layout
+		$layout = $this-> getLayoutView();
+		$layout->set("active_article", true);
 	}
 }

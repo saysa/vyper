@@ -206,7 +206,8 @@ class Router extends Base {
 		$aRoutes = $this->getRoutesByName();
 		if (array_key_exists($name, $aRoutes))
 		{
-			return $aRoutes[$name]->pattern;
+			$pattern = preg_replace("#:id#", "", $aRoutes[$name]->pattern);
+			return $pattern;
 		}
 		
 		return false;

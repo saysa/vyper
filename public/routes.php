@@ -4,7 +4,18 @@
 
 $routes = array(
 		
-		
+		array(
+				"name" 		 => "admin_update_theme",
+				"pattern" 	 => "_admin_/theme/update/:id",
+				"controller" => "admin",
+				"action" 	 => "updateTheme"
+		),
+		array(
+				"name" 		 => "admin_add_theme",
+				"pattern"    => "_admin_/themes/add",
+				"controller" => "admin",
+				"action" 	 => "addTheme"
+		),
 		array(
 				"name" 		 => "admin_add_article",
 				"pattern"    => "_admin_/articles/add",

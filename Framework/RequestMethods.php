@@ -27,7 +27,7 @@ class RequestMethods {
 	{
 		if (!empty($_POST[$key]))
 		{
-			return filter_var($_POST[$key], FILTER_SANITIZE_MAGIC_QUOTES);
+			return filter_var(trim($_POST[$key]), FILTER_SANITIZE_MAGIC_QUOTES);
 		}
 		return $default;
 	}
