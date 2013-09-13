@@ -6,6 +6,12 @@ $routes = array(
 		
 		// Admin Theme
 		array(
+				"name" 		 => "admin_delete_theme",
+				"pattern" 	 => "_admin_/theme/delete/:id",
+				"controller" => "admin",
+				"action" 	 => "deleteTheme"
+		),
+		array(
 				"name" 		 => "admin_update_theme",
 				"pattern" 	 => "_admin_/theme/update/:id",
 				"controller" => "admin",

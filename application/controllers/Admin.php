@@ -179,8 +179,7 @@ class Admin extends \Framework\Shared\Controller {
 
 		$continents = Continent::all();
 		$typeArticles = ArticleType::all();
-		$themes = Theme::all();
-
+		$themes = Theme::all(array("deleted=?"=>false));
 
 		// view
 		$view
@@ -201,8 +200,8 @@ class Admin extends \Framework\Shared\Controller {
 	{
 		$view = $this-> getActionView();
 
-		$articles = Article::all();
-		$themes = Theme::all();
+		$articles = Article::all(array("deleted=?"=>false));
+		$themes = Theme::all(array("deleted=?"=>false));
 
 		foreach ($articles as $article)
 		{
@@ -216,7 +215,9 @@ class Admin extends \Framework\Shared\Controller {
 			->set("link_admin_add_article", Registry::get("router")->getPath("admin_add_article"))
 			->set("link_admin_add_theme", Registry::get("router")->getPath("admin_add_theme"))
 			->set("link_admin_update_article", Registry::get("router")->getPath("admin_update_article"))
-			->set("link_admin_update_theme", Registry::get("router")->getPath("admin_update_theme"));
+			->set("link_admin_update_theme", Registry::get("router")->getPath("admin_update_theme"))
+			->set("link_admin_delete_theme", Registry::get("router")->getPath("admin_delete_theme"))
+		;
 
 		// layout
 		$layout = $this-> getLayoutView();
@@ -348,7 +349,7 @@ class Admin extends \Framework\Shared\Controller {
 		
 		$continents = Continent::all();
 		$typeArticles = ArticleType::all();
-		$themes = Theme::all();
+		$themes = Theme::all(array("deleted=?"=>false));
 		
 		$view->set("article", $article)
 			->set("continents", $continents)
@@ -358,5 +359,22 @@ class Admin extends \Framework\Shared\Controller {
 		// layout
 		$layout = $this-> getLayoutView();
 		$layout->set("active_article", true);
+	}
+	
+	/**
+	 * @before _secure, _admin
+	 */
+	public function deleteTheme($id)
+	{
+		$theme = Theme::first(array("id=?" => $id));
+		
+		if (!$theme)
+		{
+			self::redirect("admin_show_articles");
+		}
+		
+		$theme->deleted = true;
+		$theme->save();
+		self::redirect("admin_show_articles");
 	}
 }

@@ -120,9 +120,7 @@
 			<td>{{ theme.getModified|date('Y-m-d') }}</td>
 			<td>{{ theme.getTitle }}</td>
 			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_theme ~ theme.getId }}"><i class="icon-edit "></i></a></td>
-			<td><a class="btn btn-danger" href="#">
-											<i class="icon-trash "></i> 
-										</a></td>
+			<td><a class="btn btn-danger" href="{{ base_url ~ link_admin_delete_theme ~ theme.getId }}"><i class="icon-trash "></i></a></td>
 		</tr>
 		{% endfor %}
 	</tbody>
