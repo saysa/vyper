@@ -105,6 +105,7 @@ class Model extends Base {
 					$read = !empty($propertyMeta["@read"]) || $readwrite;
 					$write = !empty($propertyMeta["@write"]) || $readwrite;
 					$validate = !empty($propertyMeta["@validate"]) ? $propertyMeta["@validate"] : false;
+					$related = !empty($propertyMeta["@related"]) ? $propertyMeta["@related"] : false;
 					$label = $first($propertyMeta, "@label");
 					
 					if (!in_array($type, $types))
@@ -127,6 +128,7 @@ class Model extends Base {
 						"read" => $read,
 						"write" => $write,
 						"validate" => $validate,
+						"related" => $related,
 						"label" => $label
 					);
 				}

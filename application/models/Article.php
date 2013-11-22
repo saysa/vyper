@@ -144,6 +144,8 @@ class Article extends Model {
 	 * @column
 	 * @readwrite
 	 * @type integer
+	 * 
+	 * @related User
 	 */
 	protected $_relatedPicture;
 	

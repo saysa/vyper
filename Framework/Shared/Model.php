@@ -64,7 +64,11 @@ class Model extends \Framework\Model {
 			"min" => array(
 					"handler" => "_validateMin",
 					"message" => "The {0} field must contain more than {2} characters"
-			)
+			),
+			"related" => array(
+					"handler" => "_validateRelated",
+					"message" => "The {0} field related to a wrong item"
+			),
 	);
 	
 	/**
@@ -84,7 +88,7 @@ class Model extends \Framework\Model {
 	
 	protected function _validateNumeric($value)
 	{
-		return StringMethods::match($value, "#^([0–9]+)$#");
+		return StringMethods::match($value, "#^([0ï¿½9]+)$#");
 	}
 	
 	protected function _validateAlphaNumeric($value)
@@ -102,6 +106,12 @@ class Model extends \Framework\Model {
 		return strlen($value) >= (int) $number;
 	}
 	
+	protected function _validateRelated($value)
+	{
+		
+		return false; 
+	}
+	
 	public function validate()
 	{
 		$this->_errors = array();
@@ -109,6 +119,68 @@ class Model extends \Framework\Model {
 		
 		foreach ($columns as $column)
 		{
+			
+			if ($column["related"])
+			{
+				$error = false;
+				
+				$raw = $column["raw"]; // _relatedPicture
+				$name = $column["name"]; // relatedpicture
+				$label = $column["label"]; // null
+			
+				
+				$instance = "\application\models\\" . $column["related"][0];
+				$instance = $instance::first(array("id=?" => $this-> $raw));
+				
+				if (!$instance) 
+				{
+					
+					
+					
+					$defined = $this-> getValidators();
+					
+					
+					$arguments = array( // input value
+							$this-> $raw
+					);
+					
+					if (!isset($defined['related']))
+					{
+						echo "The xxx validator is not defined";
+					}
+					
+					$function = "related";
+					$template = $defined[$function];
+					
+					if (!call_user_func_array(array($this, $template["handler"]), $arguments))
+					{
+						$replacements = array_merge(array(
+								$label ? $label : $raw
+						), $arguments);
+							
+						
+						$message = $template["message"];
+						foreach ($replacements as $i => $replacement)
+						{
+							$message = str_replace("{{$i}}", $replacement, $message);
+						}
+						
+						if (!isset($this->_errors[$name]))
+						{
+							$this->_errors[$name] = array();
+						}
+						$this->_errors[$name][] = $message;
+					
+						$error = true;
+					}
+					
+					
+					
+					$error = true;
+				}
+				
+			}
+			
 			if ($column["validate"])
 			{
 				$error = false;
@@ -123,7 +195,7 @@ class Model extends \Framework\Model {
 	
 				foreach ($validators as $validator)
 				{
-					$function = $validator;
+					$function = $validator; // required, min(3)
 					$arguments = array(
 							$this-> $raw
 					);
@@ -137,6 +209,7 @@ class Model extends \Framework\Model {
 						$offset = StringMethods::indexOf($validator, "(");
 						$function = substr($validator, 0, $offset);
 					}
+					
 						
 					if (!isset($defined[$function]))
 					{

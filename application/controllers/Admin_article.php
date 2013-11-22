@@ -167,9 +167,11 @@ class Admin_article extends Admin_common {
 			$article->type = RequestMethods::post("type");
 			$article->relatedTheme = RequestMethods::post("theme");
 			$article->metaKeywords = RequestMethods::post("meta_keywords");
+			$article->relatedPicture = RequestMethods::post("related_picture");
 			
 			if ($article->validate())
 			{
+				
 				$article->save();
 			}
 				
@@ -181,6 +183,7 @@ class Admin_article extends Admin_common {
 			->set("error_rel_time", \Framework\Shared\Markup::errors($article->getErrors(), "releaseTime"))
 			->set("error_author", \Framework\Shared\Markup::errors($article->getErrors(), "author"))
 			->set("error_meta_keywords", \Framework\Shared\Markup::errors($article->getErrors(), "metaKeywords"))
+			->set("error_related_picture", \Framework\Shared\Markup::errors($article->getErrors(), "relatedPicture"))
 			;
 			
 		}
