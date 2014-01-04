@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 12 Septembre 2013 à 16:06
+-- Généré le: Jeu 02 Janvier 2014 à 16:19
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.4.3
 
@@ -56,16 +56,20 @@ CREATE TABLE IF NOT EXISTS `article` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `live` (`live`),
-  KEY `deleted` (`deleted`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+  KEY `deleted` (`deleted`),
+  KEY `relatedTheme` (`relatedTheme`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `article`
 --
 
 INSERT INTO `article` (`id`, `user`, `continent`, `title`, `description`, `text`, `releaseDate`, `releaseTime`, `author`, `translator`, `source`, `sourceURL`, `type`, `metaKeywords`, `artistsKeywords`, `relatedPicture`, `relatedGallery`, `relatedVideo`, `relatedTheme`, `relatedItem`, `relatedEvent`, `relatedTour`, `forumURL`, `live`, `deleted`, `created`, `modified`) VALUES
-(1, 1, 1, 'Nouveau single de Misaruka', 'au revoir, nouveau single du groupe, paraîtra le 20 novembre.', '<span style="font-weight: normal;">Le news avec </span><b>gras</b><div><b><br></b></div><div><font color="#ff6666"><b>Et couleur</b></font></div>', '2013-09-12', '17:51:00', 'Tomo', 'Aude', 'Site officiel', 'http://dlonline.ocnk.net/product/775', 8, 'Misaruka, single, au revoir, 20 novembre 2013, reprise, MALICE MIZER', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-12 15:54:29', '2013-09-12 15:54:29'),
-(2, 1, 1, 'Interview avec Una', 'Peu avant sa prestation au J.E Live House, JaME a eu l occasion de s entretenir avec la mannequin et chanteuse Una.', '<i>JaME tenait à remercier <b>Una</b> ainsi que l équipe de Japan Expo pour avoir rendu cette interview possible.</i>\r\n\r\n\r\n<center><iframe width="640" height="360" src="http://www.youtube.com/embed/ECx8qlJk6j4?feature=player_detailpage" frameborder="0" allowfullscreen=""></iframe></center>', '2013-09-10', '09:32:00', 'Aude Kasperski et Cyrielle', '', '', '', 6, 'Japan Expo 2013, Una, single, Juicy Juicy, 14 août 2013, Ura-Harajuku', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-12 15:58:28', '2013-09-12 15:58:28');
+(1, 1, 2, 'Nouveau single de Misaruka', 'au revoir, nouveau single du groupe, paraîtra le 20 novembre.', '<span style="font-weight: normal;">Le news avec </span><b>gras</b><div><b><br></b></div><div><font color="#ff6666"><b>Et couleur</b></font></div>', '2013-09-12', '17:51:00', 'Tomo', '', '', '', 8, 'Misaruka, single, au revoir, 20 novembre 2013, reprise, MALICE MIZER', '', 1, 0, 0, NULL, 0, 0, 0, '', 1, 0, '2013-09-12 15:54:29', '2013-11-22 15:56:43'),
+(2, 1, 1, 'Interview avec Una', 'Peu avant sa prestation au J.E Live House, JaME a eu l occasion de s entretenir avec la mannequin et chanteuse Una.', '<i>JaME tenait à remercier <b>Una</b> ainsi que l équipe de Japan Expo pour avoir rendu cette interview possible.</i>\r\n\r\n\r\n<center><iframe width="640" height="360" src="http://www.youtube.com/embed/ECx8qlJk6j4?feature=player_detailpage" frameborder="0" allowfullscreen=""></iframe></center>', '2013-09-10', '09:32:00', 'Aude Kasperski et Cyrielle', '', '', '', 6, 'Japan Expo 2013, Una, single, Juicy Juicy, 14 août 2013, Ura-Harajuku', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2013-09-12 15:58:28', '2013-09-12 15:58:28'),
+(3, 1, 3, 'j''ai attrapé un éléphant', 'Il était rose et gros', '<span style="font-weight: normal;">je suis un </span><b>gras</b>&nbsp;en <font color="#ff9900">couleur</font>', '2013-09-13', '12:19:00', 'saysa', '', '', '', 7, 'qssqdqsdqsdqsd', '', 0, 0, 0, NULL, 0, 0, 0, '', 1, 0, '2013-09-13 10:19:41', '2013-09-13 13:21:51'),
+(4, 1, 1, 'Add selected theme', 'dsqddqs', 'dffddfg df d', '2013-09-04', '14:19:00', 'fffffffff', '', '', '', 4, 'fffff', '', 0, 0, 0, 3, 0, 0, 0, '', 1, 0, '2013-09-13 12:19:45', '2013-09-13 13:22:41'),
+(5, 1, 1, 'Add none theme', 'fdsfsd', 'fsdf', '2013-09-04', '14:20:00', 'sdsdsdsd', '', '', '', 4, 'dssd', '', 0, 0, 0, NULL, 0, 0, 0, '', 1, 0, '2013-09-13 12:20:26', '2013-09-13 13:21:43');
 
 -- --------------------------------------------------------
 
@@ -99,6 +103,36 @@ INSERT INTO `articletype` (`id`, `name`, `live`, `deleted`, `created`, `modified
 (7, 'live report', 1, 0, '2013-09-12 14:56:03', '2013-09-12 14:56:03'),
 (8, 'news', 1, 0, '2013-09-12 14:56:03', '2013-09-12 14:56:03'),
 (9, 'review', 1, 0, '2013-09-12 14:56:03', '2013-09-12 14:56:03');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `artist`
+--
+
+CREATE TABLE IF NOT EXISTS `artist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `keywords` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `artist`
+--
+
+INSERT INTO `artist` (`id`, `status`, `name`, `keywords`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 0, 'The Gazette', 'gazette', 1, 0, '2013-09-13 14:13:47', '2013-09-13 14:13:47'),
+(2, 0, '12012', '12012', 1, 0, '2013-09-13 14:14:34', '2013-09-13 14:14:34'),
+(3, 0, 'Acid Black Cherry', 'acidblackcherry', 1, 0, '2013-09-13 14:15:01', '2013-09-13 14:15:01'),
+(4, 0, 'MIYAVI', 'miyavi', 1, 0, '2013-09-13 14:27:13', '2013-09-13 14:27:13');
 
 -- --------------------------------------------------------
 
@@ -463,6 +497,70 @@ INSERT INTO `picturecategory` (`id`, `name`, `live`, `deleted`, `created`, `modi
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `profilebio`
+--
+
+CREATE TABLE IF NOT EXISTS `profilebio` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `artist` int(11) DEFAULT NULL,
+  `profile` text,
+  `biography` text,
+  `author` varchar(255) DEFAULT NULL,
+  `translator` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`),
+  KEY `artist` (`artist`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `theme`
+--
+
+CREATE TABLE IF NOT EXISTS `theme` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `live` tinyint(4) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`),
+  KEY `live` (`live`),
+  KEY `deleted` (`deleted`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+
+--
+-- Contenu de la table `theme`
+--
+
+INSERT INTO `theme` (`id`, `title`, `live`, `deleted`, `created`, `modified`) VALUES
+(1, 'Tokyo Crazy Kawaii Paris', 1, 0, '2013-09-13 09:06:03', '2013-09-13 14:40:36'),
+(2, 'Japan Expo 2013', 1, 0, '2013-09-13 09:08:42', '2013-09-13 09:08:42'),
+(3, 'Top Oricon 2013', 1, 0, '2013-09-13 09:08:51', '2013-09-13 09:08:51'),
+(4, 'Joyeuses fêtes !', 1, 1, '2013-09-13 09:08:58', '2013-09-13 13:05:17'),
+(5, 'Toulouse Game Show 2012', 1, 0, '2013-09-13 09:09:05', '2013-09-13 09:09:05'),
+(6, 'Sakura-Con 2012', 1, 0, '2013-09-13 09:09:11', '2013-09-13 09:34:40'),
+(7, 'Japan Expo 2012', 1, 0, '2013-09-13 09:09:17', '2013-09-13 09:09:17'),
+(8, 'Chroniques Classiques', 1, 0, '2013-09-13 09:09:24', '2013-09-13 09:09:24'),
+(9, 'Top Oricon 2012', 1, 0, '2013-09-13 09:09:32', '2013-09-13 09:09:32'),
+(11, 'Japan Expo 2011', 1, 0, '2013-09-13 09:15:04', '2013-09-13 09:15:04'),
+(12, 'X JAPAN - Europe 2011', 1, 0, '2013-09-13 09:15:16', '2013-09-13 09:15:16'),
+(13, 'Japan Expo Sud 2011', 1, 0, '2013-09-13 09:15:24', '2013-09-13 09:15:24'),
+(14, 'Japon : Séisme 2011', 1, 0, '2013-09-13 09:15:31', '2013-09-13 09:15:31'),
+(15, 'Top Oricon 2011', 1, 0, '2013-09-13 09:15:38', '2013-09-13 09:15:38'),
+(16, 'Dernière Tournée de D''espairsRay', 1, 0, '2013-09-13 09:15:46', '2013-09-13 09:15:46'),
+(17, 'j''ai mal', 1, 0, '2013-09-13 10:45:55', '2013-09-13 10:45:55');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `user`
 --
 
@@ -512,10 +610,22 @@ INSERT INTO `user` (`id`, `first`, `last`, `nickname`, `gender`, `birthdate`, `l
 --
 
 --
+-- Contraintes pour la table `article`
+--
+ALTER TABLE `article`
+  ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`relatedTheme`) REFERENCES `theme` (`id`);
+
+--
 -- Contraintes pour la table `picture`
 --
 ALTER TABLE `picture`
   ADD CONSTRAINT `picture_ibfk_1` FOREIGN KEY (`category`) REFERENCES `picturecategory` (`id`) ON DELETE SET NULL;
+
+--
+-- Contraintes pour la table `profilebio`
+--
+ALTER TABLE `profilebio`
+  ADD CONSTRAINT `profilebio_ibfk_1` FOREIGN KEY (`artist`) REFERENCES `artist` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
