@@ -4,6 +4,20 @@
 
 $routes = array(
 		
+		// Admin Event
+		array(
+				"name" 		 => "admin_add_event",
+				"pattern"    => "_admin_/event/add",
+				"controller" => "admin_event",
+				"action" 	 => "addEvent"
+		),
+		array(
+				"name" 		 => "admin_show_events",
+				"pattern"    => "_admin_/events",
+				"controller" => "admin_event",
+				"action" 	 => "showEvents"
+		),
+		
 		// Admin Artist
 		array(
 				"name" 		 => "admin_add_artist",

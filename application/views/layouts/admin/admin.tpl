@@ -310,6 +310,7 @@
 						<li{% if active_article %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_article }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
 						<li{% if active_picture %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_picture }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
 						<li{% if active_artist %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_artist }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
+						<li{% if active_event %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_event }}"><i class="icon-star"></i><span class="hidden-sm"> Events</span></a></li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-star"></i><span class="hidden-sm"> Icons</span><span class="badge badge-important">3</span></a>
 							<ul>
