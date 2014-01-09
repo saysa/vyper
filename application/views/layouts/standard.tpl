@@ -53,6 +53,25 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        
+        
+        <header id="header">
+        	<div class="top main-color-bg">
+				<div class="content-wrap">
+								
+					<div class="left">
+						<ul class="list">
+							<li>
+								<i class="icon-home"></i> <a href="http://localhost/wordpress">Home</a>					
+							</li>								
+						</ul>
+					</div> 
+					
+								
+							</div>
+		</div>
+        </header>
+        
 		
 		<!-- top black -->
 		<div id="bandeauTop">
@@ -122,8 +141,9 @@
 				                
                 
                 </div>
-			
+				<!-- Start template -->
 				{{ template }}
+				<!-- End template -->
 			</div>
 		</section>
 
