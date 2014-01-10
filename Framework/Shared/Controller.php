@@ -113,6 +113,7 @@ class Controller extends \Framework\Controller {
 			$controller->getActionView()->set("base_url", BASE_URL);
 			$controller->getLayoutView()->set("path_css", CSS);
 			$controller->getLayoutView()->set("path_js" , JS);
+			$controller->getLayoutView()->set("path_img" , IMG);
 
 		});
 

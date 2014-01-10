@@ -11,6 +11,7 @@ define('BASE_URL',      'http://'.$_SERVER["SERVER_NAME"].'/');
 define('ASSETS',        'http://'.$_SERVER["SERVER_NAME"].'/public/assets/');
 define('CSS',           ASSETS.'css/');
 define('JS',            ASSETS.'js/');
+define('IMG',           ASSETS.'img/');
 
 
 
