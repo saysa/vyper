@@ -53,7 +53,9 @@ class Admin_event extends Admin_common {
 			$event = new Event(array(
 					"title" => RequestMethods::post("title"),
 					"realTitle" => RequestMethods::post("real_title"),
-					"description" => RequestMethods::post("description")
+					"description" => RequestMethods::post("description"),
+					"date" => RequestMethods::post("date"),
+					"time" => RequestMethods::post("time")
 			));
 		
 		
@@ -69,10 +71,14 @@ class Admin_event extends Admin_common {
 			->set("error_title",       \Framework\Shared\Markup::errors($event->getErrors(), "title"))
 			->set("error_real_title",  \Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
 			->set("error_description", \Framework\Shared\Markup::errors($event->getErrors(), "description"))
+			->set("error_date", 	   \Framework\Shared\Markup::errors($event->getErrors(), "date"))
+			->set("error_time", 	   \Framework\Shared\Markup::errors($event->getErrors(), "time"))
 				
 			->set("post_title",    	  RequestMethods::post("title"))
 			->set("post_real_title",  RequestMethods::post("real_title"))
 			->set("post_description", RequestMethods::post("description"))
+			->set("post_date", 		  RequestMethods::post("date"))
+			->set("post_time", 		  RequestMethods::post("time"))
 			;
 		}
 		

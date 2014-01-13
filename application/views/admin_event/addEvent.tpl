@@ -56,6 +56,28 @@
 							</div>
 						</div>	
 						
+						
+						<div class="row">
+							<!-- Release Date -->
+							<div class="form-group col-lg-2{%if error_date %} has-error{% endif %}">
+							  <label class="control-label" for="date">Date *</label>
+							  <div class="controls">
+								<input type="text" class="form-control datepicker" id="date" name="date" value="{{ post_date }}">
+								{{ error_date }}
+							  </div>
+							</div>
+							<div class="form-group col-lg-1">
+							</div>
+							<!-- Release Time -->
+							<div class="form-group col-lg-2{%if error_time %} has-error{% endif %}">
+							  <label class="control-label" for="time">Time *</label>
+							  <div class="controls">
+								<input type="text" class="form-control timepicker" id="time" name="time" value="{{ post_time }}">
+								{{ error_time }}
+							  </div>
+							</div>
+						</div>
+						
 						<div class="form-actions">
 						  <input type="hidden" name="add" value="add">
 						  <button type="submit" class="btn btn-primary">Save event</button>

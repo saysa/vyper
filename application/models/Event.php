@@ -94,6 +94,8 @@ class Event extends Model {
 	 * @column
 	 * @readwrite
 	 * @type date
+	 * 
+	 * @validate required
 	 */
 	protected $_date;
 	
