@@ -4,6 +4,20 @@
 
 $routes = array(
 		
+		// Admin Tour
+		array(
+				"name" 		 => "admin_add_tour",
+				"pattern"    => "_admin_/tour/add",
+				"controller" => "admin_tour",
+				"action" 	 => "addTour"
+		),
+		array(
+				"name" 		 => "admin_show_tours",
+				"pattern"    => "_admin_/tours",
+				"controller" => "admin_tour",
+				"action" 	 => "showTours"
+		),
+		
 		// Admin Event
 		array(
 				"name" 		 => "admin_add_event",
