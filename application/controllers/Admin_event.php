@@ -4,7 +4,6 @@ namespace application\controllers;
 
 use Framework\RequestMethods;
 
-use application\models\Artist;
 
 use Framework\Registry;
 use application\models\Event;
