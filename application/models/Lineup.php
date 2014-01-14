@@ -12,9 +12,9 @@ class Lineup extends Model {
 	
 	protected $_idArtist; // le groupe
 	
-	protected $_start;
+	protected $_start; // 1991
 	
-	protected $_end;
+	protected $_end; // 1997
 	
 	protected $_status; // active, gone
 	

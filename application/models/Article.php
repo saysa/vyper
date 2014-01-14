@@ -4,6 +4,14 @@ namespace application\models;
 
 use Framework\Shared\Model;
 
+/**
+ * 
+ * @author sbo
+ *
+ * On peut lier des artists pour le front pouvoir afficher les related articles, news
+ *
+ */
+
 class Article extends Model {
 	
 	/**

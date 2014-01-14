@@ -4,6 +4,13 @@ namespace application\models;
 
 use Framework\Shared\Model;
 
+/**
+ * 
+ * @author sbo
+ *
+ * Model de relation c'est tout
+ */
+
 class Tracklist extends Model {
 	
 	protected $_id;

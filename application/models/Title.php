@@ -15,5 +15,5 @@ class Title extends Model {
 	
 	protected $_title;
 	
-	protected $_titleReal;
+	protected $_titleReal; // nom en jap
 }
