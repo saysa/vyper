@@ -25,6 +25,15 @@ class Admin_tour extends Admin_common {
 		$tours = Tour::all(array("deleted=?"=>false));
 		$tourTypes = TourType::all(array("deleted=?"=>false));
 		
+		/*
+		 * Set the tour the related models
+		 */
+		foreach ($tours as $tour)
+		{
+			$type = TourType::first(array("id=?"=>$tour->type))->name;
+			$tour->type = $type;
+		}
+		
 		// view
 		$view
 		->set("tours", $tours)
