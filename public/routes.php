@@ -26,6 +26,12 @@ $routes = array(
 				"action" 	 => "addEvent"
 		),
 		array(
+				"name" 		 => "admin_update_event",
+				"pattern" 	 => "_admin_/event/update/:id",
+				"controller" => "admin_event",
+				"action" 	 => "updateEvent"
+		),
+		array(
 				"name" 		 => "admin_show_events",
 				"pattern"    => "_admin_/events",
 				"controller" => "admin_event",

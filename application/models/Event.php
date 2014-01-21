@@ -4,6 +4,13 @@ namespace application\models;
 
 use Framework\Shared\Model;
 
+/**
+ * 
+ * @author sbo
+ *
+ * Faire un nouveau model pour les lien de buy text 255
+ */
+
 class Event extends Model {
 	
 	/**
@@ -75,12 +82,6 @@ class Event extends Model {
 	 */
 	protected $_relatedTour;
 	
-	/**
-	 * @column
-	 * @readwrite
-	 * @type integer
-	 */
-	protected $_relatedArtists;
 	
 	/**
 	 * @column
@@ -114,35 +115,5 @@ class Event extends Model {
 	 */
 	protected $_price; // text
 	
-	/**
-	 * @column
-	 * @readwrite
-	 * @length 255
-	 * @type text
-	 */
-	protected $_buy1;
 	
-	/**
-	 * @column
-	 * @readwrite
-	 * @length 255
-	 * @type text
-	 */
-	protected $_buy2;
-	
-	/**
-	 * @column
-	 * @readwrite
-	 * @length 255
-	 * @type text
-	 */
-	protected $_buy3;
-	
-	/**
-	 * @column
-	 * @readwrite
-	 * @length 255
-	 * @type text
-	 */
-	protected $_buy;
 }
