@@ -239,7 +239,18 @@ $(document).ready(function() {
 
 	$( "#link_button" ).click(function() {
 		
-		console.log($('#artists_to_link').val());
+		$.ajax({
+	            type: "POST",
+	            url: "/_admin_/event/artist_link", 
+	            dataType: 'json',
+	            data:{
+	            	artist_id : $('#artists_to_link').val(),
+	            	event_id : '{{ event.getId }}'
+	            },
+                success: function(data){
+					       
+	            }
+	    });
 		
 	});
 

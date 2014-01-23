@@ -20,6 +20,12 @@ $routes = array(
 		
 		// Admin Event
 		array(
+				"name" 		 => "admin_event_artist_link",
+				"pattern"    => "_admin_/event/artist_link",
+				"controller" => "admin_event",
+				"action" 	 => "artistLink"
+		),
+		array(
 				"name" 		 => "admin_add_event",
 				"pattern"    => "_admin_/event/add",
 				"controller" => "admin_event",
