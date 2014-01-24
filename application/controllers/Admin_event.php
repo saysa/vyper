@@ -178,6 +178,7 @@ class Admin_event extends Admin_common {
 				
 				$string = 'Hello World';
 				echo json_encode($string);
+				die();
 			}
 			
 			

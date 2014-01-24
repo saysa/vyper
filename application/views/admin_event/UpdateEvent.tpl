@@ -241,14 +241,17 @@ $(document).ready(function() {
 		
 		$.ajax({
 	            type: "POST",
-	            url: "/_admin_/event/artist_link", 
-	            dataType: 'json',
+	            url: "/_admin_/ajax/event_artist_link", 
+	            
 	            data:{
 	            	artist_id : $('#artists_to_link').val(),
 	            	event_id : '{{ event.getId }}'
 	            },
                 success: function(data){
-					       
+					 console.log('je suis success :' + data);      
+	            },
+	            complete: function(xhr, stringe){
+					 console.log('je suis complet : ' + xhr);      
 	            }
 	    });
 		

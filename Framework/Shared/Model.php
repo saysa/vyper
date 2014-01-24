@@ -114,6 +114,9 @@ class Model extends \Framework\Model {
 	
 	public function validate()
 	{
+		
+		$error = false;
+		
 		$this->_errors = array();
 		$columns = $this-> getColumns();
 		

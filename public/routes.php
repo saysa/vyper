@@ -4,6 +4,14 @@
 
 $routes = array(
 		
+		// Ajax
+		array(
+				"name" 		 => "admin_event_artist_link",
+				"pattern"    => "_admin_/ajax/event_artist_link",
+				"controller" => "admin_ajax",
+				"action" 	 => "eventArtistLink"
+		),
+		
 		// Admin Tour
 		array(
 				"name" 		 => "admin_add_tour",
@@ -17,14 +25,7 @@ $routes = array(
 				"controller" => "admin_tour",
 				"action" 	 => "showTours"
 		),
-		
 		// Admin Event
-		array(
-				"name" 		 => "admin_event_artist_link",
-				"pattern"    => "_admin_/event/artist_link",
-				"controller" => "admin_event",
-				"action" 	 => "artistLink"
-		),
 		array(
 				"name" 		 => "admin_add_event",
 				"pattern"    => "_admin_/event/add",
