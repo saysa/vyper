@@ -20,7 +20,7 @@ class Admin_ajax {
 			
 			if (!$relation)
 			{
-				echo "pas de relation";
+				
 				$relArtistEvent = new RelArtistEvent(array(
 					"idArtist" => RequestMethods::post("artist_id"),
 					"idEvent" => RequestMethods::post("event_id")
@@ -30,6 +30,7 @@ class Admin_ajax {
 				if ($relArtistEvent->validate())
 				{
 					$relArtistEvent->save();
+					echo "link_done";
 				}
 				
 				/*

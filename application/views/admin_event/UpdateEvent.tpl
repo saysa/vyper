@@ -207,10 +207,10 @@
 					<fieldset class="col-sm-12">
 						
 						
-						<!-- Artists -->
 						<div class="row">
-							<div class="form-group col-lg-9">
-								<label class="control-label" for="theme">Artists </label>
+							<!-- Gauche -->
+							<div class="form-group col-lg-5">
+							  	<label class="control-label" for="theme">Artists </label>
 								<div class="controls">
 									<select id="artists_to_link" name="artists_to_link" class="form-control" data-rel="chosen">
 										<option value="-1">-- none --</option>
@@ -219,12 +219,44 @@
 										{% endfor %}
 								  	</select>
 								</div>
+								<div class="row">
+								<button type="button" class="btn btn-primary" id="link_button">Link the artist</button>
+								</div>
+							</div>
+							<div class="form-group col-lg-1">
+							</div>
+							<!-- Droite -->
+							<div class="form-group col-lg-6">
+								<table class="table table-striped table-bordered bootstrap-datatable">
+							<thead>
+		<tr>
+			<th>ID</th>
+			<th>Date</th>
+			<th>Title</th>
+			<th>Modify</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		{% for event in events %}
+		<tr>
+			<td>{{ event.getId }}</td>
+			<td>{{ event.getModified|date('Y-m-d') }}</td>
+			<td>{{ event.getTitle }}</td>
+			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_event ~ event.getId }}"><i class="icon-edit "></i>  </a></td>
+			<td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
 							</div>
 						</div>
 						
 						
 						
-						<button type="button" class="btn btn-primary" id="link_button">Link the artist</button>
+						
+						
 						
 					</fieldset>
 				</form>
