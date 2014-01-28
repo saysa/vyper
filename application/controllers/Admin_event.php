@@ -145,9 +145,20 @@ class Admin_event extends Admin_common {
 		}
 	
 		$artists = Artist::all(array("deleted=?"=>false));
-	
+		$relArtists = RelArtistEvent::all(array("idEvent=?" => $id));
+		
+		// Set relation
+		foreach ($relArtists as $relArtist)
+		{
+			$artist = Artist::first(array("id=?"=>$relArtist->idArtist))->name;
+			$relArtist->id = $relArtist->idArtist;
+			$relArtist->idArtist = $artist;
+		}
+		
 		$view->set("artists", $artists)
+		->set("relArtists", $relArtists)
 		->set("event", $article)
+		
 		;
 	
 		// layout

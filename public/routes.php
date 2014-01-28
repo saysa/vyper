@@ -11,6 +11,14 @@ $routes = array(
 				"controller" => "admin_ajax",
 				"action" 	 => "eventArtistLink"
 		),
+		array(
+				"name" 		 => "admin_event_artist_link_delete",
+				"pattern"    => "_admin_/ajax/event_artist_link_delete",
+				"controller" => "admin_ajax",
+				"action" 	 => "eventArtistLinkDelete"
+		),
+		
+		
 		
 		// Admin Tour
 		array(

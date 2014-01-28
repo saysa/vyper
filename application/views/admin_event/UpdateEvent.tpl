@@ -196,7 +196,7 @@
 	<div class="col-lg-12">
 		<div class="box">
 			<div class="box-header">
-				<h2><i class="icon-edit"></i>Update Event : {{ event.getTitle }}</h2>
+				<h2><i class="icon-edit"></i>Artists linked</h2>
 				<div class="box-icon">
 					<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
 					<a href="#" class="btn-close"><i class="icon-remove"></i></a>
@@ -227,29 +227,25 @@
 							</div>
 							<!-- Droite -->
 							<div class="form-group col-lg-6">
-								<table class="table table-striped table-bordered bootstrap-datatable">
-							<thead>
-		<tr>
-			<th>ID</th>
-			<th>Date</th>
-			<th>Title</th>
-			<th>Modify</th>
-			<th>Delete</th>
-		</tr>
-	</thead>
+								<table class="table table-striped table-bordered bootstrap-datatable" id="relArtistLinkTable">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Artist</th>
+											<th>Unlink</th>
+										</tr>
+									</thead>
 	
-	<tbody>
-		{% for event in events %}
-		<tr>
-			<td>{{ event.getId }}</td>
-			<td>{{ event.getModified|date('Y-m-d') }}</td>
-			<td>{{ event.getTitle }}</td>
-			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_event ~ event.getId }}"><i class="icon-edit "></i>  </a></td>
-			<td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
-		</tr>
-		{% endfor %}
-	</tbody>
-</table>
+									<tbody>
+										{% for artist in relArtists %}
+										<tr id="{{ artist.getId }}">
+											<td>{{ artist.getId }}</td>
+											<td>{{ artist.getIdArtist }}</td>
+											<td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
 							</div>
 						</div>
 						
@@ -268,22 +264,46 @@
 <script>
 
 $(document).ready(function() {
+	
+	$("#relArtistLinkTable").on("click", ".deleteLink", function() {
+        var tr = $(this).closest('tr');
+        var artistID = tr.attr('id');
+        
+        console.log("boucle supp ? artistID est " + artistID);
+        
+        $.ajax({
+	            type: "POST",
+	            url: "/_admin_/ajax/event_artist_link_delete", 
+	            
+	            data:{
+	            	artist_id : artistID,
+	            	event_id : '{{ event.getId }}'
+	            },
+	            success: function(data){
+					 console.log('je suis delete success :' + data);      
+	            }
+	    });
+        
+        tr.css("background-color","#FF3700");
 
-	$( "#link_button" ).click(function() {
+        tr.fadeOut(400, function(){
+            tr.remove();
+        });
+      	return false;
+    });
+	
+	$( "#link_button" ).on("click", function() {
 		
 		$.ajax({
 	            type: "POST",
 	            url: "/_admin_/ajax/event_artist_link", 
-	            
+	            dataType: "json",
 	            data:{
 	            	artist_id : $('#artists_to_link').val(),
 	            	event_id : '{{ event.getId }}'
 	            },
                 success: function(data){
-					 console.log('je suis success :' + data);      
-	            },
-	            complete: function(xhr, stringe){
-					 console.log('je suis complet : ' + xhr);      
+					 $('#relArtistLinkTable tr:last').after('<tr id="'+ data.artist.id +'"><td>' + data.artist.id + '</td><td>' + data.artist.name + '</td><td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td></tr>');
 	            }
 	    });
 		
