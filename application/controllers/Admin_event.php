@@ -98,48 +98,35 @@ class Admin_event extends Admin_common {
 		$view = $this-> getActionView();
 		
 		
-		$article = Event::first(array("id=?" => $id));
+		$event = Event::first(array("id=?" => $id));
 	
-		if (!$article)
+		if (!$event)
 		{
-			self::redirect("admin_show_articles");
+			self::redirect("admin_show_events");
 		}
-	
+		
 	
 		if (RequestMethods::post("update"))
 		{
 				
-			$article->title = RequestMethods::post("title");
-			$article->continent = RequestMethods::post("continent");
-			$article->title = RequestMethods::post("title");
-			$article->description = RequestMethods::post("description");
-			$article->text = RequestMethods::post("text");
-			$article->releaseDate = RequestMethods::post("release_date");
-			$article->releaseTime = RequestMethods::post("release_time");
-			$article->author = RequestMethods::post("author");
-			$article->translator = RequestMethods::post("translator");
-			$article->source = RequestMethods::post("source");
-			$article->sourceURL = RequestMethods::post("source_url");
-			$article->type = RequestMethods::post("type");
-			$article->relatedTheme = RequestMethods::post("theme");
-			$article->metaKeywords = RequestMethods::post("meta_keywords");
-			$article->relatedPicture = RequestMethods::post("related_picture");
+			$event->title = RequestMethods::post("title");
+			$event->realTitle = RequestMethods::post("real_title");
+			$event->description = RequestMethods::post("description");
+			$event->date = RequestMethods::post("date");
+			$event->time = RequestMethods::post("time");
 				
-			if ($article->validate())
+			if ($event->validate())
 			{
 	
-				$article->save();
+				$event->save();
 			}
 	
 			$view
-			->set("error_title", \Framework\Shared\Markup::errors($article->getErrors(), "title"))
-			->set("error_description", \Framework\Shared\Markup::errors($article->getErrors(), "description"))
-			->set("error_text", \Framework\Shared\Markup::errors($article->getErrors(), "text"))
-			->set("error_rel_date", \Framework\Shared\Markup::errors($article->getErrors(), "releaseDate"))
-			->set("error_rel_time", \Framework\Shared\Markup::errors($article->getErrors(), "releaseTime"))
-			->set("error_author", \Framework\Shared\Markup::errors($article->getErrors(), "author"))
-			->set("error_meta_keywords", \Framework\Shared\Markup::errors($article->getErrors(), "metaKeywords"))
-			->set("error_related_picture", \Framework\Shared\Markup::errors($article->getErrors(), "relatedPicture"))
+			->set("error_title",       \Framework\Shared\Markup::errors($event->getErrors(), "title"))
+			->set("error_real_title",  \Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
+			->set("error_description", \Framework\Shared\Markup::errors($event->getErrors(), "description"))
+			->set("error_date", 	   \Framework\Shared\Markup::errors($event->getErrors(), "date"))
+			->set("error_time", 	   \Framework\Shared\Markup::errors($event->getErrors(), "time"))
 			;
 				
 		}
@@ -157,7 +144,7 @@ class Admin_event extends Admin_common {
 		
 		$view->set("artists", $artists)
 		->set("relArtists", $relArtists)
-		->set("event", $article)
+		->set("event", $event)
 		
 		;
 	

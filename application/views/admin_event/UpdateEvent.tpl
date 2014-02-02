@@ -123,20 +123,6 @@
 							</div>
 						</div>
 						
-						<!-- Artists -->
-						<div class="row">
-							<div class="form-group col-lg-9">
-								<label class="control-label" for="theme">Artists </label>
-								<div class="controls">
-									<select id="artists" name="artists" class="form-control" data-rel="chosen">
-										<option value="-1">-- none --</option>
-										{% for artist in artists %}
-											<option value="{{ artist.getId }}">{{ artist.getName }}</option>
-										{% endfor %}
-								  	</select>
-								</div>
-							</div>
-						</div>
 						
 						
 						
