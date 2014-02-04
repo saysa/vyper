@@ -89,8 +89,22 @@
 								<label class="control-label" for="type">Type *</label>
 								<div class="controls">
 									<select id="type" name="type" class="form-control" data-rel="chosen">
-										{% for typeArticle in typeArticles %}
-											<option value="{{ typeArticle.getId }}"{% if typeArticle.getId==article.getType %} selected="selected"{% endif %}>{{ typeArticle.getName }}</option>
+										{% for eventType in eventTypes %}
+											<option value="{{ eventType.getId }}"{% if eventType.getId==event.getType %} selected="selected"{% endif %}>{{ eventType.getName }}</option>
+										{% endfor %}
+								  	</select>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Related tour -->
+						<div class="row">
+							<div class="form-group col-lg-9">
+								<label class="control-label" for="related_tour">Related tour *</label>
+								<div class="controls">
+									<select id="related_tour" name="related_tour" class="form-control" data-rel="chosen">
+										{% for tour in tours %}
+											<option value="{{ tour.getId }}"{% if tour.getId==event.getRelatedTour %} selected="selected"{% endif %}>{{ tour.getTitle }}</option>
 										{% endfor %}
 								  	</select>
 								</div>
@@ -102,7 +116,7 @@
 							<div class="form-group col-lg-9{%if error_meta_keywords %} has-error{% endif %}">
 								<label class="control-label" for="meta_keywords">META keywords *</label>
 								<div class="controls">
-								  <textarea class="form-control" name="meta_keywords" id="meta_keywords" rows="3" placeholder="META keywords separate with coma">{{ article.getMetaKeywords }}</textarea>
+								  <textarea class="form-control" name="meta_keywords" id="meta_keywords" rows="3" placeholder="META keywords separate with coma">{{ event.getArtistsKeywords }}</textarea>
 								  {{ error_meta_keywords }}
 								</div>
 							</div>

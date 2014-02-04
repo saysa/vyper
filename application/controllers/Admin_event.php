@@ -9,6 +9,8 @@ use Framework\Registry;
 use application\models\Event;
 use application\models\RelArtistEvent;
 use application\models\Artist;
+use application\models\EventType;
+use application\models\Tour;
 
 class Admin_event extends Admin_common {
 	
@@ -112,8 +114,13 @@ class Admin_event extends Admin_common {
 			$event->title = RequestMethods::post("title");
 			$event->realTitle = RequestMethods::post("real_title");
 			$event->description = RequestMethods::post("description");
+			$event->descriptionReal = RequestMethods::post("description_real");
 			$event->date = RequestMethods::post("date");
 			$event->time = RequestMethods::post("time");
+			$event->type = RequestMethods::post("type");
+			$event->relatedTour = RequestMethods::post("related_tour");
+			$event->artistsKeywords = RequestMethods::post("meta_keywords");
+			
 				
 			if ($event->validate())
 			{
@@ -122,17 +129,23 @@ class Admin_event extends Admin_common {
 			}
 	
 			$view
-			->set("error_title",       \Framework\Shared\Markup::errors($event->getErrors(), "title"))
-			->set("error_real_title",  \Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
-			->set("error_description", \Framework\Shared\Markup::errors($event->getErrors(), "description"))
-			->set("error_date", 	   \Framework\Shared\Markup::errors($event->getErrors(), "date"))
-			->set("error_time", 	   \Framework\Shared\Markup::errors($event->getErrors(), "time"))
+			->set("error_title",       		\Framework\Shared\Markup::errors($event->getErrors(), "title"))
+			->set("error_real_title",  		\Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
+			->set("error_description", 		\Framework\Shared\Markup::errors($event->getErrors(), "description"))
+			->set("error_description_real", \Framework\Shared\Markup::errors($event->getErrors(), "description_real"))
+			->set("error_date", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "date"))
+			->set("error_time", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "time"))
+			->set("error_type", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "type"))
+			->set("error_related_tour", 	\Framework\Shared\Markup::errors($event->getErrors(), "related_tour"))
+			->set("error_artists_keywords", \Framework\Shared\Markup::errors($event->getErrors(), "artists_keywords"))
 			;
 				
 		}
 	
 		$artists = Artist::all(array("deleted=?"=>false));
 		$relArtists = RelArtistEvent::all(array("idEvent=?" => $id));
+		$eventTypes = EventType::all(array("deleted=?"=>false));
+		$tours = Tour::all(array("deleted=?"=>false));
 		
 		// Set relation
 		foreach ($relArtists as $relArtist)
@@ -145,7 +158,8 @@ class Admin_event extends Admin_common {
 		$view->set("artists", $artists)
 		->set("relArtists", $relArtists)
 		->set("event", $event)
-		
+		->set("eventTypes", $eventTypes)
+		->set("tours", $tours)
 		;
 	
 		// layout
