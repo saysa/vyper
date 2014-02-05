@@ -120,6 +120,7 @@ class Admin_event extends Admin_common {
 			$event->type = RequestMethods::post("type");
 			$event->relatedTour = RequestMethods::post("related_tour");
 			$event->artistsKeywords = RequestMethods::post("meta_keywords");
+			$event->price = RequestMethods::post("price");
 			
 				
 			if ($event->validate())
@@ -138,6 +139,7 @@ class Admin_event extends Admin_common {
 			->set("error_type", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "type"))
 			->set("error_related_tour", 	\Framework\Shared\Markup::errors($event->getErrors(), "related_tour"))
 			->set("error_artists_keywords", \Framework\Shared\Markup::errors($event->getErrors(), "artists_keywords"))
+			->set("error_price", 			\Framework\Shared\Markup::errors($event->getErrors(), "price"))
 			;
 				
 		}

@@ -12,51 +12,69 @@
 				<form class="form-horizontal" method="post">
 					<fieldset class="col-sm-12">
 						
-					
-						<!-- Title -->
 						<div class="row">
-							<div class="form-group col-lg-9{%if error_title %} has-error{% endif %}">
-								<label class="control-label" for="title">Title *</label>
-								<div class="controls">
-								  <input class="form-control focused" id="title" name="title" type="text" placeholder="Title" value="{{ event.getTitle }}">
-								  {{ error_title }}
+							<div class="col-lg-4">
+							
+								<!-- Title -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_title %} has-error{% endif %}">
+										<label class="control-label" for="title">Title *</label>
+										<div class="controls">
+										  <input class="form-control focused" id="title" name="title" type="text" placeholder="Title" value="{{ event.getTitle }}">
+										  {{ error_title }}
+										</div>
+									</div>
 								</div>
+							
+							</div>
+							<div class="col-lg-4">
+								
+								<!-- Real Title -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_real_title %} has-error{% endif %}">
+										<label class="control-label" for="real_title">Real Title</label>
+										<div class="controls">
+										  <input class="form-control focused" id="real_title" name="real_title" type="text" placeholder="Real Title" value="{{ event.getRealTitle }}">
+										  {{ error_real_title }}
+										</div>
+									</div>
+								</div>
+								
 							</div>
 						</div>
-						
-						<!-- Title -->
+					
 						<div class="row">
-							<div class="form-group col-lg-9{%if error_real_title %} has-error{% endif %}">
-								<label class="control-label" for="real_title">Real Title</label>
-								<div class="controls">
-								  <input class="form-control focused" id="real_title" name="real_title" type="text" placeholder="Real Title" value="{{ event.getRealTitle }}">
-								  {{ error_real_title }}
+							<div class="col-lg-4">
+								
+								<!-- Description -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_description %} has-error{% endif %}">
+										<label class="control-label" for="description">Description *</label>
+										<div class="controls">
+										  <textarea class="form-control" name="description" id="description" rows="3" placeholder="Description">{{ event.getDescription }}</textarea>
+										  {{ error_description }}
+										</div>
+									</div>
 								</div>
+								
+							</div>
+							
+							<div class="col-lg-4">
+								
+								<!-- Description Real -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_description_real %} has-error{% endif %}">
+										<label class="control-label" for="description_real">Description Real</label>
+										<div class="controls">
+										  <textarea class="form-control" name="description_real" id="description_real" rows="3" placeholder="Description Real">{{ event.getDescriptionReal }}</textarea>
+										  {{ error_description_real }}
+										</div>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 							
-						
-						<!-- Description -->
-						<div class="row">
-							<div class="form-group col-lg-9{%if error_description %} has-error{% endif %}">
-								<label class="control-label" for="description">Description *</label>
-								<div class="controls">
-								  <textarea class="form-control" name="description" id="description" rows="3" placeholder="Description">{{ event.getDescription }}</textarea>
-								  {{ error_description }}
-								</div>
-							</div>
-						</div>
-						
-						<!-- Description Real -->
-						<div class="row">
-							<div class="form-group col-lg-9{%if error_description_real %} has-error{% endif %}">
-								<label class="control-label" for="description_real">Description Real</label>
-								<div class="controls">
-								  <textarea class="form-control" name="description_real" id="description_real" rows="3" placeholder="Description Real">{{ event.getDescriptionReal }}</textarea>
-								  {{ error_description_real }}
-								</div>
-							</div>
-						</div>
 						
 						
 						
@@ -81,35 +99,46 @@
 							</div>
 						</div>
 						
-							
-						
-						<!-- Type -->
 						<div class="row">
-							<div class="form-group col-lg-9">
-								<label class="control-label" for="type">Type *</label>
-								<div class="controls">
-									<select id="type" name="type" class="form-control" data-rel="chosen">
-										{% for eventType in eventTypes %}
-											<option value="{{ eventType.getId }}"{% if eventType.getId==event.getType %} selected="selected"{% endif %}>{{ eventType.getName }}</option>
-										{% endfor %}
-								  	</select>
+							<div class="col-lg-4">
+								
+								<!-- Type -->
+								<div class="row">
+									<div class="form-group col-lg-9">
+										<label class="control-label" for="type">Type *</label>
+										<div class="controls">
+											<select id="type" name="type" class="form-control" data-rel="chosen">
+												{% for eventType in eventTypes %}
+													<option value="{{ eventType.getId }}"{% if eventType.getId==event.getType %} selected="selected"{% endif %}>{{ eventType.getName }}</option>
+												{% endfor %}
+										  	</select>
+										</div>
+									</div>
 								</div>
+								
 							</div>
-						</div>
+							<div class="col-lg-4">
+								
+								<!-- Related tour -->
+								<div class="row">
+									<div class="form-group col-lg-9">
+										<label class="control-label" for="related_tour">Related tour *</label>
+										<div class="controls">
+											<select id="related_tour" name="related_tour" class="form-control" data-rel="chosen">
+												{% for tour in tours %}
+													<option value="{{ tour.getId }}"{% if tour.getId==event.getRelatedTour %} selected="selected"{% endif %}>{{ tour.getTitle }}</option>
+												{% endfor %}
+										  	</select>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>	
 						
-						<!-- Related tour -->
-						<div class="row">
-							<div class="form-group col-lg-9">
-								<label class="control-label" for="related_tour">Related tour *</label>
-								<div class="controls">
-									<select id="related_tour" name="related_tour" class="form-control" data-rel="chosen">
-										{% for tour in tours %}
-											<option value="{{ tour.getId }}"{% if tour.getId==event.getRelatedTour %} selected="selected"{% endif %}>{{ tour.getTitle }}</option>
-										{% endfor %}
-								  	</select>
-								</div>
-							</div>
-						</div>
+						
+						
+						
 						
 						<!-- META keywords -->
 						<div class="row">
@@ -122,18 +151,22 @@
 							</div>
 						</div>
 						
-						<!-- Theme -->
 						<div class="row">
-							<div class="form-group col-lg-9">
-								<label class="control-label" for="theme">Theme </label>
-								<div class="controls">
-									<select id="theme" name="theme" class="form-control" data-rel="chosen">
-										<option value="-1">-- none --</option>
-										{% for theme in themes %}
-											<option value="{{ theme.getId }}"{% if theme.getId==article.getRelatedTheme %} selected="selected"{% endif %}>{{ theme.getTitle }}</option>
-										{% endfor %}
-								  	</select>
+							<div class="col-lg-4">
+								
+								<!-- Price + devise -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_price %} has-error{% endif %}">
+										<label class="control-label" for="price">Price</label>
+										<div class="controls">
+										  <input class="form-control focused" id="price" name="price" type="text" placeholder="Price and Currency" value="{{ event.getPrice }}">
+										  {{ error_price }}
+										</div>
+									</div>
 								</div>
+								
+							</div>
+							<div class="col-lg-4">
 							</div>
 						</div>
 						
