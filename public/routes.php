@@ -19,6 +19,19 @@ $routes = array(
 		),
 		
 		
+		// Admin Location
+		array(
+				"name" 		 => "admin_add_location",
+				"pattern"    => "_admin_/location/add",
+				"controller" => "admin_location",
+				"action" 	 => "addLocation"
+		),
+		array(
+				"name" 		 => "admin_show_locations",
+				"pattern"    => "_admin_/locations",
+				"controller" => "admin_location",
+				"action" 	 => "showLocations"
+		),
 		
 		// Admin Tour
 		array(

@@ -10,3 +10,16 @@ $database = Registry::get("database");
 		));
 		
 		$database->sync($event);
+		
+Helper copier coller pour mise en page double colonne
+
+<div class="row">
+							<div class="col-lg-4">
+								/**
+								**/
+							</div>
+							<div class="col-lg-4">
+								/**
+								**/
+							</div>
+						</div>
