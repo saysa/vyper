@@ -115,7 +115,7 @@ class Model extends \Framework\Model {
 	public function validate()
 	{
 		
-		$error = false;
+		$error = false; // no error yet
 		
 		$this->_errors = array();
 		$columns = $this-> getColumns();
@@ -125,7 +125,8 @@ class Model extends \Framework\Model {
 			
 			if ($column["related"])
 			{
-				$error = false;
+				
+				
 				
 				$raw = $column["raw"]; // _relatedPicture
 				$name = $column["name"]; // relatedpicture
@@ -180,13 +181,15 @@ class Model extends \Framework\Model {
 					
 					
 					$error = true;
+					
+					
 				}
 				
 			}
 			
 			if ($column["validate"])
 			{
-				$error = false;
+				
 				$pattern = "#[a-z]+\(([a-zA-Z0-9, ]+)\)#";
 					
 				$raw = $column["raw"];
@@ -238,12 +241,17 @@ class Model extends \Framework\Model {
 							$this->_errors[$name] = array();
 						}
 						$this->_errors[$name][] = $message;
+						
+						
 						$error = true;
 					}
 				}
+				
+				
 			}
 		}
-	
+		
+		
 		return !$error;
 	}
 	
