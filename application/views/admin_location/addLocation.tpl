@@ -88,7 +88,7 @@
 								<div class="controls">
 									<select id="country" name="country" class="form-control" data-rel="chosen">
 										{% for country in countries %}
-											<option value="{{ country.getId }}"{% if country.getId==location.getCountry %} selected="selected"{% endif %}>{{ country.getName }}</option>
+											<option value="{{ country.getId }}"{% if country.getId==post_country %} selected="selected"{% endif %}>{{ country.getName }}</option>
 										{% endfor %}
 								  	</select>
 								</div>
