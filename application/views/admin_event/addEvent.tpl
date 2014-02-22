@@ -56,6 +56,20 @@
 							</div>
 						</div>	
 						
+						<!-- Location -->
+						<div class="row">
+							<div class="form-group col-lg-9">
+								<label class="control-label" for="location">Location</label>
+								<div class="controls">
+									<select id="location" name="location" class="form-control" data-rel="chosen">
+										{% for location in locations %}
+											<option value="{{ location.getId }}"{% if location.getId==post_location %} selected="selected"{% endif %}>{{ location.getName }}</option>
+										{% endfor %}
+								  	</select>
+								</div>
+							</div>
+						</div>
+						
 						
 						<div class="row">
 							<!-- Release Date -->

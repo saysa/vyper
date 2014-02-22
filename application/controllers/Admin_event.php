@@ -11,6 +11,7 @@ use application\models\RelArtistEvent;
 use application\models\Artist;
 use application\models\EventType;
 use application\models\Tour;
+use application\models\Location;
 
 class Admin_event extends Admin_common {
 	
@@ -58,6 +59,7 @@ class Admin_event extends Admin_common {
 					"title" => RequestMethods::post("title"),
 					"realTitle" => RequestMethods::post("real_title"),
 					"description" => RequestMethods::post("description"),
+					"location" => RequestMethods::post("location"),
 					"date" => RequestMethods::post("date"),
 					"time" => RequestMethods::post("time")
 			));
@@ -66,26 +68,31 @@ class Admin_event extends Admin_common {
 			
 			if ($event->validate())
 			{
-				echo "boucle save";
 				$event->save();
 			}
-			else echo "validate no";
 		
 			$view
 			->set("error_title",       \Framework\Shared\Markup::errors($event->getErrors(), "title"))
 			->set("error_real_title",  \Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
 			->set("error_description", \Framework\Shared\Markup::errors($event->getErrors(), "description"))
+			->set("error_location",    \Framework\Shared\Markup::errors($event->getErrors(), "location"))
 			->set("error_date", 	   \Framework\Shared\Markup::errors($event->getErrors(), "date"))
 			->set("error_time", 	   \Framework\Shared\Markup::errors($event->getErrors(), "time"))
 				
 			->set("post_title",    	  RequestMethods::post("title"))
 			->set("post_real_title",  RequestMethods::post("real_title"))
 			->set("post_description", RequestMethods::post("description"))
+			->set("post_location", 	  RequestMethods::post("location"))
 			->set("post_date", 		  RequestMethods::post("date"))
 			->set("post_time", 		  RequestMethods::post("time"))
 			;
 		}
 		
+		$locations = Location::all(array("deleted=?"=>false));
+		
+		$view
+		->set("locations", $locations)
+		;
 		
 		// layout
 		$layout = $this-> getLayoutView();
@@ -115,6 +122,7 @@ class Admin_event extends Admin_common {
 			$event->realTitle = RequestMethods::post("real_title");
 			$event->description = RequestMethods::post("description");
 			$event->descriptionReal = RequestMethods::post("description_real");
+			$event->location = RequestMethods::post("location");
 			$event->date = RequestMethods::post("date");
 			$event->time = RequestMethods::post("time");
 			$event->type = RequestMethods::post("type");
@@ -134,6 +142,7 @@ class Admin_event extends Admin_common {
 			->set("error_real_title",  		\Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
 			->set("error_description", 		\Framework\Shared\Markup::errors($event->getErrors(), "description"))
 			->set("error_description_real", \Framework\Shared\Markup::errors($event->getErrors(), "description_real"))
+			->set("error_location", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "location"))
 			->set("error_date", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "date"))
 			->set("error_time", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "time"))
 			->set("error_type", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "type"))
@@ -148,6 +157,7 @@ class Admin_event extends Admin_common {
 		$relArtists = RelArtistEvent::all(array("idEvent=?" => $id));
 		$eventTypes = EventType::all(array("deleted=?"=>false));
 		$tours = Tour::all(array("deleted=?"=>false));
+		$locations = Location::all(array("deleted=?"=>false));
 		
 		// Set relation
 		foreach ($relArtists as $relArtist)
@@ -162,6 +172,7 @@ class Admin_event extends Admin_common {
 		->set("event", $event)
 		->set("eventTypes", $eventTypes)
 		->set("tours", $tours)
+		->set("locations", $locations)
 		;
 	
 		// layout
