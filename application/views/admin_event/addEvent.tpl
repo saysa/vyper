@@ -84,7 +84,7 @@
 							</div>
 							<!-- Release Time -->
 							<div class="form-group col-lg-2{%if error_time %} has-error{% endif %}">
-							  <label class="control-label" for="time">Time *</label>
+							  <label class="control-label" for="time">Time</label>
 							  <div class="controls">
 								<input type="text" class="form-control timepicker" id="time" name="time" value="{{ post_time }}">
 								{{ error_time }}
