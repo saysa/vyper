@@ -47,6 +47,12 @@ $routes = array(
 				"action" 	 => "addTour"
 		),
 		array(
+				"name" 		 => "admin_update_tour",
+				"pattern" 	 => "_admin_/tour/update/:id",
+				"controller" => "admin_tour",
+				"action" 	 => "updateTour"
+		),
+		array(
 				"name" 		 => "admin_show_tours",
 				"pattern"    => "_admin_/tours",
 				"controller" => "admin_tour",
