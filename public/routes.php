@@ -32,6 +32,12 @@ $routes = array(
 				"controller" => "admin_location",
 				"action" 	 => "showLocations"
 		),
+		array(
+				"name" 		 => "admin_update_location",
+				"pattern" 	 => "_admin_/location/update/:id",
+				"controller" => "admin_location",
+				"action" 	 => "updateLocation"
+		),
 		
 		// Admin Tour
 		array(

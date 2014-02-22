@@ -111,32 +111,31 @@ class Admin_location extends Admin_common {
 	/**
 	 * @before _secure, _admin
 	 */
-	public function updateEvent($id)
+	public function updateLocation($id)
 	{
 		$view = $this-> getActionView();
 		
 		
-		$location = Event::first(array("id=?" => $id));
+		$location = Location::first(array("id=?" => $id));
 	
 		if (!$location)
 		{
-			self::redirect("admin_show_events");
+			self::redirect("admin_show_locations");
 		}
 		
 	
 		if (RequestMethods::post("update"))
 		{
 				
-			$location->title = RequestMethods::post("title");
-			$location->realTitle = RequestMethods::post("real_title");
-			$location->description = RequestMethods::post("description");
-			$location->descriptionReal = RequestMethods::post("description_real");
-			$location->date = RequestMethods::post("date");
-			$location->time = RequestMethods::post("time");
-			$location->type = RequestMethods::post("type");
-			$location->relatedTour = RequestMethods::post("related_tour");
-			$location->artistsKeywords = RequestMethods::post("meta_keywords");
-			$location->price = RequestMethods::post("price");
+			$location->name = RequestMethods::post("name");
+			$location->nameReal = RequestMethods::post("name_real");
+			$location->town = RequestMethods::post("town");
+			$location->townReal = RequestMethods::post("town_real");
+			$location->country = RequestMethods::post("country");
+			$location->address = RequestMethods::post("address");
+			$location->access = RequestMethods::post("access");
+			$location->url = RequestMethods::post("url");
+			$location->googlemap = RequestMethods::post("googlemap");
 			
 				
 			if ($location->validate())
@@ -146,43 +145,31 @@ class Admin_location extends Admin_common {
 			}
 	
 			$view
-			->set("error_title",       		\Framework\Shared\Markup::errors($location->getErrors(), "title"))
-			->set("error_real_title",  		\Framework\Shared\Markup::errors($location->getErrors(), "real_title"))
-			->set("error_description", 		\Framework\Shared\Markup::errors($location->getErrors(), "description"))
-			->set("error_description_real", \Framework\Shared\Markup::errors($location->getErrors(), "description_real"))
-			->set("error_date", 	   		\Framework\Shared\Markup::errors($location->getErrors(), "date"))
-			->set("error_time", 	   		\Framework\Shared\Markup::errors($location->getErrors(), "time"))
-			->set("error_type", 	   		\Framework\Shared\Markup::errors($location->getErrors(), "type"))
-			->set("error_related_tour", 	\Framework\Shared\Markup::errors($location->getErrors(), "related_tour"))
-			->set("error_artists_keywords", \Framework\Shared\Markup::errors($location->getErrors(), "artists_keywords"))
-			->set("error_price", 			\Framework\Shared\Markup::errors($location->getErrors(), "price"))
+			->set("error_name",       		\Framework\Shared\Markup::errors($location->getErrors(), "name"))
+			->set("error_name_real",  		\Framework\Shared\Markup::errors($location->getErrors(), "name_real"))
+			->set("error_town", 		\Framework\Shared\Markup::errors($location->getErrors(), "town"))
+			->set("error_town_real", \Framework\Shared\Markup::errors($location->getErrors(), "town_real"))
+			->set("error_country", 	   		\Framework\Shared\Markup::errors($location->getErrors(), "country"))
+			->set("error_address", 	   		\Framework\Shared\Markup::errors($location->getErrors(), "address"))
+			->set("error_access", 	   		\Framework\Shared\Markup::errors($location->getErrors(), "access"))
+			->set("error_url", 	\Framework\Shared\Markup::errors($location->getErrors(), "url"))
+			->set("error_googlemap", \Framework\Shared\Markup::errors($location->getErrors(), "googlemap"))
+	
 			;
 				
 		}
 	
-		$artists = Artist::all(array("deleted=?"=>false));
-		$relArtists = RelArtistEvent::all(array("idEvent=?" => $id));
-		$eventTypes = EventType::all(array("deleted=?"=>false));
-		$tours = Tour::all(array("deleted=?"=>false));
+		$countries = Country::all(array("deleted=?"=>false));
 		
-		// Set relation
-		foreach ($relArtists as $relArtist)
-		{
-			$artist = Artist::first(array("id=?"=>$relArtist->idArtist))->name;
-			$relArtist->id = $relArtist->idArtist;
-			$relArtist->idArtist = $artist;
-		}
 		
-		$view->set("artists", $artists)
-		->set("relArtists", $relArtists)
-		->set("event", $location)
-		->set("eventTypes", $eventTypes)
-		->set("tours", $tours)
+		$view
+		->set("location", $location)
+		->set("countries", $countries)
 		;
 	
 		// layout
 		$layout = $this-> getLayoutView();
-		$layout->set("active_event", true);
+		$layout->set("active_location", true);
 	}
 	
 	

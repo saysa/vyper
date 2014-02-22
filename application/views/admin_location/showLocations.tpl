@@ -39,7 +39,7 @@
 			<td>{{ location.getModified|date('Y-m-d') }}</td>
 			<td>{{ location.getName }}</td>
 			<td>{{ location.getTown }}</td>
-			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_event ~ event.getId }}"><i class="icon-edit "></i>  </a></td>
+			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_location ~ location.getId }}"><i class="icon-edit "></i>  </a></td>
 			<td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
 		</tr>
 		{% endfor %}
