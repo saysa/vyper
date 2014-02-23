@@ -31,6 +31,10 @@
         <link rel="stylesheet" href="{{ path_css }}lightbox.css">
         <link rel="stylesheet" href="{{ path_css }}fonts/font-awesome/css/font-awesome.min.css">
         
+        <!-- Owl carousel -->
+        <link rel="stylesheet" href="{{ path_css }}owl-carousel/owl.carousel.css">
+       
+        
         <!--  components -->
         <link rel="stylesheet" href="{{ path_css }}components/auth/auth.css">
         <link rel="stylesheet" href="{{ path_css }}components/news/news.css">
@@ -55,6 +59,8 @@
 		
 		<script src="{{ path_js }}bootstrap/bootstrap.min.js"></script>
         <script src="{{ path_js }}plugins/cleditor/jquery.cleditor.min.js"></script>
+        
+        <script src="{{ path_js }}owl-carousel/owl.carousel.js"></script>
         
     </head>
     <body>
