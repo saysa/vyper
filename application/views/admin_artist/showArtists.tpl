@@ -37,7 +37,7 @@
 			<td>{{ artist.getId }}</td>
 			<td>{{ artist.getModified|date('Y-m-d') }}</td>
 			<td>{{ artist.getName }}</td>
-			<td><a class="btn btn-info" href="#"><i class="icon-edit "></i>  </a></td>
+			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_artist ~ artist.getId }}"><i class="icon-edit "></i>  </a></td>
 			<td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
 		</tr>
 		{% endfor %}

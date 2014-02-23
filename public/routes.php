@@ -86,6 +86,12 @@ $routes = array(
 				"action" 	 => "addArtist"
 		),
 		array(
+				"name" 		 => "admin_update_artist",
+				"pattern" 	 => "_admin_/artist/update/:id",
+				"controller" => "admin_artist",
+				"action" 	 => "updateArtist"
+		),
+		array(
 				"name" 		 => "admin_show_artists",
 				"pattern"    => "_admin_/artists",
 				"controller" => "admin_artist",

@@ -32,6 +32,7 @@ class Admin_artist extends Admin_common {
 		
 		$view
 		->set("link_admin_add_artist", Registry::get("router")->getPath("admin_add_artist"))
+		->set("link_admin_update_artist", Registry::get("router")->getPath("admin_update_artist"))
 		;
 		
 		// layout
@@ -73,4 +74,50 @@ class Admin_artist extends Admin_common {
 		$layout = $this-> getLayoutView();
 		$layout->set("active_artist", true);
 	}
+	
+	/**
+	 * @before _secure, _admin
+	 */
+	public function updateArtist($id)
+	{
+		$view = $this-> getActionView();
+	
+	
+		$artist = Artist::first(array("id=?" => $id));
+	
+		if (!$artist)
+		{
+			self::redirect("admin_show_events");
+		}
+	
+	
+		if (RequestMethods::post("update"))
+		{
+	
+			$artist->name = RequestMethods::post("name");
+			$artist->keywords = RequestMethods::post("keywords");
+			
+			if ($artist->validate())
+			{
+				$artist->save();
+			}
+	
+			$view
+			->set("error_name",       		\Framework\Shared\Markup::errors($artist->getErrors(), "name"))
+			->set("error_keywords",  		\Framework\Shared\Markup::errors($artist->getErrors(), "keywords"))
+			;
+	
+		}
+	
+		
+	
+		$view
+		->set("artist", $artist)
+		;
+	
+		// layout
+		$layout = $this-> getLayoutView();
+		$layout->set("active_artist", true);
+	}
+	
 }
