@@ -28,7 +28,7 @@ class Picture extends Model {
 	 * @type text
 	 * @length 255
 	 *
-	 * @validate required, min(3)
+	 * 
 	 * @label name
 	 */
 	protected $_filename;
