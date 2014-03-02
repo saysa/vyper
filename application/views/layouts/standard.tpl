@@ -15,24 +15,10 @@
 		<meta name="author" content="vyper-jmusic.com" />
 		<meta name="ROBOTS" content="index,follow" />
 		
-		<!-- Boilerplate -->
-        <link rel="stylesheet" href="{{ path_css }}normalize.min.css">
-        <link rel="stylesheet" href="{{ path_css }}main.css">
+		<!--  Theme -->
+		<link rel='stylesheet' id='fp-style-css'  href='{{ path_css }}portal.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='fp-font-awesome-css'  href='http://newwp.dev/wp-content/themes/fp_discover/css/fonts/font-awesome/css/font-awesome.min.css?ver=3.8.1' type='text/css' media='all' />
         
-        <link rel="stylesheet" href="{{ path_css }}reset.css">
-        
-        <!-- Bootstrap -->
-    	<link href="{{ path_css }}bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
-    	<!-- Custum -->
-        <link rel="stylesheet" href="{{ path_css }}portal.css">
-        
-        <link rel="stylesheet" href="{{ path_css }}common.css">
-        <link rel="stylesheet" href="{{ path_css }}slider.css">
-        <link rel="stylesheet" href="{{ path_css }}lightbox.css">
-        <link rel="stylesheet" href="{{ path_css }}fonts/font-awesome/css/font-awesome.min.css">
-        
-        <!-- Owl carousel -->
-        <link rel="stylesheet" href="{{ path_css }}owl-carousel/owl.carousel.css">
        
         
         <!--  components -->
@@ -175,7 +161,302 @@
 				
 			</div>
 			</div>
-
+			<!-- /ticker-section -->
+			
+			<div class="logo-section">
+			<div class="content-wrap">
+				<div class="logo">			
+					<h1>
+							<a href="http://newwp.dev" title="Discover">
+								<img src="http://newwp.dev/wp-content/themes/fp_discover/images/logo.png" alt="Discover">
+							</a>
+					</h1>	
+						
+				</div>
+				
+				<div class="banner">	
+						<a href="http://newwp.dev"><img src="http://newwp.dev/wp-content/themes/fp_discover/images/ad728.png"></a>	
+				</div>
+						
+			</div>
+			</div>
+			
+			
+			<nav class="primary-menu clearfix">
+			<div class="content-wrap">
+				
+				<div class="mobile-menu">
+					<a class="menu-slide" href="#">
+						<span class="title">Menu</span>
+						<span class="icon"><i class="icon-list"></i></span>
+					</a>
+				</div>
+				
+				<ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
+					<li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-10"><a href="http://newwp.dev/">Homepage</a></li>
+					<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11"><a href="http://newwp.dev/?page_id=2" class="sf-with-ul">Page d’exemple<span class="sf-sub-indicator"> »</span></a>
+						<ul class="sub-menu" style="visibility: hidden; display: none;">
+							<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="http://newwp.dev/?page_id=2">Page d’exemple</a></li>
+						</ul>
+					</li>
+				</ul>							
+			</div>
+			</nav>
+			
+			<div class="clearfix"></div>
+			
+			<script>
+				jQuery(document).ready(function($) {
+					$("#carousel-posts").owlCarousel({
+						slideSpeed: 200,					//Slide speed in milliseconds
+						paginationSpeed: 800,				//Pagination speed in milliseconds
+						autoPlay: 5000,						//Autoplay every 5 seconds. 
+						stopOnHover: true,					//Stop autoplay on mouse hover
+						navigation: true,					//Display "next" and "prev" buttons.
+						pagination: false,					//Display pagination
+						items : 3,							//Number of items to display	
+						itemsDesktop : [1199,3],			//Number of slides visible with a particular browser width.
+						itemsTablet: [736,2],
+						itemsMobile: [462,1]	
+					});
+				});
+			</script>
+			
+			
+			
+			<div class="header-carousel section main-color-bg">
+		
+				<div class="content-wrap">
+					<div id="carousel-posts" class="owl-carousel">
+						
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/5-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="5">									
+									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">																				
+												Ellie looks younger than before											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/villain/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/3-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="3">									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/villain/">																				
+												A new female villain											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/villain/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/hallway/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/7-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="7">									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/hallway/">																				
+												The clogged hallway											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/hallway/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/9-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="9">									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/">																				
+												Drake’s Fortune hunting											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/fortune/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/8-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="8">									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/fortune/">																				
+												Drake’s Fortune screenshot											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/fortune/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/so-real/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/2-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="2">									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/so-real/">																				
+												She looks so real											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/so-real/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+							<div class="item">
+								<div class="thumbnail overlay">
+									<a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/">
+										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/1-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="1">									</a>
+								</div>
+								
+								
+								<div class="post-details">
+									<div class="post-wrap">
+									<div class="post-title">
+										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+										<h4><a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/">																				
+												Amazing graphics in the game											</a>
+										</h4>
+									</div>
+									
+									<div class="post-desc">
+										<div class="excerpt">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+										<div class="more">
+											<a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/">Read more</a>
+										</div>
+									</div>	
+									
+									</div>
+								</div>
+								
+							</div>
+												 
+											
+						 
+													 
+												 
+											
+						 
+													 
+												 
+											
+						 
+													 
+												 
+											
+						 
+													 
+												 
+											
+						 
+													 
+												 
+											
+						 
+													 
+												 
+														
+			
+		<div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></div>
+	</div>
+			
+</div>
 
         </header>
         
@@ -224,6 +505,7 @@
 		</section>
 
         
+		
 		
 		
         <script>
