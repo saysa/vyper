@@ -228,229 +228,40 @@
 		
 				<div class="content-wrap">
 					<div id="carousel-posts" class="owl-carousel">
-						
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/5-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="5">									
-									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">																				
-												Ellie looks younger than before											</a>
-										</h4>
+							
+							{% for article in articles %}
+        						<div class="item">
+									<div class="thumbnail overlay">
+										<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">
+											<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/5-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="5">									
+										</a>
 									</div>
 									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">Read more</a>
+									
+									<div class="post-details">
+										<div class="post-wrap">
+										<div class="post-title">
+											<div class="post-icon"><i class="icon-file-text-alt"></i></div>
+											<h4><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">																				
+													{{ article.getTitle }}											</a>
+											</h4>
 										</div>
-									</div>	
-									
-									</div>
-								</div>
-								
-							</div>
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/villain/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/3-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="3">									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/villain/">																				
-												A new female villain											</a>
-										</h4>
-									</div>
-									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/villain/">Read more</a>
+										
+										<div class="post-desc">
+											<div class="excerpt">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+											<div class="more">
+												<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">En savoir plus</a>
+											</div>
+										</div>	
+										
 										</div>
-									</div>	
-									
-									</div>
-								</div>
-								
-							</div>
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/hallway/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/7-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="7">									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/hallway/">																				
-												The clogged hallway											</a>
-										</h4>
 									</div>
 									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/hallway/">Read more</a>
-										</div>
-									</div>	
-									
-									</div>
 								</div>
-								
-							</div>
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/9-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="9">									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/">																				
-												Drake’s Fortune hunting											</a>
-										</h4>
-									</div>
-									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/">Read more</a>
-										</div>
-									</div>	
-									
-									</div>
-								</div>
-								
-							</div>
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/fortune/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/8-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="8">									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/fortune/">																				
-												Drake’s Fortune screenshot											</a>
-										</h4>
-									</div>
-									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/fortune/">Read more</a>
-										</div>
-									</div>	
-									
-									</div>
-								</div>
-								
-							</div>
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/so-real/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/2-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="2">									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/so-real/">																				
-												She looks so real											</a>
-										</h4>
-									</div>
-									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/so-real/">Read more</a>
-										</div>
-									</div>	
-									
-									</div>
-								</div>
-								
-							</div>
-							<div class="item">
-								<div class="thumbnail overlay">
-									<a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/">
-										<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/1-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="1">									</a>
-								</div>
-								
-								
-								<div class="post-details">
-									<div class="post-wrap">
-									<div class="post-title">
-										<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-										<h4><a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/">																				
-												Amazing graphics in the game											</a>
-										</h4>
-									</div>
-									
-									<div class="post-desc">
-										<div class="excerpt">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
-										<div class="more">
-											<a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/">Read more</a>
-										</div>
-									</div>	
-									
-									</div>
-								</div>
-								
-							</div>
-												 
-											
-						 
-													 
-												 
-											
-						 
-													 
-												 
-											
-						 
-													 
-												 
-											
-						 
-													 
-												 
-											
-						 
-													 
-												 
-											
-						 
-													 
-												 
+        					{% endfor %}
+							
+											 
 														
 			
 		<div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></div>

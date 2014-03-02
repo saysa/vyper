@@ -22,6 +22,7 @@ use application\components\header\Header;
 use application\models\User;
 
 use Framework\Registry;
+use application\models\Article;
 
 
 class Index extends \Framework\Shared\Controller {
@@ -46,10 +47,24 @@ class Index extends \Framework\Shared\Controller {
 
 	public function index()
 	{	
-		$view = $this->getActionView();
-		$db = Registry::get("database");
-	
+		$view = $this->getLayoutView();
 		
+		$articles_carousel = Article::all(array("deleted=?"=>false));
+		
+		foreach ($articles_carousel as $article)
+		{
+			//$type = ArticleType::first(array("id=?"=>$article->type))->name;
+			
+			$excerpt = $article->title;
+			$article->title = mb_substr($excerpt,0, 50);
+			if (strlen($excerpt) > 49){
+				$article->title .= '...';
+			}
+			
+		}
+		
+		$view->set("articles", $articles_carousel);
+			
 		
 	}
 	
