@@ -177,6 +177,15 @@ $routes = array(
 				"controller" => "news",
 				"action" 	 => "index"
 		),
+		
+		// try article pattern
+		array(
+				"pattern" => "articles/:id/:p.html",
+				"controller" => "index",
+				"action" => "one_article"
+		),
+		
+		
 		array(
 				"pattern" => "news/delete/:id",
 				"controller" => "news",

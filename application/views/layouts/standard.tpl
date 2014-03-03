@@ -232,7 +232,7 @@
 							{% for article in articles %}
         						<div class="item">
 									<div class="thumbnail overlay">
-										<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">
+										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
 											<img width="374" height="200" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt="5">									
 										</a>
 									</div>
@@ -242,7 +242,7 @@
 										<div class="post-wrap">
 										<div class="post-title">
 											<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-											<h4><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">																				
+											<h4><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">																				
 												{{ article.getTitle }} 										
 												</a>
 											</h4>
@@ -253,7 +253,7 @@
 												{{ article.getDescription }} 											
 											</div>
 											<div class="more">
-												<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">En savoir plus</a>
+												<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
 											</div>
 										</div>	
 										

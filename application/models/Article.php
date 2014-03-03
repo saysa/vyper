@@ -207,5 +207,8 @@ class Article extends Model {
 	 */
 	protected $_forumURL;
 	
-	
+	/**
+	 * @readwrite
+	 */
+	protected $_stringURL;
 }

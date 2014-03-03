@@ -45,6 +45,12 @@ class Index extends \Framework\Shared\Controller {
 		echo "<p>authenticate</p>";
 	}
 	
+	public function one_article($id, $p)
+	{
+		var_dump($id, $p);
+		echo "one article ! $id";
+	}
+	
 
 	public function index()
 	{	
@@ -70,6 +76,7 @@ class Index extends \Framework\Shared\Controller {
 			
 			
 			$article->relatedPicture = $image;
+			$article->stringURL = $this->_filtreURL($article->title);
 			
 		}
 		
