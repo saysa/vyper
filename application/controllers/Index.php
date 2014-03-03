@@ -83,7 +83,7 @@ class Index extends \Framework\Shared\Controller {
 		
 		$layout
 		->set("is_carousel", "true")
-		->set("front_page_index")
+		->set("front_page_index", "true")
 		;
 		
 		$view

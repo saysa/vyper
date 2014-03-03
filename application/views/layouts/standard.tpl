@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if front_page_article %}{{ article.getTitle }} | {% endif %}Visual kei - JPop - Jrock{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
+        <title>{% if front_page_article %}{{ article.getTitle }} | {% endif %}Visual kei - JPop - Jrock - VYPER Music Japan{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="L'actualité de la musique japonaise au travers de news, commentaires, vidéos, interviews et plus encore." />
@@ -17,7 +17,7 @@
 		
 		<!--  Theme -->
 		<link rel='stylesheet' id='fp-style-css'  href='{{ path_css }}portal.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='fp-font-awesome-css'  href='http://newwp.dev/wp-content/themes/fp_discover/css/fonts/font-awesome/css/font-awesome.min.css?ver=3.8.1' type='text/css' media='all' />
+		<link rel='stylesheet' id='fp-font-awesome-css'  href='{{ path_css }}fonts/font-awesome/css/font-awesome.min.css' type='text/css' media='all' />
         
        
         
@@ -54,7 +54,16 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        
+        {% if front_page_article %}
+        	<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=1470537739827941";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+        {% endif %}
         
         <header id="header">
         	<div class="top main-color-bg">
@@ -193,6 +202,7 @@
 				</div>
 				
 				<ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
+					<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-44 current_page_item"><a href="{{ base_url }}">Home</a></li>
 					<li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-10"><a href="http://newwp.dev/">Homepage</a></li>
 					<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11"><a href="http://newwp.dev/?page_id=2" class="sf-with-ul">Page d’exemple<span class="sf-sub-indicator"> »</span></a>
 						<ul class="sub-menu" style="visibility: hidden; display: none;">
@@ -204,6 +214,8 @@
 			</nav>
 			
 			<div class="clearfix"></div>
+			
+			{% if is_carousel %}
 			
 			<script>
 				jQuery(document).ready(function($) {
@@ -223,7 +235,6 @@
 			</script>
 			
 			
-			{% if is_carousel %}
 			<div class="header-carousel section main-color-bg">
 		
 				<div class="content-wrap">
@@ -273,52 +284,39 @@
         </header>
         
 		
-		<!-- top black -->
-		<div id="bandeauTop">
-			<div class="container">
-			</div>
+		
+		<div id="container" class="hfeed">
+		
+			<!-- Start template -->
+			{{ template }}
+			<!-- End template -->
+		
 		</div>
+		<!-- /container -->
 		
-		<!-- top bandeau -->
-		<div id="bandeauIdentification">
-			<div class="container">
-			</div>
-		</div>
-		
-		<!-- header -->
-		<header id="header">
-			<div class="container">
-				<div id="banniere-pub-normale">
-					
-					{{ script_add_728_90 }}			
-					
-				</div>
-			</div>
-		</header>
-		
-        <!-- container -->
-		<section id="container">
-			<div class="container">
-				
-		
-				
-				<!-- sous-navigation -->
-				<div id="sous-navigation">
-                		
-                        <div style="line-height:26px; color:#FFF; float:left; position:relative; margin-left:15px;">
-                        		
-                                                                
-                        </div>
-                </div>
-         
-                
-				<!-- Start template -->
-				{{ template }}
-				<!-- End template -->
-			</div>
-		</section>
-
-        
+        <footer id="footer">
+        	<div class="footer-widgets main-color-bg"></div>
+        	<!-- /footer-widgets -->
+        	<div class="footer-info">
+        		<div class="content-wrap">
+        			<div class="footer-left">©2014 Vyper Music Japan</div>
+        			<div class="footer-right">
+        				<ul class="list">
+        					<li class="twitter">
+        						<a href="https://twitter.com/VYPER_MusicJapa"><i class="icon-twitter"></i></a>
+        					</li>
+        					<li class="fb">
+        						<a href="https://www.facebook.com/vypermusicjapan"><i class="icon-facebook"></i></a>
+        					</li>
+        				</ul>
+        			</div>
+        		</div>
+        		<!-- /inner-wrap -->
+        	</div>
+        	<!--/footer-info -->
+        </footer>
+		<!-- /footer -->
+			
 		
 		
 		
