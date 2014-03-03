@@ -181,7 +181,7 @@ $routes = array(
 		// try article pattern
 		array(
 				"pattern" => "articles/:id/:p.html",
-				"controller" => "index",
+				"controller" => "article",
 				"action" => "one_article"
 		),
 		
