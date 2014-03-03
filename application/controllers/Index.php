@@ -54,6 +54,7 @@ class Index extends \Framework\Shared\Controller {
 
 	public function index()
 	{	
+		$layout = $this->getLayoutView();
 		$view = $this->getLayoutView();
 		
 		$articles_carousel = Article::all(array("deleted=?"=>false));
@@ -80,7 +81,15 @@ class Index extends \Framework\Shared\Controller {
 			
 		}
 		
-		$view->set("articles", $articles_carousel);
+		$layout
+		->set("is_carousel", "true")
+		->set("front_page_index")
+		;
+		
+		$view
+		->set("articles", $articles_carousel)
+		;
+		
 			
 		
 	}

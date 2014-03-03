@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Visual kei - JPop - Jrock | Toute la Jmusic, toutes les news en temps réels</title>
+        <title>{% if front_page_article %}{{ article.getTitle }} | {% endif %}Visual kei - JPop - Jrock{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="L'actualité de la musique japonaise au travers de news, commentaires, vidéos, interviews et plus encore." />
@@ -223,7 +223,7 @@
 			</script>
 			
 			
-			
+			{% if is_carousel %}
 			<div class="header-carousel section main-color-bg">
 		
 				<div class="content-wrap">
@@ -261,15 +261,14 @@
 									</div>
 									
 								</div>
-        					{% endfor %}
-							
-											 
-														
+        					{% endfor %}						
 			
-		<div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></div>
-	</div>
+						<div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div>
+					</div>
+				</div>
 			
-</div>
+			</div>
+			{% endif %}
 
         </header>
         
@@ -311,6 +310,8 @@
                                                                 
                         </div>
                 </div>
+         
+                
 				<!-- Start template -->
 				{{ template }}
 				<!-- End template -->

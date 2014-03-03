@@ -182,7 +182,7 @@ $routes = array(
 		array(
 				"pattern" => "articles/:id/:p.html",
 				"controller" => "article",
-				"action" => "one_article"
+				"action" => "showArticle"
 		),
 		
 		
