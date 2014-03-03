@@ -233,7 +233,7 @@
         						<div class="item">
 									<div class="thumbnail overlay">
 										<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">
-											<img width="374" height="200" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/5-374x200.jpg" class="attachment-fp374_200 wp-post-image" alt="5">									
+											<img width="374" height="200" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt="5">									
 										</a>
 									</div>
 									
@@ -243,13 +243,15 @@
 										<div class="post-title">
 											<div class="post-icon"><i class="icon-file-text-alt"></i></div>
 											<h4><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">																				
-													{{ article.getTitle }}											</a>
+												{{ article.getTitle }} 										
+												</a>
 											</h4>
 										</div>
 										
 										<div class="post-desc">
 											<div class="excerpt">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viv...										</div>
+												{{ article.getDescription }} 											
+											</div>
 											<div class="more">
 												<a href="http://demo.fairpixels.com/discover/2013/09/ellie/">En savoir plus</a>
 											</div>

@@ -23,6 +23,7 @@ use application\models\User;
 
 use Framework\Registry;
 use application\models\Article;
+use application\models\Picture;
 
 
 class Index extends \Framework\Shared\Controller {
@@ -53,13 +54,22 @@ class Index extends \Framework\Shared\Controller {
 		
 		foreach ($articles_carousel as $article)
 		{
-			//$type = ArticleType::first(array("id=?"=>$article->type))->name;
+			$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			
 			$excerpt = $article->title;
 			$article->title = mb_substr($excerpt,0, 50);
 			if (strlen($excerpt) > 49){
 				$article->title .= '...';
 			}
+			
+			$excerpt = $article->description;
+			$article->description = mb_substr($excerpt,0, 120);
+			if (strlen($excerpt) > 119){
+				$article->description .= '...';
+			}
+			
+			
+			$article->relatedPicture = $image;
 			
 		}
 		
