@@ -38,6 +38,8 @@
         
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        
+        
         <script>window.jQuery || document.write('<script src="{{ path_js }}vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="{{ path_js }}plugins.js"></script>
@@ -48,6 +50,8 @@
         
         <script src="{{ path_js }}owl-carousel/owl.carousel.js"></script>
         <script src="{{ path_js }}liscroll.js"></script>
+        
+        	
         
     </head>
     <body>
@@ -286,11 +290,157 @@
 		
 		
 		<div id="container" class="hfeed">
-		
-			<!-- Start template -->
-			{{ template }}
-			<!-- End template -->
-		
+			<div id="main">
+				<div id="content" class="single-post">
+					<!-- Start template -->
+					{{ template }}
+					<!-- End template -->
+				</div>	
+				<!-- /content -->
+				<div id="sidebar">
+					<aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">		
+						<script>
+							jQuery(document).ready(function($) {				
+								$(".widget-tab-titles li").click(function() {
+									$(".widget-tab-titles li").removeClass('active');
+									$(this).addClass("active");
+									$(".tab-content").hide();
+									var selected_tab = $(this).find("a").attr("href");
+									$(selected_tab).fadeIn();
+									return false;
+								});
+							});
+						</script>
+
+						<div class="widget-tabs-title-container">
+							<ul class="widget-tab-titles">
+								<li class="active"><h5><a href="#widget-tab1-content">Recent</a></h5></li>
+								<li class=""><h5><a href="#widget-tab2-content">Popular</a></h5></li>
+								<li class=""><h5><a href="#widget-tab3-content">Comments</a></h5></li>
+							</ul>
+						</div> 
+						<div class="tabs-content-container">
+			
+							<div id="widget-tab1-content" class="tab-content" style="display: block;">	
+								<ul class="list post-list">
+										
+									<li>
+										<div class="thumbnail">
+											<img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/5-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="5">							
+										</div>
+										<div class="post-right">
+											<h5><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">Ellie looks younger than before</a></h5>
+											<div class="entry-meta">
+												<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>						 
+											</div>
+										</div>
+									</li>
+										
+									<li>
+										<div class="thumbnail">
+											<img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/3-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="3">
+										</div>
+										<div class="post-right">
+											<h5><a href="http://demo.fairpixels.com/discover/2013/09/villain/">A new female villain</a></h5>
+											<div class="entry-meta">
+												<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>
+												<span class="comments"><i class="icon-comments"></i><a href="http://demo.fairpixels.com/discover/2013/09/villain/#comments" title="Comment on A new female villain">1</a>										</span>		
+																		 
+											</div>
+										</div>
+									</li>
+						
+								</ul>
+							</div>
+			
+							<div id="widget-tab2-content" class="tab-content">
+								<ul class="list post-list">
+										
+									<li>
+										<div class="thumbnail">
+											<img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/8-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="8">							
+										</div>
+										<div class="post-right">
+											<h5><a href="http://demo.fairpixels.com/discover/2013/09/fortune/">Drake’s Fortune screenshot</a></h5>
+											<div class="entry-meta">
+												<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>
+												<span class="comments"><i class="icon-comments"></i><a href="http://demo.fairpixels.com/discover/2013/09/fortune/#comments" title="Comment on Drake’s Fortune screenshot">5</a>										</span>		
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+			
+							<div id="widget-tab3-content" class="tab-content">
+								<ul class="list comment-list">
+									<li>
+										<div class="thumbnail">
+											<img alt="" src="http://0.gravatar.com/avatar/a8e47f4f1b687bafa83a75fa8a644bd0?s=70&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G" class="avatar avatar-70 photo" height="70" width="70">									</div>
+											<div class="post-right">
+												<div class="comment-author"><h5>Jack</h5></div>
+												<div class="comment-text">
+													<a class="first" href="http://demo.fairpixels.com/discover/2013/09/villain/#comment-10">Quisque risus eros, congue at libero at, aliquet ...</a>
+												</div>
+												<div class="entry-meta">
+													<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>
+												</div>
+											</div>
+									</li>		   
+												   
+								</ul>
+							</div>
+						</div>
+
+						<div id="widget-posts-tiles">
+			
+						</div><!-- /tiles -->
+	   				</aside>
+	   				
+	   				<aside id="fairpixels_flickr_widget-2" class="widget widget_flickr">
+	   					<div class="widget-title"><h4>Gallery</h4></div>		
+	   					
+						<div class="flickr_stream">  
+							
+							               
+                			<ul id="flickr_thumbs" class="list flickr_thumbs">
+                				<li>
+                					<div class="widget-overlay">
+                						<a rel="lightbox[flickr-gallery]" href="http://farm8.staticflickr.com/7373/12880818725_c24a0589f7.jpg" title="Ragazze di Gavoi"><img src="http://farm8.staticflickr.com/7373/12880818725_c24a0589f7_s.jpg" alt="Ragazze di Gavoi" width="75" height="75"></a>
+                					</div>
+                				</li>
+                				<li>
+                					<div class="widget-overlay">
+                						<a rel="lightbox[flickr-gallery]" href="http://farm4.staticflickr.com/3759/12881191404_ab5c8338a1.jpg" title="El Diablo"><img src="http://farm4.staticflickr.com/3759/12881191404_ab5c8338a1_s.jpg" alt="El Diablo" width="75" height="75"></a>
+                					</div>
+                				</li>
+                				<li>
+                					<div class="widget-overlay">
+                						<a rel="lightbox[flickr-gallery]" href="http://farm4.staticflickr.com/3698/12880825873_1946a79ff6.jpg" title="Tumbarinos"><img src="http://farm4.staticflickr.com/3698/12880825873_1946a79ff6_s.jpg" alt="Tumbarinos" width="75" height="75"></a>
+                					</div>
+                				</li>
+                				<li>
+                					<div class="widget-overlay">
+                						<a rel="lightbox[flickr-gallery]" href="http://farm8.staticflickr.com/7293/12880812933_38cf513267.jpg" title="Sardinia is my Nation"><img src="http://farm8.staticflickr.com/7293/12880812933_38cf513267_s.jpg" alt="Sardinia is my Nation" width="75" height="75"></a>
+                					</div>
+                				</li>
+                				<li>
+                					<div class="widget-overlay">
+                						<a rel="lightbox[flickr-gallery]" href="http://farm3.staticflickr.com/2827/12880703455_844ac15168.jpg" title="Tumbarino"><img src="http://farm3.staticflickr.com/2827/12880703455_844ac15168_s.jpg" alt="Tumbarino" width="75" height="75"></a>
+                					</div>
+                				</li>
+                				<li>
+                					<div class="widget-overlay">
+                						<a rel="lightbox[flickr-gallery]" href="http://farm3.staticflickr.com/2856/12880850443_8a3a29876c.jpg" title="Generations"><img src="http://farm3.staticflickr.com/2856/12880850443_8a3a29876c_s.jpg" alt="Generations" width="75" height="75"></a>
+                					</div>
+                				</li>
+                			</ul>
+            			</div>
+			
+					</aside>
+	   				
+				</div>	
+				<!-- /sidebar -->
+			</div>
 		</div>
 		<!-- /container -->
 		
@@ -308,6 +458,9 @@
         					<li class="fb">
         						<a href="https://www.facebook.com/vypermusicjapan"><i class="icon-facebook"></i></a>
         					</li>
+        					<li class="youtube">
+        						<a href="http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw"><i class="icon-youtube"></i></a>
+        					</li>
         				</ul>
         			</div>
         		</div>
@@ -316,7 +469,12 @@
         	<!--/footer-info -->
         </footer>
 		<!-- /footer -->
-			
+		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/hoverIntent.js?ver=3.6.1"></script>
+		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-includes/js/hoverIntent.min.js?ver=r7"></script>
+		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/superfish.js?ver=3.6.1"></script>
+		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/flexslider-min.js?ver=3.6.1"></script>
+		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/lightbox.js?ver=3.6.1"></script>
+		
 		
 		
 		
