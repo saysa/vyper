@@ -3,6 +3,7 @@
 namespace application\controllers;
 
 use application\models\Article as model_Article;
+use application\models\Picture;
 
 class Article extends \Framework\Shared\Controller {
 	
@@ -10,7 +11,7 @@ class Article extends \Framework\Shared\Controller {
 	public function showArticle($id)
 	{
 		$layout = $this->getLayoutView();
-		$view = $this-> getActionView();
+		$view = $this->getActionView();
 		$article = model_Article::first(array("id=?" => $id));
 		
 		if (!$article)
@@ -18,6 +19,13 @@ class Article extends \Framework\Shared\Controller {
 			self::redirect("home");
 		}
 		
+		
+		$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;	
+		$article->relatedPicture = $image;
+		$article->stringURL = $this->_filtreURL($article->title);
+				
+		
+
 		$layout
 		->set("front_page_article", "true")
 		->set("article", $article)
