@@ -63,6 +63,8 @@ class Index extends \Framework\Shared\Controller {
 		{
 			$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			
+			$article->stringURL = $this->_filtreURL($article->title);
+			
 			$excerpt = $article->title;
 			$article->title = mb_substr($excerpt,0, 50);
 			if (strlen($excerpt) > 49){
@@ -77,7 +79,7 @@ class Index extends \Framework\Shared\Controller {
 			
 			
 			$article->relatedPicture = $image;
-			$article->stringURL = $this->_filtreURL($article->title);
+			
 			
 		}
 		
