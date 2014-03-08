@@ -38,7 +38,7 @@ class Autoloader {
 	public static function _autoload($class)
 	{
 
-		$file = strtolower(str_replace("\\", DIRECTORY_SEPARATOR, trim($class, "\\"))).".php";
+		$file = str_replace("\\", DIRECTORY_SEPARATOR, trim($class, "\\")).".php";
 		$combined = APP_PATH . DIRECTORY_SEPARATOR . $file;
 		
 		if (file_exists($combined))

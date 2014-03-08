@@ -14,8 +14,8 @@ define('JS',            ASSETS.'js/');
 define('IMG',           ASSETS.'img/');
 
 
-
 try {
+
 	// 2. load the Core class that includes an autoloader
 	require("../Framework/Core.php");
 	Framework\Core::initialize();
@@ -30,10 +30,10 @@ try {
 	$database = new Framework\Database(array(
 			"type" => "pdo",
 			"options" => array(
-					"host"=>"localhost",
-					"username"=>"root",
-					"password"=>"",
-					"schema"=>"vyper",
+					"host"=>"db517756999.db.1and1.com",
+					"username"=>"dbo517756999",
+					"password"=>"vypermusicjapan77",
+					"schema"=>"db517756999",
 					"port"=>"3306"
 			)
 	));
