@@ -4,7 +4,7 @@
 define("DEBUG", TRUE);
 define("APP_PATH", dirname(dirname(__FILE__)));
 define("DS", DIRECTORY_SEPARATOR);
-define("CONTROLLER", DS . "application" . DS . "controllers" . DS);
+define("CONTROLLER", "\application\controllers\\");
 
 //PUBLIC
 define('BASE_URL',      'http://'.$_SERVER["SERVER_NAME"].'/');
