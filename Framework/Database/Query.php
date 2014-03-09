@@ -210,6 +210,7 @@ class Query extends Base {
 		if (!empty($_where))
 		{
 			$joined = join(" AND ", $_where);
+			$joined = str_replace("'NOW()'", "NOW()", $joined);
 			$where = "WHERE {$joined}";
 		}
 		

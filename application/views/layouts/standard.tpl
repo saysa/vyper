@@ -397,7 +397,7 @@
 	   				</aside>
 	   				
 	   				<aside id="fairpixels_flickr_widget-2" class="widget widget_flickr">
-	   					<div class="widget-title"><h4>Gallery</h4></div>		
+	   					<div class="widget-title"><h4>Gallery {{ nextEvent_title }}</h4></div>		
 	   					
 						<div class="flickr_stream">  
 							

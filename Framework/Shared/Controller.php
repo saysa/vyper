@@ -9,6 +9,8 @@ use Framework\Events;
 use Framework\Registry;
 
 use Framework\Router as Router;
+use application\models\Event;
+
 
 class Controller extends \Framework\Controller {
 
@@ -91,9 +93,11 @@ class Controller extends \Framework\Controller {
 
 		Events::add("framework.router.afterhooks.after", function($parameters) {
 			$controller = Registry::get("controller");
+			$layout = $this->getLayoutView();
+			$view = $controller->getActionView();
 			if ($controller->getUser())
 			{
-				$view = $controller->getActionView();
+				
 				$account = new \application\components\Account\Account;
 				$account->initialize(
 					"Mon Compte",
@@ -107,7 +111,21 @@ class Controller extends \Framework\Controller {
 					$view->set($template_var, $var);
 				}
 			}
-
+			
+			//$article = Article::first(array("id=?" => $id));
+			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), null, null, "0,1");
+			$nextEvent = new \application\components\NextEvent\NextEvent;
+			$nextEvent->initialize(
+					$event[0]->getId(),
+					$event[0]->getTitle(),
+					$event[0]->getDate()
+			);
+			
+			foreach ($nextEvent->templateVar() as $template_var => $var)
+			{
+				$layout->set($template_var, $var);
+			}
+			
 			// set genreric path to the view
 			$controller->getLayoutView()->set("base_url", BASE_URL);
 			$controller->getActionView()->set("base_url", BASE_URL);
