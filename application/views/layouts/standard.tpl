@@ -291,7 +291,63 @@
 		
 		<div id="container" class="hfeed">
 			<div id="main">
+				
+				
+			
 				<div id="content" class="single-post">
+				
+					{% if front_page_index %}
+				<div id="content" class="homepage">
+					<script>
+						jQuery(document).ready(function($) {
+							$(".main-slider").show();
+							$(".main-slider").owlCarousel({ 
+								navigation : true,
+								pagination: false,
+								autoPlay : 5000,
+								slideSpeed : 400,
+								paginationSpeed : 400,
+								singleItem: true 
+							});
+						});
+					</script>
+					<div class="main-slider section">
+					
+						{% for article in articles %}
+						<div class="item">
+								<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" >
+									<img width="780" height="400" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="5" />								</a>
+								
+								<div class="post-info">
+																	
+									<div class="title">
+										<h2><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h2>
+										<div class="sep"></div>
+									</div>								
+									
+									<div class="post-excerpt">
+										{{ article.getDescription }} 										
+									</div>
+									
+									<div class="read-more">
+										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
+									</div>
+									
+								</div>	
+									
+							</div>				
+						
+						
+						{% endfor %}
+					
+						
+						
+					</div>
+					<!-- /main-slider -->
+				
+				</div>
+				{% endif %}
+				
 					<!-- Start template -->
 					{{ template }}
 					<!-- End template -->
