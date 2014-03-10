@@ -178,11 +178,26 @@ $routes = array(
 				"action" 	 => "index"
 		),
 		
-		// try article pattern
+		// article pattern
 		array(
 				"pattern" => "articles/:id/:p.html",
 				"controller" => "article",
 				"action" => "showArticle"
+		),
+		
+		// event pattern
+		/*
+		 * Duplicate pattern for search engines optimization
+		 */
+		array(
+				"pattern" => "concert/:id/:p.html",
+				"controller" => "event",
+				"action" => "showEvent"
+		),
+		array(
+				"pattern" => "event/:id/:p.html",
+				"controller" => "event",
+				"action" => "showEvent"
 		),
 		
 		
