@@ -114,17 +114,20 @@ class Controller extends \Framework\Controller {
 			
 			//$article = Article::first(array("id=?" => $id));
 			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), null, null, "0,1");
-			$nextEvent = new \application\components\NextEvent\NextEvent;
-			$nextEvent->initialize(
-					$event[0]->getId(),
-					$event[0]->getTitle(),
-					$event[0]->getDate()
-			);
-			
-			foreach ($nextEvent->templateVar() as $template_var => $var)
-			{
-				$layout->set($template_var, $var);
+			if (sizeof($event) > 0) {
+				$nextEvent = new \application\components\NextEvent\NextEvent;
+				$nextEvent->initialize(
+						$event[0]->getId(),
+						$event[0]->getTitle(),
+						$event[0]->getDate()
+				);
+					
+				foreach ($nextEvent->templateVar() as $template_var => $var)
+				{
+					$layout->set($template_var, $var);
+				}
 			}
+			
 			
 			// set genreric path to the view
 			$controller->getLayoutView()->set("base_url", BASE_URL);

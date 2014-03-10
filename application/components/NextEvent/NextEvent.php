@@ -39,6 +39,7 @@ class NextEvent {
 	public function templateVar()
 	{
 		$r= array();
+		$r['nextEvent_exists'] = "true";
 		$r['nextEvent_id'] = $this->getEventID();
 		$r['nextEvent_title'] = $this->getEventTitle();
 		$r['nextEvent_date'] = $this->getEventDate();
