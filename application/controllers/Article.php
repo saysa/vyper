@@ -4,6 +4,7 @@ namespace application\controllers;
 
 use application\models\Article as model_Article;
 use application\models\Picture;
+use Framework\StringMethods;
 
 class Article extends \Framework\Shared\Controller {
 	
@@ -21,10 +22,8 @@ class Article extends \Framework\Shared\Controller {
 		
 		
 		$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;	
-		$article->relatedPicture = $image;
-		$article->stringURL = $this->_filtreURL($article->title);
-				
-		
+		$article->relatedPicture = $image;	
+		$article->stringURL = StringMethods::filterURL($article->title);
 
 		$layout
 		->set("front_page_article", "true")

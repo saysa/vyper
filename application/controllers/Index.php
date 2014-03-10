@@ -24,6 +24,7 @@ use application\models\User;
 use Framework\Registry;
 use application\models\Article;
 use application\models\Picture;
+use Framework\StringMethods;
 
 
 class Index extends \Framework\Shared\Controller {
@@ -63,7 +64,7 @@ class Index extends \Framework\Shared\Controller {
 		{
 			$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			
-			$article->stringURL = $this->_filtreURL($article->title);
+			$article->stringURL = StringMethods::filterURL($article->title);
 			
 			$excerpt = $article->title;
 			$article->title = mb_substr($excerpt,0, 50);
