@@ -401,7 +401,7 @@
 	   					<div class="widget-title"><h4>Prochain événement</h4></div>
 	   					
 	   					<div class="flickr_stream">  
-	   					{{ nextEvent_title }}
+	   					<a href="{{ base_url }}event/{{ nextEvent_id }}/{{ nextEvent_stringURL }}.html">{{ nextEvent_title }}</a> 
 	   					</div>		
 	   				</aside>
 	   				{% endif %}

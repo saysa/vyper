@@ -115,5 +115,8 @@ class Event extends Model {
 	 */
 	protected $_price; // text
 	
-	
+	/**
+	 * @readwrite
+	 */
+	protected $_stringURL;
 }

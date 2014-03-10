@@ -1,6 +1,8 @@
 <?php
 namespace application\components\NextEvent;
 
+use \Framework\StringMethods as StringMethods;
+
 /**
  * Displays last event info
  * @author sbo
@@ -11,6 +13,7 @@ class NextEvent {
 	private $_eventID;
 	private $_eventTitle;
 	private $_eventDate;
+	private $_stringURL;
 	
 	
 	public function getEventID() {return $this->_eventID;}
@@ -19,6 +22,11 @@ class NextEvent {
 	public function setEventID($_eventID) {$this->_eventID = $_eventID;}
 	public function setEventTitle($_eventTitle) {$this->_eventTitle = $_eventTitle;}
 	public function setEventDate($_eventDate) {$this->_eventDate = $_eventDate;}
+	public function getStringURL() 
+	{
+		$string = $this->_eventTitle;
+		return StringMethods::filterURL($string);
+	}
 
 	/**
 	 * Constructor : Initializes properties
@@ -43,6 +51,7 @@ class NextEvent {
 		$r['nextEvent_id'] = $this->getEventID();
 		$r['nextEvent_title'] = $this->getEventTitle();
 		$r['nextEvent_date'] = $this->getEventDate();
+		$r['nextEvent_stringURL'] = $this->getStringURL();
 		return $r;
 	}
 	
