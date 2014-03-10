@@ -114,7 +114,7 @@ class Controller extends \Framework\Controller {
 			}
 			
 			//$article = Article::first(array("id=?" => $id));
-			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), null, null, "0,1");
+			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), "date", null, "0,1");
 			if (sizeof($event) > 0) {
 				
 				$nextEvent = new \application\components\NextEvent\NextEvent;
