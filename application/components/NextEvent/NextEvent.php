@@ -42,6 +42,24 @@ class NextEvent {
 	}
 	
 	/**
+	 * Returns the remaining days before the event
+	 * @return number
+	 */
+	public function getRemainingDays()
+	{
+		$event = $this->getEventDate();
+		$month = substr($event, 5, 2);
+		$year = substr($event, 0, 4);
+		$day = substr($event, 8, 2);
+		
+		$event = mktime(0,0,0,$month,$day,$year);
+		$today = time();
+		$difference = $event - $today;
+		
+		return ceil($difference/86400);
+	}
+	
+	/**
 	 * @return array
 	 */
 	public function templateVar()
@@ -51,6 +69,7 @@ class NextEvent {
 		$r['nextEvent_id'] = $this->getEventID();
 		$r['nextEvent_title'] = $this->getEventTitle();
 		$r['nextEvent_date'] = $this->getEventDate();
+		$r['nextEvent_remainingDays'] = $this->getRemainingDays();
 		$r['nextEvent_stringURL'] = $this->getStringURL();
 		return $r;
 	}

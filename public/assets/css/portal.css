@@ -2873,3 +2873,21 @@ h6{
 .fb-comments, .fb-comments * {
     width:100% !important;
 }
+
+.next_event {
+	background: linear-gradient(to bottom, #4866A6 70%, #3B5997 100%);
+	padding: 10px !important;
+	color: #FFF;
+	/*height: 100px;*/
+}
+
+.next_event a {
+	color: #FFF;
+}
+
+.difference {
+	/*display: block;*/
+	font-size: 500%;
+	font-weight: bold;
+	line-height: 1.2;
+}
