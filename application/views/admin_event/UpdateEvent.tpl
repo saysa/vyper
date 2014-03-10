@@ -20,7 +20,7 @@
 									<div class="form-group col-lg-9{%if error_title %} has-error{% endif %}">
 										<label class="control-label" for="title">Title *</label>
 										<div class="controls">
-										  <input class="form-control focused" id="title" name="title" type="text" placeholder="Title" value="{{ event.getTitle }}">
+										  <input class="form-control focused" id="title" name="title" type="text" placeholder="Title" value="{{ event.getTitle|escape }}">
 										  {{ error_title }}
 										</div>
 									</div>
