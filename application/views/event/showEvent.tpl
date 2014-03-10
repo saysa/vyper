@@ -47,8 +47,12 @@
 		</header>
 	
 	
-		<div class="entry-content-wrap">		
-					
+		<div class="entry-content-wrap">	
+			{% if event_reladtedPicture %}	
+			<div class="entry-image">
+				<img width="780" height="400" src="{{ base_url }}uploads/pic/{{ event.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ event.getTitle }}">					
+			</div>				
+			{% endif %}
 						
 			<div class="entry-content">			
 				{{ event.getDescription }}

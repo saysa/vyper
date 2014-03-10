@@ -116,6 +116,15 @@ class Event extends Model {
 	protected $_price; // text
 	
 	/**
+	 * @column
+	 * @readwrite
+	 * @type integer
+	 *
+	 * @related Picture
+	 */
+	protected $_relatedPicture;
+	
+	/**
 	 * @readwrite
 	 */
 	protected $_stringURL;

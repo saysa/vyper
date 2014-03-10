@@ -39,6 +39,7 @@ class NextEvent {
 		$this->setEventID($_eventID);
 		$this->setEventTitle($_eventTitle);
 		$this->setEventDate($_eventDate);
+		
 	}
 	
 	/**
@@ -71,6 +72,7 @@ class NextEvent {
 		$r['nextEvent_date'] = $this->getEventDate();
 		$r['nextEvent_remainingDays'] = $this->getRemainingDays();
 		$r['nextEvent_stringURL'] = $this->getStringURL();
+		
 		return $r;
 	}
 	

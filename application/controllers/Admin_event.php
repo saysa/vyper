@@ -61,7 +61,8 @@ class Admin_event extends Admin_common {
 					"description" => RequestMethods::post("description"),
 					"location" => RequestMethods::post("location"),
 					"date" => RequestMethods::post("date"),
-					"time" => RequestMethods::post("time")
+					"time" => RequestMethods::post("time"),
+					"relatedPicture" => RequestMethods::post("related_picture")
 			));
 		
 		
@@ -129,6 +130,7 @@ class Admin_event extends Admin_common {
 			$event->relatedTour = RequestMethods::post("related_tour");
 			$event->artistsKeywords = RequestMethods::post("meta_keywords");
 			$event->price = RequestMethods::post("price");
+			$event->relatedPicture = RequestMethods::post("related_picture");
 			
 				
 			if ($event->validate())
@@ -142,13 +144,14 @@ class Admin_event extends Admin_common {
 			->set("error_real_title",  		\Framework\Shared\Markup::errors($event->getErrors(), "real_title"))
 			->set("error_description", 		\Framework\Shared\Markup::errors($event->getErrors(), "description"))
 			->set("error_description_real", \Framework\Shared\Markup::errors($event->getErrors(), "description_real"))
-			->set("error_location", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "location"))
+			->set("error_location", 	   	\Framework\Shared\Markup::errors($event->getErrors(), "location"))
 			->set("error_date", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "date"))
 			->set("error_time", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "time"))
 			->set("error_type", 	   		\Framework\Shared\Markup::errors($event->getErrors(), "type"))
 			->set("error_related_tour", 	\Framework\Shared\Markup::errors($event->getErrors(), "related_tour"))
 			->set("error_artists_keywords", \Framework\Shared\Markup::errors($event->getErrors(), "artists_keywords"))
 			->set("error_price", 			\Framework\Shared\Markup::errors($event->getErrors(), "price"))
+			->set("error_related_picture", 	\Framework\Shared\Markup::errors($event->getErrors(), "related_picture"))
 			;
 				
 		}

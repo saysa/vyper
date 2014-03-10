@@ -10,6 +10,7 @@ use Framework\Registry;
 
 use Framework\Router as Router;
 use application\models\Event;
+use application\models\Picture;
 
 
 class Controller extends \Framework\Controller {
@@ -115,6 +116,7 @@ class Controller extends \Framework\Controller {
 			//$article = Article::first(array("id=?" => $id));
 			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), null, null, "0,1");
 			if (sizeof($event) > 0) {
+				
 				$nextEvent = new \application\components\NextEvent\NextEvent;
 				$nextEvent->initialize(
 						$event[0]->getId(),

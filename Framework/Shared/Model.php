@@ -131,12 +131,11 @@ class Model extends \Framework\Model {
 				$raw = $column["raw"]; // _relatedPicture
 				$name = $column["name"]; // relatedpicture
 				$label = $column["label"]; // null
-			
 				
 				$instance = "\application\models\\" . $column["related"][0];
 				$instance = $instance::first(array("id=?" => $this-> $raw));
 				
-				if (!$instance) 
+				if (!$instance && $this-> $raw != "") 
 				{
 					
 					
@@ -174,7 +173,8 @@ class Model extends \Framework\Model {
 							$this->_errors[$name] = array();
 						}
 						$this->_errors[$name][] = $message;
-					
+						
+						
 						$error = true;
 					}
 					
@@ -250,7 +250,6 @@ class Model extends \Framework\Model {
 				
 			}
 		}
-		
 		
 		return !$error;
 	}

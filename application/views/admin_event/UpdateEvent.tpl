@@ -193,13 +193,22 @@
 							</div>
 						</div>
 						
-						
+						<div class="row">
+							<!-- Related Picture -->
+							<div class="form-group col-lg-3">
+								<label class="control-label" for="related_picture">Related Picture</label>
+								<div class="controls">
+								  <input class="form-control" id="related_picture" name="related_picture" type="text" placeholder="Related Picture" value="{{ event.getRelatedPicture }}"> <a href="/_admin_/pictures" target="_blank">View Pictures</a>
+								  {{ error_related_picture }}
+								</div>
+							</div>
+						</div>
 						
 						
 						<div class="form-actions">
 						  <input type="hidden" name="update" value="update">
-						  <button type="submit" class="btn btn-primary">Save article</button>
-						  <button type="reset" class="btn">Cancel</button>
+						  <button type="submit" class="btn btn-primary">Save</button>
+						  
 						</div>
 						
 					</fieldset>
