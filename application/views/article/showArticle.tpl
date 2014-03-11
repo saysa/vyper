@@ -49,7 +49,11 @@
 	
 		<div class="entry-content-wrap">		
 			<div class="entry-image">
-				<img width="780" height="400" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="3">					
+				{% if article_horizontal_image %}
+					<img  src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="">
+				{% else %}
+					<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="">
+				{% endif %}					
 			</div>					
 						
 			<div class="entry-content">			
