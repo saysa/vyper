@@ -6,7 +6,7 @@
 			<div class="entry-meta">
 				
 				<div class="left">
-					<span class="date"><i class="icon-calendar"></i> September 25, 2013</span>
+					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
 					
 					<span class="comments">
 							<i class="icon-comments"></i>

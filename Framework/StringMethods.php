@@ -189,6 +189,15 @@ class StringMethods {
 		return $position;
 	}
 	
+	public static function sqlDateToCustom($sqlDate, $custom = "%d %B %Y")
+	{		
+		setlocale (LC_TIME, 'fr_FR.utf8','fra');
+		$month = substr($sqlDate, 5, 2);
+		$year = substr($sqlDate, 0, 4);
+		$day = substr($sqlDate, 8, 2);
+		$time = mktime(0,0,0,$month,$day,$year);
+		return utf8_encode(ucfirst(strftime( $custom, $time )));;
+	}
 	
 	public static function filterURL($string)
 	{

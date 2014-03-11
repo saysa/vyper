@@ -11,6 +11,8 @@ class Article extends \Framework\Shared\Controller {
 
 	public function showArticle($id)
 	{
+		
+		
 		$layout = $this->getLayoutView();
 		$view = $this->getActionView();
 		$article = model_Article::first(array("id=?" => $id));
@@ -19,6 +21,9 @@ class Article extends \Framework\Shared\Controller {
 		{
 			self::redirect("home");
 		}
+		
+		/* Set front Release Date */
+		$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
 		
 		
 		$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;	
