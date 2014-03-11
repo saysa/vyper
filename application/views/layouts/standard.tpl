@@ -6,11 +6,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if front_page_article %}{{ article.getTitle }} | {% endif %}Visual kei - JPop - Jrock - VYPER Music Japan{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
+        <title>{% if front_page_article %}{{ article.getTitle }} | {% endif %}Visual kei - JPop - Jrock - Jmusic - VYPER Music Japan{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="L'actualité de la musique japonaise au travers de news, commentaires, vidéos, interviews et plus encore." />
-		<meta name="keywords" content="vyperjmusic, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, youtube, forum, vyper" />
+		<meta name="description" content="L'actualité de la musique japonaise au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
+		<meta name="keywords" content="vyperjmusic, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
 		
 		<meta name="author" content="vyper-jmusic.com" />
 		<meta name="ROBOTS" content="index,follow" />
