@@ -278,7 +278,6 @@
 								</div>
         					{% endfor %}						
 			
-						<div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div>
 					</div>
 				</div>
 			
