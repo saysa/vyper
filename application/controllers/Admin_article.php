@@ -53,7 +53,8 @@ class Admin_article extends Admin_common {
 				"sourceURL" => RequestMethods::post("source_url"),
 				"type" => RequestMethods::post("type"),
 				"relatedTheme" => RequestMethods::post("theme"),
-				"metaKeywords" => RequestMethods::post("meta_keywords")
+				"metaKeywords" => RequestMethods::post("meta_keywords"),
+				"relatedPicture" => RequestMethods::post("related_picture")
 			));
 
 			if ($article->validate())
@@ -69,6 +70,7 @@ class Admin_article extends Admin_common {
 			->set("error_rel_time", \Framework\Shared\Markup::errors($article->getErrors(), "releaseTime"))
 			->set("error_author", \Framework\Shared\Markup::errors($article->getErrors(), "author"))
 			->set("error_meta_keywords", \Framework\Shared\Markup::errors($article->getErrors(), "metaKeywords"))
+			->set("error_related_picture", \Framework\Shared\Markup::errors($article->getErrors(), "relatedPicture"))
 			
 			->set("post_continent", RequestMethods::post("continent"))
 			->set("post_title", RequestMethods::post("title"))
@@ -79,6 +81,7 @@ class Admin_article extends Admin_common {
 			->set("post_author", RequestMethods::post("author"))
 			->set("post_type", RequestMethods::post("type"))
 			->set("post_meta_keywords", RequestMethods::post("meta_keywords"))
+			->set("post_related_picture", RequestMethods::post("related_picture"))
 			;
 		}
 
