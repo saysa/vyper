@@ -185,6 +185,12 @@ $routes = array(
 				"action" => "showAll",
 				"parameters" => array("news")
 		),
+		array(
+				"pattern" => "interviews",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("interview")
+		),
 		
 		// article pattern
 		array(

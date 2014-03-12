@@ -207,8 +207,8 @@
 				
 				<ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
 					<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-44 current_page_item"><a href="{{ base_url }}">Home</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item"><a href="{{ base_url }}/news">News</a></li>
-					<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11"><a href="http://newwp.dev/?page_id=2" class="sf-with-ul">Interviews<span class="sf-sub-indicator"> »</span></a>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item"><a href="{{ base_url }}news">News</a></li>
+					<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11"><a href="{{ base_url }}interviews" class="sf-with-ul">Interviews<span class="sf-sub-indicator"> »</span></a>
 						<ul class="sub-menu" style="visibility: hidden; display: none;">
 							<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="http://newwp.dev/?page_id=2">Page d’exemple</a></li>
 						</ul>
