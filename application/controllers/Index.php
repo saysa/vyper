@@ -62,7 +62,9 @@ class Index extends \Framework\Shared\Controller {
 		
 		foreach ($articles_carousel as $article)
 		{
-			$image = Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+			
+			$image_path = Picture::get_path($article->relatedPicture);
+			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			
 			$article->stringURL = StringMethods::filterURL($article->title);
 			

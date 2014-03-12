@@ -73,4 +73,18 @@ class Picture extends Model {
 	 * @type integer
 	 */
 	protected $_height;
+	
+	/**
+	 * Returns "{$year}/{$month}" string
+	 * @param integer $id
+	 * @return string
+	 */
+	public static function get_path($id)
+	{
+		$picture = Picture::first(array("id=?"=>$id));
+		$year  = substr($picture->created, 0, 4);
+		$month = substr($picture->created, 5, 2);
+	
+		return "{$year}/{$month}/";
+	}
 }
