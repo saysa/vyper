@@ -171,11 +171,19 @@ $routes = array(
 				"controller" => "auth",
 				"action" 	 => "register"
 		),
-		array(
+		/*array(
 				"name" 		 => "news",
 				"pattern"    => "news",
 				"controller" => "news",
 				"action" 	 => "index"
+		),*/
+		
+		// news all
+		array(
+				"pattern" => "news",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("news")
 		),
 		
 		// article pattern

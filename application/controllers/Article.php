@@ -5,6 +5,7 @@ namespace application\controllers;
 use application\models\Article as model_Article;
 use application\models\Picture;
 use Framework\StringMethods;
+use application\models\ArticleType;
 
 class Article extends \Framework\Shared\Controller {
 	
@@ -56,6 +57,30 @@ class Article extends \Framework\Shared\Controller {
 		;
 		
 		
+	}
+	
+	public function showAll($type)
+	{
+		$view = $this->getActionView();
+		
+		$articleTypeId = ArticleType::first(array("name=?" => $type))->id;
+		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "releaseDate", "desc");
+		
+		foreach ($articles as $article)
+		{
+			/* Set front Release Date */
+			$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+			
+			$image_path = Picture::get_path($article->relatedPicture);
+			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+			$article->relatedPicture = $image;
+		}
+		
+		$view
+		->set("category", ucfirst($type))
+		->set("articles", $articles)
+		->set("int_i", 1)
+		;
 	}
 }
 
