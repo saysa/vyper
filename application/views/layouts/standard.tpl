@@ -322,18 +322,22 @@
 									<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="5" />								</a>
 								
 								<div class="post-info">
-																	
-									<div class="title">
-										<h2><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h2>
-										<div class="sep"></div>
-									</div>								
 									
 									<div class="post-excerpt">
-										{{ article.getDescription }} 										
-									</div>
+													
+										<div class="title">
+											<h2><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h2>
+											<div class="sep"></div>
+										</div>								
 									
-									<div class="read-more">
-										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
+										<div class="main-slider-description">
+										{{ article.getDescription }} 										
+										</div>
+									
+										<div class="read-more">
+											<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
+										</div>
+									
 									</div>
 									
 								</div>	
