@@ -319,7 +319,7 @@
 						{% for article in articles %}
 						<div class="item">
 								<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" >
-									<img width="780" height="400" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="5" />								</a>
+									<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="5" />								</a>
 								
 								<div class="post-info">
 																	
@@ -382,32 +382,20 @@
 			
 							<div id="widget-tab1-content" class="tab-content" style="display: block;">	
 								<ul class="list post-list">
-										
+								
+									{% for article in recent_articles %}
 									<li>
 										<div class="thumbnail">
-											<img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/5-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="5">							
+											<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle }}">							
 										</div>
 										<div class="post-right">
-											<h5><a href="http://demo.fairpixels.com/discover/2013/09/ellie/">Ellie looks younger than before</a></h5>
+											<h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h5>
 											<div class="entry-meta">
-												<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>						 
+												<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>						 
 											</div>
 										</div>
 									</li>
-										
-									<li>
-										<div class="thumbnail">
-											<img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/3-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="3">
-										</div>
-										<div class="post-right">
-											<h5><a href="http://demo.fairpixels.com/discover/2013/09/villain/">A new female villain</a></h5>
-											<div class="entry-meta">
-												<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>
-												<span class="comments"><i class="icon-comments"></i><a href="http://demo.fairpixels.com/discover/2013/09/villain/#comments" title="Comment on A new female villain">1</a>										</span>		
-																		 
-											</div>
-										</div>
-									</li>
+									{% endfor %}
 						
 								</ul>
 							</div>

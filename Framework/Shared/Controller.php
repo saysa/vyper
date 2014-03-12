@@ -11,6 +11,8 @@ use Framework\Registry;
 use Framework\Router as Router;
 use application\models\Event;
 use application\models\Picture;
+use application\models\Article;
+use Framework\StringMethods;
 
 
 class Controller extends \Framework\Controller {
@@ -113,7 +115,9 @@ class Controller extends \Framework\Controller {
 				}
 			}
 			
-			//$article = Article::first(array("id=?" => $id));
+			/**
+			 * Side Next Event
+			 */
 			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), "date", null, "0,1");
 			if (sizeof($event) > 0) {
 				
@@ -130,6 +134,22 @@ class Controller extends \Framework\Controller {
 				}
 			}
 			
+			/**
+			 * Side recent articles
+			 */
+			$recent_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,5");
+			foreach ($recent_articles as $article)
+			{
+				/* Set front Release Date */
+				$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+				
+				$article->stringURL = StringMethods::filterURL($article->title);
+				
+				$image_path = Picture::get_path($article->relatedPicture);
+				$image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+				$article->relatedPicture = $image;
+			}
+			$layout->set("recent_articles", $recent_articles);
 			
 			// set genreric path to the view
 			$controller->getLayoutView()->set("base_url", BASE_URL);
