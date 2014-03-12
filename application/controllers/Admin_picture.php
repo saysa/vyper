@@ -33,15 +33,35 @@ class Admin_picture extends Admin_common {
 				{
 					$file = $_FILES[$name];
 					$path = APP_PATH . "/public/uploads/pic/";
+					$year = date("Y", time());
+					$month = date("m", time());
 	
 					$time = time();
 					$rd = rand(0, 9999);
 					$extension = pathinfo($file["name"], PATHINFO_EXTENSION);
 					$filename = "{$rd}-{$time}.{$extension}";
+					
+					if (!is_dir("{$path}{$year}")) {
+						mkdir("{$path}{$year}");
+					}
+					
+					if (!is_dir("{$path}{$year}/{$month}")) {
+						mkdir("{$path}{$year}/{$month}");
+					}
 	
-					if (move_uploaded_file($file["tmp_name"], $path.$filename))
+					if (move_uploaded_file($file["tmp_name"], "{$path}{$year}/{$month}/{$filename}"))
 					{
-						$meta = getimagesize($path.$filename);
+						/* Create 75x75 format */
+						$imagine = new \Imagine\Gd\Imagine();
+						$size = new \Imagine\Image\Box(75, 75);
+						$mode = \Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND;
+						$imagine
+						->open("{$path}{$year}/{$month}/{$filename}")
+						->thumbnail($size, $mode)
+						->save("{$path}{$year}/{$month}/75x75-{$rd}-{$time}.{$extension}");
+						/* End Create 75x75 format */
+						
+						$meta = getimagesize("{$path}{$year}/{$month}/{$filename}");
 	
 						if ($meta)
 						{
