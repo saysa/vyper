@@ -74,5 +74,5 @@
 
 
 
-<div class="fb-comments" data-href="http://vyper.dev{{ server_request_uri }}" data-numposts="15" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
 
