@@ -253,6 +253,10 @@ class StringMethods {
 		$titre_url=str_replace  ( "Ù"  , "u" , $titre_url  );
 		$titre_url=str_replace  ( "Û"  , "u" , $titre_url  );
 		$titre_url=str_replace  ( "Ü"  , "u" , $titre_url  );
+		
+		$titre_url=str_replace  ( "("  , "" , $titre_url  );
+		$titre_url=str_replace  ( ")"  , "" , $titre_url  );
+		$titre_url=str_replace  ( ";"  , "" , $titre_url  );
 	
 		$titre_url = urlencode($titre_url);
 	
