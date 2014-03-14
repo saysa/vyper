@@ -152,6 +152,7 @@ class Article extends Model {
 	 * @column
 	 * @readwrite
 	 * @type integer
+	 * @validate required
 	 * 
 	 * @related Picture
 	 */

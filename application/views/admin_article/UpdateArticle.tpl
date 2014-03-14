@@ -173,6 +173,10 @@
 							</div>
 						</div>
 						
+						<div class="row">
+							<img src="{{ base_url }}uploads/pic/{{ current_image }}" alt="Current picture" />
+						</div>
+						
 						<div class="form-actions">
 						  <input type="hidden" name="update" value="update">
 						  <button type="submit" class="btn btn-primary">Save article</button>

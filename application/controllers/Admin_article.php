@@ -191,12 +191,16 @@ class Admin_article extends Admin_common {
 			
 		}
 		
+		$image_path = Picture::get_path($article->relatedPicture);
+		
+		
 		
 		$continents = Continent::all();
 		$typeArticles = ArticleType::all();
 		$themes = Theme::all(array("deleted=?"=>false));
 		
 		$view->set("article", $article)
+		->set("current_image", $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename)
 			->set("continents", $continents)
 			->set("themes", $themes)
 			->set("typeArticles", $typeArticles);
