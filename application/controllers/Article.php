@@ -95,6 +95,7 @@ class Article extends \Framework\Shared\Controller {
 			$image_path = Picture::get_path($article->relatedPicture);
 			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			$article->relatedPicture = $image;
+			$article->stringURL = StringMethods::filterURL($article->title);
 		}
 		
 		$view
