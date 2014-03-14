@@ -99,14 +99,11 @@
 					</div> 
 					<div class="social">
 						<ul class="list">
-							<li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-							<li class="fb"><a href="#"><i class="icon-facebook"></i></a></li>
+							<li class="twitter"><a href="{{ vyper_twitter }}"><i class="icon-twitter"></i></a></li>
+							<li class="fb"><a href="{{ vyper_facebook }}"><i class="icon-facebook"></i></a></li>
 							<li class="gplus"><a href="#"><i class="icon-google-plus"></i></a></li>
-							<li class="linkedin"><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li class="pinterest"><a href="#"><i class="icon-pinterest"></i></a></li>
-							<li class="instagram"><a href="#"><i class="icon-instagram"></i></a></li>
-							<li class="dribbble"><a href="#"><i class="icon-dribbble"></i></a></li>
-							<li class="youtube"><a href="#"><i class="icon-youtube"></i></a></li>										
+							<li class="youtube"><a href="{{ vyper_youtube }}"><i class="icon-youtube"></i></a></li>										
 						</ul>
 					</div>
 			</div>
@@ -127,7 +124,7 @@
 						<div class="ticker-icon">					
 							<i class="icon-rocket"></i>					
 						</div>								
-						<h6>Latest</h6>
+						<h6>En ce moment</h6>
 					</div>		
 			
 					<div class="tickercontainer"><div class="mask">
@@ -444,7 +441,7 @@
 	   				{% endif %}
 	   				
 	   				<aside id="fairpixels_flickr_widget-2" class="widget widget_flickr">
-	   					<div class="widget-title"><h4>Gallerie</h4></div>		
+	   					<div class="widget-title"><h4>Galerie</h4></div>		
 	   					
 						<div class="flickr_stream">  
 							
@@ -500,13 +497,13 @@
         			<div class="footer-right">
         				<ul class="list">
         					<li class="twitter">
-        						<a href="https://twitter.com/VYPER_MusicJapa"><i class="icon-twitter"></i></a>
+        						<a href="{{ vyper_twitter }}"><i class="icon-twitter"></i></a>
         					</li>
         					<li class="fb">
-        						<a href="https://www.facebook.com/vypermusicjapan"><i class="icon-facebook"></i></a>
+        						<a href="{{ vyper_facebook }}"><i class="icon-facebook"></i></a>
         					</li>
         					<li class="youtube">
-        						<a href="http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw"><i class="icon-youtube"></i></a>
+        						<a href="{{ vyper_youtube }}"><i class="icon-youtube"></i></a>
         					</li>
         				</ul>
         			</div>

@@ -162,11 +162,14 @@ class Controller extends \Framework\Controller {
 			$layout->set("ticker_articles", $ticker_articles);
 			
 			// set genreric path to the view
-			$controller->getLayoutView()->set("base_url", BASE_URL);
+			$layout->set("base_url", BASE_URL);
 			$controller->getActionView()->set("base_url", BASE_URL);
-			$controller->getLayoutView()->set("path_css", CSS);
-			$controller->getLayoutView()->set("path_js" , JS);
-			$controller->getLayoutView()->set("path_img" , IMG);
+			$layout->set("path_css", CSS);
+			$layout->set("path_js" , JS);
+			$layout->set("path_img" , IMG);
+			$layout->set("vyper_twitter", "https://twitter.com/VYPER_MusicJapa");
+			$layout->set("vyper_facebook", "https://www.facebook.com/vypermusicjapan");
+			$layout->set("vyper_youtube", "http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw");
 
 		});
 
