@@ -215,6 +215,18 @@ $routes = array(
 				"action" => "showAll",
 				"parameters" => array("live report", "live-reports")
 		),
+		array(
+				"pattern" => "chroniques",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("chronique", "chroniques")
+		),
+		array(
+				"pattern" => "chroniques/page/:p",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("chronique", "chroniques")
+		),
 		
 		// article pattern
 		array(
