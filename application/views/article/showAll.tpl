@@ -42,3 +42,5 @@
 	</div>
 {% endfor %}
 </div>
+
+{{ pagination }}

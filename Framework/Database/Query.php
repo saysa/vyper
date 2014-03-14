@@ -131,15 +131,17 @@ class Query extends Base {
 		return $this;
 	}
 	
-	public function limit($limit, $page=1)
+	public function limit($limit, $page=false)
 	{
-		if (empty($limit))
+		if (empty($limit) && $limit!="0")
 		{
 			throw new Exception\Argument("Invalid argument");
 		}
 		
 		$this->_limit = $limit;
-		$this->_offset = $limit * ($page - 1);
+		//$this->_offset = $limit * ($page - 1);
+	
+		$this->_offset = $page;
 		
 		return $this;
 	}
@@ -222,7 +224,7 @@ class Query extends Base {
 		}
 		
 		$_limit = $this->limit;
-		if (!empty($_limit))
+		if (!empty($_limit) || $_limit == "0")
 		{
 			$_offset = $this->offset;
 			if ($_offset)
@@ -234,6 +236,7 @@ class Query extends Base {
 			}
 		}
 		
+		//echo sprintf($template, $fields, $this->from, $join, $where, $order, $limit) . " <br />";
 		return sprintf($template, $fields, $this->from, $join, $where, $order, $limit);
 	}
 	

@@ -6,6 +6,7 @@ use application\models\Article as model_Article;
 use application\models\Picture;
 use Framework\StringMethods;
 use application\models\ArticleType;
+use Pagination\Pagination;
 
 class Article extends \Framework\Shared\Controller {
 	
@@ -59,12 +60,32 @@ class Article extends \Framework\Shared\Controller {
 		
 	}
 	
-	public function showAll($type)
+	public function showAll($type, $url_pattern, $p = null)
 	{
 		$view = $this->getActionView();
-		
 		$articleTypeId = ArticleType::first(array("name=?" => $type))->id;
-		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "releaseDate", "desc");
+		
+		/*
+		 * Pagination
+		 */
+		$page_name = BASE_URL . $url_pattern . "/page/%s";
+		$current_page = (isset($p))?$p:1;
+		$total_posts = model_Article::count(array("type=?" => $articleTypeId));
+		$pagination = new Pagination($page_name, $current_page, $total_posts);
+		$pagination = $pagination->display();
+		
+		/*
+		 * Select data rows
+		 */
+		$from = (string) ($current_page-1)*4;
+		if ($current_page == null || $from == "0") {$from = "0";}
+		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "releaseDate", "desc", $from, 4);
+		
+		if (sizeof($articles) == 0)
+		{
+			self::redirect("home");
+		}
+		
 		
 		foreach ($articles as $article)
 		{
@@ -80,6 +101,7 @@ class Article extends \Framework\Shared\Controller {
 		->set("category", ucfirst($type))
 		->set("articles", $articles)
 		->set("int_i", 1)
+		->set("pagination", $pagination)
 		;
 	}
 }

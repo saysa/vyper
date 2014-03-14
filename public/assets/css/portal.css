@@ -2903,3 +2903,7 @@ h6{
 .main-slider-description {
 	margin: 10px 0 20px;
 }
+
+.pagination {
+	text-align: center;
+}

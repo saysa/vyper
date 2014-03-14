@@ -183,13 +183,25 @@ $routes = array(
 				"pattern" => "news",
 				"controller" => "article",
 				"action" => "showAll",
-				"parameters" => array("news")
+				"parameters" => array("news", "news")
+		),
+		array(
+				"pattern" => "news/page/:p",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("news", "news")
 		),
 		array(
 				"pattern" => "interviews",
 				"controller" => "article",
 				"action" => "showAll",
-				"parameters" => array("interview")
+				"parameters" => array("interview", "interviews")
+		),
+		array(
+				"pattern" => "interviews/page/:p",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("interview", "interviews")
 		),
 		
 		// article pattern
