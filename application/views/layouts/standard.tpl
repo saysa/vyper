@@ -131,35 +131,16 @@
 					</div>		
 			
 					<div class="tickercontainer"><div class="mask">
-						<ul id="ticker-posts" class="newsticker" style="width: 1711px; left: -600.1500000000001px;">
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/ellie/" rel="bookmark">Ellie looks younger than before</a>
-								<div class="sep"></div>
-							</li>							
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/villain/" rel="bookmark">A new female villain</a>
-								<div class="sep"></div>
-							</li>							
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/hallway/" rel="bookmark">The clogged hallway</a>
-								<div class="sep"></div>
-							</li>							
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/fortune-2/" rel="bookmark">Drake’s Fortune hunting</a>
-								<div class="sep"></div>
-							</li>							
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/fortune/" rel="bookmark">Drake’s Fortune screenshot</a>
-								<div class="sep"></div>
-							</li>							
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/so-real/" rel="bookmark">She looks so real</a>
-								<div class="sep"></div>
-							</li>							
-							<li>
-								<a href="http://demo.fairpixels.com/discover/2013/09/amazing-graphics/" rel="bookmark">Amazing graphics in the game</a>
-								<div class="sep"></div>
-							</li>							
+						<ul id="ticker-posts" class="newsticker" >
+							
+							{% for article in ticker_articles %}
+								<li>
+									<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+									<div class="sep"></div>
+								</li>
+							{% endfor %}
+							
+										
 						</ul>
 					</div></div>
 

@@ -151,6 +151,16 @@ class Controller extends \Framework\Controller {
 			}
 			$layout->set("recent_articles", $recent_articles);
 			
+			/**
+			 * Ticker articles
+			 */
+			$ticker_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,10");
+			foreach ($ticker_articles as $article)
+			{
+				$article->stringURL = StringMethods::filterURL($article->title);
+			}
+			$layout->set("ticker_articles", $ticker_articles);
+			
 			// set genreric path to the view
 			$controller->getLayoutView()->set("base_url", BASE_URL);
 			$controller->getActionView()->set("base_url", BASE_URL);
