@@ -203,6 +203,18 @@ $routes = array(
 				"action" => "showAll",
 				"parameters" => array("interview", "interviews")
 		),
+		array(
+				"pattern" => "live-reports",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("live report", "live-reports")
+		),
+		array(
+				"pattern" => "live-reports/page/:p",
+				"controller" => "article",
+				"action" => "showAll",
+				"parameters" => array("live report", "live-reports")
+		),
 		
 		// article pattern
 		array(

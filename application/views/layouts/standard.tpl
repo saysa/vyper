@@ -213,7 +213,7 @@
 							<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="http://newwp.dev/?page_id=2">Page d’exemple</a></li>
 						</ul>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Live Reports</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}live-reports">Live Reports</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Chroniques</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Galerie</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Artistes</a></li>
