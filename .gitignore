@@ -1,6 +1,7 @@
 .settings
 .buildpath
 .project
+.idea
 
 INSTALL.txt
 LICENSE.txt
