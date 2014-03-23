@@ -31,6 +31,36 @@ class Artist extends Model {
 	 * @label name
 	 */
 	protected $_name;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
+     */
+    protected $_profile;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
+     */
+    protected $_biography;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 255
+     */
+    protected $_author;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 255
+     */
+    protected $_translator;
 	
 	/**
 	 * @column
@@ -42,4 +72,14 @@ class Artist extends Model {
 	 * @label keywords
 	 */
 	protected $_keywords;
+
+    /**
+     * @column
+     * @readwrite
+     * @type integer
+     * @validate required
+     *
+     * @related Picture
+     */
+    protected $_relatedPicture;
 }
