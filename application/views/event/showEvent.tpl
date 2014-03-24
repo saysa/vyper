@@ -6,7 +6,7 @@
 			<div class="entry-meta">
 				
 				<div class="left">
-					<span class="date"><i class="icon-calendar"></i> September 25, 2013</span>
+					<span class="date"><i class="icon-calendar"></i> {{ event.getDate }}</span>
 					
 					<span class="comments">
 							<i class="icon-comments"></i>
@@ -58,7 +58,7 @@
 				{{ event.getDescription }}
 
         <div class="map">
-            <iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Le+Divan+Du+Monde&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
+            <iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q={{ googlemap }}&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
         </div>
 
 			</div>
