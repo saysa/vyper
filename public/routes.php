@@ -249,6 +249,13 @@ $routes = array(
 				"controller" => "event",
 				"action" => "showEvent"
 		),
+
+        // artist pattern
+        array(
+            "pattern" => "artist/:id/:p.html",
+            "controller" => "artist",
+            "action" => "showArtist"
+        ),
 		
 		
 		array(

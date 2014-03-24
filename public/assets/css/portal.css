@@ -246,6 +246,7 @@ h6{
 	height: 75px;
 }
 
+
 /*======== Common Elements =========*/
 .main-color{
 	color: #53C5C5;
@@ -2906,4 +2907,9 @@ h6{
 
 .pagination {
 	text-align: center;
+}
+
+.attachment-fp320_180{
+    width: 320px;
+    height: 180px;
 }
