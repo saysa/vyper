@@ -257,11 +257,11 @@ h6{
 }
 
 .second-color{
-	color: #F97E76;
+	color: #E16D64;
 }
 
 .second-color-bg{
-	background: #F97E76;
+	background: #E16D64;
 }
 
 .button {
@@ -954,12 +954,12 @@ h6{
 
 .cat-header{
 	overflow: hidden;
-	border-bottom: 2px solid #F97E76;
+	border-bottom: 2px solid #E16D64;
 	margin-bottom: 15px;
 }
 
 .cat-header .cat-title{
-	background: #F97E76;
+	background: #E16D64;
 	float: left;
 	padding: 5px 10px;
 	color: #FFFFFF;
@@ -1108,7 +1108,7 @@ h6{
 /* ========= Posts Archive ========= */ 
 .archive-header{
 	margin-bottom: 20px;
-	border-bottom: 2px solid #F97E76;
+	border-bottom: 2px solid #E16D64;
 	padding-bottom: 7px;
 }
 
@@ -1161,7 +1161,7 @@ h6{
 
 .pagination a:hover{
 	color: #FFFFFF;
-	background: #F97E76;
+	background: #E16D64;
 }
 
 .pagination  .page-numbers {
@@ -1174,7 +1174,7 @@ h6{
 }
 
 .pagination .current {
-	background: #F97E76;
+	background: #E16D64;
 	color: #ffffff;
 }
 
@@ -1716,12 +1716,12 @@ h6{
 
 #sidebar .widget .widget-title{
 	overflow: hidden;
-	border-bottom: 2px solid #F97E76;
+	border-bottom: 2px solid #E16D64;
 	margin-bottom: 15px;
 }
 
 #sidebar .widget .widget-title h4{
-	background: #F97E76;
+	background: #E16D64;
 	float: left;
 	padding: 5px 10px;
 	color: #FFFFFF;
@@ -2035,7 +2035,7 @@ h6{
 }
 
 .widget_tabs .active {
-	background: #F97E76;
+	background: #E16D64;
 }
 
 .widget_tabs .widget-tabs-title-container ul li a{
@@ -2912,4 +2912,22 @@ h6{
 .attachment-fp320_180{
     width: 320px;
     height: 180px;
+}
+
+
+@font-face {
+  font-family: 'Interstate';
+  src: url('../fonts/interstate.ttf');
+}
+
+h5 a, h3 a, header h2 {
+    font-family: 'Interstate';
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+#sidebar .widget .widget-title h4, .primary-menu ul li a {
+    font-family: 'Interstate';
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
