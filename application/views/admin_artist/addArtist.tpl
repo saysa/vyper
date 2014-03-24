@@ -22,6 +22,46 @@
 								</div>
 							</div>
 						</div>
+
+                        <!-- Profile -->
+                        <div class="row">
+                            <div class="form-group col-lg-9{%if error_profile %} has-error{% endif %}">
+								<label class="control-label" for="profile">Profile</label>
+								<div class="controls">
+								  <textarea class="form-control" name="profile" id="profile" rows="3" placeholder="Profile">{{ post_profile }}</textarea>
+								  {{ error_profile }}
+								</div>
+							</div>
+						</div>
+
+						<!-- Biographie -->
+						<div class="form-group hidden-phone{%if error_biography %} has-error{% endif %}">
+						  <label class="control-label" for="text">Biography</label>
+						  <div class="controls">
+							<textarea class="cleditor" name="biography" id="biography">{{ post_biography }}</textarea>
+                            {{ error_biography }}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Author -->
+                            <div class="form-group col-lg-3{%if error_author %} has-error{% endif %}">
+                                            <label class="control-label" for="author">Author</label>
+                                            <div class="controls">
+                                              <input class="form-control focused" id="author" name="author" type="text" placeholder="Author" value="{{ post_author }}">
+                                {{ error_author }}
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-1">
+                        </div>
+                        <!-- Translator -->
+                        <div class="form-group col-lg-4">
+                            <label class="control-label" for="translator">Translator</label>
+                            <div class="controls">
+                                <input class="form-control focused" id="translator" name="translator" type="text" placeholder="Translator">
+                            </div>
+                        </div>
+                        </div>
 						
 						<!-- Keywords -->
 						<div class="row">
@@ -33,6 +73,17 @@
 								</div>
 							</div>
 						</div>
+
+                        <div class="row">
+                            <!-- Related Picture -->
+                            <div class="form-group col-lg-3">
+                                <label class="control-label" for="related_picture">Related Picture</label>
+                                <div class="controls">
+                                    <input class="form-control" id="related_picture" name="related_picture" type="text" placeholder="Related Picture" value="{{ post_related_picture }}"> <a href="/_admin_/pictures" target="_blank">View Pictures</a>
+                                    {{ error_related_picture }}
+                                </div>
+                            </div>
+                        </div>
 							
 						
 						<div class="form-actions">

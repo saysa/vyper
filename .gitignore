@@ -1,6 +1,9 @@
 .settings
 .buildpath
 .project
+.idea/*
+.idea/workspace.xml
+.idea/tasks.xml
 
 INSTALL.txt
 LICENSE.txt

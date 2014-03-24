@@ -3,6 +3,7 @@
 namespace application\controllers;
 
 use application\models\Article as model_Article;
+use application\models\ArticleVisite;
 use application\models\Picture;
 use Framework\StringMethods;
 use application\models\ArticleType;
@@ -23,6 +24,27 @@ class Article extends \Framework\Shared\Controller {
 		{
 			self::redirect("home");
 		}
+
+        /* Incremented visit counter */
+        $time = time();
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $waiting_time = $time - 3600; // 1 hour
+
+        $visite = ArticleVisite::count(array("articleId=?" => $id, "ip=?" => $ip, "timestampVisit>?" => $waiting_time));
+
+        if ($visite=="0")
+        {
+            $articleVisite = new ArticleVisite(array(
+                "articleId"      => $id,
+                "ip" 	         => $ip,
+                "timestampVisit" => $time
+            ));
+
+            if ($articleVisite->validate())
+            {
+                $articleVisite->save();
+            }
+        }
 		
 		/* Set front Release Date */
 		$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);

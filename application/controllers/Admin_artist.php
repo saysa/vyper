@@ -18,7 +18,7 @@ class Admin_artist extends Admin_common {
 	public function showArtists()
 	{
 		$view = $this->getActionView();
-		
+
 		$artists = Artist::all(array("deleted=?"=>false));
 		
 		
@@ -47,12 +47,19 @@ class Admin_artist extends Admin_common {
 	{
 		// code
 		$view = $this-> getActionView();
+
+
 	
 		if (RequestMethods::post("add"))
 		{
 			$artist = new Artist(array(
-					"name" => RequestMethods::post("name"),
-					"keywords" => RequestMethods::post("keywords")
+					"name"           => RequestMethods::post("name"),
+                    "profile"        => RequestMethods::post("profile"),
+                    "biography"      => RequestMethods::post("biography"),
+                    "author"         => RequestMethods::post("author"),
+                    "translator"     => RequestMethods::post("translator"),
+					"keywords"       => RequestMethods::post("keywords"),
+                    "relatedPicture" => RequestMethods::post("related_picture")
 			));
 		
 			if ($artist->validate())
@@ -65,7 +72,12 @@ class Admin_artist extends Admin_common {
 			->set("error_keywords", \Framework\Shared\Markup::errors($artist->getErrors(), "keywords"))
 				
 			->set("post_name",     RequestMethods::post("name"))
-			->set("post_keywords", RequestMethods::post("keywords"))
+			->set("post_profile", RequestMethods::post("profile"))
+            ->set("post_biography",     RequestMethods::post("biography"))
+            ->set("post_author", RequestMethods::post("author"))
+            ->set("post_translator",     RequestMethods::post("translator"))
+            ->set("post_keywords", RequestMethods::post("keywords"))
+            ->set("post_related_picture", RequestMethods::post("related_picture"))
 			;
 		}
 		

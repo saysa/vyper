@@ -256,7 +256,8 @@ class Model extends \Framework\Model {
 	
 	public function save()
 	{
-		$primary = $this-> getPrimaryColumn();
+        date_default_timezone_set('Europe/Paris');
+        $primary = $this-> getPrimaryColumn();
 		$raw = $primary["raw"];
 		
 		if (empty($this-> $raw))
