@@ -2,6 +2,7 @@
 
 namespace application\controllers;
 
+use application\models\Picture;
 use Framework\RequestMethods;
 
 use application\models\Artist;
@@ -107,8 +108,13 @@ class Admin_artist extends Admin_common {
 		{
 	
 			$artist->name = RequestMethods::post("name");
+            $artist->profile = RequestMethods::post("profile");
+            $artist->biography = RequestMethods::post("biography");
+            $artist->author = RequestMethods::post("author");
+            $artist->translator = RequestMethods::post("translator");
+            $artist->relatedPicture = RequestMethods::post("related_picture");
 			$artist->keywords = RequestMethods::post("keywords");
-			
+
 			if ($artist->validate())
 			{
 				$artist->save();
@@ -117,14 +123,16 @@ class Admin_artist extends Admin_common {
 			$view
 			->set("error_name",       		\Framework\Shared\Markup::errors($artist->getErrors(), "name"))
 			->set("error_keywords",  		\Framework\Shared\Markup::errors($artist->getErrors(), "keywords"))
+            ->set("error_related_picture",  \Framework\Shared\Markup::errors($artist->getErrors(), "relatedPicture"))
 			;
 	
 		}
-	
-		
+
+        $image_path = Picture::get_path($artist->relatedPicture);
 	
 		$view
 		->set("artist", $artist)
+        ->set("current_image", $image_path . Picture::first(array("id=?"=>$artist->relatedPicture))->filename)
 		;
 	
 		// layout
