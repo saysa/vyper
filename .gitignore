@@ -4,6 +4,8 @@
 .idea/*
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/
+.idea
 
 INSTALL.txt
 LICENSE.txt
