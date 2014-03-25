@@ -2924,19 +2924,65 @@ h5 a, h3 a, header h2,
 .main-slider .post-info h2 a,
 .header-carousel .item a,
 .cat-header h4,
-header h1
+header h1,
+#sidebar .widget .widget-title h4, .primary-menu ul li a
 {
     font-family: 'Interstate';
     letter-spacing: 0;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
-#sidebar .widget .widget-title h4, .primary-menu ul li a {
-    font-family: 'Interstate';
-    letter-spacing: 0;
-    text-transform: uppercase;
-}
+
 
 body {
     background: #FAFAfA url('images/bg16.png') repeat 0 0 !important
+}
+
+.artist-thumbnail {
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    padding: 5px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+}
+
+.artist-thumbnail .ribbon-caption {
+    left: 5px;
+    bottom: 5px;
+    position: absolute;
+    background-color: #333;
+    color: white;
+}
+
+.ribbon-caption-title {
+    font-family: 'Interstate';
+    letter-spacing: 0;
+    text-transform: uppercase;
+    float: left;
+    position: relative;
+    padding: 0.5em 10px;
+    font-size: 0.821em;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+.ribbon-caption-title:visited {
+    color: white;
+}
+.ribbon-caption-title:hover {
+    color: black;
+}
+
+.artists-img {
+    width: 162px;
+    height: 108px;
 }

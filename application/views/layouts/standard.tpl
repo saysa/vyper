@@ -194,7 +194,7 @@
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}live-reports">Live Reports</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}chroniques">Chroniques</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Galerie</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Artistes</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}artists">Artistes</a></li>
 				</ul>							
 			</div>
 			</nav>

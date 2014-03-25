@@ -256,7 +256,20 @@ $routes = array(
             "controller" => "artist",
             "action" => "showArtist"
         ),
-		
+
+        // artist all
+        array(
+            "pattern" => "artists",
+            "controller" => "artist",
+            "action" => "showAll",
+            "parameters" => array("artists", "artists")
+        ),
+        array(
+            "pattern" => "artists/page/:p",
+            "controller" => "artist",
+            "action" => "showAll",
+            "parameters" => array("artists", "artists")
+        ),
 		
 		array(
 				"pattern" => "news/delete/:id",

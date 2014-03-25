@@ -82,4 +82,9 @@ class Artist extends Model {
      * @related Picture
      */
     protected $_relatedPicture;
+
+    /**
+     * @readwrite
+     */
+    protected $_stringURL;
 }
