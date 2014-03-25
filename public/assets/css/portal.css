@@ -2920,7 +2920,12 @@ h6{
   src: url('../fonts/interstate.ttf');
 }
 
-h5 a, h3 a, header h2 {
+h5 a, h3 a, header h2,
+.main-slider .post-info h2 a,
+.header-carousel .item a,
+.cat-header h4,
+header h1
+{
     font-family: 'Interstate';
     letter-spacing: 0;
     text-transform: uppercase;
@@ -2930,4 +2935,8 @@ h5 a, h3 a, header h2 {
     font-family: 'Interstate';
     letter-spacing: 0;
     text-transform: uppercase;
+}
+
+body {
+    background: #FAFAfA url('images/bg16.png') repeat 0 0 !important
 }
