@@ -105,7 +105,7 @@
                     <tr>
                     <td>{{ album.getId }}</td>
                     <td>{{ album.getTitle }}</td>
-                    <td><a class="btn btn-info" href="#">
+                    <td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_album ~ album.getId }}">
                             <i class="icon-edit "></i>
                         </a></td>
                     <td><a class="btn btn-danger" href="#">

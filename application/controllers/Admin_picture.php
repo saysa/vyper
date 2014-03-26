@@ -129,10 +129,12 @@ class Admin_picture extends Admin_common {
         $albums = Album::all();
 
 		// action
-		$view->set("pictures", $pictures);
-        $view->set("albums"  , $albums);
-		$view->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
-        $view->set("link_admin_add_album",   Registry::get("router")->getPath("admin_add_album"));
+		$view->set("pictures", $pictures)
+        ->set("albums"  , $albums)
+		->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"))
+        ->set("link_admin_add_album",   Registry::get("router")->getPath("admin_add_album"))
+        ->set("link_admin_update_album", Registry::get("router")->getPath("admin_update_album"))
+        ;
 
 		// layout
 		$layout = $this-> getLayoutView();

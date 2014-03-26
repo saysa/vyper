@@ -97,6 +97,14 @@ $routes = array(
 				"controller" => "admin_artist",
 				"action" 	 => "showArtists"
 		),
+
+        // Admin album
+        array(
+            "name" 		 => "admin_update_album",
+            "pattern"    => "_admin_/album/update/:id",
+            "controller" => "admin_album",
+            "action" 	 => "updateAlbum"
+        ),
 		
 		// Admin Theme
 		array(

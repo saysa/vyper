@@ -45,28 +45,53 @@ class Admin_album extends Admin_common {
 		$layout = $this-> getLayoutView();
 		$layout->set("active_picture", true);
 	}
-	
-	/**
-	 * @before _secure, _admin
-	 */
-	public function showAlbums()
-	{
-		/*$view = $this-> getActionView();
-		$pictures = Picture::all();
-	
-		foreach ($pictures as $picture)
-		{
-			$category = PictureCategory::first(array("id=?"=>$picture->category))->name;
-			$picture->category = $category;
-		}
-		
-		// action
-		$view->set("pictures", $pictures);
-		$view->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
-	
-		// layout
-		$layout = $this-> getLayoutView();
-		$layout->set("active_picture", true);
-	    */
+
+    /**
+     * @before _secure, _admin
+     */
+    public function updateAlbum($id)
+    {
+        $view = $this-> getActionView();
+
+
+        $album = Album::first(array("id=?" => $id));
+
+        if (!$album)
+        {
+            self::redirect("admin_show_locations");
+        }
+
+
+        if (RequestMethods::post("update"))
+        {
+
+            $album->title = RequestMethods::post("title");
+            $album->category = RequestMethods::post("category");
+
+
+
+            if ($album->validate())
+            {
+
+                $album->save();
+            }
+
+            $view
+                ->set("error_title",       		\Framework\Shared\Markup::errors($album->getErrors(), "title"))
+                ->set("error_category",  		\Framework\Shared\Markup::errors($album->getErrors(), "category"))
+            ;
+
+        }
+
+        $categories = AlbumCategory::all($where = array(), $fields = array("*"), $order = "name");
+
+        $view
+            ->set("album", $album)
+            ->set("categories", $categories)
+        ;
+
+        // layout
+        $layout = $this-> getLayoutView();
+        $layout->set("active_picture", true);
     }
 }
