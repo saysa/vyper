@@ -133,8 +133,24 @@ class Controller extends \Framework\Controller {
 					$layout->set($template_var, $var);
 				}
 			}
-			
-			/**
+
+            /**
+             * Side Galerie
+             */
+            $recent_pictures = Picture::all(array("deleted=?"=>false), array("*"), "created", "desc", "0,6");
+            foreach ($recent_pictures as $picture)
+            {
+                /* Set front Release Date */
+                $image_path = Picture::get_path($picture->id);
+                $filename = $picture->filename;
+                $picture->name     = $image_path . "75x75-" . $filename;
+                $picture->filename = $image_path . $filename;
+
+            }
+            $layout->set("recent_pictures", $recent_pictures);
+
+
+            /**
 			 * Side recent articles
 			 */
 			$recent_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,5");

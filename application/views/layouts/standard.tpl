@@ -727,36 +727,16 @@
 							
 							               
                 			<ul id="flickr_thumbs" class="list flickr_thumbs">
-                				<li>
-                					<div class="widget-overlay">
-                						<a rel="lightbox[flickr-gallery]" href="http://farm8.staticflickr.com/7373/12880818725_c24a0589f7.jpg" title="Ragazze di Gavoi"><img src="http://farm8.staticflickr.com/7373/12880818725_c24a0589f7_s.jpg" alt="Ragazze di Gavoi" width="75" height="75"></a>
-                					</div>
-                				</li>
-                				<li>
-                					<div class="widget-overlay">
-                						<a rel="lightbox[flickr-gallery]" href="http://farm4.staticflickr.com/3759/12881191404_ab5c8338a1.jpg" title="El Diablo"><img src="http://farm4.staticflickr.com/3759/12881191404_ab5c8338a1_s.jpg" alt="El Diablo" width="75" height="75"></a>
-                					</div>
-                				</li>
-                				<li>
-                					<div class="widget-overlay">
-                						<a rel="lightbox[flickr-gallery]" href="http://farm4.staticflickr.com/3698/12880825873_1946a79ff6.jpg" title="Tumbarinos"><img src="http://farm4.staticflickr.com/3698/12880825873_1946a79ff6_s.jpg" alt="Tumbarinos" width="75" height="75"></a>
-                					</div>
-                				</li>
-                				<li>
-                					<div class="widget-overlay">
-                						<a rel="lightbox[flickr-gallery]" href="http://farm8.staticflickr.com/7293/12880812933_38cf513267.jpg" title="Sardinia is my Nation"><img src="http://farm8.staticflickr.com/7293/12880812933_38cf513267_s.jpg" alt="Sardinia is my Nation" width="75" height="75"></a>
-                					</div>
-                				</li>
-                				<li>
-                					<div class="widget-overlay">
-                						<a rel="lightbox[flickr-gallery]" href="http://farm3.staticflickr.com/2827/12880703455_844ac15168.jpg" title="Tumbarino"><img src="http://farm3.staticflickr.com/2827/12880703455_844ac15168_s.jpg" alt="Tumbarino" width="75" height="75"></a>
-                					</div>
-                				</li>
-                				<li>
-                					<div class="widget-overlay">
-                						<a rel="lightbox[flickr-gallery]" href="http://farm3.staticflickr.com/2856/12880850443_8a3a29876c.jpg" title="Generations"><img src="http://farm3.staticflickr.com/2856/12880850443_8a3a29876c_s.jpg" alt="Generations" width="75" height="75"></a>
-                					</div>
-                				</li>
+
+                                {% for picture in recent_pictures %}
+                                    <li>
+                                        <div class="widget-overlay">
+                                        <a rel="lightbox[flickr-gallery]" href="{{ base_url }}uploads/pic/{{ picture.getFilename }}" title=""><img src="{{ base_url }}uploads/pic/{{ picture.getName }}" alt="" width="75" height="75"></a>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+
+
                 			</ul>
             			</div>
 			
