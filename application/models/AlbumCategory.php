@@ -4,7 +4,7 @@ namespace application\models;
 
 use Framework\Shared\Model;
 
-class PictureCategory extends Model {
+class AlbumCategory extends Model {
 	
 	/**
 	 * @column

@@ -20,7 +20,7 @@ class Picture extends Model {
 	 * @type integer
 	 * @index
 	 */
-	protected $_category; // artist, concert, interview, event, other, contest
+	protected $_album; // artist, concert, interview, event, other, contest
 	
 	/**
 	 * @column

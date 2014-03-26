@@ -12,10 +12,11 @@
 	
 	<div>
 		<label>
-		Category:
-		<select name="category">
-			{% for category in categories %}
-				<option value="{{ category.getId }}">{{ category.getName }}</option> 
+		Album:
+		<select name="album">
+            <option value="-1">none</option>
+			{% for album in albums %}
+				<option value="{{ album.getId }}">{{ album.getTitle }}</option>
 			{% endfor %}
 		</select>
 		</label>

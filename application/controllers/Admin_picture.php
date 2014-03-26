@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\Album;
+use application\models\AlbumCategory;
 use Framework\Registry;
 
 use application\models\PictureCategory;
@@ -70,7 +72,7 @@ class Admin_picture extends Admin_common {
 	
 							$picture = new Picture(array(
 									"filename" => $filename,
-									"category" => RequestMethods::post("category"),
+									"album" => RequestMethods::post("album"),
 									"name" => RequestMethods::post("name"),
 									"mime" => $file["type"],
 									"size" => $file["size"],
@@ -88,8 +90,11 @@ class Admin_picture extends Admin_common {
 		}
 		
 		// tableau de models
-		$categories = PictureCategory::all($where = array(), $fields = array("*"), $order = "name");
-		$view->set("categories", $categories);
+
+        $albums = Album::all($where = array(), $fields = array("*"), $order = "title");
+
+
+        $view->set("albums", $albums);
 	
 	
 	
@@ -103,21 +108,25 @@ class Admin_picture extends Admin_common {
 	 */
 	public function showPictures()
 	{
-		$view = $this-> getActionView();
+		/*$view = $this-> getActionView();
 		$pictures = Picture::all();
 	
 		foreach ($pictures as $picture)
 		{
-			$category = PictureCategory::first(array("id=?"=>$picture->category))->name;
-			$picture->category = $category;
+			//$album = AlbumCategory::first(array("id=?"=>$picture->album))->name;
+			//$picture->album = $album;
 		}
+
+        $albums = Album::all();
 		
 		// action
 		$view->set("pictures", $pictures);
+        $view->set("albums"  , $albums);
 		$view->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
+        $view->set("link_admin_add_album",   Registry::get("router")->getPath("admin_add_album"));
 	
 		// layout
 		$layout = $this-> getLayoutView();
-		$layout->set("active_picture", true);
+		$layout->set("active_picture", true);*/
 	}
 }

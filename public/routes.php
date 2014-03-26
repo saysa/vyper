@@ -143,6 +143,14 @@ $routes = array(
 				"controller" => "admin_article",
 				"action" 	 => "showArticles"
 		),
+
+        // Admin album
+        array(
+            "name" 		 => "admin_add_album",
+            "pattern"    => "_admin_/albums/add",
+            "controller" => "admin_album",
+            "action" 	 => "addAlbum"
+        ),
 		
 		// Admin picture
 		array(
