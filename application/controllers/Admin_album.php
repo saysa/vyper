@@ -24,8 +24,9 @@ class Admin_album extends Admin_common {
 		if (RequestMethods::post("add"))
 		{
 			$album = new Album(array(
-					"title" => RequestMethods::post("title"),
-                    "category" => RequestMethods::post("category")
+					"title"       => RequestMethods::post("title"),
+                    "category"    => RequestMethods::post("category"),
+                    "description" => RequestMethods::post("description")
 			));
 	
 			if ($album->validate())
@@ -65,8 +66,9 @@ class Admin_album extends Admin_common {
         if (RequestMethods::post("update"))
         {
 
-            $album->title = RequestMethods::post("title");
-            $album->category = RequestMethods::post("category");
+            $album->title       = RequestMethods::post("title");
+            $album->category    = RequestMethods::post("category");
+            $album->description = RequestMethods::post("description");
 
 
 

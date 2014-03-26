@@ -47,7 +47,16 @@
                                             </div>
                                             </div>
 
-
+                                            <!-- Description -->
+                                            <div class="row">
+                                            <div class="form-group col-lg-9{%if error_description %} has-error{% endif %}">
+                                            <label class="control-label" for="description">Description</label>
+                                            <div class="controls">
+                                            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Description">{{ post_description }}</textarea>
+                                            {{ error_description }}
+                                    </div>
+                                </div>
+                            </div>
 
                                             <div class="form-actions">
                                             <input type="submit" class="btn btn-primary" name="add" value="Add" />

@@ -6,7 +6,6 @@ use application\models\Album as model_Album;
 use application\models\ArticleVisite;
 use application\models\Picture;
 use Framework\StringMethods;
-use application\models\ArticleType;
 use Pagination\Pagination;
 
 class Album extends \Framework\Shared\Controller {
@@ -14,8 +13,7 @@ class Album extends \Framework\Shared\Controller {
 
 	public function showAlbum($id)
 	{
-		
-		
+
 		$layout = $this->getLayoutView();
 		$view = $this->getActionView();
 		$album = model_Album::first(array("id=?" => $id));
@@ -47,7 +45,7 @@ class Album extends \Framework\Shared\Controller {
             }
         }
         */
-		
+
         $pictures = Picture::all(array("album=?" => $album->id));
         foreach($pictures as $picture)
         {

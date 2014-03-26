@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/album/showAlbum.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Admin_album.php" afterPath="$PROJECT_DIR$/application/controllers/Admin_album.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Album.php" afterPath="$PROJECT_DIR$/application/controllers/Album.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/StringMethods.php" afterPath="$PROJECT_DIR$/Framework/StringMethods.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/routes.php" afterPath="$PROJECT_DIR$/public/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/slider.css" afterPath="$PROJECT_DIR$/public/assets/css/slider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Album.php" afterPath="$PROJECT_DIR$/application/models/Album.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl" afterPath="$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl" afterPath="$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/album/showAlbum.tpl" afterPath="$PROJECT_DIR$/application/views/album/showAlbum.tpl" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,43 +33,7 @@
       <file leaf-file-name="Album.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="26" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="799">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showAll.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/album/showAll.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1088" selection-end="1117" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1258">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringMethods.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="247" column="60" selection-start="6512" selection-end="6512" vertical-scroll-proportion="-29.653847" vertical-offset="3428" max-vertical-offset="4658">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="34" selection-start="373" selection-end="373" vertical-scroll-proportion="-4.25" vertical-offset="51" max-vertical-offset="7055">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="112" selection-start="8021" selection-end="8021" vertical-scroll-proportion="17.692308" vertical-offset="3775" max-vertical-offset="13923">
+            <state line="42" column="27" selection-start="641" selection-end="654" vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
@@ -78,7 +42,7 @@
       <file leaf-file-name="Album.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="8" selection-start="1516" selection-end="1516" vertical-scroll-proportion="-24.846153" vertical-offset="459" max-vertical-offset="2091">
+            <state line="47" column="0" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-18.961538" vertical-offset="306" max-vertical-offset="2057">
               <folding>
                 <element signature="e#43#87#0" expanded="true" />
               </folding>
@@ -86,37 +50,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAlbum.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="vyper.album" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..album">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vyper.picture" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..picture">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showAlbum.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/album/showAlbum.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="85" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.6856465" vertical-offset="153" max-vertical-offset="1071">
+            <state line="52" column="31" selection-start="1564" selection-end="1564" vertical-scroll-proportion="-27.038462" vertical-offset="181" max-vertical-offset="1037">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showArticle.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
+      <file leaf-file-name="Admin_album.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Admin_album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="57" selection-start="2617" selection-end="2643" vertical-scroll-proportion="-13.076923" vertical-offset="204" max-vertical-offset="1428">
+            <state line="31" column="35" selection-start="692" selection-end="692" vertical-scroll-proportion="8.5" vertical-offset="612" max-vertical-offset="1649">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/slider.css">
+      <file leaf-file-name="UpdateArticle.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin_article/UpdateArticle.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="21" selection-start="4171" selection-end="4171" vertical-scroll-proportion="49.192307" vertical-offset="5852" max-vertical-offset="6919">
+            <state line="50" column="30" selection-start="1510" selection-end="1977" vertical-scroll-proportion="-22.884615" vertical-offset="255" max-vertical-offset="3332">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
+      <file leaf-file-name="addAlbum.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="44" selection-start="1283" selection-end="1474" vertical-scroll-proportion="-24.192308" vertical-offset="204" max-vertical-offset="2244">
+            <state line="52" column="102" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.63226575" vertical-offset="351" max-vertical-offset="1666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateAlbum.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="158" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-23.884615" vertical-offset="297" max-vertical-offset="1360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addArticle.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin_article/addArticle.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="30" selection-start="1470" selection-end="1931" vertical-scroll-proportion="-22.884615" vertical-offset="255" max-vertical-offset="3264">
               <folding />
             </state>
           </provider>
@@ -150,18 +156,18 @@
         <option value="$PROJECT_DIR$/application/models/AlbumCategory.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_picture.php" />
         <option value="$PROJECT_DIR$/application/views/admin_picture/showPictures.tpl" />
-        <option value="$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin_album.php" />
-        <option value="$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl" />
         <option value="$PROJECT_DIR$/application/views/admin_picture/addPicture.tpl" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
-        <option value="$PROJECT_DIR$/application/models/Album.php" />
         <option value="$PROJECT_DIR$/application/views/album/showAll.tpl" />
         <option value="$PROJECT_DIR$/public/routes.php" />
         <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
         <option value="$PROJECT_DIR$/public/assets/css/slider.css" />
-        <option value="$PROJECT_DIR$/application/controllers/Album.php" />
+        <option value="$PROJECT_DIR$/application/models/Album.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin_album.php" />
         <option value="$PROJECT_DIR$/application/views/album/showAlbum.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/Album.php" />
+        <option value="$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl" />
+        <option value="$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl" />
       </list>
     </option>
   </component>
@@ -198,6 +204,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -578,7 +585,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -652,7 +658,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19275825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15761448" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15921193" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -684,19 +690,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..artist">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.23314285" vertical-offset="204" max-vertical-offset="3604" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_artist/UpdateArtist.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="58" selection-start="3667" selection-end="3688" vertical-scroll-proportion="-24.653847" vertical-offset="906" max-vertical-offset="2040" />
@@ -784,14 +777,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882" />
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..album">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Shared/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="24" selection-start="476" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="4760">
@@ -804,14 +789,6 @@
         <state line="17" column="4" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="7021">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="94" selection-end="223" vertical-scroll-proportion="-2.38" vertical-offset="0" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
@@ -870,9 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_article/showArticles.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="46" selection-start="1304" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2584">
-          <folding />
-        </state>
+        <state line="45" column="46" selection-start="1304" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_picture/showPictures.tpl">
@@ -884,37 +859,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin_location.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="5" selection-start="3277" selection-end="5284" vertical-scroll-proportion="0.0" vertical-offset="2924" max-vertical-offset="3570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin_article/UpdateArticle.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="483" selection-end="1047" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="3332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1751">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="34" selection-start="0" selection-end="2423" vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="0" selection-end="2935" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1513">
-          <folding />
-        </state>
+        <state line="172" column="5" selection-start="3277" selection-end="5284" vertical-scroll-proportion="0.0" vertical-offset="2924" max-vertical-offset="3570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_picture/addPicture.tpl">
@@ -931,81 +876,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="26" selection-start="2578" selection-end="2625" vertical-scroll-proportion="0.0" vertical-offset="2884" max-vertical-offset="3740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="26" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="373" selection-end="373" vertical-scroll-proportion="-4.25" vertical-offset="51" max-vertical-offset="7055">
+        <state line="16" column="34" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="7055">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="112" selection-start="8021" selection-end="8021" vertical-scroll-proportion="17.692308" vertical-offset="3775" max-vertical-offset="13923">
+        <state line="195" column="112" selection-start="8021" selection-end="8021" vertical-scroll-proportion="0.0" vertical-offset="3775" max-vertical-offset="13923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/slider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="21" selection-start="4171" selection-end="4171" vertical-scroll-proportion="49.192307" vertical-offset="5852" max-vertical-offset="6919">
+        <state line="269" column="21" selection-start="4171" selection-end="4171" vertical-scroll-proportion="0.0" vertical-offset="5852" max-vertical-offset="6919">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="60" selection-start="6512" selection-end="6512" vertical-scroll-proportion="-29.653847" vertical-offset="3428" max-vertical-offset="4658">
+        <state line="247" column="60" selection-start="6512" selection-end="6512" vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="4658">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="44" selection-start="1283" selection-end="1474" vertical-scroll-proportion="-24.192308" vertical-offset="204" max-vertical-offset="2244">
+        <state line="54" column="44" selection-start="1283" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2329">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/album/showAll.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1088" selection-end="1117" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1258">
+        <state line="27" column="0" selection-start="1088" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="57" selection-start="2617" selection-end="2643" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="28" selection-start="609" selection-end="735" vertical-scroll-proportion="-15.615385" vertical-offset="563" max-vertical-offset="3740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="24" selection-start="94" selection-end="223" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..album">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..picture">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/album/showAlbum.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="31" selection-start="1564" selection-end="1564" vertical-scroll-proportion="-27.038462" vertical-offset="181" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Album.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="27" selection-start="641" selection-end="654" vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="952">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="8" selection-start="1516" selection-end="1516" vertical-scroll-proportion="-24.846153" vertical-offset="459" max-vertical-offset="2091">
+        <state line="47" column="0" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-18.961538" vertical-offset="306" max-vertical-offset="2057">
           <folding>
             <element signature="e#43#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="57" selection-start="2617" selection-end="2643" vertical-scroll-proportion="-13.076923" vertical-offset="204" max-vertical-offset="1428">
+        <state line="31" column="35" selection-start="692" selection-end="692" vertical-scroll-proportion="8.5" vertical-offset="612" max-vertical-offset="1649">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/album/showAlbum.tpl">
+    <entry file="file://$PROJECT_DIR$/application/views/admin_article/UpdateArticle.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="85" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.6856465" vertical-offset="153" max-vertical-offset="1071">
+        <state line="50" column="30" selection-start="1510" selection-end="1977" vertical-scroll-proportion="-22.884615" vertical-offset="255" max-vertical-offset="3332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="158" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-23.884615" vertical-offset="297" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin_article/addArticle.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="30" selection-start="1470" selection-end="1931" vertical-scroll-proportion="-22.884615" vertical-offset="255" max-vertical-offset="3264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="102" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.63226575" vertical-offset="351" max-vertical-offset="1666">
           <folding />
         </state>
       </provider>
