@@ -9,7 +9,13 @@ $routes = array(
             "pattern" => "galerie",
             "controller" => "album",
             "action" => "showAll",
-            "parameters" => array("news", "news")
+            "parameters" => array("galerie", "galerie")
+        ),
+        array(
+            "pattern" => "galerie/page/:p",
+            "controller" => "album",
+            "action" => "showAll",
+            "parameters" => array("galerie", "galerie")
         ),
         array(
             "pattern" => "album/:id/:p.html",
