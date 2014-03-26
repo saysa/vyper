@@ -4,6 +4,14 @@
 
 $routes = array(
 		
+		// albums
+        array(
+            "pattern" => "galerie",
+            "controller" => "album",
+            "action" => "showAll",
+            "parameters" => array("news", "news")
+        ),
+
 		// Ajax
 		array(
 				"name" 		 => "admin_event_artist_link",

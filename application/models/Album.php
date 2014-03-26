@@ -33,4 +33,9 @@ class Album extends Model {
      */
     protected $_category; // artist, concert, interview, event, other, contest
 
+    /**
+     * @readwrite
+     */
+    protected $_stringURL;
+
 }
