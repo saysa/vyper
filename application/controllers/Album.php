@@ -103,6 +103,12 @@ class Album extends \Framework\Shared\Controller {
             $artist->relatedPicture = $image;
             */
             $album->stringURL = StringMethods::filterURL($album->title);
+
+            $picture = Picture::first(array("album=?" => $album->id));
+            $image_path = Picture::get_path($picture->id);
+            $album->cover = $image_path . $picture->filename;
+
+
         }
 
         $view

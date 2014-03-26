@@ -47,4 +47,9 @@ class Album extends Model {
      */
     protected $_stringURL;
 
+    /**
+     * @readwrite
+     */
+    protected $_cover;
+
 }
