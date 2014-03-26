@@ -24,7 +24,8 @@ class Admin_album extends Admin_common {
 		if (RequestMethods::post("add"))
 		{
 			$album = new Album(array(
-					"title" => RequestMethods::post("title")
+					"title" => RequestMethods::post("title"),
+                    "category" => RequestMethods::post("category")
 			));
 	
 			if ($album->validate())

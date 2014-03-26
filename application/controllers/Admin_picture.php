@@ -108,25 +108,34 @@ class Admin_picture extends Admin_common {
 	 */
 	public function showPictures()
 	{
-		/*$view = $this-> getActionView();
+		$view = $this-> getActionView();
 		$pictures = Picture::all();
-	
+
+
 		foreach ($pictures as $picture)
 		{
-			//$album = AlbumCategory::first(array("id=?"=>$picture->album))->name;
-			//$picture->album = $album;
+            if (Album::first(array("id=?"=>$picture->album)))
+            {
+                $album = Album::first(array("id=?"=>$picture->album))->title;
+                $picture->album = $album;
+
+                $image_path = Picture::get_path($picture->id);
+                $picture->filename = $image_path . $picture->filename;
+               
+            }
+
 		}
 
         $albums = Album::all();
-		
+
 		// action
 		$view->set("pictures", $pictures);
         $view->set("albums"  , $albums);
 		$view->set("link_admin_add_picture", Registry::get("router")->getPath("admin_add_picture"));
         $view->set("link_admin_add_album",   Registry::get("router")->getPath("admin_add_album"));
-	
+
 		// layout
 		$layout = $this-> getLayoutView();
-		$layout->set("active_picture", true);*/
+		$layout->set("active_picture", true);
 	}
 }

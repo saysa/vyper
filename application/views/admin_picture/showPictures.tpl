@@ -25,7 +25,7 @@
 		<tr>
 			<th>ID</th>
 			<th>Date</th>
-			<th>Category</th>
+			<th>Album</th>
 			<th>Name</th>
 			<th>Preview</th>
 			<th>Modify</th>
@@ -38,7 +38,7 @@
 		<tr>
 			<td>{{ picture.getId }}</td>
 			<td>{{ picture.getModified|date('Y-m-d') }}</td>
-			<td>{{ picture.getCategory }}</td>
+			<td>{{ picture.getAlbum }}</td>
 			<td>{{ picture.getName }}</td>
 			<td><a class="btn btn-success" href="{{ base_url }}uploads/pic/{{ picture.getFilename }}"><i class="icon-zoom-in "></i></a></td>
 			<td><a class="btn btn-info" href="#">
