@@ -18,9 +18,9 @@ class Album extends \Framework\Shared\Controller {
 		
 		$layout = $this->getLayoutView();
 		$view = $this->getActionView();
-		$artist = model_Artist::first(array("id=?" => $id));
+		$album = model_Album::first(array("id=?" => $id));
 		
-		if (!$artist)
+		if (!$album)
 		{
 			self::redirect("home");
 		}
@@ -30,7 +30,8 @@ class Album extends \Framework\Shared\Controller {
         $ip = $_SERVER['REMOTE_ADDR'];
         $waiting_time = $time - 3600; // 1 hour
 
-        /*$visite = ArticleVisite::count(array("articleId=?" => $id, "ip=?" => $ip, "timestampVisit>?" => $waiting_time));
+        /*
+        $visite = ArticleVisite::count(array("articleId=?" => $id, "ip=?" => $ip, "timestampVisit>?" => $waiting_time));
 
         if ($visite=="0")
         {
@@ -47,35 +48,22 @@ class Album extends \Framework\Shared\Controller {
         }
         */
 		
-		/* Set front Release Date */
+        $pictures = Picture::all(array("album=?" => $album->id));
+        foreach($pictures as $picture)
+        {
+            $image_path = Picture::get_path($picture->id);
+            $picture->filename = $image_path . $picture->filename;
+        }
 
-		$image_path = Picture::get_path($artist->relatedPicture);
-		$image = $image_path . Picture::first(array("id=?"=>$artist->relatedPicture))->filename;
 
-        $artist->relatedPicture = $image;
-       //$artist->stringURL = StringMethods::filterURL($artist->title);
-		
-		$dimensionImage = getimagesize(BASE_URL . "uploads/pic/" . $artist->relatedPicture);
-		
-		/* vertical image OR square */
-		if($dimensionImage[0]<=$dimensionImage[1])
-		{
-			
-		}
-		/* horizontal image */
-		elseif($dimensionImage[0]>$dimensionImage[1])
-		{
-			$view->set("article_horizontal_image", "true");
-		}
-		
-		
-		$layout
-		->set("front_page_article", "true")
-		->set("artist", $artist)
+        $layout
+		->set("album", $album)
+
 		;
 		
 		$view
-		->set("artist", $artist)
+		->set("album", $album)
+        ->set("pictures", $pictures)
 		->set("server_request_uri", $_SERVER['REQUEST_URI'])
 		;
 		

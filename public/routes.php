@@ -11,6 +11,11 @@ $routes = array(
             "action" => "showAll",
             "parameters" => array("news", "news")
         ),
+        array(
+            "pattern" => "album/:id/:p.html",
+            "controller" => "album",
+            "action" => "showAlbum"
+        ),
 
 		// Ajax
 		array(

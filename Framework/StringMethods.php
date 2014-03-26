@@ -258,6 +258,7 @@ class StringMethods {
 		$titre_url=str_replace  ( ")"  , "" , $titre_url  );
 		$titre_url=str_replace  ( ";"  , "" , $titre_url  );
         $titre_url=str_replace  ( ","  , "" , $titre_url  );
+        $titre_url=str_replace  ( "."  , "" , $titre_url  );
 	
 		$titre_url = urlencode($titre_url);
 	
