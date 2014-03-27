@@ -353,7 +353,7 @@
                 <div class="main-post">
                     <div class="thumb-wrap">
                         <div class="thumb">
-                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                         </div>
 
                         <span class="comments main-color-bg">
@@ -385,7 +385,7 @@
                                 <i class="icon-eye-open"></i> 6549
                             </span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viverra. Ut vehicula quis nisi consequat rutrum. Morbi pulvinar arcu vel pellentesque dictum. Donec et placerat nunc. Integer…</p>
+                        <p>{{ article.getDescription }}</p>
                     </div>
                 </div>
                 <!-- /one-half -->

@@ -212,4 +212,12 @@ class Article extends Model {
 	 * @readwrite
 	 */
 	protected $_stringURL;
+
+    public function getRawPicture($id)
+    {
+        $article = Article::first(array("id=?" => $id));
+        $image_path = Picture::get_path($article->relatedPicture);
+        return $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+
+    }
 }
