@@ -11,6 +11,7 @@ use application\models\PictureCategory;
 use application\models\Picture;
 
 use Framework\RequestMethods;
+use Imagine\Image\Point;
 
 class Admin_picture extends Admin_common {
 	
@@ -62,6 +63,15 @@ class Admin_picture extends Admin_common {
 						->thumbnail($size, $mode)
 						->save("{$path}{$year}/{$month}/75x75-{$rd}-{$time}.{$extension}");
 						/* End Create 75x75 format */
+
+                        /* Create 780x400 format */
+                        $imagine = new \Imagine\Gd\Imagine();
+                        $size = new \Imagine\Image\Box(780, 400);
+                        $imagine
+                            ->open("{$path}{$year}/{$month}/{$filename}")
+                            ->thumbnail($size)
+                            ->save("{$path}{$year}/{$month}/780x400-{$rd}-{$time}.{$extension}");
+                        /* End Create 780x400 format */
 						
 						$meta = getimagesize("{$path}{$year}/{$month}/{$filename}");
 	

@@ -9,8 +9,9 @@
 }
 
 .flexslider .slides img {
-	width: 100%; 
+	/*width: 100%;*/ /* display true size image */
 	display: block;
+    margin: 0 auto;
 }
 
 .flex-pauseplay span {

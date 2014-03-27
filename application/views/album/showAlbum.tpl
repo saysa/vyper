@@ -35,7 +35,7 @@
                 {% for picture in pictures %}
                     <li class="galerie">
                         <a rel="lightbox[album]" href="{{ base_url }}uploads/pic/{{ picture.getFilename }}">
-                            <img class="attachment-fp780_400" src="{{ base_url }}uploads/pic/{{ picture.getFilename }}">
+                            <img src="{{ base_url }}uploads/pic/{{ picture.getName }}">
                         </a>
                     </li>
                 {% endfor %}
@@ -45,7 +45,7 @@
 
             <ul class="slides">
                 {% for picture in pictures %}
-                    <li><img src="{{ base_url }}uploads/pic/{{ picture.getFilename }}"></li>
+                    <li><img src="{{ base_url }}uploads/pic/{{ picture.getName }}"></li>
                 {% endfor %}
             </ul>
         </div>

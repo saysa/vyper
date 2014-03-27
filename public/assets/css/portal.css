@@ -2987,3 +2987,6 @@ body {
     height: 108px;
 }
 
+li.galerie {
+    background: black;
+}

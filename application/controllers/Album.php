@@ -50,6 +50,7 @@ class Album extends \Framework\Shared\Controller {
         foreach($pictures as $picture)
         {
             $image_path = Picture::get_path($picture->id);
+            $picture->name = $image_path . "780x400-" . $picture->filename;
             $picture->filename = $image_path . $picture->filename;
         }
 
