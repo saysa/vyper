@@ -167,8 +167,18 @@
 						
 				</div>
 				
-				<div class="banner">	
-						<a href="http://newwp.dev"><img src="http://newwp.dev/wp-content/themes/fp_discover/images/ad728.png"></a>	
+				<div class="banner">
+                <script type="text/javascript"><!--
+         		google_ad_client = "pub-2203599332195876";
+          		/* 728x90, date de création 23/10/08 */
+         		google_ad_slot = "8569900228";
+         		google_ad_width = 728;
+         		google_ad_height = 90;
+          		//-->
+          		</script>
+          		<script type="text/javascript"
+         		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          		</script>
 				</div>
 						
 			</div>

@@ -71,8 +71,19 @@
 </div>
 <!-- /comments -->
 
-
-
+<div class="add_468">
+<script type="text/javascript"><!--
+     						google_ad_client = "pub-2203599332195876";
+     						/* 468x60, date de création 24/09/08 */
+     						google_ad_slot = "8274791547";
+    						google_ad_width = 468;
+     						google_ad_height = 60;
+     						//-->
+     						</script>
+  						<script type="text/javascript"
+ 						src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+ 						</script>
+</div>
 
 <div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
 
