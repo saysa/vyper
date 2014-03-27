@@ -36,6 +36,13 @@ $routes = array(
 				"controller" => "admin_ajax",
 				"action" 	 => "eventArtistLinkDelete"
 		),
+        array(
+
+            "pattern"    => "_admin_/ajax/switch_article_highlight",
+            "controller" => "admin_ajax",
+            "action" 	 => "switchArticleHighlight"
+        ),
+
 		
 		
 		// Admin Location

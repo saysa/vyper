@@ -24,7 +24,7 @@
 							<thead>
 		<tr>
 			<th>ID</th>
-			<th>Status</th>
+			<th>Highlight</th>
 			<th>Date</th>
 			<th>Type</th>
 			<th>Title</th>
@@ -38,7 +38,7 @@
 		{% for article in articles %}
 		<tr>
 			<td>{{ article.getId }}</td>
-			<td></td>
+			<td><input type="checkbox" class="hightlight" data-articleid="{{ article.getId }}" {% if article.getHighlight == 1 %}checked="checked"{% endif %} /></td>
 			<td>{{ article.getModified|date('Y-m-d') }}</td>
 			<td>{{ article.getType }}</td>
 			<td>{{ article.getTitle }}</td>
@@ -141,6 +141,30 @@
 
 
 
+<script>
 
+    $(document).ready(function() {
+        $( ".hightlight" ).on("click", function() {
+
+            var articleId = $(this).data('articleid');
+            var checkboxValue = $(this).is(':checked');
+
+            $.ajax({
+                type: "POST",
+                url: "/_admin_/ajax/switch_article_highlight",
+                dataType: "json",
+                data:{
+                    article_id : articleId,
+                    checkboxValue : checkboxValue
+                },
+                success: function(data){
+                    console.log("changed :)");
+                }
+            });
+
+        });
+    });
+
+</script>
 
 

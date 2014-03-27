@@ -58,7 +58,7 @@ class Index extends \Framework\Shared\Controller {
 		$layout = $this->getLayoutView();
 		$view = $this->getLayoutView();
 		
-		$articles_carousel = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,7");
+		$articles_carousel = Article::all(array("deleted=?"=>false, "highlight=?" => 1), array("*"), "releaseDate", "desc", "0,7");
 		
 		foreach ($articles_carousel as $article)
 		{

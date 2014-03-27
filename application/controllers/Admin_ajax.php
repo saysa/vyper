@@ -2,6 +2,7 @@
 
 namespace application\controllers;
 
+use application\models\Article;
 use Framework\RequestMethods;
 
 
@@ -10,15 +11,7 @@ use application\models\RelArtistEvent;
 use Framework\Controller;
 use application\models\Artist;
 
-class Bidon {
-	
-	public $id;
-	
-	public function __construct()
-	{
-		$this->id = "je suis ID de instance Bidon";
-	}
-}
+
 
 class Admin_ajax extends Controller {
 	
@@ -69,4 +62,25 @@ class Admin_ajax extends Controller {
 			
 		}
 	}
+
+    public function switchArticleHighlight()
+    {
+        $this->_willRenderLayoutView = false;
+        $this->_defaultContentType = "application/json";
+
+        //var_dump($_POST['article_id'], $_POST['checkboxValue']);
+
+        $article = Article::first(array("id=?" => $_POST['article_id']));
+
+        if ($_POST['checkboxValue'] == "true")
+        {
+            $article->highlight = 1;
+        }
+        else{
+            $article->highlight = 0;
+        }
+
+        $article->save();
+
+    }
 }

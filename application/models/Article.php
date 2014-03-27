@@ -28,6 +28,13 @@ class Article extends Model {
 	 * @type integer
 	 */
 	protected $_user;
+
+    /**
+     * @column
+     * @readwrite
+     * @type boolean
+     */
+    protected $_highlight;
 	
 	/**
 	 * @column
@@ -207,6 +214,8 @@ class Article extends Model {
 	 * @type text
 	 */
 	protected $_forumURL;
+
+
 	
 	/**
 	 * @readwrite
