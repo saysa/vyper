@@ -158,8 +158,8 @@
 			<div class="content-wrap">
 				<div class="logo">			
 					<h1>
-							<a href="http://newwp.dev" title="Discover">
-								<img src="http://newwp.dev/wp-content/themes/fp_discover/images/logo.png" alt="Discover">
+							<a href="{{ base_url }}" title="Vyper Japanese Music">
+								<img src="{{ base_url }}/assets/img/logo.png" alt="Vyper Japanese Music" height="100" width="100">
 							</a>
 					</h1>	
 						
