@@ -68,6 +68,8 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
         {% endif %}
+
+
         
         <header id="header">
         	<div class="top main-color-bg">
@@ -226,7 +228,7 @@
 				<div class="content-wrap">
 					<div id="carousel-posts" class="owl-carousel">
 							
-							{% for article in articles %}
+							{% for article in mini_carousel %}
         						<div class="item">
 									<div class="thumbnail overlay">
 										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">

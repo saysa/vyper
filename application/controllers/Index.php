@@ -57,12 +57,58 @@ class Index extends \Framework\Shared\Controller {
 	{	
 		$layout = $this->getLayoutView();
 		$view = $this->getLayoutView();
-		
-		$articles_carousel = Article::all(array("deleted=?"=>false, "highlight=?" => 1), array("*"), "releaseDate", "desc", "0,7");
+
+        /**
+         * Mini Carousel
+         */
+        $database = Registry::get("database");
+        $queryPdo = $database->query();
+        $stmt = $queryPdo->connector->execute("SELECT id FROM article WHERE type IN (8, 6)");
+        for ($i=0; $i<$stmt->rowCount();$i++)
+        {
+            $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+        }
+
+        $mini_carousel = array();
+        foreach ($rows as $oArticle)
+        {
+            $mini_carousel[] = Article::first(array("id=?" => $oArticle->id));
+        }
+        foreach ($mini_carousel as $article)
+        {
+
+            $image_path = Picture::get_path($article->relatedPicture);
+            $image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+
+            $article->stringURL = StringMethods::filterURL($article->title);
+
+            $excerpt = $article->title;
+            $article->title = mb_substr($excerpt,0, 50);
+            if (strlen($excerpt) > 49){
+                $article->title .= '...';
+            }
+
+            $excerpt = $article->description;
+            $article->description = mb_substr($excerpt,0, 120);
+            if (strlen($excerpt) > 119){
+                $article->description .= '...';
+            }
+
+
+            $article->relatedPicture = $image;
+
+
+        }
+
+
+        /**
+         * Big carousel for highlights articles
+         */
+        $articles_carousel = Article::all(array("deleted=?"=>false, "highlight=?" => 1), array("*"), "releaseDate", "desc", "0,7");
 		
 		foreach ($articles_carousel as $article)
 		{
-			
+
 			$image_path = Picture::get_path($article->relatedPicture);
 			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			
@@ -89,6 +135,7 @@ class Index extends \Framework\Shared\Controller {
 		$layout
 		->set("is_carousel", "true")
 		->set("front_page_index", "true")
+        ->set("mini_carousel", $mini_carousel)
 		;
 		
 		$view

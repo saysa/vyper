@@ -10,6 +10,19 @@ $database = Registry::get("database");
 		));
 		
 		$database->sync($event);
+
+
+Helper requete en dur
+
+$database = Registry::get("database");
+        $queryPdo = $database->query();
+        $stmt = $queryPdo->connector->execute("SELECT * FROM article");
+        for ($i=0; $i<$stmt->rowCount();$i++)
+        {
+            $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+        }
+        var_dump($rows);
+
 		
 Helper copier coller pour mise en page double colonne
 
