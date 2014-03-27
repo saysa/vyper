@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Shared/Controller.php" afterPath="$PROJECT_DIR$/Framework/Shared/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/portal.css" afterPath="$PROJECT_DIR$/public/assets/css/portal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/album/showAlbum.tpl" afterPath="$PROJECT_DIR$/application/views/album/showAlbum.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vyper.iws" />
@@ -40,7 +40,16 @@
         <entry file="file://$PROJECT_DIR$/application/views/album/showAll.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="0" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="561">
-              <folding />
+              <folding>
+                <marker date="1395853747399" expanded="true" signature="30:80" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="136:1099" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="236:1055" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="315:1044" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="352:1025" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="405:1006" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="657:983" placeholder="..." />
+                <marker date="1395853747399" expanded="true" signature="789:956" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="733" column="128" selection-start="27982" selection-end="27982" vertical-scroll-proportion="0.27172583" vertical-offset="12239" max-vertical-offset="13583">
+            <state line="733" column="74" selection-start="27897" selection-end="27928" vertical-scroll-proportion="-9.788462" vertical-offset="11952" max-vertical-offset="13583">
               <folding />
             </state>
           </provider>
@@ -84,16 +93,16 @@
       <file leaf-file-name="showAlbum.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/album/showAlbum.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="114" selection-start="1068" selection-end="1119" vertical-scroll-proportion="-15.923077" vertical-offset="181" max-vertical-offset="1037">
+            <state line="39" column="25" selection-start="1330" selection-end="1330" vertical-scroll-proportion="-15.923077" vertical-offset="249" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addAlbum.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl">
+      <file leaf-file-name="portal.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="58" selection-start="1647" selection-end="1647" vertical-scroll-proportion="-9.384615" vertical-offset="351" max-vertical-offset="1666">
+            <state line="2980" column="29" selection-start="47007" selection-end="47007" vertical-scroll-proportion="0.6975089" vertical-offset="50072" max-vertical-offset="50915">
               <folding />
             </state>
           </provider>
@@ -140,7 +149,6 @@
         <option value="$PROJECT_DIR$/application/models/Artist.php" />
         <option value="$PROJECT_DIR$/application/controllers/Artist.php" />
         <option value="$PROJECT_DIR$/application/views/artist/showAll.tpl" />
-        <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/application/models/Picture.php" />
         <option value="$PROJECT_DIR$/application/models/AlbumCategory.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_picture.php" />
@@ -149,7 +157,6 @@
         <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
         <option value="$PROJECT_DIR$/public/assets/css/slider.css" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_album.php" />
-        <option value="$PROJECT_DIR$/application/views/album/showAlbum.tpl" />
         <option value="$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl" />
         <option value="$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl" />
         <option value="$PROJECT_DIR$/application/models/Album.php" />
@@ -158,6 +165,8 @@
         <option value="$PROJECT_DIR$/application/controllers/Album.php" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
+        <option value="$PROJECT_DIR$/application/views/album/showAlbum.tpl" />
+        <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
       </list>
     </option>
   </component>
@@ -264,68 +273,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exception" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,13 +687,6 @@
         <state line="11" column="49" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1258" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2976" column="0" selection-start="46925" selection-end="46925" vertical-scroll-proportion="0.0" vertical-offset="50012" max-vertical-offset="50881">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Artist.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="26" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-47.307693" vertical-offset="266" max-vertical-offset="1632" />
@@ -956,17 +896,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/album/showAlbum.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="114" selection-start="1068" selection-end="1119" vertical-scroll-proportion="-15.923077" vertical-offset="181" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/album/showAll.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="561">
-          <folding />
+          <folding>
+            <marker date="1395853747399" expanded="true" signature="30:80" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="136:1099" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="236:1055" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="315:1044" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="352:1025" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="405:1006" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="657:983" placeholder="..." />
+            <marker date="1395853747399" expanded="true" signature="789:956" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,7 +949,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="733" column="128" selection-start="27982" selection-end="27982" vertical-scroll-proportion="0.27172583" vertical-offset="12239" max-vertical-offset="13583">
+        <state line="733" column="74" selection-start="27897" selection-end="27928" vertical-scroll-proportion="-9.788462" vertical-offset="11952" max-vertical-offset="13583">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/album/showAlbum.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="25" selection-start="1330" selection-end="1330" vertical-scroll-proportion="-15.923077" vertical-offset="249" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2980" column="29" selection-start="47007" selection-end="47007" vertical-scroll-proportion="0.6975089" vertical-offset="50072" max-vertical-offset="50915">
           <folding />
         </state>
       </provider>
