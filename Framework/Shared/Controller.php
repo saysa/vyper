@@ -118,7 +118,7 @@ class Controller extends \Framework\Controller {
 			/**
 			 * Side Next Event
 			 */
-			$event = Event::all(array("live=?" => "1", "date>?" => "NOW()"), array("*"), "date", null, "0,1");
+			$event = Event::all(array("live=?" => "1", "date>?" => "expression NOW()"), array("*"), "date", null, "0,1");
 			if (sizeof($event) > 0) {
 				
 				$nextEvent = new \application\components\NextEvent\NextEvent;
@@ -137,7 +137,7 @@ class Controller extends \Framework\Controller {
             /**
              * Side Galerie
              */
-            $recent_pictures = Picture::all(array("deleted=?"=>false), array("*"), "created", "desc", "0,6");
+            $recent_pictures = Picture::all(array("deleted=?"=>false, "album ?" => "expressionIS NOT NULL"), array("*"), "created", "desc", "0,6");
             foreach ($recent_pictures as $picture)
             {
                 /* Set front Release Date */

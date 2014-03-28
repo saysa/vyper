@@ -167,16 +167,23 @@ class Query extends Base {
 		{
 			throw new Exception\Argument("Invalid argument");
 		}
-		
+
 		$arguments[0] = preg_replace("#\?#", "%s", $arguments[0]);
-		
+
 		foreach (array_slice($arguments, 1, null, true) as $i => $parameter)
 		{
-			$arguments[$i] = $this->_quote($arguments[$i]);
+            if (strpos($arguments[$i], "expression") !== false)
+            {
+                $arguments[$i] = str_replace("expression", "", $arguments[$i]);
+            }
+            else
+            {
+                $arguments[$i] = $this->_quote($arguments[$i]);
+            }
 		}
 		
 		$this->_where[] = call_user_func_array("sprintf", $arguments);
-		
+
 		return $this;
 	}
 	
@@ -211,8 +218,7 @@ class Query extends Base {
 		$_where = $this->where;
 		if (!empty($_where))
 		{
-			$joined = join(" AND ", $_where);
-			$joined = str_replace("'NOW()'", "NOW()", $joined);
+            $joined = join(" AND ", $_where);
 			$where = "WHERE {$joined}";
 		}
 		

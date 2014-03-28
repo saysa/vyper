@@ -61,19 +61,7 @@ class Index extends \Framework\Shared\Controller {
         /**
          * Mini Carousel
          */
-        $database = Registry::get("database");
-        $queryPdo = $database->query();
-        $stmt = $queryPdo->connector->execute("SELECT id FROM article WHERE type IN (8, 6)");
-        for ($i=0; $i<$stmt->rowCount();$i++)
-        {
-            $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
-        }
-
-        $mini_carousel = array();
-        foreach ($rows as $oArticle)
-        {
-            $mini_carousel[] = Article::first(array("id=?" => $oArticle->id));
-        }
+        $mini_carousel = Article::all(array("deleted=?" => false, "type ?" => 'expressionIN (8,6)'));
         foreach ($mini_carousel as $article)
         {
 
