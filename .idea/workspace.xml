@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/lightbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/superfish.js" />
-      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\amcharts.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\images\dragIcon.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\images\dragIconH.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\images\lens.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/components/NextEvent/NextEvent.php" afterPath="$PROJECT_DIR$/application/components/NextEvent/NextEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/StringMethods.php" afterPath="$PROJECT_DIR$/Framework/StringMethods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/portal.css" afterPath="$PROJECT_DIR$/public/assets/css/portal.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,36 +31,9 @@
       <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="970" column="24" selection-start="39779" selection-end="39779" vertical-scroll-proportion="0.500612" vertical-offset="16081" max-vertical-offset="16915">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="3" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lightbox.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/lightbox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7389" selection-start="7389" selection-end="7389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flexslider-min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="65" selection-start="16236" selection-end="16236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+            <state line="808" column="26" selection-start="33488" selection-end="33488" vertical-scroll-proportion="0.5477327" vertical-offset="13277" max-vertical-offset="17119">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#34594#34617#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,27 +42,7 @@
       <file leaf-file-name="superfish.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/js/discover/superfish.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="25" selection-start="2817" selection-end="2820" vertical-scroll-proportion="-10.961538" vertical-offset="956" max-vertical-offset="2142">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap/bootstrap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="27" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34085">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showTheme.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/theme/showTheme.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="221" selection-start="1687" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1020">
+            <state line="73" column="25" selection-start="2817" selection-end="2820" vertical-scroll-proportion="0.0" vertical-offset="956" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
@@ -104,16 +51,25 @@
       <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="62" selection-start="4655" selection-end="4655" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="4624">
+            <state line="123" column="73" selection-start="2980" selection-end="2980" vertical-scroll-proportion="-6.9423075" vertical-offset="1560" max-vertical-offset="4454">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
+      <file leaf-file-name="NextEvent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/components/NextEvent/NextEvent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1224">
+            <state line="88" column="21" selection-start="2242" selection-end="2242" vertical-scroll-proportion="-10.403846" vertical-offset="955" max-vertical-offset="1955">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringMethods.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="191" column="73" selection-start="4005" selection-end="4015" vertical-scroll-proportion="-11.307693" vertical-offset="2953" max-vertical-offset="4930">
               <folding />
             </state>
           </provider>
@@ -122,8 +78,98 @@
       <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="107" selection-start="1897" selection-end="1996" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2397">
+            <state line="101" column="27" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-26.153847" vertical-offset="935" max-vertical-offset="2295">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="portal.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2827" column="8" selection-start="43819" selection-end="43819" vertical-scroll-proportion="-6.8846154" vertical-offset="47880" max-vertical-offset="51714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vyper.article" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..article">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PHP/\application\controllers\Article" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://PHP/\application\controllers\Article">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>PHP</ID>
+              <OriginalElement>\application\controllers\Article</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">\Framework\Shared\Controller</node>
+                <node x="8.5" y="77.0">\application\controllers\Article</node>
+                <node x="124.0" y="0.0">\Framework\Base</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="\application\controllers\Article" target="\Framework\Shared\Controller">
+                  <point x="0.0" y="-13.5" />
+                  <point x="0.0" y="13.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-261.0" y="-135.5" />
+              <SelectedNodes>
+                <node>\application\controllers\Article</node>
+              </SelectedNodes>
+              <Categories />
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/6573dcec-5e6c-472c-b85c-be069529509e.schema:vyper" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://DATABASE/6573dcec-5e6c-472c-b85c-be069529509e.schema:vyper">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>6573dcec-5e6c-472c-b85c-be069529509e.schema:vyper</OriginalElement>
+              <nodes>
+                <node x="1226.0" y="0.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.event</node>
+                <node x="766.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.artist</node>
+                <node x="1235.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.picturecategory</node>
+                <node x="1012.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.continent</node>
+                <node x="0.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.album</node>
+                <node x="0.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.tour</node>
+                <node x="0.0" y="0.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.article</node>
+                <node x="1458.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.albumcategory</node>
+                <node x="1129.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.picture</node>
+                <node x="223.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.theme</node>
+                <node x="0.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.eventtype</node>
+                <node x="446.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.tourtype</node>
+                <node x="526.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.relartistevent</node>
+                <node x="669.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.articletype</node>
+                <node x="683.0" y="0.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.user</node>
+                <node x="769.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.relartistitem</node>
+                <node x="383.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.location</node>
+                <node x="263.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.articlevisite</node>
+                <node x="892.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.country</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="0.6076759061833689" x="241.94736842105266" y="244.94736842105266" />
+              <SelectedNodes>
+                <node>6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.event</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -165,7 +211,6 @@
         <option value="$PROJECT_DIR$/public/assets/css/slider.css" />
         <option value="$PROJECT_DIR$/application/views/admin_article/showArticles.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_ajax.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/application/models/Article.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_article.php" />
         <option value="$PROJECT_DIR$/application/views/admin_article/addArticle.tpl" />
@@ -175,7 +220,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/application/models/Theme.php" />
         <option value="$PROJECT_DIR$/public/routes.php" />
-        <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
         <option value="$PROJECT_DIR$/application/controllers/Article.php" />
         <option value="$PROJECT_DIR$/application/views/article/showAll.tpl" />
         <option value="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
@@ -186,7 +230,10 @@
         <option value="$PROJECT_DIR$/public/assets/js/discover/lightbox.js" />
         <option value="$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js" />
         <option value="$PROJECT_DIR$/public/assets/js/discover/script.js" />
+        <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
+        <option value="$PROJECT_DIR$/application/components/NextEvent/NextEvent.php" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
+        <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
       </list>
     </option>
   </component>
@@ -270,76 +317,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="discover" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,6 +719,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -752,7 +730,12 @@
       <recent name="C:\wamp\www\vyper\application\views\artist" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Article.php">
+    <configuration default="false" name="Article.php" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/vyper/application/controllers/Article.php">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -772,7 +755,14 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Article.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Article.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -802,15 +792,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19275825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19275825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14802982" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17678382" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17838125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -823,6 +813,26 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32938644" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32831" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19275825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14802982" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17838125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -838,27 +848,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..picture">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1785" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin_album/UpdateAlbum.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="158" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-23.884615" vertical-offset="297" max-vertical-offset="1360" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_album/addAlbum.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="58" selection-start="1647" selection-end="1647" vertical-scroll-proportion="-9.384615" vertical-offset="351" max-vertical-offset="1666" />
@@ -917,14 +911,6 @@
     <entry file="file://$PROJECT_DIR$/Framework/Shared/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="34" selection-start="145" selection-end="145" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="4726" />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..article">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_article/showArticles.tpl">
@@ -991,13 +977,6 @@
         <state line="22" column="165" selection-start="896" selection-end="902" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="6545" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="464" column="37" selection-start="6283" selection-end="6283" vertical-scroll-proportion="0.0" vertical-offset="6477" max-vertical-offset="51034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_article/UpdateArticle.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="40" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="3519" />
@@ -1030,16 +1009,12 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="187" selection-end="187" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="8" column="32" selection-start="187" selection-end="187" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="0" selection-start="7222" selection-end="7222" vertical-scroll-proportion="-11.519231" vertical-offset="4229" max-vertical-offset="7412">
-          <folding />
-        </state>
+        <state line="284" column="0" selection-start="7222" selection-end="7222" vertical-scroll-proportion="-11.519231" vertical-offset="4229" max-vertical-offset="7412" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Album.php">
@@ -1049,25 +1024,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="4930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/article/showAll.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="221" selection-start="1803" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="1037">
-          <folding />
-        </state>
+        <state line="39" column="221" selection-start="1803" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="61" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1632">
-          <folding />
-        </state>
+        <state line="21" column="61" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1632" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Theme.php">
@@ -1084,20 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="107" selection-start="1897" selection-end="1996" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2397">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="62" selection-start="4655" selection-end="4655" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="4624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/theme/showTheme.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="221" selection-start="1687" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1020">
@@ -1108,9 +1058,7 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="27" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34085">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,9 +1072,7 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="65" selection-start="16236" selection-end="16236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,15 +1085,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/discover/superfish.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="25" selection-start="2817" selection-end="2820" vertical-scroll-proportion="-10.961538" vertical-offset="956" max-vertical-offset="2142">
+        <state line="73" column="25" selection-start="2817" selection-end="2820" vertical-scroll-proportion="0.0" vertical-offset="956" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="73" selection-start="2980" selection-end="2980" vertical-scroll-proportion="-6.9423075" vertical-offset="1560" max-vertical-offset="4454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="73" selection-start="4005" selection-end="4015" vertical-scroll-proportion="-11.307693" vertical-offset="2953" max-vertical-offset="4930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/components/NextEvent/NextEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="21" selection-start="2242" selection-end="2242" vertical-scroll-proportion="-10.403846" vertical-offset="955" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2827" column="8" selection-start="43819" selection-end="43819" vertical-scroll-proportion="-6.8846154" vertical-offset="47880" max-vertical-offset="51714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..article">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\application\controllers\Article">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\application\controllers\Article</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">\Framework\Shared\Controller</node>
+            <node x="8.5" y="77.0">\application\controllers\Article</node>
+            <node x="124.0" y="0.0">\Framework\Base</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\application\controllers\Article" target="\Framework\Shared\Controller">
+              <point x="0.0" y="-13.5" />
+              <point x="0.0" y="13.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-261.0" y="-135.5" />
+          <SelectedNodes>
+            <node>\application\controllers\Article</node>
+          </SelectedNodes>
+          <Categories />
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/6573dcec-5e6c-472c-b85c-be069529509e.schema:vyper">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>6573dcec-5e6c-472c-b85c-be069529509e.schema:vyper</OriginalElement>
+          <nodes>
+            <node x="1226.0" y="0.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.event</node>
+            <node x="766.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.artist</node>
+            <node x="1235.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.picturecategory</node>
+            <node x="1012.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.continent</node>
+            <node x="0.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.album</node>
+            <node x="0.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.tour</node>
+            <node x="0.0" y="0.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.article</node>
+            <node x="1458.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.albumcategory</node>
+            <node x="1129.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.picture</node>
+            <node x="223.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.theme</node>
+            <node x="0.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.eventtype</node>
+            <node x="446.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.tourtype</node>
+            <node x="526.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.relartistevent</node>
+            <node x="669.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.articletype</node>
+            <node x="683.0" y="0.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.user</node>
+            <node x="769.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.relartistitem</node>
+            <node x="383.0" y="653.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.location</node>
+            <node x="263.0" y="1006.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.articlevisite</node>
+            <node x="892.0" y="1239.0">6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.country</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.6076759061833689" x="241.94736842105266" y="244.94736842105266" />
+          <SelectedNodes>
+            <node>6573dcec-5e6c-472c-b85c-be069529509e.table:vyper.event</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="27" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-26.153847" vertical-offset="935" max-vertical-offset="2295">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="970" column="24" selection-start="39779" selection-end="39779" vertical-scroll-proportion="0.500612" vertical-offset="16081" max-vertical-offset="16915">
-          <folding />
+        <state line="808" column="26" selection-start="33488" selection-end="33488" vertical-scroll-proportion="0.5477327" vertical-offset="13277" max-vertical-offset="17119">
+          <folding>
+            <element signature="e#34594#34617#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

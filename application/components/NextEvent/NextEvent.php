@@ -59,6 +59,35 @@ class NextEvent {
 		
 		return ceil($difference/86400);
 	}
+
+    /**
+     * Returns the event date day
+     * @return string
+     */
+    public function getEventDateDay()
+    {
+        $event = $this->getEventDate();
+        $day = substr($event, 8, 2);
+        return $day;
+    }
+
+
+    /**
+     * Returns the event date month on Jan, Feb format
+     * @return string
+     */
+    public function getEventDateMonth()
+    {
+        setlocale (LC_TIME, 'fr_FR.utf8','fra');
+        $event = $this->getEventDate();
+        $month = substr($event, 5, 2);
+        $year = substr($event, 0, 4);
+        $day = substr($event, 8, 2);
+        $time = mktime(0,0,0,$month,$day,$year);
+        $month = utf8_encode(ucfirst(strftime( "%b", $time )));
+        $month = str_replace(".", "", $month);
+        return $month;
+    }
 	
 	/**
 	 * @return array
@@ -70,6 +99,8 @@ class NextEvent {
 		$r['nextEvent_id'] = $this->getEventID();
 		$r['nextEvent_title'] = $this->getEventTitle();
 		$r['nextEvent_date'] = $this->getEventDate();
+        $r['nextEvent_dateDay'] = $this->getEventDateDay();
+        $r['nextEvent_dateMonth'] = $this->getEventDateMonth();
 		$r['nextEvent_remainingDays'] = $this->getRemainingDays();
 		$r['nextEvent_stringURL'] = $this->getStringURL();
 		

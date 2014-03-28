@@ -196,7 +196,7 @@ class StringMethods {
 		$year = substr($sqlDate, 0, 4);
 		$day = substr($sqlDate, 8, 2);
 		$time = mktime(0,0,0,$month,$day,$year);
-		return utf8_encode(ucfirst(strftime( $custom, $time )));;
+		return utf8_encode(ucfirst(strftime( $custom, $time )));
 	}
 	
 	public static function filterURL($string)

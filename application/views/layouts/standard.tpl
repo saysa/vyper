@@ -904,13 +904,25 @@
 	   				{% if nextEvent_exists %}
 	   				<aside class="widget widget_flickr">
 	   					<div class="widget-title"><h4>Prochain événement</h4></div>
-	   					
-	   					
-	   						<div class="next_event">  
-		   						<h4><a href="{{ base_url }}event/{{ nextEvent_id }}/{{ nextEvent_stringURL }}.html">{{ nextEvent_title }}</a></h4>
-		   						<span class="difference"><a href="{{ base_url }}event/{{ nextEvent_id }}/{{ nextEvent_stringURL }}.html">{{ nextEvent_remainingDays }}</a></span>
-		   						jours restant(s)
-	   						</div>		
+
+
+                            <div class="featured-event">
+                            <div class="event-date">
+                            <div class="event-date-holder">
+                            <div class="event-date-number">{{ nextEvent_dateDay }}</div>
+                            <div class="event-month">{{ nextEvent_dateMonth }}</div>
+                            </div>
+                            <div class="clear"></div>
+                            </div>
+                            <div class="event-details">
+                            <h5 class="event-title"><a href="{{ base_url }}event/{{ nextEvent_id }}/{{ nextEvent_stringURL }}.html">{{ nextEvent_title }}</a></h5>
+                            <div class="event-place">Los Angeles, USA</div>
+                            <div>{{ nextEvent_remainingDays }} jours restant(s)</div>
+
+                            </div>
+                            </div>
+
+
 	   					
 	   					
 	   				</aside>
