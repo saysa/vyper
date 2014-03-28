@@ -290,204 +290,179 @@
 				<div id="content" class="single-post">
 				
 					{% if front_page_index %}
-				<div id="content" class="homepage">
-					<script>
-						jQuery(document).ready(function($) {
-							$(".main-slider").show();
-							$(".main-slider").owlCarousel({ 
-								navigation : true,
-								pagination: false,
-								autoPlay : 5000,
-								slideSpeed : 400,
-								paginationSpeed : 400,
-								singleItem: true 
+					<div id="content" class="homepage">
+						<script>
+							jQuery(document).ready(function($) {
+								$(".main-slider").show();
+								$(".main-slider").owlCarousel({ 
+									navigation : true,
+									pagination: false,
+									autoPlay : 5000,
+									slideSpeed : 400,
+									paginationSpeed : 400,
+									singleItem: true 
+								});
 							});
-						});
-					</script>
-					<div class="main-slider section">
-					
-						{% for article in articles %}
-						<div class="item">
+						</script>
+						<div class="main-slider section">
+							{% for article in articles %}
+							<div class="item">
 								<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" >
-									<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="5" />								</a>
-								
-								<div class="post-info">
+									<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle }}" />								
+								</a>
 									
+								<div class="post-info">
 									<div class="post-excerpt">
-													
 										<div class="title">
 											<h2><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h2>
 											<div class="sep"></div>
 										</div>								
-									
+										
 										<div class="main-slider-description">
-										{{ article.getDescription }} 										
+											{{ article.getDescription }} 										
 										</div>
-									
+										
 										<div class="read-more">
 											<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
 										</div>
-									
-									</div>
-									
+									</div>		
 								</div>	
-									
 							</div>				
-						
-						
-						{% endfor %}
+							{% endfor %}
+						</div>
+						<!-- /main-slider -->
 					
-						
-						
-					</div>
-					<!-- /main-slider -->
-					
-					<div id="single-cats" class="section">
+						<div id="single-cats" class="section">
 						<!-- category1 -->
 					
-						<div class="feat-cat one-half">
-						
-			
-							<div class="cat-header">
-								<div class="cat-title second-color-bg">
-					
-											<div class="cat-icon"><i class="icon-bell-alt"></i></div>					
-											<h4>Dernières News</h4>	
+							<div class="feat-cat one-half">
+								<div class="cat-header">
+									<div class="cat-title second-color-bg">
+										<div class="cat-icon"><i class="icon-bell-alt"></i></div>					
+										<h4><a href="{{ base_url }}news">Dernières News</a></h4>	
+									</div>
 								</div>
-							</div>
 
 
 
-                {% for article in recent_articles %}
-                {% if loop.index == 1 %}
+				                {% for article in recent_articles %}
+				                {% if loop.index == 1 %}
 
 
-                <div class="main-post">
-                    <div class="thumb-wrap">
-                        <div class="thumb">
-                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
-                        </div>
+                				<div class="main-post">
+                    				
+                    				{% if youtube %}
+                    					<div class="thumb-wrap video-thumb">
+	                        				<iframe width="560" height="315" src="//www.youtube.com/embed/p5GxXYR78mE?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+	                        			</div>
+                    				{% endif %}
 
-                        <span class="comments main-color-bg">
-                            <i class="icon-comments"></i>
-                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
-                        </span>
+                    				<div class="thumb-wrap">
+				                        <div class="thumb">
+				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+				                        </div>
 
-                        <div class="overlay">
-                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
-                        </div>
+				                        <span class="comments main-color-bg">
+				                            <i class="icon-comments"></i>
+				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+				                        </span>
 
+				                        <div class="overlay">
+				                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+				                        </div>
+									</div>
 
-                    </div>
+                    				<div class="post-details">
+				                        <h3>
+				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+				                        </h3>
 
-                    <div class="post-details">
-                        <h3>
-                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
-                        </h3>
+				                        <div class="entry-meta">
+				                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
 
-                        <div class="entry-meta">
-                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+				                            <span class="category">
+				                                <i class="icon-folder-close"></i>
+				                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+				                            </span>
 
-                            <span class="category">
-                                <i class="icon-folder-close"></i>
-                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
-                            </span>
+				                            <span class="views">
+				                                <i class="icon-eye-open"></i> 6549
+				                            </span>
+				                        </div>
+                        				<p>{{ article.getDescription }}</p>
+                    				</div>
+                				</div>
+                				<!-- /one-half -->
 
-                            <span class="views">
-                                <i class="icon-eye-open"></i> 6549
-                            </span>
-                        </div>
-                        <p>{{ article.getDescription }}</p>
-                    </div>
-                </div>
-                <!-- /one-half -->
-
-                {% endif %}
-                {% endfor %}
-
-
-
-                <div class="post-list">
-
-                    {% for key, article in recent_articles %}
-                    {% if key>0 and key<4 %}
-
-
-
-				        <div class="item-post">
-                            <div class="thumb">
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img width="75" height="75" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
-                            </div>
-
-                            <div class="post-right">
-                                <h5>
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">
-                                        {{ article.getTitle }} {{ key }}
-                                    </a>
-                                </h5>
-
-                                <div class="entry-meta">
-                                    <span class="date">
-                                        <i class="icon-calendar"></i>
-                                        {{ article.getReleaseDate }}
-                                    </span>
-
-                                    <span class="comments">
-                                        <i class="icon-comments"></i>
-                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        {% endif %}
-                        {% endfor %}
+                				{% endif %}
+                				{% endfor %}
 
 
 
+                				<div class="post-list">
+
+				                    {% for key, article in recent_articles %}
+				                    {% if key>0 and key<4 %}
+
+							        <div class="item-post">
+			                            <div class="thumb">
+			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+			                            </div>
+
+			                            <div class="post-right">
+			                                <h5>
+			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+			                                </h5>
+
+			                                <div class="entry-meta">
+			                                    <span class="date">
+			                                        <i class="icon-calendar"></i>
+			                                        {{ article.getReleaseDate }}
+			                                    </span>
+
+			                                    <span class="comments">
+			                                        <i class="icon-comments"></i>
+			                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+			                                    </span>
+			                                </div>
+			                            </div>
+			                        </div>
 
 
-                        </div><!-- /one-half -->
+			                        {% endif %}
+			                        {% endfor %}
+                        		</div><!-- /one-half -->
+    						</div><!-- /section1-cat -->
+    						<!-- /category1 -->
+
+    						<!-- category2 -->
+
+    						<div class="feat-cat one-half last">
 
 
+	    						<div class="cat-header">
+	    							<div class="cat-title second-color-bg">
+	                                	<div class="cat-icon">
+	                						<i class="icon-rocket"></i>
+	            						</div>
+	                                	<h4>événements</h4>
+	    							</div>
+	    						</div>
 
-    </div><!-- /section1-cat -->
-    <!-- /category1 -->
+            					<div class="main-post">
+                                	<div class="thumb-wrap video-thumb">
+                        				<iframe width="560" height="315" src="//www.youtube.com/embed/p5GxXYR78mE?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>								
+                        			</div>
 
-    <!-- category2 -->
-
-    <div class="feat-cat one-half last">
-
-
-    <div class="cat-header">
-    <div class="cat-title second-color-bg">
-
-                                <div class="cat-icon">
-                <i class="icon-rocket"></i>
-            </div>
-
-                                <h4><a href="http://demo.fairpixels.com/discover/category/entertainment/">Entertainment</a></h4>
-
-
-    </div>
-    </div>
-
-
-
-            <div class="main-post">
-                                                <div class="thumb-wrap video-thumb">
-                        <iframe width="560" height="315" src="//www.youtube.com/embed/Mef-OEmw9vI?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>								</div>
-
-                                            <div class="post-details">
-                    <h3>
-                        <a href="http://demo.fairpixels.com/discover/2013/09/villain/">
-                            A new female villain									</a>
-                    </h3>
-                    <div class="entry-meta">
-                        <span class="date">
-                            <i class="icon-calendar"></i>
-                            September 25, 2013									</span>
+                                    <div class="post-details">
+                    					<h3>
+                        					<a href="http://demo.fairpixels.com/discover/2013/09/villain/">A new female villain</a>
+                    					</h3>
+                    					<div class="entry-meta">
+                        					<span class="date">
+                            					<i class="icon-calendar"></i>
+                           						September 25, 2013									
+                           					</span>
 
 
                                 <span class="category">
