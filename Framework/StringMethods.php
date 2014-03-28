@@ -201,13 +201,27 @@ class StringMethods {
 	
 	public static function filterURL($string)
 	{
+        $emptyItem = array(
+
+            "(",
+            ")",
+            ";",
+            ",",
+            ".",
+            "?",
+            "’",
+            ":",
+            ">",
+            "<",
+
+        );
+
 		$titre_url=stripslashes($string);
 	
 		$titre_url=str_replace  ( "'"  , "-" , $titre_url  );
 		$titre_url=str_replace  ( " "  , "-" , $titre_url  );
 		$titre_url=str_replace  ( "\?"  , "" , $titre_url  );
-		$titre_url=str_replace  ( ">"  , "" , $titre_url  );
-		$titre_url=str_replace  ( "<"  , "" , $titre_url  );
+
 		$titre_url=str_replace  ( "&quot;"  , "" , $titre_url  ); //-- "
 		$titre_url=str_replace  ( "\""  , "" , $titre_url  ); //-- "
 		$titre_url=str_replace  ( "/"  , "-" , $titre_url  );
@@ -253,14 +267,13 @@ class StringMethods {
 		$titre_url=str_replace  ( "Ù"  , "u" , $titre_url  );
 		$titre_url=str_replace  ( "Û"  , "u" , $titre_url  );
 		$titre_url=str_replace  ( "Ü"  , "u" , $titre_url  );
-		
-		$titre_url=str_replace  ( "("  , "" , $titre_url  );
-		$titre_url=str_replace  ( ")"  , "" , $titre_url  );
-		$titre_url=str_replace  ( ";"  , "" , $titre_url  );
-        $titre_url=str_replace  ( ","  , "" , $titre_url  );
-        $titre_url=str_replace  ( "."  , "" , $titre_url  );
-        $titre_url=str_replace  ( "?"  , "" , $titre_url  );
-        $titre_url=str_replace  ( "’"  , "" , $titre_url  );
+
+        foreach ($emptyItem as $item)
+        {
+            $titre_url=str_replace  ( $item  , "" , $titre_url  );
+        }
+
+
 
 	
 		$titre_url = urlencode($titre_url);

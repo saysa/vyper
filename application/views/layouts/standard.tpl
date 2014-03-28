@@ -385,12 +385,10 @@
 
 				                            <span class="category">
 				                                <i class="icon-folder-close"></i>
-				                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+				                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
 				                            </span>
 
-				                            <span class="views">
-				                                <i class="icon-eye-open"></i> 6549
-				                            </span>
+
 				                        </div>
                         				<p>{{ article.getDescription }}</p>
                     				</div>
@@ -492,12 +490,10 @@
 
 				                            <span class="category">
 				                                <i class="icon-folder-close"></i>
-				                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+				                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
 				                            </span>
 
-				                            <span class="views">
-				                                <i class="icon-eye-open"></i> 6549
-				                            </span>
+
 				                        </div>
                         				<p>{{ article.getDescription }}</p>
                     				</div>
@@ -624,12 +620,10 @@
 
 						                            <span class="category">
 						                                <i class="icon-folder-close"></i>
-						                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+						                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
 						                            </span>
 
-						                            <span class="views">
-						                                <i class="icon-eye-open"></i> 6549
-						                            </span>
+
 						                        </div>
 		                        				<p>{{ article.getDescription }}</p>
 		                    				</div>
@@ -742,12 +736,11 @@
 
 						                            <span class="category">
 						                                <i class="icon-folder-close"></i>
-						                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+                                                        <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+
 						                            </span>
 
-						                            <span class="views">
-						                                <i class="icon-eye-open"></i> 6549
-						                            </span>
+
 						                        </div>
 		                        				<p>{{ article.getDescription }}</p>
 		                    				</div>

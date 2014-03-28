@@ -19,8 +19,9 @@
 					</span> 
 					
 					<span class="category">
-						<i class="icon-folder-close-alt"></i>									
-						<a href="http://demo.fairpixels.com/discover/category/entertainment/" title="View all posts in Entertainment" rel="category tag">Entertainment</a>, <a href="http://demo.fairpixels.com/discover/category/games/" title="View all posts in Games" rel="category tag">Games</a>					</span>
+						<i class="icon-folder-close-alt"></i>
+                        <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+                    </span>
 											
 					<span class="tags"><i class="icon-tags"></i><a href="http://demo.fairpixels.com/discover/tag/characters/" rel="tag">characters</a> , <a href="http://demo.fairpixels.com/discover/tag/villain/" rel="tag">villain</a></span>				</div>
 				

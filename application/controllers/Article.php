@@ -5,6 +5,7 @@ namespace application\controllers;
 use application\models\Article as model_Article;
 use application\models\ArticleVisite;
 use application\models\Picture;
+use application\models\Theme;
 use Framework\StringMethods;
 use application\models\ArticleType;
 use Pagination\Pagination;
@@ -67,7 +68,8 @@ class Article extends \Framework\Shared\Controller {
 		{
 			$view->set("article_horizontal_image", "true");
 		}
-		
+
+        $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 		
 		$layout
 		->set("front_page_article", "true")
@@ -118,6 +120,8 @@ class Article extends \Framework\Shared\Controller {
 			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			$article->relatedPicture = $image;
 			$article->stringURL = StringMethods::filterURL($article->title);
+
+            $article->relatedTheme = Theme::first(array("id=?" => $article->relatedTheme));
 		}
 		
 		$view

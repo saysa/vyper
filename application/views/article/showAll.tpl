@@ -37,7 +37,8 @@
 										
 							<span class="category">
 								<i class="icon-folder-close"></i>
-								<a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>					</span>					
+								<a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+                            </span>
 											
 					
 				</div>		

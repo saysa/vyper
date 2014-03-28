@@ -276,6 +276,14 @@ $routes = array(
 				"controller" => "article",
 				"action" => "showArticle"
 		),
+
+        // theme pattern
+        array(
+            "pattern" => "theme/:id/:page/:p.html",
+            "controller" => "theme",
+            "action" => "showTheme",
+
+        ),
 		
 		// event pattern
 		/*

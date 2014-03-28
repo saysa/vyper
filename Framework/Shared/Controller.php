@@ -164,6 +164,8 @@ class Controller extends \Framework\Controller {
 				$image_path = Picture::get_path($article->relatedPicture);
 				$image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 				$article->relatedPicture = $image;
+
+                $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 			}
 			$layout->set("recent_articles", $recent_articles);
 			

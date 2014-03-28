@@ -3,6 +3,7 @@
 namespace application\models;
 
 use Framework\Shared\Model;
+use Framework\StringMethods;
 
 class Theme extends Model {
 	
@@ -24,4 +25,11 @@ class Theme extends Model {
 	 * @label title
 	 */
 	protected $_title;
+
+    public function getTitleUrlFormat($id)
+    {
+        $theme = Theme::first(array("id=?" => $id));
+
+        return StringMethods::filterURL($theme->title) . ".html";
+    }
 }
