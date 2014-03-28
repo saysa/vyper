@@ -36,3 +36,11 @@ Helper copier coller pour mise en page double colonne
 								**/
 							</div>
 						</div>
+
+
+Requete popular
+
+SELECT article.id, article.title, articlevisite.*, count(*) AS nb FROM article
+INNER JOIN articlevisite ON article.id = articlevisite.articleId
+GROUP BY articlevisite.articleId
+ORDER BY nb DESC

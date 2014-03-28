@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/StringMethods.php" afterPath="$PROJECT_DIR$/Framework/StringMethods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vyper.iws" />
@@ -39,15 +39,6 @@
         <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state line="73" column="0" selection-start="3118" selection-end="3560" vertical-scroll-proportion="0.0" vertical-offset="751" max-vertical-offset="1615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateArticle.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin_article/UpdateArticle.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="3519">
               <folding />
             </state>
           </provider>
@@ -98,10 +89,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringMethods.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StringMethods.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="36" selection-start="7239" selection-end="7239" vertical-scroll-proportion="0.7803738" vertical-offset="3786" max-vertical-offset="4709">
+            <state line="262" column="36" selection-start="7239" selection-end="7239" vertical-scroll-proportion="-25.692308" vertical-offset="3786" max-vertical-offset="4709">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
@@ -155,7 +158,6 @@
         <option value="$PROJECT_DIR$/application/views/admin_article/showArticles.tpl" />
         <option value="$PROJECT_DIR$/public/routes.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_ajax.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
         <option value="$PROJECT_DIR$/application/models/Article.php" />
@@ -168,6 +170,7 @@
         <option value="$PROJECT_DIR$/Framework/Database/Query.php" />
         <option value="$PROJECT_DIR$/application/controllers/Index.php" />
         <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -909,14 +912,6 @@
         <state line="42" column="28" selection-start="700" selection-end="703" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="731" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Database/Query/Pdo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="9" selection-start="392" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="646" />
@@ -1043,7 +1038,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="36" selection-start="7239" selection-end="7239" vertical-scroll-proportion="0.7803738" vertical-offset="3786" max-vertical-offset="4709">
+        <state line="262" column="36" selection-start="7239" selection-end="7239" vertical-scroll-proportion="-25.692308" vertical-offset="3786" max-vertical-offset="4709">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
