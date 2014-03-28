@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Theme.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/theme/showTheme.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Article.php" afterPath="$PROJECT_DIR$/application/controllers/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Shared/Controller.php" afterPath="$PROJECT_DIR$/Framework/Shared/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/StringMethods.php" afterPath="$PROJECT_DIR$/Framework/StringMethods.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Theme.php" afterPath="$PROJECT_DIR$/application/models/Theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/routes.php" afterPath="$PROJECT_DIR$/public/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/article/showAll.tpl" afterPath="$PROJECT_DIR$/application/views/article/showAll.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/article/showArticle.tpl" afterPath="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/lightbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/discover/superfish.js" />
+      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\amcharts.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\images\dragIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\images\dragIconH.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\vyper\public\assets\js\amcharts\images\lens.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -38,17 +37,57 @@
       <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="630" column="0" selection-start="26232" selection-end="26232" vertical-scroll-proportion="0.499388" vertical-offset="10302" max-vertical-offset="16915">
+            <state line="970" column="24" selection-start="39779" selection-end="39779" vertical-scroll-proportion="0.500612" vertical-offset="16081" max-vertical-offset="16915">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAll.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/article/showAll.tpl">
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="221" selection-start="1803" selection-end="1992" vertical-scroll-proportion="-8.846154" vertical-offset="203" max-vertical-offset="1037">
+            <state line="33" column="3" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lightbox.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/lightbox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="7389" selection-start="7389" selection-end="7389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flexslider-min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="65" selection-start="16236" selection-end="16236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="superfish.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/discover/superfish.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="25" selection-start="2817" selection-end="2820" vertical-scroll-proportion="-10.961538" vertical-offset="956" max-vertical-offset="2142">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="27" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34085">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,19 +95,8 @@
       <file leaf-file-name="showTheme.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/theme/showTheme.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="221" selection-start="1687" selection-end="1876" vertical-scroll-proportion="-10.788462" vertical-offset="102" max-vertical-offset="1020">
+            <state line="39" column="221" selection-start="1687" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1020">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Theme.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="33" selection-start="493" selection-end="493" vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="697">
-              <folding>
-                <element signature="e#38#65#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -76,16 +104,7 @@
       <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="62" selection-start="4655" selection-end="4655" vertical-scroll-proportion="-9.884615" vertical-offset="2189" max-vertical-offset="4454">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Album.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Album.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="40" selection-start="3241" selection-end="3273" vertical-scroll-proportion="-27.692308" vertical-offset="1201" max-vertical-offset="2108">
+            <state line="169" column="62" selection-start="4655" selection-end="4655" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="4624">
               <folding />
             </state>
           </provider>
@@ -94,18 +113,7 @@
       <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1755" selection-end="1755" vertical-scroll-proportion="-20.26923" vertical-offset="357" max-vertical-offset="1224">
-              <folding>
-                <element signature="e#43#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showArticle.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="61" selection-start="801" selection-end="801" vertical-scroll-proportion="-4.9038463" vertical-offset="102" max-vertical-offset="1632">
+            <state line="52" column="0" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -114,16 +122,7 @@
       <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="107" selection-start="1897" selection-end="1996" vertical-scroll-proportion="-18.961538" vertical-offset="612" max-vertical-offset="2295">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringMethods.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="10.884615" vertical-offset="4074" max-vertical-offset="4930">
+            <state line="71" column="107" selection-start="1897" selection-end="1996" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2397">
               <folding />
             </state>
           </provider>
@@ -183,6 +182,10 @@
         <option value="$PROJECT_DIR$/application/views/theme/showTheme.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Theme.php" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
+        <option value="$PROJECT_DIR$/public/assets/js/discover/superfish.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/discover/lightbox.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/discover/script.js" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
       </list>
     </option>
@@ -220,7 +223,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,6 +270,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="discover" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -681,6 +731,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -758,7 +809,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19275825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14802982" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17518637" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17678382" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -790,34 +841,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/admin_picture/showPictures.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="99" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.0" vertical-offset="1576" max-vertical-offset="2329" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_location.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="5" selection-start="3277" selection-end="5284" vertical-scroll-proportion="0.0" vertical-offset="2924" max-vertical-offset="3570" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin_picture/addPicture.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1479" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_tour.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3009" />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..album">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/856663eb/6573dcec-5e6c-472c-b85c-be069529509e/vyper..picture">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -977,16 +1000,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_article/UpdateArticle.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="3519">
-          <folding />
-        </state>
+        <state line="20" column="40" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="3519" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1037">
-          <folding />
-        </state>
+        <state line="25" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Model.php">
@@ -998,16 +1017,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Database/Query.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="39" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="7531">
-          <folding />
-        </state>
+        <state line="221" column="39" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="7531" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="35" selection-start="727" selection-end="727" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="2193">
-          <folding />
-        </state>
+        <state line="45" column="35" selection-start="727" selection-end="727" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="2193" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1029,74 +1044,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="40" selection-start="3241" selection-end="3273" vertical-scroll-proportion="-27.692308" vertical-offset="1201" max-vertical-offset="2108">
+        <state line="117" column="40" selection-start="3241" selection-end="3273" vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="2176">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="10.884615" vertical-offset="4074" max-vertical-offset="4930">
+        <state line="223" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="4930">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/article/showAll.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="221" selection-start="1803" selection-end="1992" vertical-scroll-proportion="-8.846154" vertical-offset="203" max-vertical-offset="1037">
+        <state line="39" column="221" selection-start="1803" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="1037">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="61" selection-start="801" selection-end="801" vertical-scroll-proportion="-4.9038463" vertical-offset="102" max-vertical-offset="1632">
+        <state line="21" column="61" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1632">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="33" selection-start="493" selection-end="493" vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="697">
-          <folding>
-            <element signature="e#38#65#0" expanded="true" />
-          </folding>
+        <state line="32" column="33" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="697">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1755" selection-end="1755" vertical-scroll-proportion="-20.26923" vertical-offset="357" max-vertical-offset="1224">
-          <folding>
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
+        <state line="52" column="0" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1224">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="107" selection-start="1897" selection-end="1996" vertical-scroll-proportion="-18.961538" vertical-offset="612" max-vertical-offset="2295">
+        <state line="71" column="107" selection-start="1897" selection-end="1996" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2397">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="62" selection-start="4655" selection-end="4655" vertical-scroll-proportion="-9.884615" vertical-offset="2189" max-vertical-offset="4454">
+        <state line="169" column="62" selection-start="4655" selection-end="4655" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="4624">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/theme/showTheme.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="221" selection-start="1687" selection-end="1876" vertical-scroll-proportion="-10.788462" vertical-offset="102" max-vertical-offset="1020">
+        <state line="39" column="221" selection-start="1687" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="27" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34085">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/discover/lightbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7389" selection-start="7389" selection-end="7389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/discover/flexslider-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="65" selection-start="16236" selection-end="16236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/discover/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="3" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/discover/superfish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="25" selection-start="2817" selection-end="2820" vertical-scroll-proportion="-10.961538" vertical-offset="956" max-vertical-offset="2142">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="630" column="0" selection-start="26232" selection-end="26232" vertical-scroll-proportion="0.499388" vertical-offset="10302" max-vertical-offset="16915">
+        <state line="970" column="24" selection-start="39779" selection-end="39779" vertical-scroll-proportion="0.500612" vertical-offset="16081" max-vertical-offset="16915">
           <folding />
         </state>
       </provider>

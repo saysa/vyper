@@ -45,13 +45,13 @@
         <script src="{{ path_js }}plugins.js"></script>
         <script src="{{ path_js }}main.js"></script>
 		
-		<script src="{{ path_js }}bootstrap/bootstrap.min.js"></script>
+
         <script src="{{ path_js }}plugins/cleditor/jquery.cleditor.min.js"></script>
         
         <script src="{{ path_js }}owl-carousel/owl.carousel.js"></script>
         <script src="{{ path_js }}liscroll.js"></script>
-        
-        	
+
+
         
     </head>
     <body>
@@ -79,7 +79,7 @@
 						<ul class="list">
 							<li>
 								<i class="icon-home"></i>
-								<a href="http://demo.fairpixels.com/discover">Home</a>
+								<a href="{{ base_url }}">Home</a>
 							</li>
 														
 							<li>
@@ -94,7 +94,7 @@
 														
 							<li>
 								<i class="icon-envelope"></i>
-								<a href="http://demo.fairpixels.com/discover/contact/">Contact us</a>
+								<a href="{{ base_url }}">Contact us</a>
 							</li>							
 														
 						</ul>
@@ -969,13 +969,13 @@
         	<!--/footer-info -->
         </footer>
 		<!-- /footer -->
-		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/hoverIntent.js?ver=3.6.1"></script>
-		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-includes/js/hoverIntent.min.js?ver=r7"></script>
-		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/superfish.js?ver=3.6.1"></script>
-		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/flexslider-min.js?ver=3.6.1"></script>
-		<script type="text/javascript" src="http://demo.fairpixels.com/discover/wp-content/themes/fp_discover/js/lightbox.js?ver=3.6.1"></script>
-		
-		
+
+
+        <script src="{{ path_js }}discover/superfish.js"></script>
+        <script src="{{ path_js }}discover/flexslider-min.js"></script>
+        <script src="{{ path_js }}discover/lightbox.js"></script>
+        <script src="{{ path_js }}discover/script.js"></script>
+        <script src="{{ path_js }}bootstrap/bootstrap.min.js"></script>
 		
 		
         <script>
