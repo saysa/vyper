@@ -452,156 +452,369 @@
 	    							</div>
 	    						</div>
 
-            					<div class="main-post">
-                                	<div class="thumb-wrap video-thumb">
-                        				<iframe width="560" height="315" src="//www.youtube.com/embed/p5GxXYR78mE?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>								
-                        			</div>
-
-                                    <div class="post-details">
-                    					<h3>
-                        					<a href="http://demo.fairpixels.com/discover/2013/09/villain/">A new female villain</a>
-                    					</h3>
-                    					<div class="entry-meta">
-                        					<span class="date">
-                            					<i class="icon-calendar"></i>
-                           						September 25, 2013									
-                           					</span>
+            					{% for article in recent_articles %}
+				                {% if loop.index == 1 %}
 
 
-                                <span class="category">
-                                    <i class="icon-folder-close"></i>
-                                    <a href="http://demo.fairpixels.com/discover/category/entertainment/">Entertainment</a>											</span>
+                				<div class="main-post">
+                    				
+                    				{% if article.getYoutube %}
+                    					<div class="thumb-wrap video-thumb">
+	                        				<iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+	                        			</div>
 
-                        <span class="views">
-                            <i class="icon-eye-open"></i>
-                            5833									</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing augue quis augue egestas, sed gravida diam viverra. Ut vehicula quis nisi consequat rutrum. Morbi pulvinar arcu vel pellentesque dictum. Donec et placerat nunc. Integer…</p>
-                </div>
-            </div><!-- /one-half -->
+                                    {% else %}
+                                        <div class="thumb-wrap">
+                                        <div class="thumb">
+                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                        </div>
 
+                                        <span class="comments main-color-bg">
+                                            <i class="icon-comments"></i>
+                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+                                        </span>
 
+                                        <div class="overlay">
+                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+                                        </div>
+                                        </div>
+                    				{% endif %}
 
 
 
+                    				<div class="post-details">
+				                        <h3>
+				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+				                        </h3>
 
+				                        <div class="entry-meta">
+				                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
 
+				                            <span class="category">
+				                                <i class="icon-folder-close"></i>
+				                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+				                            </span>
 
+				                            <span class="views">
+				                                <i class="icon-eye-open"></i> 6549
+				                            </span>
+				                        </div>
+                        				<p>{{ article.getDescription }}</p>
+                    				</div>
+                				</div>
+                				<!-- /one-half -->
+
+                				{% endif %}
+                				{% endfor %}
 
                                 <div class="post-list">
 
+                					{% for key, article in recent_articles %}
+				                    {% if key>0 and key<4 %}
 
-                <div class="item-post">
-                                                        <div class="thumb">
-                            <a href="http://demo.fairpixels.com/discover/2013/09/hallway/"><img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/7-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="7"></a>
-                        </div>
+							        <div class="item-post">
+			                            <div class="thumb">
+			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+			                            </div>
 
-                    <div class="post-right">
-                        <h5>
-                            <a href="http://demo.fairpixels.com/discover/2013/09/hallway/" rel="bookmark">
-                                The clogged hallway
-                            </a>
-                        </h5>
+			                            <div class="post-right">
+			                                <h5>
+			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+			                                </h5>
 
-                        <div class="entry-meta">
-                            <span class="date">
-                                <i class="icon-calendar"></i>
-                                September 25, 2013										</span>
+			                                <div class="entry-meta">
+			                                    <span class="date">
+			                                        <i class="icon-calendar"></i>
+			                                        {{ article.getReleaseDate }}
+			                                    </span>
 
-                                                                        <span class="comments">
-                                    <i class="icon-comments"></i>
-                                    <a href="http://demo.fairpixels.com/discover/2013/09/hallway/#comments" title="Comment on The clogged hallway">1 comment</a>											</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+			                                    <span class="comments">
+			                                        <i class="icon-comments"></i>
+			                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+			                                    </span>
+			                                </div>
+			                            </div>
+			                        </div>
 
 
+			                        {% endif %}
+			                        {% endfor %}
 
-
-
-
-
-
-                <div class="item-post">
-                                                        <div class="thumb">
-                            <a href="http://demo.fairpixels.com/discover/2013/09/fortune/"><img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/8-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="8"></a>
-                        </div>
-
-                    <div class="post-right">
-                        <h5>
-                            <a href="http://demo.fairpixels.com/discover/2013/09/fortune/" rel="bookmark">
-                                Drake’s Fortune screenshot
-                            </a>
-                        </h5>
-
-                        <div class="entry-meta">
-                            <span class="date">
-                                <i class="icon-calendar"></i>
-                                September 25, 2013										</span>
-
-                                                                        <span class="comments">
-                                    <i class="icon-comments"></i>
-                                    <a href="http://demo.fairpixels.com/discover/2013/09/fortune/#comments" title="Comment on Drake’s Fortune screenshot">5 comments</a>											</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                        		</div><!-- /one-half -->
 
 
 
+						    </div><!-- /section1-cat -->
+						    <!-- /category2 -->
 
 
-
-
-
-
-                <div class="item-post">
-                                                        <div class="thumb">
-                            <a href="http://demo.fairpixels.com/discover/2013/09/so-real/"><img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/2-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="2"></a>
-                        </div>
-
-                    <div class="post-right">
-                        <h5>
-                            <a href="http://demo.fairpixels.com/discover/2013/09/so-real/" rel="bookmark">
-                                She looks so real
-                            </a>
-                        </h5>
-
-                        <div class="entry-meta">
-                            <span class="date">
-                                <i class="icon-calendar"></i>
-                                September 25, 2013										</span>
-
-                                                                        <span class="comments">
-                                    <i class="icon-comments"></i>
-                                    <a href="http://demo.fairpixels.com/discover/2013/09/so-real/#respond" title="Comment on She looks so real">no comments</a>											</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                        </div><!-- /one-half -->
-
-
-
-    </div><!-- /section1-cat -->
-    <!-- /category2 -->
 
 
 
     </div>
 
-    </div>
-    {% endif %}
+
+
+    						<div class="add_468">
+        <script type="text/javascript"><!--
+        google_ad_client = "pub-2203599332195876";
+        /* 468x60, date de création 24/09/08 */
+        google_ad_slot = "8274791547";
+        google_ad_width = 468;
+        google_ad_height = 60;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        </div>
+
+    						<div id="feat-categories">
+	
+								<!-- category1 -->	
+								<div class="feat-cat section">
+				
+									<div class="cat-header">
+										<div class="cat-title second-color-bg">
+											<div class="cat-icon">					
+												<i class="icon-bookmark"></i>					
+											</div>					
+											<h4><a href="{{ base_url }}interviews">Interviews</a></h4>
+										</div>
+									</div>
+				
+									<div class="one-half main-post">
+
+										{% for article in recent_articles %}
+						                {% if loop.index == 1 %}
+
+
+		                    				
+		                    				{% if article.getYoutube %}
+		                    					<div class="thumb-wrap video-thumb">
+			                        				<iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+			                        			</div>
+
+		                                    {% else %}
+		                                        <div class="thumb-wrap">
+		                                        <div class="thumb">
+		                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+		                                        </div>
+
+		                                        <span class="comments main-color-bg">
+		                                            <i class="icon-comments"></i>
+		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                        </span>
+
+		                                        <div class="overlay">
+		                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+		                                        </div>
+		                                        </div>
+		                    				{% endif %}
+
+
+
+		                    				<div class="post-details">
+						                        <h3>
+						                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+						                        </h3>
+
+						                        <div class="entry-meta">
+						                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+
+						                            <span class="category">
+						                                <i class="icon-folder-close"></i>
+						                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+						                            </span>
+
+						                            <span class="views">
+						                                <i class="icon-eye-open"></i> 6549
+						                            </span>
+						                        </div>
+		                        				<p>{{ article.getDescription }}</p>
+		                    				</div>
+		                			
+
+		                				{% endif %}
+		                				{% endfor %}
+	
+									</div><!-- /one-half -->
+							
+									
+									<div class="one-half last">
+										
+										{% for key, article in recent_articles %}
+					                    {% if key>0 and key<5 %}
+
+								        <div class="item-post">
+				                            <div class="thumb">
+				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+				                            </div>
+
+				                            <div class="post-right">
+				                                <h5>
+				                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+				                                </h5>
+
+				                                <div class="entry-meta">
+				                                    <span class="date">
+				                                        <i class="icon-calendar"></i>
+				                                        {{ article.getReleaseDate }}
+				                                    </span>
+
+				                                    <span class="comments">
+				                                        <i class="icon-comments"></i>
+				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+				                                    </span>
+				                                </div>
+				                            </div>
+				                        </div>
+
+
+				                        {% endif %}
+				                        {% endfor %}
+								
+										
+								
+									</div><!-- /one-half -->
+										
+				
+								
+								</div><!-- /feat-cat -->
+								<!-- /category1 -->
+
+        
+
+								<!-- category2 -->	
+								<div class="feat-cat section">
+				
+									<div class="cat-header">
+										<div class="cat-title second-color-bg">
+											<div class="cat-icon">					
+												<i class="icon-leaf"></i>					
+											</div>					
+									
+											<h4><a href="{{ base_url }}live-reports">Live Reports</a></h4>
+										</div>
+									</div>
+											
+				
+							
+									<div class="one-half main-post">
+						
+													
+										{% for article in recent_articles %}
+						                {% if loop.index == 1 %}
+
+
+		                    				
+		                    				{% if article.getYoutube %}
+		                    					<div class="thumb-wrap video-thumb">
+			                        				<iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+			                        			</div>
+
+		                                    {% else %}
+		                                        <div class="thumb-wrap">
+		                                        <div class="thumb">
+		                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+		                                        </div>
+
+		                                        <span class="comments main-color-bg">
+		                                            <i class="icon-comments"></i>
+		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                        </span>
+
+		                                        <div class="overlay">
+		                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+		                                        </div>
+		                                        </div>
+		                    				{% endif %}
+
+
+
+		                    				<div class="post-details">
+						                        <h3>
+						                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+						                        </h3>
+
+						                        <div class="entry-meta">
+						                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+
+						                            <span class="category">
+						                                <i class="icon-folder-close"></i>
+						                                <a href="http://demo.fairpixels.com/discover/category/graphics/">Graphics</a>
+						                            </span>
+
+						                            <span class="views">
+						                                <i class="icon-eye-open"></i> 6549
+						                            </span>
+						                        </div>
+		                        				<p>{{ article.getDescription }}</p>
+		                    				</div>
+		                			
+
+		                				{% endif %}
+		                				{% endfor %}
+	
+									</div><!-- /one-half -->
+							
+									
+							
+									<div class="one-half last">
+										
+										{% for key, article in recent_articles %}
+					                    {% if key>0 and key<5 %}
+
+								        <div class="item-post">
+				                            <div class="thumb">
+				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+				                            </div>
+
+				                            <div class="post-right">
+				                                <h5>
+				                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+				                                </h5>
+
+				                                <div class="entry-meta">
+				                                    <span class="date">
+				                                        <i class="icon-calendar"></i>
+				                                        {{ article.getReleaseDate }}
+				                                    </span>
+
+				                                    <span class="comments">
+				                                        <i class="icon-comments"></i>
+				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+				                                    </span>
+				                                </div>
+				                            </div>
+				                        </div>
+
+
+				                        {% endif %}
+				                        {% endfor %}
+												
+								
+									</div><!-- /one-half -->
+										
+				
+								
+								</div><!-- /feat-cat -->
+								<!-- /category2 -->
+	
+	<!-- category3 -->	
+		<!-- /category3 -->
+	
+	<!-- category4 -->	
+		<!-- /category4 -->
+	
+	<!-- category5 -->	
+		<!-- /category5 -->
+	
+</div>
+
+
+				    </div>
+				    {% endif %}
 
         <!-- Start template -->
         {{ template }}
