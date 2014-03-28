@@ -45,6 +45,7 @@ class Admin_article extends Admin_common {
 				"title" => RequestMethods::post("title"),
 				"description" => RequestMethods::post("description"),
 				"text" => RequestMethods::post("text"),
+                "youtube" => RequestMethods::post("youtube"),
 				"releaseDate" => RequestMethods::post("release_date"),
 				"releaseTime" => RequestMethods::post("release_time"),
 				"author" => RequestMethods::post("author"),
@@ -76,6 +77,7 @@ class Admin_article extends Admin_common {
 			->set("post_title", RequestMethods::post("title"))
 			->set("post_description", RequestMethods::post("description"))
 			->set("post_text", RequestMethods::post("text"))
+            ->set("post_youtube", RequestMethods::post("youtube"))
 			->set("post_rel_date", RequestMethods::post("release_date"))
 			->set("post_rel_time", RequestMethods::post("release_time"))
 			->set("post_author", RequestMethods::post("author"))
@@ -161,6 +163,7 @@ class Admin_article extends Admin_common {
 			$article->title = RequestMethods::post("title");
 			$article->description = RequestMethods::post("description");
 			$article->text = RequestMethods::post("text");
+            $article->youtube = RequestMethods::post("youtube");
 			$article->releaseDate = RequestMethods::post("release_date");
 			$article->releaseTime = RequestMethods::post("release_time");
 			$article->author = RequestMethods::post("author");

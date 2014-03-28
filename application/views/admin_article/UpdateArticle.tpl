@@ -32,7 +32,7 @@
 							<div class="form-group col-lg-9{%if error_title %} has-error{% endif %}">
 								<label class="control-label" for="title">Title *</label>
 								<div class="controls">
-								  <input class="form-control focused" id="title" name="title" type="text" placeholder="Title" value="{{ article.getTitle }}">
+								  <input class="form-control focused" id="title" name="title" type="text" placeholder="Title" value="{{ article.getTitle|escape }}">
 								  {{ error_title }}
 								</div>
 							</div>
@@ -58,6 +58,17 @@
 							{{ error_text }}
 						  </div>
 						</div>
+
+                        <!-- Youtube -->
+                        <div class="row">
+                            <div class="form-group col-lg-9{%if error_youtube %} has-error{% endif %}">
+                                <label class="control-label" for="youtube">Youtube</label>
+                                <div class="controls">
+                                        <input class="form-control focused" id="youtube" name="youtube" type="text" placeholder="ID Youtube" value="{{ article.getYoutube }}">
+                                        {{ error_youtube }}
+                                </div>
+                            </div>
+                        </div>
 						
 						<div class="row">
 							<!-- Release Date -->

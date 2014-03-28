@@ -58,6 +58,17 @@
 							{{ error_text }}
 						  </div>
 						</div>
+
+                        <!-- Youtube -->
+                        <div class="row">
+                            <div class="form-group col-lg-9{%if error_youtube %} has-error{% endif %}">
+                                            <label class="control-label" for="youtube">Youtube</label>
+                                            <div class="controls">
+                                              <input class="form-control focused" id="youtube" name="youtube" type="text" placeholder="ID Youtube" value="{{ post_youtube }}">
+                                {{ error_youtube }}
+                            </div>
+                        </div>
+                        </div>
 						
 						<div class="row">
 							<!-- Release Date -->

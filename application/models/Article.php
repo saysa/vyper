@@ -164,6 +164,14 @@ class Article extends Model {
 	 * @related Picture
 	 */
 	protected $_relatedPicture;
+
+    /**
+     * @column
+     * @readwrite
+     * @length 255
+     * @type text
+     */
+    protected $_youtube;
 	
 	/**
 	 * @column
