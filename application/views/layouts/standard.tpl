@@ -59,7 +59,7 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        {% if front_page_article %}
+
         	<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
@@ -68,7 +68,7 @@
 			  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=1470537739827941";
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
-        {% endif %}
+
 
 
         
@@ -243,7 +243,7 @@
         						<div class="item">
 									<div class="thumbnail overlay">
 										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
-											<img width="374" height="200" src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt="5">									
+											<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt="5">
 										</a>
 									</div>
 									
@@ -424,7 +424,7 @@
 
 			                                    <span class="comments">
 			                                        <i class="icon-comments"></i>
-			                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+                                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"></fb:comments-count> réactions</a>
 			                                    </span>
 			                                </div>
 			                            </div>
@@ -917,7 +917,7 @@
                             </div>
                             <div class="event-details">
                             <h5 class="event-title"><a href="{{ base_url }}event/{{ nextEvent_id }}/{{ nextEvent_stringURL }}.html">{{ nextEvent_title }}</a></h5>
-                            <div class="event-place">Los Angeles, USA</div>
+                            <div class="event-place">Paris, FRA</div>
                             <div>{{ nextEvent_remainingDays }} jours restant(s)</div>
 
                             </div>

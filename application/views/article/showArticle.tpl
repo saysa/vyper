@@ -10,14 +10,10 @@
 					
 					<span class="comments">
 							<i class="icon-comments"></i>
-							<a href="http://demo.fairpixels.com/discover/2013/09/villain/#comments" title="Comment on A new female villain">1 comment</a>						
+							<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"></fb:comments-count> réactions</a>
 					</span>		
 						
-					
-					<span class="views">
-						<i class="icon-eye-open"></i> 5642					
-					</span> 
-					
+
 					<span class="category">
 						<i class="icon-folder-close-alt"></i>
                         <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
@@ -27,19 +23,19 @@
 				
 									<div class="social">
 						<span class="fb">
-							<a href="http://facebook.com/share.php?u=http://demo.fairpixels.com/discover/2013/09/villain/&amp;t=A new female villain" target="_blank"><i class=" icon-facebook-sign"></i></a>
+							<a href="http://facebook.com/share.php?u={{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html&amp;t={{ article.getTitle }}" target="_blank"><i class=" icon-facebook-sign"></i></a>
 						</span>				
 						
 						<span class="twitter">
-							<a href="http://twitter.com/home?status=A new female villain http://demo.fairpixels.com/discover/2013/09/villain/" target="_blank"><i class="icon-twitter"></i></a>				
+							<a href="http://twitter.com/home?status={{ article.getTitle }} {{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" target="_blank"><i class="icon-twitter"></i></a>
 						</span>
 						
 						<span class="gplus">
-							<a href="https://plus.google.com/share?url=http://demo.fairpixels.com/discover/2013/09/villain/&amp;t=A new female villain" target="_blank"><i class="icon-google-plus-sign"></i></a>			
+							<a href="https://plus.google.com/share?url={{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html&amp;t={{ article.getTitle }}" target="_blank"><i class="icon-google-plus-sign"></i></a>
 						</span>
 						
 						<span class="pinterest">
-														<a href="http://pinterest.com/pin/create/button/?url=http://demo.fairpixels.com/discover/2013/09/villain/&amp;media=http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/3-150x150.jpg&amp;description=A new female villain" target="_blank">		
+						    <a href="http://pinterest.com/pin/create/button/?url={{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html&amp;media={{ base_url }}uploads/pic/{{ article.getRelatedPicture }}&amp;description={{ article.getTitle }}" target="_blank">
 							<i class="icon-pinterest"></i>					
 							</a>					
 						</span>				

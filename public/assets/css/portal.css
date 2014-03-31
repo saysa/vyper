@@ -2880,19 +2880,18 @@ h6{
 	
 	padding: 10px !important;
 	color: #FFF;
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0.39) 0%, rgba(0,0,0,0.69) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.39)), color-stop(100%,rgba(0,0,0,0.69))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.39) 0%,rgba(0,0,0,0.69) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,0,0,0.39) 0%,rgba(0,0,0,0.69) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0.39) 0%,rgba(0,0,0,0.69) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0.39) 0%,rgba(0,0,0,0.69) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63000000', endColorstr='#b0000000',GradientType=0 ); /* IE6-9 */
+    background: #414140;
+
 
 }
 
-.next_event a {
+.featured-event a {
 	color: #FFF;
 }
+.featured-event a:hover {
+    color: #959495;
+}
+
 
 .difference {
 	/*display: block;*/
@@ -2999,7 +2998,7 @@ li.galerie {
 .featured-event {
     width: 100%;
     border-bottom: 1px solid #EBEBEB;
-    margin: 0 0 1.5em -20px;
+    margin: 0 0 1.5em 0;
     padding: 0 20px 1.5em 20px;
     overflow: hidden;
 }

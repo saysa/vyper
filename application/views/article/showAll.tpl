@@ -19,7 +19,7 @@
 				
 					<span class="comments main-color-bg">
 						<i class="icon-comments"></i>
-						<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#respond" title="Comment on Ellie looks younger than before">no comments</a>				
+						<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#comments" title=""><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"></fb:comments-count> réactions</a>
 					</span>		
 				
 					<div class="overlay">									
