@@ -314,12 +314,12 @@ h6{
 	height: 50px;
 }
 
-#header .social li{	
-	border-left: 1px solid #86D7D7;
-	border-right: 1px solid #3db4b4;
-	float: left;
-	padding: 10px;	
-	font-size: 20px;
+#header .social li {
+    border-left: 1px solid #D35F5F;
+    border-right: 1px solid #D33535;
+    float: left;
+    padding: 10px;
+    font-size: 20px;
 }
 
 #header .social li:hover a{
