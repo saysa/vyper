@@ -31,23 +31,24 @@
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="assets/js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
-        
-   
-        
-        
-        
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+
+
+
+
+            <script type='text/javascript' src='{{ path_js }}discover/jquery.js?ver=1.10.2'></script>
+            <script type='text/javascript' src='{{ path_js }}discover/jquery-migrate.min.js?ver=1.2.1'></script>
         
         
         <script>window.jQuery || document.write('<script src="{{ path_js }}vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="{{ path_js }}plugins.js"></script>
         <script src="{{ path_js }}main.js"></script>
-		
+
 
         <script src="{{ path_js }}plugins/cleditor/jquery.cleditor.min.js"></script>
-        
+
         <script src="{{ path_js }}owl-carousel/owl.carousel.js"></script>
         <script src="{{ path_js }}liscroll.js"></script>
 
@@ -982,12 +983,15 @@
         </footer>
 		<!-- /footer -->
 
+        <script>
+
+
+        </script>
 
         <script src="{{ path_js }}discover/superfish.js"></script>
         <script src="{{ path_js }}discover/flexslider-min.js"></script>
         <script src="{{ path_js }}discover/lightbox.js"></script>
         <script src="{{ path_js }}discover/script.js"></script>
-        <script src="{{ path_js }}bootstrap/bootstrap.min.js"></script>
 		
 		
         <script>
