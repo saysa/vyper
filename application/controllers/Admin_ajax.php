@@ -3,6 +3,7 @@
 namespace application\controllers;
 
 use application\models\Article;
+use application\models\RelArtistItem;
 use Framework\RequestMethods;
 
 
@@ -19,49 +20,59 @@ class Admin_ajax extends Controller {
 	{
 		$this->_willRenderLayoutView = false;
 		
-		$relation = RelArtistEvent::first(array("idArtist=?" => $_POST['artist_id'], "idEvent=?" => $_POST['event_id']));
+		$relation = RelArtistItem::first(array("type=?" => "event",  "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
 		$relation->delete();
 	}
+
+    public function articleArtistLinkDelete()
+    {
+        $this->_willRenderLayoutView = false;
+
+        $relation = RelArtistItem::first(array("type=?" => "article",  "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
+        $relation->delete();
+    }
 	
 	public function eventArtistLink()
 	{
-		
 		$this->_willRenderLayoutView = false;
-		//$this->_willRenderActionView = false;
 		$this->_defaultContentType = "application/json";
-		
-		if (isset($_POST['artist_id']) && $_POST['artist_id'] != '-1') {
-			
-			$relation = RelArtistEvent::first(array("idArtist=?" => $_POST['artist_id'], "idEvent=?" => $_POST['event_id']));
-			
-			if (!$relation)
-			{
-				
-				$relArtistEvent = new RelArtistEvent(array(
-					"idArtist" => RequestMethods::post("artist_id"),
-					"idEvent" => RequestMethods::post("event_id")
-				));
-				
-				
-					
-				if ($relArtistEvent->validate())
-				{
-					$relArtistEvent->save();
-					
-					$artist = Artist::first(array("id=?" => $_POST['artist_id']));
-					
-					$array = array("artist" => array("id" => $artist->id, "name" => $artist->name));
-					
-					
-					echo json_encode($array);
-				}
-				
-				
-			}
-			
-			
-		}
+        $this->itemArtistLink("event");
 	}
+
+    public function articleArtistLink()
+    {
+        $this->_willRenderLayoutView = false;
+        $this->_defaultContentType = "application/json";
+        $this->itemArtistLink("article");
+
+    }
+
+    public function itemArtistLink($type)
+    {
+        if (isset($_POST['artist_id']) && $_POST['artist_id'] != '-1') {
+
+            $relation = RelArtistItem::first(array("type=?" => $type, "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
+
+            if (!$relation)
+            {
+                $relArtistEvent = new RelArtistItem(array(
+                    "idArtist" => RequestMethods::post("artist_id"),
+                    "idItem" => RequestMethods::post("item_id"),
+                    "type" => $type
+                ));
+
+                if ($relArtistEvent->validate())
+                {
+                    $relArtistEvent->save();
+                    $artist = Artist::first(array("id=?" => $_POST['artist_id']));
+                    $array = array("artist" => array("id" => $artist->id, "name" => $artist->name));
+                    echo json_encode($array);
+                }
+            }
+        }
+    }
+
+
 
     public function switchArticleHighlight()
     {

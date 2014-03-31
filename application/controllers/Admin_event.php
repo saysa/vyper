@@ -2,6 +2,7 @@
 
 namespace application\controllers;
 
+use application\models\RelArtistItem;
 use Framework\RequestMethods;
 
 
@@ -106,8 +107,8 @@ class Admin_event extends Admin_common {
 	public function updateEvent($id)
 	{
 		$view = $this-> getActionView();
-		
-		
+
+
 		$event = Event::first(array("id=?" => $id));
 	
 		if (!$event)
@@ -157,7 +158,8 @@ class Admin_event extends Admin_common {
 		}
 	
 		$artists = Artist::all(array("deleted=?"=>false));
-		$relArtists = RelArtistEvent::all(array("idEvent=?" => $id));
+
+		$relArtists = RelArtistItem::all(array("type=?" => "event", "idItem=?" => $id));
 		$eventTypes = EventType::all(array("deleted=?"=>false));
 		$tours = Tour::all(array("deleted=?"=>false));
 		$locations = Location::all(array("deleted=?"=>false));

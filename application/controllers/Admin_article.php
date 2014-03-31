@@ -4,6 +4,7 @@ namespace application\controllers;
 
 use application\models\Artist;
 
+use application\models\RelArtistItem;
 use application\models\Theme;
 
 use application\models\ArticleType;
@@ -201,8 +202,13 @@ class Admin_article extends Admin_common {
 		$continents = Continent::all();
 		$typeArticles = ArticleType::all();
 		$themes = Theme::all(array("deleted=?"=>false));
-		
+
+        $artists = Artist::all(array("deleted=?"=>false));
+        $relArtists = RelArtistItem::all(array("type=?" => "article", "idItem=?" => $id));
+
 		$view->set("article", $article)
+        ->set("artists", $artists)
+        ->set("relArtists", $relArtists)
 		->set("current_image", $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename)
 			->set("continents", $continents)
 			->set("themes", $themes)

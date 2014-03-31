@@ -27,5 +27,14 @@ class RelArtistItem extends Model {
 	 * @type integer
 	 */
 	protected $_idItem;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 255
+     *
+     */
+    protected $_type; // item, event, article, ect
 }
 

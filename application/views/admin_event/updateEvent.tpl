@@ -342,7 +342,7 @@ $(document).ready(function() {
 	            
 	            data:{
 	            	artist_id : artistID,
-	            	event_id : '{{ event.getId }}'
+	            	item_id : '{{ event.getId }}'
 	            },
 	            success: function(data){
 					 console.log('je suis delete success :' + data);      
@@ -365,7 +365,7 @@ $(document).ready(function() {
 	            dataType: "json",
 	            data:{
 	            	artist_id : $('#artists_to_link').val(),
-	            	event_id : '{{ event.getId }}'
+	            	item_id : '{{ event.getId }}'
 	            },
                 success: function(data){
 					 $('#relArtistLinkTable tr:last').after('<tr id="'+ data.artist.id +'"><td>' + data.artist.id + '</td><td>' + data.artist.name + '</td><td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td></tr>');

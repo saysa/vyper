@@ -30,12 +30,24 @@ $routes = array(
 				"controller" => "admin_ajax",
 				"action" 	 => "eventArtistLink"
 		),
+        array(
+            "name" 		 => "admin_article_artist_link",
+            "pattern"    => "_admin_/ajax/article_artist_link",
+            "controller" => "admin_ajax",
+            "action" 	 => "articleArtistLink"
+        ),
 		array(
-				"name" 		 => "admin_event_artist_link_delete",
-				"pattern"    => "_admin_/ajax/event_artist_link_delete",
-				"controller" => "admin_ajax",
-				"action" 	 => "eventArtistLinkDelete"
+            "name" 		 => "admin_event_artist_link_delete",
+            "pattern"    => "_admin_/ajax/event_artist_link_delete",
+            "controller" => "admin_ajax",
+            "action" 	 => "eventArtistLinkDelete"
 		),
+        array(
+            "name" 		 => "admin_article_artist_link_delete",
+            "pattern"    => "_admin_/ajax/article_artist_link_delete",
+            "controller" => "admin_ajax",
+            "action" 	 => "articleArtistLinkDelete"
+        ),
         array(
 
             "pattern"    => "_admin_/ajax/switch_article_highlight",
