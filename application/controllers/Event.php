@@ -18,6 +18,10 @@ class Event extends \Framework\Shared\Controller {
 			self::redirect("home");
 		}
 
+        /* Incremented visit counter */
+        $this->incrementeVisite("event", $id);
+
+
         $location = Location::first(array("id=?" => $event->location));
 
         $event->date =  StringMethods::sqlDateToCustom($event->date);

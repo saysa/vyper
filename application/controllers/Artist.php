@@ -26,26 +26,7 @@ class Artist extends \Framework\Shared\Controller {
 		}
 
         /* Incremented visit counter */
-        $time = time();
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $waiting_time = $time - 3600; // 1 hour
-
-        /*$visite = ArticleVisite::count(array("articleId=?" => $id, "ip=?" => $ip, "timestampVisit>?" => $waiting_time));
-
-        if ($visite=="0")
-        {
-            $articleVisite = new ArticleVisite(array(
-                "articleId"      => $id,
-                "ip" 	         => $ip,
-                "timestampVisit" => $time
-            ));
-
-            if ($articleVisite->validate())
-            {
-                $articleVisite->save();
-            }
-        }
-        */
+        $this->incrementeVisite("artist", $id);
 		
 		/* Set front Release Date */
 

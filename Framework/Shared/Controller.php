@@ -2,6 +2,7 @@
 
 namespace Framework\Shared;
 
+use application\models\ItemVisite;
 use application\models\User;
 
 use Framework\Events;
@@ -43,6 +44,33 @@ class Controller extends \Framework\Controller {
 		$this->_user = $user;
 		return $this;
 	}
+
+    public function incrementeVisite($type, $itemId)
+    {
+        $time = time();
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $waiting_time = $time - 3600; // 1 hour
+
+        $nbVisite = ItemVisite::count(array("type" => $type, "itemId=?" => $itemId, "ip=?" => $ip, "timestampVisit>?" => $waiting_time));
+
+        if ($nbVisite=="0")
+        {
+            $itemVisite = new ItemVisite(array(
+                "type"           => $type,
+                "itemId"         => $itemId,
+                "ip" 	         => $ip,
+                "timestampVisit" => $time
+            ));
+
+            if ($itemVisite->validate())
+            {
+                $itemVisite->save();
+                return true;
+            }
+        }
+
+        return false;
+    }
 
 	public function __construct($options=array())
 	{

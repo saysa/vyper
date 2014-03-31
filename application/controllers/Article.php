@@ -27,25 +27,9 @@ class Article extends \Framework\Shared\Controller {
 		}
 
         /* Incremented visit counter */
-        $time = time();
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $waiting_time = $time - 3600; // 1 hour
+        $this->incrementeVisite("article", $id);
 
-        $visite = ArticleVisite::count(array("articleId=?" => $id, "ip=?" => $ip, "timestampVisit>?" => $waiting_time));
 
-        if ($visite=="0")
-        {
-            $articleVisite = new ArticleVisite(array(
-                "articleId"      => $id,
-                "ip" 	         => $ip,
-                "timestampVisit" => $time
-            ));
-
-            if ($articleVisite->validate())
-            {
-                $articleVisite->save();
-            }
-        }
 		
 		/* Set front Release Date */
 		$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
@@ -88,7 +72,7 @@ class Article extends \Framework\Shared\Controller {
 	{
 		$view = $this->getActionView();
 		$articleTypeId = ArticleType::first(array("name=?" => $type))->id;
-		
+
 		/*
 		 * Pagination
 		 */
