@@ -45,7 +45,7 @@
 
             <ul class="slides">
                 {% for picture in pictures %}
-                    <li><img src="{{ base_url }}uploads/pic/{{ picture.getName }}"></li>
+                    <li class="mini"><img src="{{ base_url }}uploads/pic/{{ picture.getName }}"></li>
                 {% endfor %}
             </ul>
         </div>
