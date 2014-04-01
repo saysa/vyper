@@ -26,6 +26,7 @@ class Event extends \Framework\Shared\Controller {
 
         $event->date =  StringMethods::sqlDateToCustom($event->date);
 
+
         $layout = $this->getLayoutView();
         $layout
             ->set("soe_title", $event->title)
@@ -38,10 +39,12 @@ class Event extends \Framework\Shared\Controller {
 		;
 		
 		if (Picture::first(array("id=?"=>$event->relatedPicture))) {
-			$image = Picture::first(array("id=?"=>$event->relatedPicture))->filename;
-			$event->relatedPicture = $image;
+            $image_path = Picture::get_path($event->relatedPicture);
+            $event->relatedPicture = $image_path . Picture::first(array("id=?"=>$event->relatedPicture))->filename;
 			$event->stringURL = StringMethods::filterURL($event->title);
 			$view->set("event_reladtedPicture", "true");
+
+
 		}
 		
 	

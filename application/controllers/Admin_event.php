@@ -2,6 +2,7 @@
 
 namespace application\controllers;
 
+use application\models\Picture;
 use application\models\RelArtistItem;
 use Framework\RequestMethods;
 
@@ -171,14 +172,23 @@ class Admin_event extends Admin_common {
 			$relArtist->id = $relArtist->idArtist;
 			$relArtist->idArtist = $artist;
 		}
-		
+
+
+
 		$view->set("artists", $artists)
 		->set("relArtists", $relArtists)
 		->set("event", $event)
 		->set("eventTypes", $eventTypes)
 		->set("tours", $tours)
 		->set("locations", $locations)
-		;
+        ;
+
+        if ($event->relatedPicture)
+        {
+            $image_path = Picture::get_path($event->relatedPicture);
+            $view->set("current_image", $image_path . Picture::first(array("id=?"=>$event->relatedPicture))->filename);
+        }
+
 	
 		// layout
 		$layout = $this-> getLayoutView();

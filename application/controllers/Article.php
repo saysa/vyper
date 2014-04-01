@@ -35,9 +35,8 @@ class Article extends \Framework\Shared\Controller {
 		$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
 		
 		$image_path = Picture::get_path($article->relatedPicture);
-		$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
-		
-		$article->relatedPicture = $image;	
+        $article->relatedPicture = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+
 		$article->stringURL = StringMethods::filterURL($article->title);
 		
 		$dimensionImage = getimagesize(BASE_URL . "uploads/pic/" . $article->relatedPicture);

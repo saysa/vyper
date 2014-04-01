@@ -151,7 +151,9 @@
 							</div>
 						</div>
 						
-						
+						<div class="map">
+                            <iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q={{ location.getGooglemap }}&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
+                        </div>
 						
 						
 						

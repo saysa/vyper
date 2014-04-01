@@ -452,21 +452,16 @@
 	    							</div>
 	    						</div>
 
-            					{% for article in recent_articles %}
+            					{% for event in latest_events %}
 				                {% if loop.index == 1 %}
 
 
                 				<div class="main-post">
                     				
-                    				{% if article.getYoutube %}
-                    					<div class="thumb-wrap video-thumb">
-	                        				<iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
-	                        			</div>
 
-                                    {% else %}
                                         <div class="thumb-wrap">
                                         <div class="thumb">
-                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                         </div>
 
                                         <span class="comments main-color-bg">
@@ -478,22 +473,19 @@
                                             <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
                                         </div>
                                         </div>
-                    				{% endif %}
+
 
 
 
                     				<div class="post-details">
 				                        <h3>
-				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+				                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html">{{ event.getTitle }}</a>
 				                        </h3>
 
 				                        <div class="entry-meta">
-				                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+				                            <span class="date"><i class="icon-calendar"></i> {{ event.getDate }}</span>
 
-				                            <span class="category">
-				                                <i class="icon-folder-close"></i>
-				                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
-				                            </span>
+
 
 
 				                        </div>
@@ -507,7 +499,7 @@
 
                                 <div class="post-list">
 
-                					{% for key, article in recent_articles %}
+                					{% for key, event in latest_events %}
 				                    {% if key>0 and key<4 %}
 
 							        <div class="item-post">
@@ -517,7 +509,7 @@
 
 			                            <div class="post-right">
 			                                <h5>
-			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ event.getTitle }}</a>
 			                                </h5>
 
 			                                <div class="entry-meta">

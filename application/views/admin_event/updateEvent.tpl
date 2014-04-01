@@ -203,6 +203,12 @@
 								</div>
 							</div>
 						</div>
+
+                            {% if current_image %}
+                        <div class="row">
+                            <img src="{{ base_url }}uploads/pic/{{ current_image }}" alt="Current picture" height="150" />
+                        </div>
+                                    {% endif %}
 						
 						
 						<div class="form-actions">

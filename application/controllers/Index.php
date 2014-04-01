@@ -123,23 +123,9 @@ class Index extends \Framework\Shared\Controller {
 
 
         /**
-         * Latest events
+         * Latest event
          */
-        $latests_events = Event::all(array("deleted=?"=>false), array("*"), "created", "desc", "0,5");
-        foreach ($latests_events as $event)
-        {
-            /* Set front Release Date */
-            /*$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
-
-            $article->stringURL = StringMethods::filterURL($article->title);
-
-            $image_path = Picture::get_path($article->relatedPicture);
-            $image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
-            $article->relatedPicture = $image;
-
-            $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
-            */
-        }
+        $latests_events = Event::all(array("live=?" => "1", "date>?" => "expression NOW()"), array("*"), "date", null, "0,5");
         $layout->set("latest_events", $latests_events);
 
         /**
