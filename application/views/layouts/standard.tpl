@@ -583,7 +583,7 @@
 				
 									<div class="one-half main-post">
 
-										{% for article in recent_articles %}
+										{% for article in latest_interviews %}
 						                {% if loop.index == 1 %}
 
 
@@ -639,7 +639,7 @@
 									
 									<div class="one-half last">
 										
-										{% for key, article in recent_articles %}
+										{% for key, article in latest_interviews %}
 					                    {% if key>0 and key<5 %}
 
 								        <div class="item-post">
@@ -699,7 +699,7 @@
 									<div class="one-half main-post">
 						
 													
-										{% for article in recent_articles %}
+										{% for article in latest_live_reports %}
 						                {% if loop.index == 1 %}
 
 
@@ -757,7 +757,7 @@
 							
 									<div class="one-half last">
 										
-										{% for key, article in recent_articles %}
+										{% for key, article in latest_live_reports %}
 					                    {% if key>0 and key<5 %}
 
 								        <div class="item-post">

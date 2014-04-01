@@ -4,6 +4,7 @@ namespace application\controllers;
 
 use application\models\Country;
 
+use application\models\Event;
 use application\models\Text;
 
 use application\models\News;
@@ -119,6 +120,68 @@ class Index extends \Framework\Shared\Controller {
 			
 			
 		}
+
+
+        /**
+         * Latest events
+         */
+        $latests_events = Event::all(array("deleted=?"=>false), array("*"), "created", "desc", "0,5");
+        foreach ($latests_events as $event)
+        {
+            /* Set front Release Date */
+            /*$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+
+            $article->stringURL = StringMethods::filterURL($article->title);
+
+            $image_path = Picture::get_path($article->relatedPicture);
+            $image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+            $article->relatedPicture = $image;
+
+            $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
+            */
+        }
+        $layout->set("latest_events", $latests_events);
+
+        /**
+         * Latest interviews
+         */
+        $latests_interviews = Article::all(array("deleted=?"=>false, "type=?" => "6"), array("*"), "releaseDate", "desc", "0,5");
+        foreach ($latests_interviews as $article)
+        {
+            /* Set front Release Date */
+            $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+
+            $article->stringURL = StringMethods::filterURL($article->title);
+
+            $image_path = Picture::get_path($article->relatedPicture);
+            $image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+            $article->relatedPicture = $image;
+
+            $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
+
+        }
+        $layout->set("latest_interviews", $latests_interviews);
+
+        /**
+         * Latest live reports
+         */
+        $latests_live_reports = Article::all(array("deleted=?"=>false, "type=?" => "7"), array("*"), "releaseDate", "desc", "0,5");
+        foreach ($latests_live_reports as $article)
+        {
+            /* Set front Release Date */
+            $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+
+            $article->stringURL = StringMethods::filterURL($article->title);
+
+            $image_path = Picture::get_path($article->relatedPicture);
+            $image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+            $article->relatedPicture = $image;
+
+            $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
+
+        }
+        $layout->set("latest_live_reports", $latests_live_reports);
+
 		
 		$layout
 		->set("is_carousel", "true")
