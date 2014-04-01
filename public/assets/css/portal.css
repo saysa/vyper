@@ -3039,3 +3039,13 @@ li.galerie {
     float: right;
     width: 138px;
 }
+
+
+.statique h2 {
+    background: #D35F5F;
+    padding: 10px 10px;
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}

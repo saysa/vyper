@@ -437,7 +437,13 @@ $routes = array(
 				"controller" => "home",
 				"action" => "index"
 		),
-		array(
+        array(
+            "name" 		 => "cgu",
+            "pattern" 	 => "conditions_utilisation",
+            "controller" => "statique",
+            "action" 	 => "cgu"
+        ),
+        array(
 			"name" 		 => "home",
 			"pattern" 	 => "home",
 			"controller" => "index",
