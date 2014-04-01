@@ -37,9 +37,9 @@ class Album extends \Framework\Shared\Controller {
 
         $layout
 		->set("album", $album)
-
+        ->set("current_album", "true")
 		;
-		
+
 		$view
 		->set("album", $album)
         ->set("pictures", $pictures)
@@ -91,6 +91,12 @@ class Album extends \Framework\Shared\Controller {
 
 
         }
+
+        $layout = $this->getLayoutView();
+        $layout
+        ->set("current_album", "true")
+        ;
+
 
         $view
         ->set("albums", $albums)

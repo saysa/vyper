@@ -61,7 +61,7 @@ class Index extends \Framework\Shared\Controller {
         /**
          * Mini Carousel
          */
-        $mini_carousel = Article::all(array("deleted=?" => false, "type ?" => 'expressionIN (8,6)'));
+        $mini_carousel = Article::all(array("deleted=?" => false, "type ?" => 'expressionIN (10)'));
         foreach ($mini_carousel as $article)
         {
 

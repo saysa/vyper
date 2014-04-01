@@ -54,13 +54,38 @@ class Article extends \Framework\Shared\Controller {
 		}
 
         $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
-		
-		$layout
+
+
+
+        /**
+         * Set Layout
+         */
+        $layout
 		->set("front_page_article", "true")
 		->set("article", $article)
 		;
-		
-		$view
+        $type = ArticleType::first(array("id=?" => $article->type))->name;
+        switch($type)
+        {
+            case "news":
+                $layout->set("current_article", "true");
+                break;
+            case "chronique":
+                $layout->set("current_chronique", "true");
+                break;
+            case "interview":
+                $layout->set("current_interview", "true");
+                break;
+            case "live report":
+                $layout->set("current_live_report", "true");
+                break;
+
+        }
+
+        /**
+         * Set view
+         */
+        $view
 		->set("article", $article)
 		->set("server_request_uri", $_SERVER['REQUEST_URI'])
 		;
@@ -70,6 +95,7 @@ class Article extends \Framework\Shared\Controller {
 	
 	public function showAll($type, $url_pattern, $p = null)
 	{
+        $layout = $this->getLayoutView();
 		$view = $this->getActionView();
 		$articleTypeId = ArticleType::first(array("name=?" => $type))->id;
 
@@ -107,8 +133,31 @@ class Article extends \Framework\Shared\Controller {
 
             $article->relatedTheme = Theme::first(array("id=?" => $article->relatedTheme));
 		}
-		
-		$view
+
+        /**
+         * Set layout
+         */
+        switch($type)
+        {
+            case "news":
+                $layout->set("current_article", "true");
+                break;
+            case "chronique":
+                $layout->set("current_chronique", "true");
+                break;
+            case "interview":
+                $layout->set("current_interview", "true");
+                break;
+            case "live report":
+                $layout->set("current_live_report", "true");
+                break;
+
+        }
+
+        /**
+         * Set view
+         */
+        $view
 		->set("category", ucfirst($type))
 		->set("articles", $articles)
 		->set("int_i", 1)

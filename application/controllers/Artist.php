@@ -16,7 +16,7 @@ class Artist extends \Framework\Shared\Controller {
 	{
 		
 		
-		$layout = $this->getLayoutView();
+
 		$view = $this->getActionView();
 		$artist = model_Artist::first(array("id=?" => $id));
 		
@@ -48,11 +48,11 @@ class Artist extends \Framework\Shared\Controller {
 		{
 			$view->set("article_horizontal_image", "true");
 		}
-		
-		
+
+        $layout = $this->getLayoutView();
 		$layout
-		->set("front_page_article", "true")
 		->set("artist", $artist)
+        ->set("current_artist", "true")
 		;
 		
 		$view
@@ -97,6 +97,12 @@ class Artist extends \Framework\Shared\Controller {
             $artist->relatedPicture = $image;
             $artist->stringURL = StringMethods::filterURL($artist->name);
         }
+
+        $layout = $this->getLayoutView();
+        $layout
+        ->set("current_artist", "true")
+        ;
+
 
         $view
         ->set("artists", $artists)

@@ -197,17 +197,18 @@
 				</div>
 				
 				<ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
-					<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-44 current_page_item"><a href="{{ base_url }}">Home</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item"><a href="{{ base_url }}news">News</a></li>
-					<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11"><a href="{{ base_url }}interviews" class="sf-with-ul">Interviews<span class="sf-sub-indicator"> »</span></a>
-						<ul class="sub-menu" style="visibility: hidden; display: none;">
-							<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="http://newwp.dev/?page_id=2">Page d’exemple</a></li>
-						</ul>
-					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}live-reports">Live Reports</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}chroniques">Chroniques</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}galerie">Galerie</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ base_url }}artists">Artistes</a></li>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index %} current_page_item{% endif %}"><a href="{{ base_url }}">Home</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_article %} current_page_item{% endif %}"><a href="{{ base_url }}news">News</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_interview %} current_page_item{% endif %}"><a href="{{ base_url }}interviews">Interviews</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_live_report %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports">Live Reports</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_chronique %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques">Chroniques</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_album %} current_page_item{% endif %}"><a href="{{ base_url }}galerie">Galerie</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_artist %} current_page_item{% endif %}"><a href="{{ base_url }}artists">Artistes</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-post_type"><a href="http://newwp.dev/?page_id=2">Page d’exemple</a></li>
+                        </ul>
+                    </li>
 				</ul>							
 			</div>
 			</nav>
@@ -962,7 +963,7 @@
         	<!-- /footer-widgets -->
         	<div class="footer-info">
         		<div class="content-wrap">
-        			<div class="footer-left">©2014 Vyper Music Japan</div>
+        			<div class="footer-left">©2014 Vyper Japanese Music</div>
         			<div class="footer-right">
         				<ul class="list">
         					<li class="twitter">
