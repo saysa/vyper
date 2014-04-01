@@ -53,6 +53,7 @@ class Artist extends \Framework\Shared\Controller {
 		$layout
 		->set("artist", $artist)
         ->set("current_artist", "true")
+        ->set("soe_title", $artist->name)
 		;
 		
 		$view
@@ -101,6 +102,7 @@ class Artist extends \Framework\Shared\Controller {
         $layout = $this->getLayoutView();
         $layout
         ->set("current_artist", "true")
+        ->set("soe_title", "Artistes")
         ;
 
 

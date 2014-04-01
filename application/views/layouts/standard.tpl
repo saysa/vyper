@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if front_page_article %}{{ article.getTitle }} | {% endif %}Visual kei - JPop - Jrock - Jmusic - VYPER Music Japan{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
+        <title>{% if soe_title %}{{ soe_title }} | {% endif %}Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="L'actualité de la musique japonaise au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />

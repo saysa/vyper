@@ -63,6 +63,7 @@ class Article extends \Framework\Shared\Controller {
         $layout
 		->set("front_page_article", "true")
 		->set("article", $article)
+        ->set("soe_title", $article->title)
 		;
         $type = ArticleType::first(array("id=?" => $article->type))->name;
         switch($type)
@@ -140,16 +141,28 @@ class Article extends \Framework\Shared\Controller {
         switch($type)
         {
             case "news":
-                $layout->set("current_article", "true");
+                $layout
+                    ->set("current_article", "true")
+                    ->set("soe_title", "News")
+                ;
                 break;
             case "chronique":
-                $layout->set("current_chronique", "true");
+                $layout
+                    ->set("current_chronique", "true")
+                    ->set("soe_title", "Chroniques")
+                ;
                 break;
             case "interview":
-                $layout->set("current_interview", "true");
+                $layout
+                    ->set("current_interview", "true")
+                    ->set("soe_title", "Interviews")
+                ;
                 break;
             case "live report":
-                $layout->set("current_live_report", "true");
+                $layout
+                    ->set("current_live_report", "true")
+                    ->set("soe_title", "Live reports")
+                ;
                 break;
 
         }

@@ -38,6 +38,7 @@ class Album extends \Framework\Shared\Controller {
         $layout
 		->set("album", $album)
         ->set("current_album", "true")
+        ->set("soe_title", $album->title)
 		;
 
 		$view
@@ -94,7 +95,8 @@ class Album extends \Framework\Shared\Controller {
 
         $layout = $this->getLayoutView();
         $layout
-        ->set("current_album", "true")
+            ->set("current_album", "true")
+            ->set("soe_title", "Galerie")
         ;
 
 

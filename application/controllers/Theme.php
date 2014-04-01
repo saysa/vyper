@@ -51,7 +51,10 @@ class Theme extends \Framework\Shared\Controller {
             $article->relatedTheme = $theme;
         }
 
-
+        $layout = $this->getLayoutView();
+        $layout
+            ->set("soe_title", $theme->title)
+        ;
 		
 		$view
 		->set("articles", $articles)
