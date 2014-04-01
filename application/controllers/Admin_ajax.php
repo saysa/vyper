@@ -31,6 +31,14 @@ class Admin_ajax extends Controller {
         $relation = RelArtistItem::first(array("type=?" => "article",  "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
         $relation->delete();
     }
+
+    public function albumArtistLinkDelete()
+    {
+        $this->_willRenderLayoutView = false;
+
+        $relation = RelArtistItem::first(array("type=?" => "album",  "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
+        $relation->delete();
+    }
 	
 	public function eventArtistLink()
 	{
@@ -44,6 +52,14 @@ class Admin_ajax extends Controller {
         $this->_willRenderLayoutView = false;
         $this->_defaultContentType = "application/json";
         $this->itemArtistLink("article");
+
+    }
+
+    public function albumArtistLink()
+    {
+        $this->_willRenderLayoutView = false;
+        $this->_defaultContentType = "application/json";
+        $this->itemArtistLink("album");
 
     }
 

@@ -25,10 +25,10 @@ $routes = array(
 
 		// Ajax
 		array(
-				"name" 		 => "admin_event_artist_link",
-				"pattern"    => "_admin_/ajax/event_artist_link",
-				"controller" => "admin_ajax",
-				"action" 	 => "eventArtistLink"
+            "name" 		 => "admin_event_artist_link",
+            "pattern"    => "_admin_/ajax/event_artist_link",
+            "controller" => "admin_ajax",
+            "action" 	 => "eventArtistLink"
 		),
         array(
             "name" 		 => "admin_article_artist_link",
@@ -36,6 +36,14 @@ $routes = array(
             "controller" => "admin_ajax",
             "action" 	 => "articleArtistLink"
         ),
+        array(
+            "name" 		 => "admin_album_artist_link",
+            "pattern"    => "_admin_/ajax/album_artist_link",
+            "controller" => "admin_ajax",
+            "action" 	 => "albumArtistLink"
+        ),
+
+
 		array(
             "name" 		 => "admin_event_artist_link_delete",
             "pattern"    => "_admin_/ajax/event_artist_link_delete",
@@ -48,6 +56,13 @@ $routes = array(
             "controller" => "admin_ajax",
             "action" 	 => "articleArtistLinkDelete"
         ),
+        array(
+            "name" 		 => "admin_album_artist_link_delete",
+            "pattern"    => "_admin_/ajax/album_artist_link_delete",
+            "controller" => "admin_ajax",
+            "action" 	 => "albumArtistLinkDelete"
+        ),
+
         array(
 
             "pattern"    => "_admin_/ajax/switch_article_highlight",

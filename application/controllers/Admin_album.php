@@ -4,6 +4,8 @@ namespace application\controllers;
 
 use application\models\Album;
 use application\models\AlbumCategory;
+use application\models\Artist;
+use application\models\RelArtistItem;
 use Framework\Registry;
 
 use application\models\PictureCategory;
@@ -86,8 +88,12 @@ class Admin_album extends Admin_common {
         }
 
         $categories = AlbumCategory::all($where = array(), $fields = array("*"), $order = "name");
+        $artists = Artist::all(array("deleted=?"=>false));
+        $relArtists = RelArtistItem::all(array("type=?" => "album", "idItem=?" => $id));
 
         $view
+            ->set("artists", $artists)
+            ->set("relArtists", $relArtists)
             ->set("album", $album)
             ->set("categories", $categories)
         ;
