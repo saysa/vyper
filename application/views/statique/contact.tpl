@@ -21,13 +21,13 @@
     <p>
         Courrier : VYPER Japanese Music PONS Cyrielle Résidence St Roch Rue Louis Orvoen 29350 Moëlan Sur Mer<br />
         Tel. +33(0)9 77 77 77 77<br />
-        E-mail : <a href="mailto:contact@iphoniacs.fr">contact@vyper-jmusic.com</a>
+        E-mail : <a class="hide-contact" href="#">contact</a>
     </p>
 
     <p>
-        Rédaction de vyper-jmusic.com : <a href="mailto:contact@vyper-jmusic.com">contact@vyper-jmusic.com</a><br />
-        Support technique : <a href="mailto:webmaster@vyper-jmusic.com">webmaster@vyper-jmusic.com</a><br />
-        Régie publicitaire : <a href="mailto:publicite@vyper-jmusic.com">publicite@vyper-jmusic.com</a>
+        Rédaction de vyper-jmusic.com : <a class="hide-contact" href="#">contact</a><br />
+        Support technique : <a class="hide-webmaster" href="#">webmaster</a><br />
+        Régie publicitaire : <a class="hide-publicite" href="#">publicite</a>
     </p>
 
     <h2>L'équipe de vyper-jmusic.com</h2>
@@ -56,3 +56,30 @@
     </p>
 
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+        var e = "contact";
+        var t = "vyper-jmusic";
+        var n = ".com"; //
+        var m = e + '@' + t + n;
+        var r = 'mailto:' + e + '@' + t + n;
+        $('.hide-contact').attr('href',r).html(m);
+
+        var e = "webmaster";
+        var t = "vyper-jmusic";
+        var n = ".com";
+        var m = e + '@' + t + n;
+        var r = 'mailto:' + e + '@' + t + n;
+        $('.hide-webmaster').attr('href',r).html(m);
+
+        var e = "publicite";
+        var t = "vyper-jmusic";
+        var n = ".com";
+        var m = e + '@' + t + n;
+        var r = 'mailto:' + e + '@' + t + n;
+        $('.hide-publicite').attr('href',r).html(m);
+    });
+
+</script>
