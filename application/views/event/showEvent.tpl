@@ -75,7 +75,7 @@
             <div class="cat-icon">
                 <i class="icon-rocket"></i>
             </div>
-            <h4>Papotage</h4>
+            <h4>Donnez votre avis</h4>
         </div>
     </div>
 
