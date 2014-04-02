@@ -4,7 +4,9 @@ namespace application\controllers;
 
 use application\models\Artist as model_Artist;
 use application\models\ArticleVisite;
+use application\models\Event;
 use application\models\Picture;
+use application\models\RelArtistItem;
 use Framework\StringMethods;
 use application\models\ArticleType;
 use Pagination\Pagination;
@@ -49,6 +51,33 @@ class Artist extends \Framework\Shared\Controller {
 			$view->set("article_horizontal_image", "true");
 		}
 
+        /**
+         * Linked article ?
+         */
+        $articles = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "article"), array("*"), "created", "desc", "0,3");
+        if ($articles)
+        {
+
+        }
+
+        /**
+         * Linked event ?
+         */
+        $relEvents = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "event"), array("*"), "created", "desc", "0,3");
+        if ($relEvents)
+        {
+            foreach ($relEvents as $rel)
+            {
+                $events[] = Event::first(array("id=?" => $rel->idItem));
+            }
+
+            foreach($events as $event)
+            {
+                $event->date =  StringMethods::sqlDateToCustom($event->date);
+                $event->stringURL = StringMethods::filterURL($event->title);
+            }
+        }
+
         $layout = $this->getLayoutView();
 		$layout
 		->set("artist", $artist)
@@ -58,6 +87,8 @@ class Artist extends \Framework\Shared\Controller {
 		
 		$view
 		->set("artist", $artist)
+        ->set("articles", $articles)
+        ->set("events", $events)
 		->set("server_request_uri", $_SERVER['REQUEST_URI'])
 		;
 		

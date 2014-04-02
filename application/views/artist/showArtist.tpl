@@ -4,19 +4,26 @@
 			<h1>{{ artist.getName }}</h1>
 		
 			<div class="entry-meta">
-				
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style ">
+                    <a class="addthis_button_preferred_1"></a>
+                    <a class="addthis_button_preferred_2"></a>
+                    <a class="addthis_button_preferred_3"></a>
+                    <a class="addthis_button_preferred_4"></a>
+                    <a class="addthis_button_compact"></a>
+                    <a class="addthis_counter addthis_bubble_style"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
+<!-- AddThis Button END -->
 				<div class="left">
-					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+
 					
 					<span class="comments">
 							<i class="icon-comments"></i>
 							<a href="http://demo.fairpixels.com/discover/2013/09/villain/#comments" title="Comment on A new female villain">1 comment</a>						
 					</span>		
-						
-					
-					<span class="views">
-						<i class="icon-eye-open"></i> 5642					
-					</span> 
+
 					
 					<span class="category">
 						<i class="icon-folder-close-alt"></i>									
@@ -24,25 +31,7 @@
 											
 					<span class="tags"><i class="icon-tags"></i><a href="http://demo.fairpixels.com/discover/tag/characters/" rel="tag">characters</a> , <a href="http://demo.fairpixels.com/discover/tag/villain/" rel="tag">villain</a></span>				</div>
 				
-									<div class="social">
-						<span class="fb">
-							<a href="http://facebook.com/share.php?u=http://demo.fairpixels.com/discover/2013/09/villain/&amp;t=A new female villain" target="_blank"><i class=" icon-facebook-sign"></i></a>
-						</span>				
-						
-						<span class="twitter">
-							<a href="http://twitter.com/home?status=A new female villain http://demo.fairpixels.com/discover/2013/09/villain/" target="_blank"><i class="icon-twitter"></i></a>				
-						</span>
-						
-						<span class="gplus">
-							<a href="https://plus.google.com/share?url=http://demo.fairpixels.com/discover/2013/09/villain/&amp;t=A new female villain" target="_blank"><i class="icon-google-plus-sign"></i></a>			
-						</span>
-						
-						<span class="pinterest">
-														<a href="http://pinterest.com/pin/create/button/?url=http://demo.fairpixels.com/discover/2013/09/villain/&amp;media=http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/3-150x150.jpg&amp;description=A new female villain" target="_blank">		
-							<i class="icon-pinterest"></i>					
-							</a>					
-						</span>				
-					</div>
+
 							</div>
 		</header>
 	
@@ -72,14 +61,84 @@
 </div>
 <!-- /entry-content -->
 
+{% if events %}
+    <div class="cat-header">
+        <div class="cat-title second-color-bg">
+            <div class="cat-icon">
+                <i class="icon-rocket"></i>
+            </div>
+            <h4>événements</h4>
+        </div>
+    </div>
 
-<div id="comments">
-    <div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
-</div>
-<!-- /comments -->
+    <ul class="list">
+
+        {% for key, event in events %}
+            <li class="one-third{% if key==2 %} last{% endif %}">
+                <div class="thumbnail">
+                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html">
+                            <img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp239_130 wp-post-image" alt="">									</a>
+                    </div>
+
+                <h5>
+                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html">
+                        {{ event.getTitle }}
+                    </a>
+                </h5>
+
+                <div class="entry-meta">
+                    <span class="date">
+                        <i class="icon-calendar"></i>
+                        {{ event.getDate }}
+                    </span>
+                </div>
+            </li>
+        {% endfor %}
+
+
+								</ul>
+
+{% endif %}
+
+{% if articles %}
+    ARTTICLE
+{% endif %}
+
+
+                    <div class="add_468">
+                            <script type="text/javascript"><!--
+                            google_ad_client = "pub-2203599332195876";
+                    /* 468x60, date de création 24/09/08 */
+                    google_ad_slot = "8274791547";
+                    google_ad_width = 468;
+                    google_ad_height = 60;
+                    //-->
+                </script>
+                <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
 
 
 
 
+
+
+
+            <div id="comments">
+                <div class="cat-header">
+                    <div class="cat-title second-color-bg">
+                        <div class="cat-icon">
+                            <i class="icon-rocket"></i>
+                        </div>
+                        <h4>Donnez votre avis</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- /comments -->
+
+
+
+            <div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
 
 
