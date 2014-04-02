@@ -4,21 +4,17 @@ namespace application\controllers;
 
 
 class Statique extends \Framework\Shared\Controller {
-	
-
-	
-
-	
 
 	public function cgu()
-	{	
-		$layout = $this->getLayoutView();
-		$view = $this->getLayoutView();
-
-
-		
+	{
 	}
-	
 
+    public function aPropos()
+    {
+    }
+
+    public function contact()
+    {
+    }
 }
 

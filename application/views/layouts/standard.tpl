@@ -80,12 +80,12 @@
 						<ul class="list">
 							<li>
 								<i class="icon-home"></i>
-								<a href="{{ base_url }}">Home</a>
+								<a href="{{ base_url }}">Accueil</a>
 							</li>
 														
 							<li>
 								<i class="icon-star"></i>
-								<a href="#">About us</a>			
+								<a href="{{ base_url }}a_propos">A propos</a>
 							</li>
 														
 							<li>
@@ -95,7 +95,7 @@
 														
 							<li>
 								<i class="icon-envelope"></i>
-								<a href="{{ base_url }}">Contact us</a>
+								<a href="{{ base_url }}contact">Contact</a>
 							</li>							
 														
 						</ul>

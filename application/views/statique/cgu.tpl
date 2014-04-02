@@ -97,6 +97,12 @@
     Vyper Japanese Music se réserve la possibilité discrétionnaire de publier ou non votre Avis sur son Site, de le modifier, de l'adapter ou de le traduire en toute langue, de le conserver en ligne ou de le supprimer à tout moment et sans avoir à vous en informer préalablement.
 </p>
 
+<h2>Modalité de jeu et modalité de délivrance des lots</h2>
+
+<p>
+    VYPER Japanese Music est un site accessible à toute personne disposant d’un accès internet ou d’une connexion 3G/4G. Les concours/jeux organisés par VYPER Japanese Music sont accessibles à toutes personnes possédant un compte Facebook et/ou Twitter. Il est formellement interdit à toutes personnes de participer aux concours grâce à plusieurs comptes Facebook ou Twitter. S’il remporte le lot, le participant est tenu de fournir à l’organisateur des coordonnées exactes (nom, prénom, adresse postale). Tout préjudice du à une information incomplète ou erronée ne pourra être reproché à l’organisateur (lot ne pouvant être envoyé, lot jamais arrivé, etc). A chaque classement, VYPER Japanese Music met en jeu, un ou plusieurs lots attribués, à la fin du classement, aux participants les mieux placés. Les visuels des lots étant donnés à titre indicatif, leur ressemblance avec la photo sur le site ne pourra être contestée. Le lot attribué ne pourra donner lieu à aucun échange ou remise de sa contre-valeur en nature ou en espèce. Le gagnant autorise toute vérification concernant son identité et son domicile. Toute fausse déclaration d'identité ou d'adresse peut entraîner l'élimination immédiate du participant et le cas échéant le remboursement des lots déjà envoyés. Les lots sont envoyés dans les 30 jours qui suivent la fin du classement. Aucune réclamation ne pourra être faite sur les désagréments imputables à la société de livraison (colis abimé ou perdu, retard de livraison, etc.).
+</p>
+
 <h2>Droit applicable - Litiges</h2>
 
 <p>

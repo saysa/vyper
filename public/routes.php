@@ -437,18 +437,32 @@ $routes = array(
 				"controller" => "home",
 				"action" => "index"
 		),
-        array(
-            "name" 		 => "cgu",
-            "pattern" 	 => "conditions_utilisation",
-            "controller" => "statique",
-            "action" 	 => "cgu"
-        ),
-        array(
-			"name" 		 => "home",
-			"pattern" 	 => "home",
-			"controller" => "index",
-			"action" 	 => "index"
-		)
+
+    // Static page
+    array(
+        "name" 		 => "a_propos",
+        "pattern" 	 => "a_propos",
+        "controller" => "statique",
+        "action" 	 => "aPropos"
+    ),
+    array(
+        "name" 		 => "contact",
+        "pattern" 	 => "contact",
+        "controller" => "statique",
+        "action" 	 => "contact"
+    ),
+    array(
+        "name" 		 => "cgu",
+        "pattern" 	 => "conditions_utilisation",
+        "controller" => "statique",
+        "action" 	 => "cgu"
+    ),
+    array(
+        "name" 		 => "home",
+        "pattern" 	 => "home",
+        "controller" => "index",
+        "action" 	 => "index"
+    )
 );
 
 
