@@ -409,7 +409,7 @@
 
 							        <div class="item-post">
 			                            <div class="thumb">
-			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 			                            </div>
 
 			                            <div class="post-right">
@@ -461,7 +461,7 @@
 
                                         <div class="thumb-wrap">
                                         <div class="thumb">
-                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                         </div>
 
                                         <span class="comments main-color-bg">
@@ -504,23 +504,23 @@
 
 							        <div class="item-post">
 			                            <div class="thumb">
-			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+			                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getMini75Picture(event.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 			                            </div>
 
 			                            <div class="post-right">
 			                                <h5>
-			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ event.getTitle }}</a>
+			                                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html" rel="bookmark">{{ event.getTitle }}</a>
 			                                </h5>
 
 			                                <div class="entry-meta">
 			                                    <span class="date">
 			                                        <i class="icon-calendar"></i>
-			                                        {{ article.getReleaseDate }}
+			                                        {{ event.getDate }}
 			                                    </span>
 
 			                                    <span class="comments">
 			                                        <i class="icon-comments"></i>
-			                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+			                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
 			                                    </span>
 			                                </div>
 			                            </div>
@@ -636,7 +636,7 @@
 
 								        <div class="item-post">
 				                            <div class="thumb">
-				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 				                            </div>
 
 				                            <div class="post-right">
@@ -754,7 +754,7 @@
 
 								        <div class="item-post">
 				                            <div class="thumb">
-				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 				                            </div>
 
 				                            <div class="post-right">

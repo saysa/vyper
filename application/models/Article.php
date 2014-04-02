@@ -237,4 +237,12 @@ class Article extends Model {
         return $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 
     }
+
+    public function getMini75Picture($id)
+    {
+        $article = Article::first(array("id=?" => $id));
+        $image_path = Picture::get_path($article->relatedPicture);
+        return $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
+
+    }
 }

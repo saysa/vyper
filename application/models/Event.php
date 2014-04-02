@@ -128,4 +128,20 @@ class Event extends Model {
 	 * @readwrite
 	 */
 	protected $_stringURL;
+
+    public function getRawPicture($id)
+    {
+        $event = Event::first(array("id=?" => $id));
+        $image_path = Picture::get_path($event->relatedPicture);
+        return $image_path . Picture::first(array("id=?"=>$event->relatedPicture))->filename;
+
+    }
+
+    public function getMini75Picture($id)
+    {
+        $event = Event::first(array("id=?" => $id));
+        $image_path = Picture::get_path($event->relatedPicture);
+        return $image_path . "75x75-" . Picture::first(array("id=?"=>$event->relatedPicture))->filename;
+
+    }
 }
