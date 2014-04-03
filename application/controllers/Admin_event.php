@@ -51,8 +51,7 @@ class Admin_event extends Admin_common {
 	{
 		// code
 		$view = $this-> getActionView();
-		
-		$event = new Event();
+
 	
 		if (RequestMethods::post("add"))
 		{
@@ -64,6 +63,8 @@ class Admin_event extends Admin_common {
 					"location" => RequestMethods::post("location"),
 					"date" => RequestMethods::post("date"),
 					"time" => RequestMethods::post("time"),
+                    "type" => RequestMethods::post("type"),
+                    "relatedTour" => RequestMethods::post("related_tour"),
 					"relatedPicture" => RequestMethods::post("related_picture")
 			));
 		
@@ -81,20 +82,29 @@ class Admin_event extends Admin_common {
 			->set("error_location",    \Framework\Shared\Markup::errors($event->getErrors(), "location"))
 			->set("error_date", 	   \Framework\Shared\Markup::errors($event->getErrors(), "date"))
 			->set("error_time", 	   \Framework\Shared\Markup::errors($event->getErrors(), "time"))
+            ->set("error_type", 	   \Framework\Shared\Markup::errors($event->getErrors(), "type"))
+            ->set("error_related_tour", 	   \Framework\Shared\Markup::errors($event->getErrors(), "related_tour"))
 				
 			->set("post_title",    	  RequestMethods::post("title"))
 			->set("post_real_title",  RequestMethods::post("real_title"))
 			->set("post_description", RequestMethods::post("description"))
 			->set("post_location", 	  RequestMethods::post("location"))
 			->set("post_date", 		  RequestMethods::post("date"))
-			->set("post_time", 		  RequestMethods::post("time"))
+            ->set("post_time", 		  RequestMethods::post("time"))
+            ->set("post_type", 		  RequestMethods::post("type"))
+            ->set("post_related_tour",RequestMethods::post("related_tour"))
+
 			;
 		}
-		
+
+        $eventTypes = EventType::all(array("deleted=?"=>false));
+        $tours = Tour::all(array("deleted=?"=>false));
 		$locations = Location::all(array("deleted=?"=>false));
 		
 		$view
 		->set("locations", $locations)
+        ->set("tours", $tours)
+        ->set("eventTypes", $eventTypes)
 		;
 		
 		// layout

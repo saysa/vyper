@@ -47,7 +47,6 @@ class Event extends Model {
 	 * @readwrite
 	 * @type text
 	 *
-	 * @validate required
 	 * @label description
 	 */
 	protected $_description;

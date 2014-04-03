@@ -160,20 +160,6 @@
 						</div>	
 						
 						
-						
-						
-						
-						<!-- META keywords -->
-						<div class="row">
-							<div class="form-group col-lg-9{%if error_meta_keywords %} has-error{% endif %}">
-								<label class="control-label" for="meta_keywords">META keywords *</label>
-								<div class="controls">
-								  <textarea class="form-control" name="meta_keywords" id="meta_keywords" rows="3" placeholder="META keywords separate with coma">{{ event.getArtistsKeywords }}</textarea>
-								  {{ error_meta_keywords }}
-								</div>
-							</div>
-						</div>
-						
 						<div class="row">
 							<div class="col-lg-4">
 								
