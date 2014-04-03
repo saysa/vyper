@@ -66,6 +66,7 @@ class Admin_artist extends Admin_common {
 			if ($artist->validate())
 			{
 				$artist->save();
+                self::redirect("admin_show_artists");
 			}
 		
 			$view

@@ -75,6 +75,7 @@ class Admin_tour extends Admin_common {
 			if ($tour->validate())
 			{
 				$tour->save();
+                self::redirect("admin_show_tours");
 			}
 		
 			$view

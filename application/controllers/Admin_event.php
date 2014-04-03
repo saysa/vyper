@@ -73,6 +73,7 @@ class Admin_event extends Admin_common {
 			if ($event->validate())
 			{
 				$event->save();
+                self::redirect("admin_show_events");
 			}
 		
 			$view

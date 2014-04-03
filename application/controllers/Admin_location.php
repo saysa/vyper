@@ -73,6 +73,7 @@ class Admin_location extends Admin_common {
 			if ($location->validate())
 			{
 				$location->save();
+                self::redirect("admin_show_locations");
 			}
 		
 			$view
