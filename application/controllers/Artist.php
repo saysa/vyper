@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\Album;
+use application\models\Article;
 use application\models\Artist as model_Artist;
 use application\models\ArticleVisite;
 use application\models\Event;
@@ -52,12 +54,46 @@ class Artist extends \Framework\Shared\Controller {
 		}
 
         /**
+         * Linked album ?
+         */
+        $relAlbums = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "album"), array("*"), "created", "desc", "0,3");
+        if ($relAlbums)
+        {
+            foreach ($relAlbums as $rel)
+            {
+                $albums[] = Album::first(array("id=?" => $rel->idItem));
+            }
+
+            foreach ($albums as $album)
+            {
+
+                $album->stringURL = StringMethods::filterURL($album->title);
+
+                $picture = Picture::first(array("album=?" => $album->id));
+                $image_path = Picture::get_path($picture->id);
+                $album->cover = $image_path . $picture->filename;
+
+
+            }
+        }
+
+
+        /**
          * Linked article ?
          */
-        $articles = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "article"), array("*"), "created", "desc", "0,3");
-        if ($articles)
+        $relArticles = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "article"), array("*"), "created", "desc", "0,3");
+        if ($relArticles)
         {
+            foreach ($relArticles as $rel)
+            {
+                $articles[] = Article::first(array("id=?" => $rel->idItem));
+            }
 
+            foreach($articles as $article)
+            {
+                $article->stringURL = StringMethods::filterURL($article->title);
+                $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+            }
         }
 
         /**
@@ -87,6 +123,7 @@ class Artist extends \Framework\Shared\Controller {
 		
 		$view
 		->set("artist", $artist)
+        ->set("albums", $albums)
         ->set("articles", $articles)
         ->set("events", $events)
 		->set("server_request_uri", $_SERVER['REQUEST_URI'])

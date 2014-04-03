@@ -56,9 +56,21 @@
 </div>
 <!-- /post-wrap -->
 
+{% if artist.getBiography %}
+<div class="cat-header">
+        <div class="cat-title second-color-bg">
+        <div class="cat-icon">
+        <i class="icon-rocket"></i>
+</div>
+        <h4>Biographie</h4>
+</div>
+</div>
+
 <div class="entry-content">
     {{ artist.getBiography }}
-</div>
+                </div>
+{% endif %}
+
 <!-- /entry-content -->
 
 {% if events %}
@@ -101,7 +113,69 @@
 {% endif %}
 
 {% if articles %}
-    ARTTICLE
+    <div class="cat-header">
+        <div class="cat-title second-color-bg">
+            <div class="cat-icon">
+                <i class="icon-rocket"></i>
+            </div>
+            <h4>Articles</h4>
+        </div>
+    </div>
+
+    <ul class="list">
+    {% for key, article in articles %}
+        <li class="one-third{% if key==2 %} last{% endif %}">
+            <div class="thumbnail">
+                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
+                    <img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp239_130 wp-post-image" alt="">
+                </a>
+            </div>
+
+            <h5>
+                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
+                    {{ article.getTitle }}
+                </a>
+            </h5>
+
+            <div class="entry-meta">
+                <span class="date">
+                    <i class="icon-calendar"></i>
+                    {{ article.getReleaseDate }}
+                </span>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if albums %}
+    <div class="cat-header">
+        <div class="cat-title second-color-bg">
+            <div class="cat-icon">
+                <i class="icon-rocket"></i>
+            </div>
+            <h4>Galerie</h4>
+        </div>
+    </div>
+
+    <ul class="list">
+    {% for key, album in albums %}
+        <li class="one-third{% if key==2 %} last{% endif %}">
+            <div class="thumbnail">
+                <a href="{{ base_url }}album/{{ album.getId }}/{{ album.getStringURL }}.html">
+                    <img src="{{ base_url }}uploads/pic/{{ album.getCover }}" class="attachment-fp239_130 wp-post-image" alt="">
+                </a>
+            </div>
+
+            <h5>
+                <a href="{{ base_url }}album/{{ album.getId }}/{{ album.getStringURL }}.html">
+                    {{ album.getTitle }}
+                </a>
+            </h5>
+
+        </li>
+    {% endfor %}
+    </ul>
 {% endif %}
 
 
