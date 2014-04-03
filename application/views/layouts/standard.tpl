@@ -838,7 +838,7 @@
 									{% for article in recent_articles %}
 									<li>
 										<div class="thumbnail">
-											<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle }}">							
+											<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
 										</div>
 										<div class="post-right">
 											<h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h5>

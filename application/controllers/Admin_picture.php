@@ -90,6 +90,7 @@ class Admin_picture extends Admin_common {
 									"height" => $height
 							));
 							$picture->save();
+                            self::redirect("admin_show_pictures");
 						}
 					}
 				}

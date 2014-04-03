@@ -62,6 +62,7 @@ class Admin_article extends Admin_common {
 			if ($article->validate())
 			{
 				$article->save();
+                self::redirect("admin_show_articles");
 			}
 
 			$view

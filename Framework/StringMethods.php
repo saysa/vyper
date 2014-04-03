@@ -223,6 +223,7 @@ class StringMethods {
 		$titre_url=str_replace  ( "'"  , "-" , $titre_url  );
 		$titre_url=str_replace  ( " "  , "-" , $titre_url  );
 		$titre_url=str_replace  ( "\?"  , "" , $titre_url  );
+        $titre_url=str_replace  ( "~"  , "-" , $titre_url  );
 
 		$titre_url=str_replace  ( "&quot;"  , "" , $titre_url  ); //-- "
 		$titre_url=str_replace  ( "\""  , "" , $titre_url  ); //-- "
