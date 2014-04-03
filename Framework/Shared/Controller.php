@@ -148,12 +148,15 @@ class Controller extends \Framework\Controller {
 			 */
 			$event = Event::all(array("live=?" => "1", "date>?" => "expression NOW()"), array("*"), "date", null, "0,1");
 			if (sizeof($event) > 0) {
-				
+
+
 				$nextEvent = new \application\components\NextEvent\NextEvent;
 				$nextEvent->initialize(
 						$event[0]->getId(),
 						$event[0]->getTitle(),
-						$event[0]->getDate()
+						$event[0]->getDate(),
+                        $event[0]->getTown($event[0]->id),
+                        $event[0]->getCountry($event[0]->id)
 				);
 					
 				foreach ($nextEvent->templateVar() as $template_var => $var)

@@ -14,6 +14,8 @@ class NextEvent {
 	private $_eventTitle;
 	private $_eventDate;
 	private $_stringURL;
+    private $_town;
+    private $_country;
 	
 	
 	public function getEventID() {return $this->_eventID;}
@@ -22,11 +24,18 @@ class NextEvent {
 	public function setEventID($_eventID) {$this->_eventID = $_eventID;}
 	public function setEventTitle($_eventTitle) {$this->_eventTitle = $_eventTitle;}
 	public function setEventDate($_eventDate) {$this->_eventDate = $_eventDate;}
+    public function setTown($town){$this->_town = $town;}
+    public function getTown(){return $this->_town;}
+    public function setCountry($country){$this->_country = $country;}
+    public function getCountry(){return $this->_country;}
+
 	public function getStringURL() 
 	{
 		$string = $this->_eventTitle;
 		return StringMethods::filterURL($string);
 	}
+
+
 
 	/**
 	 * Constructor : Initializes properties
@@ -34,12 +43,13 @@ class NextEvent {
 	 * @param string $_eventTitle
 	 * @param string $_eventDate
 	 */
-	public function initialize($_eventID, $_eventTitle, $_eventDate)
+	public function initialize($_eventID, $_eventTitle, $_eventDate, $_town, $_country)
 	{
 		$this->setEventID($_eventID);
 		$this->setEventTitle($_eventTitle);
 		$this->setEventDate($_eventDate);
-		
+		$this->setTown($_town);
+        $this->setCountry($_country);
 	}
 	
 	/**
@@ -102,6 +112,8 @@ class NextEvent {
         $r['nextEvent_dateDay'] = $this->getEventDateDay();
         $r['nextEvent_dateMonth'] = $this->getEventDateMonth();
 		$r['nextEvent_remainingDays'] = $this->getRemainingDays();
+        $r['nextEvent_town'] = $this->getTown();
+        $r['nextEvent_country'] = $this->getCountry();
 		$r['nextEvent_stringURL'] = $this->getStringURL();
 		
 		return $r;

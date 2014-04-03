@@ -25,8 +25,9 @@
 					</span>		
 
 					<span class="category">
-						<i class="icon-folder-close-alt"></i>									
-						<a href="http://demo.fairpixels.com/discover/category/entertainment/" title="View all posts in Entertainment" rel="category tag">Entertainment</a>, <a href="http://demo.fairpixels.com/discover/category/games/" title="View all posts in Games" rel="category tag">Games</a>					</span>
+						<i class="icon-folder-close-alt"></i>
+                        {{ event.getTown(event.getId) }}, {{ event.getCountry(event.getId)|upper }}
+				    </span>
 
 				</div>
 				

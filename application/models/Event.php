@@ -143,4 +143,23 @@ class Event extends Model {
         return $image_path . "75x75-" . Picture::first(array("id=?"=>$event->relatedPicture))->filename;
 
     }
+
+    public function getTown($eventId)
+    {
+        $event = Event::first(array("id=?" => $eventId));
+        $location = Location::first(array("id=?" => $event->location));
+
+        return $location->town;
+    }
+
+    public function getCountry($eventId)
+    {
+        $event = Event::first(array("id=?" => $eventId));
+        $location = Location::first(array("id=?" => $event->location));
+        $country = Country::first(array("id=?" => $location->country))->name;
+
+        $country = substr($country, 0, 3);
+
+        return $country;
+    }
 }

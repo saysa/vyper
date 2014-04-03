@@ -520,7 +520,7 @@
 
 			                                    <span class="comments">
 			                                        <i class="icon-comments"></i>
-			                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+                                                    {{ event.getTown(event.getId) }}, {{ event.getCountry(event.getId)|upper }}
 			                                    </span>
 			                                </div>
 			                            </div>
@@ -910,7 +910,7 @@
                             </div>
                             <div class="event-details">
                             <h5 class="event-title"><a href="{{ base_url }}event/{{ nextEvent_id }}/{{ nextEvent_stringURL }}.html">{{ nextEvent_title }}</a></h5>
-                            <div class="event-place">Paris, FRA</div>
+                            <div class="event-place">{{ nextEvent_town }}, {{ nextEvent_country|upper }}</div>
                             <div>{{ nextEvent_remainingDays }} jours restant(s)</div>
 
                             </div>
