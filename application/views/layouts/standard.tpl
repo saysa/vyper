@@ -212,11 +212,16 @@
 					<li class="menu-item menu-item-type-post_type{% if current_chronique %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques">Chroniques</a></li>
 					<li class="menu-item menu-item-type-post_type{% if current_album %} current_page_item{% endif %}"><a href="{{ base_url }}galerie">Galerie</a></li>
 					<li class="menu-item menu-item-type-post_type{% if current_artist %} current_page_item{% endif %}"><a href="{{ base_url }}artists">Artistes</a></li>
+
+                    {% if themes_showInMenu %}
                     <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
                         <ul class="sub-menu">
-                            <li class="menu-item menu-item-type-post_type"><a href="http://newwp.dev/?page_id=2">Page d’exemple</a></li>
+                        {% for theme in themes_showInMenu %}
+                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}theme/{{ theme.getId }}/1/{{ theme.getTitleUrlFormat(theme.getId) }}">{{ theme.getTitle }}</a></li>
+                        {% endfor %}
                         </ul>
                     </li>
+                    {% endif %}
 				</ul>							
 			</div>
 			</nav>

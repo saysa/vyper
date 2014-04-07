@@ -3,6 +3,7 @@
 namespace Framework\Shared;
 
 use application\models\ItemVisite;
+use application\models\Theme;
 use application\models\User;
 
 use Framework\Events;
@@ -199,8 +200,14 @@ class Controller extends \Framework\Controller {
                 $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 			}
 			$layout->set("recent_articles", $recent_articles);
-			
-			/**
+
+            /**
+             * Themes article : show in menu
+             */
+            $themes = Theme::all(array("deleted=?" => false, "showInMenu=?" => true));
+            $layout->set("themes_showInMenu", $themes);
+
+            /**
 			 * Ticker articles
 			 */
 			$ticker_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,10");
