@@ -4,6 +4,7 @@ namespace application\controllers;
 
 use application\models\Article;
 use application\models\RelArtistItem;
+use application\models\Theme;
 use Framework\RequestMethods;
 
 
@@ -109,5 +110,23 @@ class Admin_ajax extends Controller {
 
         $article->save();
 
+    }
+
+    public function switchThemeShowInMenu()
+    {
+        $this->_willRenderLayoutView = false;
+        $this->_defaultContentType = "application/json";
+
+        $theme = Theme::first(array("id=?" => $_POST['theme_id']));
+
+        if ($_POST['checkboxValue'] == "true")
+        {
+            $theme->showInMenu = 1;
+        }
+        else{
+            $theme->showInMenu = 0;
+        }
+
+        $theme->save();
     }
 }

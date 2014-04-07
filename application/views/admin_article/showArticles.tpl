@@ -104,6 +104,7 @@
 							<thead>
 		<tr>
 			<th>ID</th>
+            <th>Active</th>
 			<th>Date</th>
 			<th>Title</th>
 			<th>Modify</th>
@@ -115,6 +116,7 @@
 		{% for theme in themes %}
 		<tr>
 			<td>{{ theme.getId }}</td>
+            <td><input type="checkbox" class="theme-active" data-themeid="{{ theme.getId }}" {% if theme.getShowInMenu == 1 %}checked="checked"{% endif %} /></td>
 			<td>{{ theme.getModified|date('Y-m-d') }}</td>
 			<td>{{ theme.getTitle }}</td>
 			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_theme ~ theme.getId }}"><i class="icon-edit "></i></a></td>
@@ -155,6 +157,26 @@
                 dataType: "json",
                 data:{
                     article_id : articleId,
+                    checkboxValue : checkboxValue
+                },
+                success: function(data){
+                    console.log("changed :)");
+                }
+            });
+
+        });
+
+        $( ".theme-active" ).on("click", function() {
+
+            var themeId = $(this).data('themeid');
+            var checkboxValue = $(this).is(':checked');
+
+            $.ajax({
+                type: "POST",
+                url: "/_admin_/ajax/switch_theme_show_in_menu",
+                dataType: "json",
+                data:{
+                    theme_id : themeId,
                     checkboxValue : checkboxValue
                 },
                 success: function(data){

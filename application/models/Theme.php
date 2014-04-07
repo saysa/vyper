@@ -26,6 +26,13 @@ class Theme extends Model {
 	 */
 	protected $_title;
 
+    /**
+     * @column
+     * @readwrite
+     * @type boolean
+     */
+    protected $_showInMenu;
+
     public function getTitleUrlFormat($id)
     {
         $theme = Theme::first(array("id=?" => $id));

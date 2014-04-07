@@ -70,6 +70,13 @@ $routes = array(
             "action" 	 => "switchArticleHighlight"
         ),
 
+    array(
+
+        "pattern"    => "_admin_/ajax/switch_theme_show_in_menu",
+        "controller" => "admin_ajax",
+        "action" 	 => "switchThemeShowInMenu"
+    ),
+
 		
 		
 		// Admin Location
