@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Shared/Controller.php" afterPath="$PROJECT_DIR$/Framework/Shared/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Theme.php" afterPath="$PROJECT_DIR$/application/controllers/Theme.php" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="118" selection-start="8907" selection-end="8907" vertical-scroll-proportion="0.6761364" vertical-offset="3366" max-vertical-offset="17289">
+            <state line="219" column="118" selection-start="8907" selection-end="8907" vertical-scroll-proportion="-13.730769" vertical-offset="3366" max-vertical-offset="17289">
               <folding>
                 <element signature="e#34558#34581#0" expanded="true" />
               </folding>
@@ -37,10 +36,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logo.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/img/logo.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="showTheme.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/theme/showTheme.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="38" selection-start="65" selection-end="70" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1020">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -80,6 +81,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Theme.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="4" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.46969697" vertical-offset="670" max-vertical-offset="1224">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,15 +112,6 @@
         <entry file="file://$PROJECT_DIR$/application/views/admin_article/showArticles.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state line="175" column="61" selection-start="4768" selection-end="4793" vertical-scroll-proportion="-8.692307" vertical-offset="2749" max-vertical-offset="3366">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Article.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="26" selection-start="388" selection-end="480" vertical-scroll-proportion="-9.538462" vertical-offset="364" max-vertical-offset="4301">
               <folding />
             </state>
           </provider>
@@ -147,7 +148,6 @@
         <option value="$PROJECT_DIR$/application/views/admin_article/updateArticle.tpl" />
         <option value="$PROJECT_DIR$/application/views/admin_album/updateAlbum.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_album.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Theme.php" />
         <option value="$PROJECT_DIR$/application/controllers/Album.php" />
         <option value="$PROJECT_DIR$/application/views/admin_location/updateLocation.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Event.php" />
@@ -180,6 +180,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin_ajax.php" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/Theme.php" />
       </list>
     </option>
   </component>
@@ -304,6 +305,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,7 +644,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2892057" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14802982" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2515275" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24236253" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -655,11 +678,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/js/discover/jquery-migrate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6964" selection-start="7078" selection-end="7078" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/discover/superfish.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="40" selection-start="2536" selection-end="2536" vertical-scroll-proportion="0.0" vertical-offset="678" max-vertical-offset="2142" />
@@ -708,11 +726,6 @@
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="34" selection-start="926" selection-end="926" vertical-scroll-proportion="-1.3648803" vertical-offset="1690" max-vertical-offset="2567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="44" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_location/updateLocation.tpl">
@@ -919,6 +932,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="118" selection-start="8907" selection-end="8907" vertical-scroll-proportion="-13.730769" vertical-offset="3366" max-vertical-offset="17289">
+          <folding>
+            <element signature="e#34558#34581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/theme/showTheme.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="38" selection-start="65" selection-end="70" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="37" selection-start="476" selection-end="493" vertical-scroll-proportion="-14.384615" vertical-offset="204" max-vertical-offset="799">
@@ -926,12 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="118" selection-start="8907" selection-end="8907" vertical-scroll-proportion="0.6761364" vertical-offset="3366" max-vertical-offset="17289">
-          <folding>
-            <element signature="e#34558#34581#0" expanded="true" />
-          </folding>
+        <state line="57" column="4" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.46969697" vertical-offset="670" max-vertical-offset="1224">
+          <folding />
         </state>
       </provider>
     </entry>

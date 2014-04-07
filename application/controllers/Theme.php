@@ -15,7 +15,7 @@ class Theme extends \Framework\Shared\Controller {
         $url_pattern = "theme";
 		$view = $this->getActionView();
 
-        $theme = \application\models\Theme::first(array("id" => $id));
+        $theme = \application\models\Theme::first(array("id=?" => $id));
 
         /*
 		 * Pagination
@@ -55,7 +55,7 @@ class Theme extends \Framework\Shared\Controller {
         $layout
             ->set("soe_title", $theme->title)
         ;
-		
+	
 		$view
 		->set("articles", $articles)
         ->set("theme", $theme)
