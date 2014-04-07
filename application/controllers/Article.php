@@ -64,6 +64,7 @@ class Article extends \Framework\Shared\Controller {
 		->set("article", $article)
         ->set("soe_title", $article->title)
         ->set("google_description", $article->description)
+        ->set("meta_keywords", $article->metaKeywords)
 		;
         $type = ArticleType::first(array("id=?" => $article->type))->name;
         switch($type)

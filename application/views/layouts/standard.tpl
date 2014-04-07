@@ -14,8 +14,12 @@
         {% else %}
             <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
         {% endif %}
-        <meta name="keywords" content="vyperjmusic, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
-		
+
+        {% if meta_keywords %}
+            <meta name="keywords" content="{{ meta_keywords }}" />
+        {% else %}
+            <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+        {% endif %}
 		<meta name="author" content="vyper-jmusic.com" />
 		<meta name="ROBOTS" content="index,follow" />
 		
