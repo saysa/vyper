@@ -9,8 +9,12 @@
         <title>{% if soe_title %}{{ soe_title }} | {% endif %}Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="L'actualité de la musique japonaise au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
-		<meta name="keywords" content="vyperjmusic, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+        {% if google_description %}
+		    <meta name="description" content="{{ google_description|escape }}" />
+        {% else %}
+            <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
+        {% endif %}
+        <meta name="keywords" content="vyperjmusic, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
 		
 		<meta name="author" content="vyper-jmusic.com" />
 		<meta name="ROBOTS" content="index,follow" />

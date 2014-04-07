@@ -63,6 +63,7 @@ class Article extends \Framework\Shared\Controller {
 		->set("front_page_article", "true")
 		->set("article", $article)
         ->set("soe_title", $article->title)
+        ->set("google_description", $article->description)
 		;
         $type = ArticleType::first(array("id=?" => $article->type))->name;
         switch($type)
