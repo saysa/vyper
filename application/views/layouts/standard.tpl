@@ -670,9 +670,9 @@
 				                                    </span>
 
 				                                    <span class="comments">
-				                                        <i class="icon-comments"></i>
-				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on A new female villain">1 comment</a>
-				                                    </span>
+                                                        <i class="icon-comments"></i>
+                                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                    </span>
 				                                </div>
 				                            </div>
 				                        </div>
@@ -788,9 +788,9 @@
 				                                    </span>
 
 				                                    <span class="comments">
-				                                        <i class="icon-comments"></i>
-				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on A new female villain">1 comment</a>
-				                                    </span>
+                                                        <i class="icon-comments"></i>
+                                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                    </span>
 				                                </div>
 				                            </div>
 				                        </div>
