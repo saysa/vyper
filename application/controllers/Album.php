@@ -60,7 +60,7 @@ class Album extends \Framework\Shared\Controller {
         $posts_per_page = 32;
         $page_name = BASE_URL . $url_pattern . "/page/%s";
         $current_page = (isset($p))?$p:1;
-        $total_posts = model_Album::count(array("deleted=?" => false));
+        $total_posts = model_Album::count(array("deleted=?" => false, "category=?" => '1'));
         $pagination = new Pagination($page_name, $current_page, $total_posts, array('posts_per_page' => $posts_per_page));
         $pagination = $pagination->display();
 
@@ -69,7 +69,7 @@ class Album extends \Framework\Shared\Controller {
          */
         $from = (string) ($current_page-1)*$posts_per_page;
         if ($current_page == null || $from == "0") {$from = "0";}
-        $albums = model_Album::all(array("deleted=?" => false), array("*"), "created", "desc", $from, $posts_per_page);
+        $albums = model_Album::all(array("deleted=?" => false, "category=?" => '1'), array("*"), "created", "desc", $from, $posts_per_page);
 
         if (sizeof($albums) == 0)
         {

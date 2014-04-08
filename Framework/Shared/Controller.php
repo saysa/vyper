@@ -214,7 +214,7 @@ LIMIT 0,5");
             /**
              * Side Galerie
              */
-            $recent_pictures = Picture::all(array("deleted=?"=>false, "album ?" => "expressionIS NOT NULL"), array("*"), "created", "desc", "0,6");
+            $recent_pictures = Picture::all(array("deleted=?"=>false, "album ?" => "expressionIS NOT NULL"), array("*"), "created", "desc", "0,9");
             foreach ($recent_pictures as $picture)
             {
                 /* Set front Release Date */
