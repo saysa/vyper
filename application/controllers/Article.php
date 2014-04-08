@@ -71,6 +71,7 @@ class Article extends \Framework\Shared\Controller {
         {
             case "news":
                 $layout->set("current_article", "true");
+                $view->set("img_type_news", "true");
                 break;
             case "chronique":
                 $layout->set("current_chronique", "true");

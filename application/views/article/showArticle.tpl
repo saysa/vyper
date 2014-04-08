@@ -39,15 +39,21 @@
 	
 		<div class="entry-content-wrap">		
 			<div class="entry-image">
-				{% if article_horizontal_image %}
-					<img  src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
-				{% else %}
-					<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
-				{% endif %}					
-			</div>					
-						
-			<div class="entry-content">			
-				{{ article.getText }}
+                {% if img_type_news %}
+                    <img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
+                {% else %}
+                    {% if article_horizontal_image %}
+                        <img  src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
+                    {% else %}
+                        <img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
+                    {% endif %}
+                {% endif %}
+
+
+                </div>
+
+                <div class="entry-content">
+                    {{ article.getText }}
 			</div>
 			<!-- /entry-content -->
 		
