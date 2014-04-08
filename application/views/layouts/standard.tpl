@@ -21,7 +21,7 @@
             <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
         {% endif %}
 		<meta name="author" content="vyper-jmusic.com" />
-		<meta name="ROBOTS" content="index,follow" />
+		<meta name="ROBOTS" content="noindex,nofollow" />
 		
 		<!--  Theme -->
 		<link rel='stylesheet' id='fp-style-css'  href='{{ path_css }}portal.css' type='text/css' media='all' />
