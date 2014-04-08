@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/StringMethods.php" afterPath="$PROJECT_DIR$/Framework/StringMethods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/article/showAll.tpl" afterPath="$PROJECT_DIR$/application/views/article/showAll.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/article/showArticle.tpl" afterPath="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="0" selection-start="4167" selection-end="4167" vertical-scroll-proportion="-2.1153846" vertical-offset="1539" max-vertical-offset="17221">
+            <state line="395" column="82" selection-start="15622" selection-end="15654" vertical-scroll-proportion="0.33333334" vertical-offset="6547" max-vertical-offset="17238">
               <folding />
             </state>
           </provider>
@@ -64,7 +66,7 @@
       <file leaf-file-name="showArticle.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="17" selection-start="2132" selection-end="2132" vertical-scroll-proportion="-5.8076925" vertical-offset="461" max-vertical-offset="1904">
+            <state line="34" column="19" selection-start="1999" selection-end="1999" vertical-scroll-proportion="-12.423077" vertical-offset="255" max-vertical-offset="1938">
               <folding />
             </state>
           </provider>
@@ -82,7 +84,7 @@
       <file leaf-file-name="showAll.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/article/showAll.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="39" selection-start="703" selection-end="703" vertical-scroll-proportion="-5.8076925" vertical-offset="104" max-vertical-offset="1037">
+            <state line="36" column="58" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-9.730769" vertical-offset="359" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -97,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringMethods.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StringMethods.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="16" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.5524862" vertical-offset="3474" max-vertical-offset="5287">
+            <state line="222" column="16" selection-start="4642" selection-end="4642" vertical-scroll-proportion="-11.538462" vertical-offset="3474" max-vertical-offset="5287">
               <folding />
             </state>
           </provider>
@@ -167,7 +169,6 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin_ajax.php" />
         <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/application/models/Article.php" />
-        <option value="$PROJECT_DIR$/application/views/article/showAll.tpl" />
         <option value="$PROJECT_DIR$/application/views/theme/showTheme.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Theme.php" />
         <option value="$PROJECT_DIR$/application/models/Event.php" />
@@ -179,10 +180,11 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin_picture.php" />
         <option value="$PROJECT_DIR$/application/controllers/Album.php" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
-        <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Article.php" />
-        <option value="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
         <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
+        <option value="$PROJECT_DIR$/application/views/article/showAll.tpl" />
+        <option value="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
+        <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
       </list>
     </option>
   </component>
@@ -999,20 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="0" selection-start="4167" selection-end="4167" vertical-scroll-proportion="-2.1153846" vertical-offset="1539" max-vertical-offset="17221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/article/showAll.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="703" selection-end="703" vertical-scroll-proportion="-5.8076925" vertical-offset="104" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
@@ -1027,13 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="17" selection-start="2132" selection-end="2132" vertical-scroll-proportion="-5.8076925" vertical-offset="461" max-vertical-offset="1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="252" column="36" selection-start="3565" selection-end="3565" vertical-scroll-proportion="-15.153846" vertical-offset="3873" max-vertical-offset="4403">
@@ -1043,7 +1024,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="16" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.5524862" vertical-offset="3474" max-vertical-offset="5287">
+        <state line="222" column="16" selection-start="4642" selection-end="4642" vertical-scroll-proportion="-11.538462" vertical-offset="3474" max-vertical-offset="5287">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/article/showAll.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="58" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-9.730769" vertical-offset="359" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="19" selection-start="1999" selection-end="1999" vertical-scroll-proportion="-12.423077" vertical-offset="255" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="395" column="82" selection-start="15622" selection-end="15654" vertical-scroll-proportion="0.33333334" vertical-offset="6547" max-vertical-offset="17238">
           <folding />
         </state>
       </provider>

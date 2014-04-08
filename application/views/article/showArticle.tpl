@@ -22,25 +22,27 @@
 					<span class="comments">
 							<i class="icon-comments"></i>
 							<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
-					</span>		
-						
+					</span>
 
-					<span class="category">
-						<i class="icon-folder-close-alt"></i>
-                        <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
-                    </span>
-											
-					<span class="tags"><i class="icon-tags"></i><a href="http://demo.fairpixels.com/discover/tag/characters/" rel="tag">characters</a> , <a href="http://demo.fairpixels.com/discover/tag/villain/" rel="tag">villain</a></span>				</div>
-				
-									
-							</div>
-		</header>
-	
-	
-		<div class="entry-content-wrap">		
-			<div class="entry-image">
-                {% if img_type_news %}
-                    <img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
+                    {% if article.getRelatedTheme.getTitle %}
+
+                        <span class="category">
+                            <i class="icon-folder-close-alt"></i>
+                            <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+                        </span>
+                    {% endif %}
+
+                   				</div>
+
+
+                                </div>
+            </header>
+
+
+            <div class="entry-content-wrap">
+                <div class="entry-image">
+                    {% if img_type_news %}
+                        <img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
                 {% else %}
                     {% if article_horizontal_image %}
                         <img  src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">

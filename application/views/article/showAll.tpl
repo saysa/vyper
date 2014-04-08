@@ -33,13 +33,14 @@
 				<h3><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h3>
 				<div class="entry-meta">
 					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
-					
-										
+
+                    {% if article.getRelatedTheme.getTitle %}
+
 							<span class="category">
 								<i class="icon-folder-close"></i>
 								<a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
                             </span>
-											
+                    {% endif %}
 					
 				</div>		
 			</header>
