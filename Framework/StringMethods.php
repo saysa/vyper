@@ -271,6 +271,8 @@ class StringMethods {
 		$titre_url=str_replace  ( "Û"  , "u" , $titre_url  );
 		$titre_url=str_replace  ( "Ü"  , "u" , $titre_url  );
 
+        $titre_url=str_replace  ( "@"  , "a" , $titre_url  );
+
         foreach ($emptyItem as $item)
         {
             $titre_url=str_replace  ( $item  , "" , $titre_url  );

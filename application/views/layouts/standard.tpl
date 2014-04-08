@@ -95,7 +95,7 @@
 								<i class="icon-star"></i>
 								<a href="{{ base_url }}a_propos">A propos</a>
 							</li>
-														
+
 							<li>
 								<i class="icon-envelope"></i>
 								<a href="{{ base_url }}contact">Contact</a>
