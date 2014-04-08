@@ -97,11 +97,6 @@
 							</li>
 														
 							<li>
-								<i class="icon-leaf"></i>
-								Some text							
-							</li>
-														
-							<li>
 								<i class="icon-envelope"></i>
 								<a href="{{ base_url }}contact">Contact</a>
 							</li>							
