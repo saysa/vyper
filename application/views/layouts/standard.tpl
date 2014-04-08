@@ -971,7 +971,14 @@
 		<!-- /container -->
 		
         <footer id="footer">
-        	<div class="footer-widgets main-color-bg"></div>
+        	<div class="footer-widgets main-color-bg">
+                <div class="content-wrap">
+                    <a href="{{ base_url }}recrutement">Recrutement</a> -
+                    <a href="{{ base_url }}partenariat">Partenariat</a> -
+                    <a href="{{ base_url }}conditions_utilisation">Conditions d'utilisation</a>
+                </div>
+
+            </div>
         	<!-- /footer-widgets -->
         	<div class="footer-info">
         		<div class="content-wrap">

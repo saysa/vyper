@@ -465,6 +465,18 @@ $routes = array(
         "action" 	 => "cgu"
     ),
     array(
+        "name" 		 => "recrutement",
+        "pattern" 	 => "recrutement",
+        "controller" => "statique",
+        "action" 	 => "recrutement"
+    ),
+    array(
+        "name" 		 => "partenariat",
+        "pattern" 	 => "partenariat",
+        "controller" => "statique",
+        "action" 	 => "partenariat"
+    ),
+    array(
         "name" 		 => "home",
         "pattern" 	 => "home",
         "controller" => "index",

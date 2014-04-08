@@ -16,5 +16,13 @@ class Statique extends \Framework\Shared\Controller {
     public function contact()
     {
     }
+
+    public function recrutement()
+    {
+    }
+
+    public function partenariat()
+    {
+    }
 }
 
