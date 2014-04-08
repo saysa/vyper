@@ -34,6 +34,8 @@ class Admin_picture extends Admin_common {
 			{
 				if (isset($_FILES[$name]))
 				{
+                    ini_set('memory_limit', '64M');
+
 					$file = $_FILES[$name];
 					$path = APP_PATH . "/public/uploads/pic/";
 					$year = date("Y", time());
