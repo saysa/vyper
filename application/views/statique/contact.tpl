@@ -20,7 +20,7 @@
 
     <p>
         Courrier : VYPER Japanese Music PONS Cyrielle Résidence St Roch Rue Louis Orvoen 29350 Moëlan Sur Mer<br />
-        Tel. +33(0)9 77 77 77 77<br />
+
         E-mail : <a class="hide-contact" href="#">contact</a>
     </p>
 
