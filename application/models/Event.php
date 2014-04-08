@@ -3,6 +3,7 @@
 namespace application\models;
 
 use Framework\Shared\Model;
+use Framework\StringMethods;
 
 /**
  * 
@@ -162,4 +163,18 @@ class Event extends Model {
 
         return $country;
     }
+
+    public function getStringUrl($id)
+    {
+        $event = Event::first(array("id=?" => $id));
+        return StringMethods::filterURL($event->title);
+    }
+
+    public function getDateEvent($id)
+    {
+        $event = Event::first(array("id=?" => $id));
+        return  StringMethods::sqlDateToCustom($event->date);
+    }
+
+
 }

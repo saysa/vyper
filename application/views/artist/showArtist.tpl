@@ -88,12 +88,12 @@
         {% for key, event in events %}
             <li class="one-third{% if key==2 %} last{% endif %}">
                 <div class="thumbnail">
-                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html">
+                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">
                             <img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp239_130 wp-post-image" alt="">									</a>
                     </div>
 
                 <h5>
-                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html">
+                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">
                         {{ event.getTitle }}
                     </a>
                 </h5>
@@ -126,13 +126,13 @@
     {% for key, article in articles %}
         <li class="one-third{% if key==2 %} last{% endif %}">
             <div class="thumbnail">
-                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
+                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">
                     <img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp239_130 wp-post-image" alt="">
                 </a>
             </div>
 
             <h5>
-                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
+                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">
                     {{ article.getTitle }}
                 </a>
             </h5>

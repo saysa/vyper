@@ -155,6 +155,7 @@ WHERE itemvisite.type = 'article'
 GROUP BY itemvisite.itemId
 ORDER BY nb DESC
 LIMIT 0,5");
+            $rows = array();
             for ($i=0; $i<$stmt->rowCount();$i++)
             {
                 $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
@@ -165,6 +166,28 @@ LIMIT 0,5");
                 $popular_articles[] = Article::first(array("id=?" => $oResult->id));
             }
             $layout->set("popular_articles", $popular_articles);
+
+            /**
+             * Side popular events
+             */
+            $queryPdo = $database->query();
+            $stmt = $queryPdo->connector->execute("SELECT event.id, count(*) AS nb FROM event
+INNER JOIN itemvisite ON event.id = itemvisite.itemId
+WHERE itemvisite.type = 'event'
+GROUP BY itemvisite.itemId
+ORDER BY nb DESC
+LIMIT 0,5");
+            $rows = array();
+            for ($i=0; $i<$stmt->rowCount();$i++)
+            {
+                $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+            }
+            $popular_events = array();
+            foreach($rows as $oResult)
+            {
+                $popular_events[] = Event::first(array("id=?" => $oResult->id));
+            }
+            $layout->set("popular_events", $popular_events);
 
             /**
 			 * Side Next Event

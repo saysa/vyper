@@ -17,11 +17,11 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
 <!-- AddThis Button END -->
 				<div class="left">
-					<span class="date"><i class="icon-calendar"></i> {{ event.getDate }}</span>
+					<span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span>
 					
 					<span class="comments">
 							<i class="icon-comments"></i>
-                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html#comments"><fb:comments-count href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"></fb:comments-count> réactions</a>
+                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html#comments"><fb:comments-count href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"></fb:comments-count> réactions</a>
 					</span>		
 
 					<span class="category">

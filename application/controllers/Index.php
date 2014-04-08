@@ -125,12 +125,6 @@ class Index extends \Framework\Shared\Controller {
          * Latest event
          */
         $latests_events = Event::all(array("live=?" => "1", "date>?" => "expression NOW()"), array("*"), "date", null, "0,5");
-        foreach ($latests_events as $event)
-        {
-            $event->date =  StringMethods::sqlDateToCustom($event->date);
-            $event->stringURL = StringMethods::filterURL($event->title);
-
-        }
         $layout->set("latest_events", $latests_events);
 
         /**

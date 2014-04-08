@@ -474,16 +474,16 @@
 
                                         <div class="thumb-wrap">
                                         <div class="thumb">
-                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                         </div>
 
                                         <span class="comments main-color-bg">
                                             <i class="icon-comments"></i>
-                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+                                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html" title="{{ event.getTitle|escape }}">no comments</a>
                                         </span>
 
                                         <div class="overlay">
-                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                            <a class="post-link" href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><i class="icon-link"></i></a>
                                         </div>
                                         </div>
 
@@ -492,11 +492,11 @@
 
                     				<div class="post-details">
 				                        <h3>
-				                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html">{{ event.getTitle }}</a>
+				                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">{{ event.getTitle|escape }}</a>
 				                        </h3>
 
 				                        <div class="entry-meta">
-				                            <span class="date"><i class="icon-calendar"></i> {{ event.getDate }}</span>
+				                            <span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span>
 
 
 
@@ -517,18 +517,18 @@
 
 							        <div class="item-post">
 			                            <div class="thumb">
-			                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getMini75Picture(event.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+			                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getMini75Picture(event.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 			                            </div>
 
 			                            <div class="post-right">
 			                                <h5>
-			                                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringURL }}.html" rel="bookmark">{{ event.getTitle }}</a>
+			                                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html" rel="bookmark">{{ event.getTitle }}</a>
 			                                </h5>
 
 			                                <div class="entry-meta">
 			                                    <span class="date">
 			                                        <i class="icon-calendar"></i>
-			                                        {{ event.getDate }}
+			                                        {{ event.getDateEvent(event.getId) }}
 			                                    </span>
 
 			                                    <span class="comments">
@@ -838,14 +838,14 @@
 
 						<div class="widget-tabs-title-container">
 							<ul class="widget-tab-titles">
-								<li class="active"><h5><a href="#widget-tab1-content">Recent</a></h5></li>
-								<li class=""><h5><a href="#widget-tab2-content">Popular</a></h5></li>
-								<li class=""><h5><a href="#widget-tab3-content">Comments</a></h5></li>
+								<li class="active"><h5><a href="#widget-tab1-content">Récents</a></h5></li>
+								<li class=""><h5><a href="#widget-tab2-content">Populaires</a></h5></li>
+								<li class=""><h5><a href="#widget-tab3-content">Evénements</a></h5></li>
 							</ul>
 						</div> 
 						<div class="tabs-content-container">
 			
-							<div id="widget-tab1-content" class="tab-content" style="display: block;">	
+							<div id="widget-tab1-content" class="tab-content" style="display: block;">
 								<ul class="list post-list">
 								
 									{% for article in recent_articles %}
@@ -886,19 +886,19 @@
 			
 							<div id="widget-tab3-content" class="tab-content">
 								<ul class="list comment-list">
-									<li>
-										<div class="thumbnail">
-											<img alt="" src="http://0.gravatar.com/avatar/a8e47f4f1b687bafa83a75fa8a644bd0?s=70&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G" class="avatar avatar-70 photo" height="70" width="70">									</div>
-											<div class="post-right">
-												<div class="comment-author"><h5>Jack</h5></div>
-												<div class="comment-text">
-													<a class="first" href="http://demo.fairpixels.com/discover/2013/09/villain/#comment-10">Quisque risus eros, congue at libero at, aliquet ...</a>
-												</div>
-												<div class="entry-meta">
-													<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>
-												</div>
-											</div>
-									</li>		   
+                                    {% for event in popular_events %}
+                                    <li>
+                                        <div class="thumbnail">
+                                            <img src="{{ base_url }}uploads/pic/{{ event.getMini75Picture(event.getId) }}" class="attachment-fp75_75 wp-post-image" alt="{{ event.getTitle|escape }}">
+                                        </div>
+                                        <div class="post-right">
+                                            <h5><a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">{{ event.getTitle }}</a></h5>
+                                            <div class="entry-meta">
+                                                <span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
 												   
 								</ul>
 							</div>
