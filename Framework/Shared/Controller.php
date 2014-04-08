@@ -214,7 +214,21 @@ LIMIT 0,5");
             /**
              * Side Galerie
              */
-            $recent_pictures = Picture::all(array("deleted=?"=>false, "album ?" => "expressionIS NOT NULL"), array("*"), "created", "desc", "0,9");
+            $queryPdo = $database->query();
+            $stmt = $queryPdo->connector->execute("SELECT picture.id FROM picture
+INNER JOIN album ON album.id = picture.album
+WHERE album.category = '1'
+LIMIT 0,9");
+            $rows = array();
+            for ($i=0; $i<$stmt->rowCount();$i++)
+            {
+                $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+            }
+            $recent_pictures = array();
+            foreach($rows as $oResult)
+            {
+                $recent_pictures[] = Picture::first(array("id=?" => $oResult->id));
+            }
             foreach ($recent_pictures as $picture)
             {
                 /* Set front Release Date */
