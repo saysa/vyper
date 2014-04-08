@@ -105,18 +105,19 @@ class Article extends \Framework\Shared\Controller {
 		/*
 		 * Pagination
 		 */
+        $posts_per_page = 8;
 		$page_name = BASE_URL . $url_pattern . "/page/%s";
 		$current_page = (isset($p))?$p:1;
 		$total_posts = model_Article::count(array("type=?" => $articleTypeId));
-		$pagination = new Pagination($page_name, $current_page, $total_posts);
+		$pagination = new Pagination($page_name, $current_page, $total_posts, array('posts_per_page' => $posts_per_page));
 		$pagination = $pagination->display();
 		
 		/*
 		 * Select data rows
 		 */
-		$from = (string) ($current_page-1)*4;
+        $from = (string) ($current_page-1)*$posts_per_page;
 		if ($current_page == null || $from == "0") {$from = "0";}
-		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "releaseDate", "desc", $from, 4);
+		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "releaseDate", "desc", $from, $posts_per_page);
 		
 		if (sizeof($articles) == 0)
 		{
