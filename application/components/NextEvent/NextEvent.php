@@ -94,8 +94,9 @@ class NextEvent {
         $year = substr($event, 0, 4);
         $day = substr($event, 8, 2);
         $time = mktime(0,0,0,$month,$day,$year);
-        $month = utf8_encode(ucfirst(strftime( "%b", $time )));
+        $month = ucfirst(strftime( "%b", $time ));
         $month = str_replace(".", "", $month);
+        $month = substr($month, 0, 3);
         return $month;
     }
 	
