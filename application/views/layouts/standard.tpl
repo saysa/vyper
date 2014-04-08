@@ -143,7 +143,7 @@
 							
 							{% for article in ticker_articles %}
 								<li>
-									<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+									<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
 									<div class="sep"></div>
 								</li>
 							{% endfor %}
@@ -256,7 +256,7 @@
 							{% for article in mini_carousel %}
         						<div class="item">
 									<div class="thumbnail overlay">
-										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">
+										<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">
 											<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt="5">
 										</a>
 									</div>
@@ -266,7 +266,7 @@
 										<div class="post-wrap">
 										<div class="post-title">
 											<div class="post-icon"><i class="icon-file-text-alt"></i></div>
-											<h4><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">																				
+											<h4><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">
 												{{ article.getTitle }} 										
 												</a>
 											</h4>
@@ -277,7 +277,7 @@
 												{{ article.getDescription }} 											
 											</div>
 											<div class="more">
-												<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
+												<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">En savoir plus</a>
 											</div>
 										</div>	
 										
@@ -322,14 +322,14 @@
 						<div class="main-slider section">
 							{% for article in articles %}
 							<div class="item">
-								<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" >
+								<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" >
 									<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle }}" />								
 								</a>
 									
 								<div class="post-info">
 									<div class="post-excerpt">
 										<div class="title">
-											<h2><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h2>
+											<h2><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h2>
 											<div class="sep"></div>
 										</div>								
 										
@@ -338,7 +338,7 @@
 										</div>
 										
 										<div class="read-more">
-											<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">En savoir plus</a>
+											<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">En savoir plus</a>
 										</div>
 									</div>		
 								</div>	
@@ -374,16 +374,16 @@
                                     {% else %}
                                         <div class="thumb-wrap">
                                         <div class="thumb">
-                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                         </div>
 
                                         <span class="comments main-color-bg">
                                             <i class="icon-comments"></i>
-                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
                                         </span>
 
                                         <div class="overlay">
-                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
                                         </div>
                                         </div>
                     				{% endif %}
@@ -392,7 +392,7 @@
 
                     				<div class="post-details">
 				                        <h3>
-				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+				                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
 				                        </h3>
 
 				                        <div class="entry-meta">
@@ -422,12 +422,12 @@
 
 							        <div class="item-post">
 			                            <div class="thumb">
-			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+			                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 			                            </div>
 
 			                            <div class="post-right">
 			                                <h5>
-			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+			                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
 			                                </h5>
 
 			                                <div class="entry-meta">
@@ -438,7 +438,7 @@
 
 			                                    <span class="comments">
 			                                        <i class="icon-comments"></i>
-                                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"></fb:comments-count> réactions</a>
+                                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
 			                                    </span>
 			                                </div>
 			                            </div>
@@ -479,11 +479,11 @@
 
                                         <span class="comments main-color-bg">
                                             <i class="icon-comments"></i>
-                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
                                         </span>
 
                                         <div class="overlay">
-                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
                                         </div>
                                         </div>
 
@@ -601,16 +601,16 @@
 		                                    {% else %}
 		                                        <div class="thumb-wrap">
 		                                        <div class="thumb">
-		                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+		                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
 		                                        </div>
 
 		                                        <span class="comments main-color-bg">
 		                                            <i class="icon-comments"></i>
-		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
 		                                        </span>
 
 		                                        <div class="overlay">
-		                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+		                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
 		                                        </div>
 		                                        </div>
 		                    				{% endif %}
@@ -619,7 +619,7 @@
 
 		                    				<div class="post-details">
 						                        <h3>
-						                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+						                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
 						                        </h3>
 
 						                        <div class="entry-meta">
@@ -649,12 +649,12 @@
 
 								        <div class="item-post">
 				                            <div class="thumb">
-				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 				                            </div>
 
 				                            <div class="post-right">
 				                                <h5>
-				                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+				                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
 				                                </h5>
 
 				                                <div class="entry-meta">
@@ -665,7 +665,7 @@
 
 				                                    <span class="comments">
 				                                        <i class="icon-comments"></i>
-				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on A new female villain">1 comment</a>
 				                                    </span>
 				                                </div>
 				                            </div>
@@ -717,16 +717,16 @@
 		                                    {% else %}
 		                                        <div class="thumb-wrap">
 		                                        <div class="thumb">
-		                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+		                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
 		                                        </div>
 
 		                                        <span class="comments main-color-bg">
 		                                            <i class="icon-comments"></i>
-		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
 		                                        </span>
 
 		                                        <div class="overlay">
-		                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+		                                            <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
 		                                        </div>
 		                                        </div>
 		                    				{% endif %}
@@ -735,7 +735,7 @@
 
 		                    				<div class="post-details">
 						                        <h3>
-						                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a>
+						                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
 						                        </h3>
 
 						                        <div class="entry-meta">
@@ -767,12 +767,12 @@
 
 								        <div class="item-post">
 				                            <div class="thumb">
-				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+				                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
 				                            </div>
 
 				                            <div class="post-right">
 				                                <h5>
-				                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" rel="bookmark">{{ article.getTitle }}</a>
+				                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
 				                                </h5>
 
 				                                <div class="entry-meta">
@@ -783,7 +783,7 @@
 
 				                                    <span class="comments">
 				                                        <i class="icon-comments"></i>
-				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html" title="Comment on A new female villain">1 comment</a>
+				                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on A new female villain">1 comment</a>
 				                                    </span>
 				                                </div>
 				                            </div>
@@ -851,10 +851,10 @@
 									{% for article in recent_articles %}
 									<li>
 										<div class="thumbnail">
-											<img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
+											<img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
 										</div>
 										<div class="post-right">
-											<h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h5>
+											<h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h5>
 											<div class="entry-meta">
 												<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>						 
 											</div>
@@ -867,19 +867,20 @@
 			
 							<div id="widget-tab2-content" class="tab-content">
 								<ul class="list post-list">
-										
-									<li>
-										<div class="thumbnail">
-											<img width="75" height="75" src="http://demo.fairpixels.com/discover/wp-content/uploads/2013/09/8-75x75.jpg" class="attachment-fp75_75 wp-post-image" alt="8">							
-										</div>
-										<div class="post-right">
-											<h5><a href="http://demo.fairpixels.com/discover/2013/09/fortune/">Drake’s Fortune screenshot</a></h5>
-											<div class="entry-meta">
-												<span class="date"><i class="icon-calendar"></i>September 25, 2013</span>
-												<span class="comments"><i class="icon-comments"></i><a href="http://demo.fairpixels.com/discover/2013/09/fortune/#comments" title="Comment on Drake’s Fortune screenshot">5</a>										</span>		
-											</div>
-										</div>
-									</li>
+
+                            {% for article in popular_articles %}
+                                <li>
+                                    <div class="thumbnail">
+                                        <img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
+                                    </div>
+                                    <div class="post-right">
+                                        <h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h5>
+                                        <div class="entry-meta">
+                                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+                                        </div>
+                                    </div>
+                            </li>
+                            {% endfor %}
 								</ul>
 							</div>
 			

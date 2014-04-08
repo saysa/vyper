@@ -14,23 +14,23 @@
 {% else %}
 <div class="thumb-wrap">
 <div class="thumb">
-<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
 </div>
 
 <span class="comments main-color-bg">
 						<i class="icon-comments"></i>
-						<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#respond" title="Comment on Ellie looks younger than before">no comments</a>
+						<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#respond" title="Comment on Ellie looks younger than before">no comments</a>
 					</span>
 
 <div class="overlay">
-    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"><i class="icon-link"></i></a>
+    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
 </div>
 </div>
 {% endif %}
 
 
 <header class="entry-header">
-<h3><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html">{{ article.getTitle }}</a></h3>
+<h3><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h3>
 <div class="entry-meta">
     <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
 

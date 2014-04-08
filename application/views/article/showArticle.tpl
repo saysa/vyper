@@ -21,7 +21,7 @@
 					
 					<span class="comments">
 							<i class="icon-comments"></i>
-							<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html#comments"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringURL }}.html"></fb:comments-count> réactions</a>
+							<a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
 					</span>		
 						
 

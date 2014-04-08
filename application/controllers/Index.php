@@ -69,7 +69,7 @@ class Index extends \Framework\Shared\Controller {
             $image_path = Picture::get_path($article->relatedPicture);
             $image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 
-            $article->stringURL = StringMethods::filterURL($article->title);
+
 
             $excerpt = $article->title;
             $article->title = mb_substr($excerpt,0, 50);
@@ -100,8 +100,7 @@ class Index extends \Framework\Shared\Controller {
 
 			$image_path = Picture::get_path($article->relatedPicture);
 			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
-			
-			$article->stringURL = StringMethods::filterURL($article->title);
+
 			
 			$excerpt = $article->title;
 			$article->title = mb_substr($excerpt,0, 50);
@@ -142,7 +141,6 @@ class Index extends \Framework\Shared\Controller {
         {
             /* Set front Release Date */
             $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
-            $article->stringURL = StringMethods::filterURL($article->title);
             $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 
         }
@@ -156,7 +154,6 @@ class Index extends \Framework\Shared\Controller {
         {
             /* Set front Release Date */
             $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
-            $article->stringURL = StringMethods::filterURL($article->title);
             $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 
         }

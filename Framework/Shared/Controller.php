@@ -143,8 +143,30 @@ class Controller extends \Framework\Controller {
 					$view->set($template_var, $var);
 				}
 			}
-			
-			/**
+
+            /**
+             * Side popular
+             */
+            $database = Registry::get("database");
+            $queryPdo = $database->query();
+            $stmt = $queryPdo->connector->execute("SELECT article.id, count(*) AS nb FROM article
+INNER JOIN itemvisite ON article.id = itemvisite.itemId
+WHERE itemvisite.type = 'article'
+GROUP BY itemvisite.itemId
+ORDER BY nb DESC
+LIMIT 0,5");
+            for ($i=0; $i<$stmt->rowCount();$i++)
+            {
+                $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+            }
+            $popular_articles = array();
+            foreach($rows as $oResult)
+            {
+                $popular_articles[] = Article::first(array("id=?" => $oResult->id));
+            }
+            $layout->set("popular_articles", $popular_articles);
+
+            /**
 			 * Side Next Event
 			 */
 			$event = Event::all(array("live=?" => "1", "date>?" => "expression NOW()"), array("*"), "date", null, "0,1");
@@ -190,13 +212,6 @@ class Controller extends \Framework\Controller {
 			{
 				/* Set front Release Date */
 				$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
-				
-				$article->stringURL = StringMethods::filterURL($article->title);
-				
-				$image_path = Picture::get_path($article->relatedPicture);
-				$image = $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
-				$article->relatedPicture = $image;
-
                 $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 			}
 			$layout->set("recent_articles", $recent_articles);
@@ -211,10 +226,6 @@ class Controller extends \Framework\Controller {
 			 * Ticker articles
 			 */
 			$ticker_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,10");
-			foreach ($ticker_articles as $article)
-			{
-				$article->stringURL = StringMethods::filterURL($article->title);
-			}
 			$layout->set("ticker_articles", $ticker_articles);
 			
 			// set genreric path to the view

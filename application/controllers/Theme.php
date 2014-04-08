@@ -20,7 +20,7 @@ class Theme extends \Framework\Shared\Controller {
         /*
 		 * Pagination
 		 */
-        $posts_per_page = 2;
+        $posts_per_page = 4;
         $page_name = BASE_URL . $url_pattern . "/$id/%s/" . $themeUrlFormat . ".html";
         $total_posts = Article::count(array("deleted=?" => false, "relatedTheme=?" => $id));
         $pagination = new Pagination($page_name, $current_page, $total_posts, array('posts_per_page' => $posts_per_page));
@@ -46,7 +46,7 @@ class Theme extends \Framework\Shared\Controller {
             $image_path = Picture::get_path($article->relatedPicture);
             $image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
             $article->relatedPicture = $image;
-            $article->stringURL = StringMethods::filterURL($article->title);
+
 
             $article->relatedTheme = $theme;
         }

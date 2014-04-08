@@ -3,6 +3,7 @@
 namespace application\models;
 
 use Framework\Shared\Model;
+use Framework\StringMethods;
 
 /**
  * 
@@ -244,5 +245,11 @@ class Article extends Model {
         $image_path = Picture::get_path($article->relatedPicture);
         return $image_path . "75x75-" . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 
+    }
+
+    public function getStringUrl($id)
+    {
+        $article = Article::first(array("id=?" => $id));
+        return StringMethods::filterURL($article->title);
     }
 }
