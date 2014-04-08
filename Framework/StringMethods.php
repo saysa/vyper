@@ -214,7 +214,16 @@ class StringMethods {
             ">",
             "<",
             "!",
-            "="
+            "=",
+            "°",
+            "♪♯",
+            "♂",
+            "†",
+            "→",
+            "~",
+            "&",
+            "☆",
+            "["
 
         );
 
@@ -272,6 +281,13 @@ class StringMethods {
 		$titre_url=str_replace  ( "Ü"  , "u" , $titre_url  );
 
         $titre_url=str_replace  ( "@"  , "a" , $titre_url  );
+        $titre_url=str_replace  ( "★"  , "-" , $titre_url  );
+
+
+
+
+
+
 
         foreach ($emptyItem as $item)
         {
