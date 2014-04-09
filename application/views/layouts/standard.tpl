@@ -117,8 +117,8 @@
 						<ul class="list">
 							<li class="twitter"><a href="{{ vyper_twitter }}"><i class="icon-twitter"></i></a></li>
 							<li class="fb"><a href="{{ vyper_facebook }}"><i class="icon-facebook"></i></a></li>
-							<li class="gplus"><a href="#"><i class="icon-google-plus"></i></a></li>
-							<li class="pinterest"><a href="#"><i class="icon-pinterest"></i></a></li>
+							<li class="gplus"><a href="{{ vyper_google_plus }}"><i class="icon-google-plus"></i></a></li>
+
 							<li class="youtube"><a href="{{ vyper_youtube }}"><i class="icon-youtube"></i></a></li>										
 						</ul>
 					</div>
@@ -300,6 +300,7 @@
 				<div id="content" class="single-post">
 				
 					{% if front_page_index %}
+                <a href="https://plus.google.com/117439863059039345672" rel="publisher">Google+</a>
 					<div id="content" class="homepage">
 						<script>
 							jQuery(document).ready(function($) {
@@ -985,7 +986,10 @@
         					<li class="fb">
         						<a href="{{ vyper_facebook }}"><i class="icon-facebook"></i></a>
         					</li>
-        					<li class="youtube">
+                            <li class="gplus">
+                                <a href="{{ vyper_google_plus }}"><i class="icon-google-plus"></i></a>
+                            </li>
+                            <li class="youtube">
         						<a href="{{ vyper_youtube }}"><i class="icon-youtube"></i></a>
         					</li>
         				</ul>
