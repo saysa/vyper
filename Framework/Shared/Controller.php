@@ -271,7 +271,7 @@ LIMIT 0,9");
 			$layout->set("path_css", CSS);
 			$layout->set("path_js" , JS);
 			$layout->set("path_img" , IMG);
-			$layout->set("vyper_twitter", "https://twitter.com/VYPER_MusicJapa");
+			$layout->set("vyper_twitter", "https://twitter.com/VYPER_JMusic");
 			$layout->set("vyper_facebook", "https://www.facebook.com/vypermusicjapan");
 			$layout->set("vyper_youtube", "http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw");
 
