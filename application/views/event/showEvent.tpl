@@ -39,7 +39,7 @@
 		<div class="entry-content-wrap">	
 			{% if event_reladtedPicture %}	
 			<div class="entry-image">
-                <img  src="{{ base_url }}uploads/pic/{{ event.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ event.getTitle }}">
+                <img  src="{{ base_url }}uploads/pic/{{ event.getRelatedPicture }}" alt="{{ event.getTitle }}">
             </div>
 			{% endif %}
 						
