@@ -20,7 +20,7 @@ class Theme extends \Framework\Shared\Controller {
         /*
 		 * Pagination
 		 */
-        $posts_per_page = 4;
+        $posts_per_page = 8;
         $page_name = BASE_URL . $url_pattern . "/$id/%s/" . $themeUrlFormat . ".html";
         $total_posts = Article::count(array("deleted=?" => false, "relatedTheme=?" => $id));
         $pagination = new Pagination($page_name, $current_page, $total_posts, array('posts_per_page' => $posts_per_page));
