@@ -3049,7 +3049,7 @@ li.galerie {
 }
 
 #sidebar .widget_partners ul li{
-    width: 100%;
+    width: 42%;
     float: left;
     margin-right: 22px;
     margin-bottom: 22px;
@@ -3058,5 +3058,5 @@ li.galerie {
 }
 
 #sidebar .widget_partners ul li a img{
-    width: 100%;
+    /*width: 100%;*/
 }
