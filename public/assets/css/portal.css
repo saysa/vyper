@@ -3047,3 +3047,16 @@ li.galerie {
     margin-bottom: 15px;
     margin-top: 50px;
 }
+
+#sidebar .widget_partners ul li{
+    width: 100%;
+    float: left;
+    margin-right: 22px;
+    margin-bottom: 22px;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+#sidebar .widget_partners ul li a img{
+    width: 100%;
+}

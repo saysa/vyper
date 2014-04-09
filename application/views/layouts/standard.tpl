@@ -953,6 +953,19 @@
             			</div>
 			
 					</aside>
+
+                        <aside class="widget widget_partners">
+                            <div class="widget-title"><h4>Partenaires</h4></div>
+                                <ul>
+                                    <li><a href="http://www.japanfm.fr/radio/"><img src="{{ path_img }}partners/japan-fm.jpg" alt="japan fm" /></a></li>
+                                    <li><a href="http://ramenevents.wordpress.com/"><img src="{{ path_img }}partners/ramen-events.jpg" alt="ramen events" /></a></li>
+                                    <li><a href="https://www.facebook.com/GazettEFrance"><img src="{{ path_img }}partners/the-gazette-france.jpg" alt="the gazette france" /></a></li>
+                                    <li><a href="https://hollyhockya.wordpress.com/"><img src="{{ path_img }}partners/hollyhock-ya.jpg" alt="hollyhock ya" /></a></li>
+                                    <li><a href="http://www.giza-shoko.net/"><img src="{{ path_img }}partners/gizashoko.png" alt="gizashoko" /></a></li>
+                                </ul>
+
+
+                        </aside>
 	   				
 				</div>	
 				<!-- /sidebar -->
