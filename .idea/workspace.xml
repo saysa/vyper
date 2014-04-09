@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/suivez-nous.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/LogoVYPER.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +30,7 @@
       <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="65" selection-start="6985" selection-end="6985" vertical-scroll-proportion="0.29960316" vertical-offset="2977" max-vertical-offset="17340">
+            <state line="177" column="119" selection-start="6848" selection-end="6848" vertical-scroll-proportion="0.5019841" vertical-offset="2756" max-vertical-offset="17340">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -1080,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="65" selection-start="6985" selection-end="6985" vertical-scroll-proportion="0.29960316" vertical-offset="2977" max-vertical-offset="17340">
+        <state line="177" column="119" selection-start="6848" selection-end="6848" vertical-scroll-proportion="0.5019841" vertical-offset="2756" max-vertical-offset="17340">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
