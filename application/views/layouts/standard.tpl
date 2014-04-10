@@ -182,7 +182,15 @@
 				</div>
 				
 				<div class="banner">
-                <a href="https://www.facebook.com/vypermusicjapan" title="Suivez-nous sur Facebook"><img src="{{ path_img }}suivez-nous.jpg" alt="Suivez-nous sur Facebook"></a>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- mega bannière -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="6322916319"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 				</div>
 						
 			</div>
@@ -556,7 +564,15 @@
 
 
     						<div class="add_468">
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- un_artist -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-3070362287154347"
+     data-ad-slot="6183315514"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                             </div>
 
     						<div id="feat-categories">
@@ -895,6 +911,18 @@
 			
 						</div><!-- /tiles -->
 	   				</aside>
+
+                    <aside class="widget">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- sidebar -->
+            <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:250px"
+            data-ad-client="ca-pub-3070362287154347"
+            data-ad-slot="7520447913"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+                    </aside>
 	   				
 	   				{% if nextEvent_exists %}
 	   				<aside class="widget widget_flickr">
