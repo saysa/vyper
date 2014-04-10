@@ -160,10 +160,12 @@
 				</div>
 		
 				<div class="search">
-						<form method="get" id="searchform" class="search-form" action="">
+					    {% if on_cache %}
+						<form method="post" id="searchform" class="search-form" action="">
 						<input type="text" class="search-field" name="s" id="s" placeholder="Search">
 	    				<button class="search-submit"><i class="icon-search"></i></button>
 						</form>
+						{% endif %}
 				</div>
 				
 			</div>
