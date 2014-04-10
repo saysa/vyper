@@ -1,0 +1,6 @@
+User-agent:*
+Sitemap: http://vyper-jmusic.com/sitemap.xml
+#
+# le terme suivant nous permet de limiter les temps de passage des robots ? 120 secondes
+#
+Crawl-delay: 120

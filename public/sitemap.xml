@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>http://vyper-jmusic.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/news</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/interviews</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/live-reports</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/chroniques</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/galerie</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/artists</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/interviews</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/recrutement</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <url>
+        <loc>http://vyper-jmusic.com/partenariat</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+</urlset>
