@@ -477,6 +477,12 @@ $routes = array(
         "action" 	 => "partenariat"
     ),
     array(
+        "name" 		 => "resultats",
+        "pattern" 	 => "resultats",
+        "controller" => "statique",
+        "action" 	 => "googleResults"
+    ),
+    array(
         "name" 		 => "home",
         "pattern" 	 => "home",
         "controller" => "index",

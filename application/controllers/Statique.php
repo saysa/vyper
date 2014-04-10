@@ -24,5 +24,9 @@ class Statique extends \Framework\Shared\Controller {
     public function partenariat()
     {
     }
+
+    public function googleResults()
+    {
+    }
 }
 

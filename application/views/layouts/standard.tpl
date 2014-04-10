@@ -21,7 +21,7 @@
             <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
         {% endif %}
 		<meta name="author" content="vyper-jmusic.com" />
-		<meta name="ROBOTS" content="noindex,nofollow" />
+		<meta name="ROBOTS" content="index,follow" />
 		
 		<!--  Theme -->
 		<link rel='stylesheet' id='fp-style-css'  href='{{ path_css }}portal.css' type='text/css' media='all' />
@@ -300,7 +300,7 @@
 				<div id="content" class="single-post">
 				
 					{% if front_page_index %}
-                <a href="https://plus.google.com/117439863059039345672" rel="publisher">Google+</a>
+
 					<div id="content" class="homepage">
 						<script>
 							jQuery(document).ready(function($) {
@@ -987,7 +987,7 @@
         						<a href="{{ vyper_facebook }}"><i class="icon-facebook"></i></a>
         					</li>
                             <li class="gplus">
-                                <a href="{{ vyper_google_plus }}"><i class="icon-google-plus"></i></a>
+                                <a href="{{ vyper_google_plus }}" rel="publisher"><i class="icon-google-plus"></i></a>
                             </li>
                             <li class="youtube">
         						<a href="{{ vyper_youtube }}"><i class="icon-youtube"></i></a>

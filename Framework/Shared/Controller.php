@@ -274,7 +274,7 @@ LIMIT 0,9");
 			$layout->set("vyper_twitter", "https://twitter.com/VYPER_JMusic");
 			$layout->set("vyper_facebook", "https://www.facebook.com/vypermusicjapan");
 			$layout->set("vyper_youtube", "http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw");
-            $layout->set("vyper_google_plus", "https://plus.google.com/b/117439863059039345672/117439863059039345672");
+            $layout->set("vyper_google_plus", "https://plus.google.com/117439863059039345672");
 
 		});
 
