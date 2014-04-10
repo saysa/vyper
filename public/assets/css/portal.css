@@ -3060,3 +3060,7 @@ li.galerie {
 #sidebar .widget_partners ul li a img{
     /*width: 100%;*/
 }
+
+b {
+    font-weight: bold;
+}

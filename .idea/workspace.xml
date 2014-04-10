@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/portal.css" afterPath="$PROJECT_DIR$/public/assets/css/portal.css" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="978" column="53" selection-start="42090" selection-end="42090" vertical-scroll-proportion="0.6369048" vertical-offset="16305" max-vertical-offset="18020">
+            <state line="978" column="53" selection-start="42090" selection-end="42090" vertical-scroll-proportion="-6.173077" vertical-offset="16305" max-vertical-offset="18020">
               <folding />
             </state>
           </provider>
@@ -48,15 +47,6 @@
         <entry file="file://$PROJECT_DIR$/public/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="491" column="13" selection-start="12314" selection-end="12314" vertical-scroll-proportion="0.0" vertical-offset="8107" max-vertical-offset="8772">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="500.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/errors/500.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="35" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -93,6 +83,15 @@
         <entry file="file://$PROJECT_DIR$/application/views/errors/404.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="portal.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3060" column="20" selection-start="47572" selection-end="47572" vertical-scroll-proportion="0.7859712" vertical-offset="51583" max-vertical-offset="52207">
               <folding />
             </state>
           </provider>
@@ -169,7 +168,6 @@
         <option value="$PROJECT_DIR$/application/views/statique/recrutement.tpl" />
         <option value="$PROJECT_DIR$/application/views/statique/partenariat.tpl" />
         <option value="$PROJECT_DIR$/application/views/event/showEvent.tpl" />
-        <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/application/controllers/Theme.php" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
         <option value="$PROJECT_DIR$/application/views/statique/googleResults.tpl" />
@@ -184,6 +182,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Statique.php" />
         <option value="$PROJECT_DIR$/application/views/statique/page404.tpl" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
+        <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
       </list>
     </option>
   </component>
@@ -249,6 +248,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -654,11 +693,6 @@
         <state line="41" column="83" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1632" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3049" column="0" selection-start="47331" selection-end="47331" vertical-scroll-proportion="0.0" vertical-offset="51609" max-vertical-offset="52139" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="27" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1275" />
@@ -788,7 +822,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="978" column="53" selection-start="42090" selection-end="42090" vertical-scroll-proportion="0.6369048" vertical-offset="16305" max-vertical-offset="18020">
+        <state line="978" column="53" selection-start="42090" selection-end="42090" vertical-scroll-proportion="-6.173077" vertical-offset="16305" max-vertical-offset="18020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3060" column="20" selection-start="47572" selection-end="47572" vertical-scroll-proportion="0.7859712" vertical-offset="51583" max-vertical-offset="52207">
           <folding />
         </state>
       </provider>
