@@ -28,5 +28,9 @@ class Statique extends \Framework\Shared\Controller {
     public function googleResults()
     {
     }
+
+    public function page404()
+    {
+    }
 }
 

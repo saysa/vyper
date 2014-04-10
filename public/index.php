@@ -127,8 +127,15 @@ catch (Exception $e)
 		{
 			if ($class == $exception)
 			{
-				header("Content-type: text/html");
-				include(APP_PATH . "/application/views/errors/{$template}.php");
+				if (!DEBUG && $template == "404")
+                {
+                    header('location: http://www.vyper-jmusic.com/page404');
+                }
+                else
+                {
+                    header("Content-type: text/html");
+                    include(APP_PATH . "/application/views/errors/{$template}.php");
+                }
 				exit;
 			}
 		}

@@ -483,11 +483,19 @@ $routes = array(
         "action" 	 => "googleResults"
     ),
     array(
+        "name" 		 => "page404",
+        "pattern" 	 => "page404",
+        "controller" => "statique",
+        "action" 	 => "page404"
+    ),
+    array(
         "name" 		 => "home",
         "pattern" 	 => "home",
         "controller" => "index",
         "action" 	 => "index"
     )
+
+
 );
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ProMvc</title>
+		<title>Vyper Japanese Music</title>
 	</head>
 	<body>
 		error 500
