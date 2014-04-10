@@ -975,6 +975,11 @@
 			
 					</aside>
 
+                        <aside class="widget">
+            <div class="widget-title"><h4>Suivez-nous</h4></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/vypermusicjapan" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+                        </aside>
+
                         <aside class="widget widget_partners">
                             <div class="widget-title"><h4>Partenaires</h4></div>
                                 <ul>
