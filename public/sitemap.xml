@@ -1,64 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>http://vyper-jmusic.com/</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/news</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/interviews</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/live-reports</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/chroniques</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/galerie</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/artists</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/interviews</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/recrutement</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.1</priority>
-    </url>
-
-    <url>
-        <loc>http://vyper-jmusic.com/partenariat</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.1</priority>
-    </url>
-
+<url>
+<loc>http://www.vyper-jmusic.com</loc>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/news</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/interviews</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/live-reports</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/chroniques</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/galerie</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/artists</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/recrutement</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>http://vyper-jmusic.com/partenariat</loc>
+<changefreq>monthly</changefreq>
+</url>
 </urlset>
+<url>
+<loc>http://vyper.dev/articles/1/Nouveau-single-pour-Memento-Mori.html</loc>
+<lastmod>2014-04-07</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/2/landz-annonce-la-sortie-dun-nouveau-single.html</loc>
+<lastmod>2014-03-28</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/3/Yeti-devoile-les-details-sur-le-nouveau-mini-album.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/4/REVIEW---KAMIJO-SYMPHONY-OF-THE-VAMPIRE.html</loc>
+<lastmod>2014-03-28</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/5/Miyavi-enflamme-l-olympia-.html</loc>
+<lastmod>2014-04-01</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/6/Rencontre-avec-KAOS.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/7/Les-confidences-de-VAMPS.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/8/Rencontre-en-tout-simplicite-avec-LOVERIN-TAMBURIN.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/9/Rencontre-avec-EAT-YOU-ALIVE.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/10/KEISHO-OHNO--Un-voyage-aux-saveurs-traditionnelles.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/11/MIKARU-ce-vampire-qui-aimait-l-art-.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/12/Retour-sur-la-performance-de-Dir-En-Grey-a-la-Cigale.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/13/Satsuki-a-la-Boule-Noire-pour-son-Scene-Of-Luminous.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/14/Rapport-de-l-avant-dernier-Live-de-Sadie-a-Tokyo-le-13-juillet-2013.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/15/POLYSICS-enflamme-la-scene-du-SCOPITONE-a-Nantes.html</loc>
+<lastmod>2014-04-02</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/16/DID-annonce-son-troisieme-single.html</loc>
+<lastmod>2014-04-03</lastmod>
+<changefreq>never</changefreq>
+</url>
+<url>
+<loc>http://vyper.dev/articles/17/L-Arc-En-Ciel-devoile-son-nouveau-single.html</loc>
+<lastmod>2014-04-03</lastmod>
+<changefreq>never</changefreq>
+</url>

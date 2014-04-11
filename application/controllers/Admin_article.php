@@ -36,7 +36,7 @@ class Admin_article extends Admin_common {
 		// code
 		$view = $this-> getActionView();
 
-
+        $this->updateSitemap();
 
 		if (RequestMethods::post("add"))
 		{
