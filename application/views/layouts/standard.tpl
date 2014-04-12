@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if soe_title %}{{ soe_title }} | {% endif %}Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music{% if front_page_index %} | Toute la Jmusic, toutes les news en temps réels{% endif %}</title>
+        <title>{% if soe_title %}{{ soe_title }} | {% endif %}{% if front_page_index %}Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music | Toute la Jmusic, toutes les news en temps réels{% else %}vyper-jmusic.com | Le webzine de la J-Music {% endif %}</title>
  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% if google_description %}
