@@ -3064,3 +3064,30 @@ li.galerie {
 b {
     font-weight: bold;
 }
+
+.cse .gsc-control-cse,
+.gsc-control-cse {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.gsc-control-cse {
+    border-color: #F2F2F2 !important;
+    background-color: #F2F2F2 !important;
+}
+
+form.gsc-search-box {
+    margin: 0 !important;
+}
+
+table.gsc-search-box {
+    margin-bottom: 0 !important;
+}
+
+td {
+    padding: 0 !important;
+}
+
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: #666666 !important;
+}
