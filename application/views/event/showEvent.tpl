@@ -69,22 +69,38 @@
 	</article>
 </div>
 <!-- /post-wrap -->
-<div id="comments">
 
-    <div class="cat-header">
-        <div class="cat-title second-color-bg">
-            <div class="cat-icon">
-                <i class="icon-rocket"></i>
-            </div>
-            <h4>Donnez votre avis</h4>
-        </div>
-    </div>
-
-
-</div>
-<!-- /comments -->
+                   <div class="add_468">
+                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <!-- un_artist -->
+                   <ins class="adsbygoogle"
+                   style="display:inline-block;width:468px;height:60px"
+                   data-ad-client="ca-pub-3070362287154347"
+                   data-ad-slot="6183315514"></ins>
+                   <script>
+                   (adsbygoogle = window.adsbygoogle || []).push({});
+                   </script>
+                   </div>
 
 
 
 
-<div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
+                   <div id="comments">
+
+                       <div class="cat-header">
+                           <div class="cat-title second-color-bg">
+                               <div class="cat-icon">
+                                   <i class="icon-rocket"></i>
+                               </div>
+                               <h4>Donnez votre avis</h4>
+                           </div>
+                       </div>
+
+
+                   </div>
+                   <!-- /comments -->
+
+
+
+
+                   <div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
