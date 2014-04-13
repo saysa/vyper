@@ -379,7 +379,7 @@
 
 
 
-				                {% for article in recent_articles %}
+				                {% for article in latest_news %}
 				                {% if loop.index == 1 %}
 
 
@@ -437,7 +437,7 @@
 
                 				<div class="post-list">
 
-				                    {% for key, article in recent_articles %}
+				                    {% for key, article in latest_news %}
 				                    {% if key>0 and key<4 %}
 
 							        <div class="item-post">

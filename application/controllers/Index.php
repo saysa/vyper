@@ -153,6 +153,19 @@ class Index extends \Framework\Shared\Controller {
         }
         $layout->set("latest_live_reports", $latests_live_reports);
 
+        /**
+         * Latest news
+         */
+        $latests_news = Article::all(array("deleted=?"=>false, "type=?" => "8"), array("*"), "releaseDate", "desc", "0,5");
+        foreach ($latests_news as $article)
+        {
+            /* Set front Release Date */
+            $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+            $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
+
+        }
+        $layout->set("latest_news", $latests_news);
+
 		
 		$layout
 		->set("is_carousel", "true")
