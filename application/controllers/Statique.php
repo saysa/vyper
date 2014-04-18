@@ -45,6 +45,7 @@ class Statique extends \Framework\Shared\Controller {
     {
         $layout = $this->getLayoutView();
         $layout->set("soe_title", "Page 404");
+        http_response_code(404);
     }
 }
 
