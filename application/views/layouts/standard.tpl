@@ -415,7 +415,7 @@
 				                        </h3>
 
 				                        <div class="entry-meta">
-				                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+				                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 
                                             {% if article.getRelatedTheme.getTitle %}
 				                            <span class="category">
@@ -453,7 +453,7 @@
 			                                <div class="entry-meta">
 			                                    <span class="date">
 			                                        <i class="icon-calendar"></i>
-			                                        {{ article.getReleaseDate }}
+			                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
 			                                    </span>
 
 			                                    <span class="comments">
@@ -641,7 +641,7 @@
 						                        </h3>
 
 						                        <div class="entry-meta">
-						                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+						                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
                                                     {% if article.getRelatedTheme.getTitle %}
 						                            <span class="category">
 						                                <i class="icon-folder-close"></i>
@@ -678,7 +678,7 @@
 				                                <div class="entry-meta">
 				                                    <span class="date">
 				                                        <i class="icon-calendar"></i>
-				                                        {{ article.getReleaseDate }}
+				                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
 				                                    </span>
 
 				                                    <span class="comments">
@@ -757,7 +757,7 @@
 						                        </h3>
 
 						                        <div class="entry-meta">
-						                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+						                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
                                                     {% if article.getRelatedTheme.getTitle %}
 						                            <span class="category">
 						                                <i class="icon-folder-close"></i>
@@ -796,7 +796,7 @@
 				                                <div class="entry-meta">
 				                                    <span class="date">
 				                                        <i class="icon-calendar"></i>
-				                                        {{ article.getReleaseDate }}
+				                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
 				                                    </span>
 
 				                                    <span class="comments">
@@ -874,7 +874,7 @@
 										<div class="post-right">
 											<h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h5>
 											<div class="entry-meta">
-												<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>						 
+												<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 											</div>
 										</div>
 									</li>
@@ -894,7 +894,7 @@
                                     <div class="post-right">
                                         <h5><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h5>
                                         <div class="entry-meta">
-                                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+                                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
                                         </div>
                                     </div>
                             </li>

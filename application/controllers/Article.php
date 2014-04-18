@@ -30,9 +30,7 @@ class Article extends \Framework\Shared\Controller {
         $this->incrementeVisite("article", $id);
 
 
-		
-		/* Set front Release Date */
-		$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
+
 		
 		$image_path = Picture::get_path($article->relatedPicture);
         $article->relatedPicture = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
@@ -127,9 +125,7 @@ class Article extends \Framework\Shared\Controller {
 		
 		foreach ($articles as $article)
 		{
-			/* Set front Release Date */
-			$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
-			
+
 			$image_path = Picture::get_path($article->relatedPicture);
 			$image = $image_path . Picture::first(array("id=?"=>$article->relatedPicture))->filename;
 			$article->relatedPicture = $image;

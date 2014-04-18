@@ -248,7 +248,6 @@ LIMIT 0,9");
 			foreach ($recent_articles as $article)
 			{
 				/* Set front Release Date */
-				$article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
                 $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 			}
 			$layout->set("recent_articles", $recent_articles);

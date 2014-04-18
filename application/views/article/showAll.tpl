@@ -32,7 +32,7 @@
 			<header class="entry-header">							
 				<h3><a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a></h3>
 				<div class="entry-meta">
-					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 
                     {% if article.getRelatedTheme.getTitle %}
 

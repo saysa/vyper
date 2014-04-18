@@ -252,4 +252,10 @@ class Article extends Model {
         $article = Article::first(array("id=?" => $id));
         return StringMethods::filterURL($article->title);
     }
+
+    public function getReleaseDateFrontFormat($id)
+    {
+        $article = Article::first(array("id=?" => $id));
+        return StringMethods::sqlDateToCustom($article->releaseDate);
+    }
 }

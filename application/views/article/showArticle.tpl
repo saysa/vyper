@@ -17,7 +17,7 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
 <!-- AddThis Button END -->
 				<div class="left">
-					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDate }}</span>
+					<span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 					
 					<span class="comments">
 							<i class="icon-comments"></i>

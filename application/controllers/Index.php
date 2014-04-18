@@ -134,7 +134,6 @@ class Index extends \Framework\Shared\Controller {
         foreach ($latests_interviews as $article)
         {
             /* Set front Release Date */
-            $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
             $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 
         }
@@ -147,7 +146,6 @@ class Index extends \Framework\Shared\Controller {
         foreach ($latests_live_reports as $article)
         {
             /* Set front Release Date */
-            $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
             $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 
         }
@@ -160,7 +158,6 @@ class Index extends \Framework\Shared\Controller {
         foreach ($latests_news as $article)
         {
             /* Set front Release Date */
-            $article->releaseDate =  StringMethods::sqlDateToCustom($article->releaseDate);
             $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
 
         }
