@@ -190,7 +190,7 @@
 				<div class="logo">			
 					<h1>
 							<a href="{{ base_url }}" title="Vyper Japanese Music">
-								<img src="{{ base_url }}/assets/img/LogoVYPER.png" alt="Vyper Japanese Music" width="250" >
+								<img src="{{ base_url }}/assets/img/logo.png" alt="Vyper Japanese Music" width="200" >
 							</a>
 					</h1>	
 						
