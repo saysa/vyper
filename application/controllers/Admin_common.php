@@ -3,6 +3,7 @@
 namespace application\controllers;
 
 use application\models\Article;
+use application\models\Event;
 use Framework\Registry;
 
 class Admin_common extends \Framework\Shared\Controller {
@@ -88,6 +89,17 @@ class Admin_common extends \Framework\Shared\Controller {
             $xml .= "<loc>".$loc."</loc>\n";
             $xml .= "<lastmod>".$lastmod."</lastmod>\n";
             $xml .= "<changefreq>never</changefreq>\n";
+            $xml .= "<priority>0.8</priority>\n";
+            $xml .= "</url>\n";
+        }
+
+        $events = Event::all(array("deleted=?"=>false));
+        foreach($events as $event)
+        {
+            $loc = BASE_URL . "event/" . $event->id . "/" . $event->getStringUrl($event->id) . ".html";
+            $xml .= "<url>\n";
+            $xml .= "<loc>".$loc."</loc>\n";
+            $xml .= "<changefreq>monthly</changefreq>\n";
             $xml .= "<priority>0.8</priority>\n";
             $xml .= "</url>\n";
         }
