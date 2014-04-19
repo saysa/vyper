@@ -3,6 +3,7 @@
 namespace application\models;
 
 use Framework\Shared\Model;
+use Framework\StringMethods;
 
 class Artist extends Model {
 	
@@ -87,4 +88,10 @@ class Artist extends Model {
      * @readwrite
      */
     protected $_stringURL;
+
+    public function getStringUrl($id)
+    {
+        $artist = Artist::first(array("id=?" => $id));
+        return StringMethods::filterURL($artist->name);
+    }
 }
