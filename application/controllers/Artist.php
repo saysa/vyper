@@ -18,9 +18,6 @@ class Artist extends \Framework\Shared\Controller {
 
 	public function showArtist($id)
 	{
-		
-		
-
 		$view = $this->getActionView();
 		$artist = model_Artist::first(array("id=?" => $id));
 		
@@ -28,6 +25,10 @@ class Artist extends \Framework\Shared\Controller {
 		{
 			self::redirect("home");
 		}
+
+        $albums = null;
+        $articles = null;
+        $events = null;
 
         /* Incremented visit counter */
         $this->incrementeVisite("artist", $id);

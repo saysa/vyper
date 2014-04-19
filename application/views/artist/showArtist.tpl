@@ -21,15 +21,11 @@
 					
 					<span class="comments">
 							<i class="icon-comments"></i>
-							<a href="http://demo.fairpixels.com/discover/2013/09/villain/#comments" title="Comment on A new female villain">1 comment</a>						
+							<a href="{{ base_url }}artist/{{ artist.getId }}/{{ artist.getStringUrl(artist.getId) }}.html#comments"><fb:comments-count href="{{ base_url }}artist/{{ artist.getId }}/{{ artist.getStringUrl(artist.getId) }}.html"></fb:comments-count> réactions</a>
+
 					</span>		
 
-					
-					<span class="category">
-						<i class="icon-folder-close-alt"></i>									
-						<a href="http://demo.fairpixels.com/discover/category/entertainment/" title="View all posts in Entertainment" rel="category tag">Entertainment</a>, <a href="http://demo.fairpixels.com/discover/category/games/" title="View all posts in Games" rel="category tag">Games</a>					</span>
-											
-					<span class="tags"><i class="icon-tags"></i><a href="http://demo.fairpixels.com/discover/tag/characters/" rel="tag">characters</a> , <a href="http://demo.fairpixels.com/discover/tag/villain/" rel="tag">villain</a></span>				</div>
+									</div>
 				
 
 							</div>

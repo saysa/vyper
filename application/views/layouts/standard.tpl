@@ -516,8 +516,9 @@
 				                        </h3>
 
 				                        <div class="entry-meta">
-				                            <span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span>
-
+				                            <span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span><br />
+                                            {{ event.getTown(event.getId) }}<br />
+                                            {{ event.getCountry(event.getId)|upper }}
 
 
 
