@@ -24,6 +24,8 @@
         {% endif %}
 		<meta name="author" content="vyper-jmusic.com" />
 		<meta name="ROBOTS" content="index,follow" />
+
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="{{ base_url }}rss_fil_info.xml" />
 		
 		<!--  Theme -->
 		<link rel='stylesheet' id='fp-style-css'  href='{{ path_css }}portal.css' type='text/css' media='all' />

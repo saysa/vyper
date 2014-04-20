@@ -37,6 +37,7 @@ class Admin_article extends Admin_common {
 		$view = $this-> getActionView();
 
         $this->updateSitemap();
+        $this->updateFilInfoRss();
 
 		if (RequestMethods::post("add"))
 		{
