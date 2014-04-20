@@ -845,6 +845,33 @@
 				</div>	
 				<!-- /content -->
 				<div id="sidebar">
+
+                                <aside id="fairpixels_social_subscribers_widget-2" class="widget widget_social_counter">		<div class="wrap">
+                                <ul class="list">
+
+                                <li class="facebook">
+                                <div class="icon"><i class="icon-facebook"></i></div>
+                        <div class="right">
+                                <div class="count"><h4><a target="_blank" href="https://www.facebook.com/vypermusicjapan">{{ fb_fans }}</a></h4></div>
+                        <div class="text">Likes</div>
+                        </div>
+                        </li><!-- /facebook -->
+
+
+                        <li class="rss">
+                                <div class="icon"><i class="icon-rss"></i></div>
+                        <div class="right">
+                                <div class="subscribe"><h4><a target="_blank" href="{{ base_url }}rss_fil_info.xml">RSS Feed</a></h4></div>
+                        <div class="text">S'abonner</div>
+                        </div>
+                        </li>
+
+                        </ul>
+
+                        </div><!-- /wrap -->
+                        </aside>
+
+
 					<aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">		
 						<script>
 							jQuery(document).ready(function($) {				

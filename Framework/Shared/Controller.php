@@ -240,6 +240,12 @@ LIMIT 0,9");
             }
             $layout->set("recent_pictures", $recent_pictures);
 
+            /**
+             * Facebook fans
+             */
+            $fb = @json_decode(file_get_contents('https://graph.facebook.com/vypermusicjapan'));
+            $fb_fans = number_format($fb->likes);
+            $layout->set("fb_fans", $fb_fans);
 
             /**
 			 * Side recent articles
