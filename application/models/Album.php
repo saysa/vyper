@@ -3,6 +3,7 @@
 namespace application\models;
 
 use Framework\Shared\Model;
+use Framework\StringMethods;
 
 class Album extends Model {
 
@@ -51,5 +52,12 @@ class Album extends Model {
      * @readwrite
      */
     protected $_cover;
+
+    public function getTitleUrlFormat($id)
+    {
+        $album = Album::first(array("id=?" => $id));
+
+        return StringMethods::filterURL($album->title) . ".html";
+    }
 
 }

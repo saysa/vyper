@@ -2,8 +2,11 @@
 
 namespace application\controllers;
 
+use application\models\Album;
 use application\models\Article;
+use application\models\Artist;
 use application\models\Event;
+use application\models\Theme;
 use Framework\Registry;
 
 class Admin_common extends \Framework\Shared\Controller {
@@ -101,6 +104,39 @@ class Admin_common extends \Framework\Shared\Controller {
             $xml .= "<loc>".$loc."</loc>\n";
             $xml .= "<changefreq>monthly</changefreq>\n";
             $xml .= "<priority>0.8</priority>\n";
+            $xml .= "</url>\n";
+        }
+
+        $artists = Artist::all(array("deleted=?"=>false));
+        foreach($artists as $artist)
+        {
+            $loc = BASE_URL . "artist/" . $artist->id . "/" . $artist->getStringUrl($artist->id) . ".html";
+            $xml .= "<url>\n";
+            $xml .= "<loc>".$loc."</loc>\n";
+            $xml .= "<changefreq>weekly</changefreq>\n";
+            $xml .= "<priority>0.8</priority>\n";
+            $xml .= "</url>\n";
+        }
+
+        $themes = Theme::all(array("deleted=?" => false, "showInMenu=?" => true));
+        foreach($themes as $theme)
+        {
+            $loc = BASE_URL . "theme/" . $theme->id . "/1/" . $theme->getTitleUrlFormat($theme->id);
+            $xml .= "<url>\n";
+            $xml .= "<loc>".$loc."</loc>\n";
+            $xml .= "<changefreq>monthly</changefreq>\n";
+            $xml .= "<priority>0.5</priority>\n";
+            $xml .= "</url>\n";
+        }
+
+        $albums = Album::all(array("deleted=?"=>false));
+        foreach($albums as $album)
+        {
+            $loc = BASE_URL . "album/" . $album->id . "/" . $album->getTitleUrlFormat($album->id);
+            $xml .= "<url>\n";
+            $xml .= "<loc>".$loc."</loc>\n";
+            $xml .= "<changefreq>monthly</changefreq>\n";
+            $xml .= "<priority>0.7</priority>\n";
             $xml .= "</url>\n";
         }
 
