@@ -225,19 +225,19 @@
 				</div>
 				
 				<ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
-					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index %} current_page_item{% endif %}"><a href="{{ base_url }}">Home</a></li>
-					<li class="menu-item menu-item-type-post_type{% if current_article %} current_page_item{% endif %}"><a href="{{ base_url }}news">News</a></li>
-					<li class="menu-item menu-item-type-post_type{% if current_interview %} current_page_item{% endif %}"><a href="{{ base_url }}interviews">Interviews</a></li>
-					<li class="menu-item menu-item-type-post_type{% if current_live_report %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports">Live Reports</a></li>
-					<li class="menu-item menu-item-type-post_type{% if current_chronique %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques">Chroniques</a></li>
-					<li class="menu-item menu-item-type-post_type{% if current_album %} current_page_item{% endif %}"><a href="{{ base_url }}galerie">Galerie</a></li>
-					<li class="menu-item menu-item-type-post_type{% if current_artist %} current_page_item{% endif %}"><a href="{{ base_url }}artists">Artistes</a></li>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index %} current_page_item{% endif %}"><a href="{{ base_url }}" title="Accueil">Accueil</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_article %} current_page_item{% endif %}"><a href="{{ base_url }}news" title="News">News</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_interview %} current_page_item{% endif %}"><a href="{{ base_url }}interviews" title="Interview">Interviews</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_live_report %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports" title="Live Reports">Live Reports</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_chronique %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques" title="Chroniques">Chroniques</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_album %} current_page_item{% endif %}"><a href="{{ base_url }}galerie" title="Galerie">Galerie</a></li>
+					<li class="menu-item menu-item-type-post_type{% if current_artist %} current_page_item{% endif %}"><a href="{{ base_url }}artists" title="Artistes">Artistes</a></li>
 
                     {% if themes_showInMenu %}
                     <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
                         <ul class="sub-menu">
                         {% for theme in themes_showInMenu %}
-                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}theme/{{ theme.getId }}/1/{{ theme.getTitleUrlFormat(theme.getId) }}">{{ theme.getTitle }}</a></li>
+                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}theme/{{ theme.getId }}/1/{{ theme.getTitleUrlFormat(theme.getId) }}" title="{{ theme.getTitle }}">{{ theme.getTitle }}</a></li>
                         {% endfor %}
                         </ul>
                     </li>
