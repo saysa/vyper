@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/components/auth/auth.tpl" afterPath="$PROJECT_DIR$/application/views/components/auth/auth.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Shared/Controller.php" afterPath="$PROJECT_DIR$/Framework/Shared/Controller.php" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +46,7 @@
       <file leaf-file-name="Admin_common.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin_common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="27" selection-start="5359" selection-end="5359" vertical-scroll-proportion="3.2692308" vertical-offset="2176" max-vertical-offset="4063">
+            <state line="128" column="27" selection-start="5359" selection-end="5359" vertical-scroll-proportion="0.0" vertical-offset="2176" max-vertical-offset="4148">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="login.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/auth/login.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="50" selection-start="673" selection-end="673" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="680">
+            <state line="16" column="50" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="403" column="35" selection-start="10285" selection-end="10290" vertical-scroll-proportion="-3.3076923" vertical-offset="6679" max-vertical-offset="8772">
+            <state line="403" column="35" selection-start="10285" selection-end="10290" vertical-scroll-proportion="0.0" vertical-offset="6679" max-vertical-offset="8772">
               <folding />
             </state>
           </provider>
@@ -73,16 +73,16 @@
       <file leaf-file-name="login.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/users/login.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
+            <state line="3" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="auth.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/components/auth/auth.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="0.8766114" vertical-offset="0" max-vertical-offset="578">
+            <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="-16.961538" vertical-offset="35" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -106,14 +106,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="49" selection-start="7023" selection-end="7023" vertical-scroll-proportion="-1.3076923" vertical-offset="3944" max-vertical-offset="5984">
+            <state line="249" column="50" selection-start="7123" selection-end="7123" vertical-scroll-proportion="0.28176796" vertical-offset="3876" max-vertical-offset="6052">
               <folding>
-                <marker date="1398005816980" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
-                <marker date="1398005816980" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
-                <marker date="1398005816980" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
+                <marker date="1398100714026" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
+                <marker date="1398100714026" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
+                <marker date="1398100714026" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
               </folding>
             </state>
           </provider>
@@ -179,10 +179,10 @@
         <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
         <option value="$PROJECT_DIR$/application/models/Album.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_article.php" />
-        <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_common.php" />
         <option value="$PROJECT_DIR$/application/views/components/auth/auth.tpl" />
+        <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
       </list>
     </option>
   </component>
@@ -219,6 +219,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -537,7 +538,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -629,7 +629,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12990937" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14728096" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17824773" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18051359" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -659,9 +659,9 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14728096" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17824773" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -854,9 +854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Artist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="32" selection-start="1269" selection-end="1281" vertical-scroll-proportion="-13.038462" vertical-offset="1191" max-vertical-offset="1734">
-          <folding />
-        </state>
+        <state line="91" column="32" selection-start="1269" selection-end="1281" vertical-scroll-proportion="-13.038462" vertical-offset="1191" max-vertical-offset="1734" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
@@ -906,9 +904,7 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
@@ -941,47 +937,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin_common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="27" selection-start="5359" selection-end="5359" vertical-scroll-proportion="3.2692308" vertical-offset="2176" max-vertical-offset="4063">
+        <state line="128" column="27" selection-start="5359" selection-end="5359" vertical-scroll-proportion="0.0" vertical-offset="2176" max-vertical-offset="4148">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/auth/login.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="50" selection-start="673" selection-end="673" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="680">
+        <state line="16" column="50" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="403" column="35" selection-start="10285" selection-end="10290" vertical-scroll-proportion="-3.3076923" vertical-offset="6679" max-vertical-offset="8772">
+        <state line="403" column="35" selection-start="10285" selection-end="10290" vertical-scroll-proportion="0.0" vertical-offset="6679" max-vertical-offset="8772">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/users/login.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
+        <state line="3" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/components/auth/auth.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="-16.961538" vertical-offset="35" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="49" selection-start="7023" selection-end="7023" vertical-scroll-proportion="-1.3076923" vertical-offset="3944" max-vertical-offset="5984">
+        <state line="249" column="50" selection-start="7123" selection-end="7123" vertical-scroll-proportion="0.28176796" vertical-offset="3876" max-vertical-offset="6052">
           <folding>
-            <marker date="1398005816980" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
-            <marker date="1398005816980" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
-            <marker date="1398005816980" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
+            <marker date="1398100714026" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
+            <marker date="1398100714026" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
+            <marker date="1398100714026" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/components/auth/auth.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="0.8766114" vertical-offset="0" max-vertical-offset="578">
-          <folding />
         </state>
       </provider>
     </entry>
