@@ -124,6 +124,11 @@ class Admin_common extends \Framework\Shared\Controller {
         $xml .= "</url>\n";
 
         $xml .= "<url>\n";
+        $xml .= "<loc>http://www.vyper-jmusic.com/rss_fil_info.xml</loc>\n";
+        $xml .= "<changefreq>daily</changefreq>\n";
+        $xml .= "</url>\n";
+
+        $xml .= "<url>\n";
         $xml .= "<loc>http://vyper-jmusic.com/news</loc>\n";
         $xml .= "<changefreq>daily</changefreq>\n";
         $xml .= "</url>\n";
