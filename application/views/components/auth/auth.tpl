@@ -1,11 +1,11 @@
 <div id="auth_container">
-	<span id="auth_title">Portal : portail de démonstration</span>
+	<span id="auth_title">Vyper Japanese Music</span>
 	
 	<form method = "post">
 		<ol>
 			<li>
 				<label>
-					Email:
+					Login:
 					<input type = "text" name = "email" />
 					{% if email_error %}
 						{{ email_error }}
