@@ -852,7 +852,7 @@
                                 <li class="facebook">
                                 <div class="icon"><i class="icon-facebook"></i></div>
                         <div class="right">
-                                <div class="count"><h4><a target="_blank" href="https://www.facebook.com/vypermusicjapan">{{ fb_fans }}</a></h4></div>
+                                <div class="count"><h4><a target="_blank" href="{{ vyper_facebook }}">{{ fb_fans }}</a></h4></div>
                         <div class="text">Likes</div>
                         </div>
                         </li><!-- /facebook -->
@@ -1022,7 +1022,7 @@
 
                         <aside class="widget">
             <div class="widget-title"><h4>Suivez-nous</h4></div>
-            <div class="fb-like-box" data-href="https://www.facebook.com/vypermusicjapan" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/vyperjmusic" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
                         </aside>
 
                         <aside class="widget widget_partners">

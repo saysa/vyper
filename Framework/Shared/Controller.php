@@ -243,7 +243,7 @@ LIMIT 0,9");
             /**
              * Facebook fans
              */
-            $fb = @json_decode(file_get_contents('https://graph.facebook.com/vypermusicjapan'));
+            $fb = @json_decode(file_get_contents('https://graph.facebook.com/vyperjmusic'));
             if(is_object($fb))
             {
                 $fb_fans = number_format($fb->likes);
@@ -281,7 +281,7 @@ LIMIT 0,9");
 			$layout->set("path_js" , JS);
 			$layout->set("path_img" , IMG);
 			$layout->set("vyper_twitter", "https://twitter.com/VYPER_JMusic");
-			$layout->set("vyper_facebook", "https://www.facebook.com/vypermusicjapan");
+			$layout->set("vyper_facebook", "https://www.facebook.com/vyperjmusic");
 			$layout->set("vyper_youtube", "http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw");
             $layout->set("vyper_google_plus", "https://plus.google.com/117439863059039345672");
 

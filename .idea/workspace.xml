@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Shared/Controller.php" afterPath="$PROJECT_DIR$/Framework/Shared/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/standard.tpl" afterPath="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
     </list>
     <ignored path="vyper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="standard.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="858" column="0" selection-start="37213" selection-end="37213" vertical-scroll-proportion="0.0" vertical-offset="14492" max-vertical-offset="18785">
+            <state line="854" column="94" selection-start="37023" selection-end="37023" vertical-scroll-proportion="0.26050422" vertical-offset="14456" max-vertical-offset="18785">
               <folding />
             </state>
           </provider>
@@ -82,7 +83,7 @@
       <file leaf-file-name="auth.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/components/auth/auth.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="-16.961538" vertical-offset="35" max-vertical-offset="578">
+            <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -106,14 +107,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="50" selection-start="7123" selection-end="7123" vertical-scroll-proportion="0.28176796" vertical-offset="3876" max-vertical-offset="6052">
+            <state line="281" column="43" selection-start="8213" selection-end="8213" vertical-scroll-proportion="-0.9423077" vertical-offset="4524" max-vertical-offset="6052">
               <folding>
-                <marker date="1398100714026" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
-                <marker date="1398100714026" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
-                <marker date="1398100714026" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
+                <marker date="1398106693694" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
+                <marker date="1398106693694" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
+                <marker date="1398106693694" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
               </folding>
             </state>
           </provider>
@@ -179,10 +180,10 @@
         <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
         <option value="$PROJECT_DIR$/application/models/Album.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_article.php" />
-        <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_common.php" />
         <option value="$PROJECT_DIR$/application/views/components/auth/auth.tpl" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
+        <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
       </list>
     </option>
   </component>
@@ -621,15 +622,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4318182" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12990937" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14728096" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18051359" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18277946" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -638,7 +640,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29383117" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -659,9 +660,9 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14728096" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17824773" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -880,9 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="27" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1972">
-          <folding />
-        </state>
+        <state line="78" column="27" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1972" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin_article.php">
@@ -928,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="858" column="0" selection-start="37213" selection-end="37213" vertical-scroll-proportion="0.0" vertical-offset="14492" max-vertical-offset="18785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin_common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="27" selection-start="5359" selection-end="5359" vertical-scroll-proportion="0.0" vertical-offset="2176" max-vertical-offset="4148">
@@ -965,19 +957,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/components/auth/auth.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="-16.961538" vertical-offset="35" max-vertical-offset="578">
+        <state line="28" column="8" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="50" selection-start="7123" selection-end="7123" vertical-scroll-proportion="0.28176796" vertical-offset="3876" max-vertical-offset="6052">
+        <state line="281" column="43" selection-start="8213" selection-end="8213" vertical-scroll-proportion="-0.9423077" vertical-offset="4524" max-vertical-offset="6052">
           <folding>
-            <marker date="1398100714026" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
-            <marker date="1398100714026" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
-            <marker date="1398100714026" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
+            <marker date="1398106693694" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
+            <marker date="1398106693694" expanded="true" signature="4538:4720" placeholder="SELECT event..event..." />
+            <marker date="1398106693694" expanded="true" signature="5912:6024" placeholder="SELECT pictu..picture..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="854" column="94" selection-start="37023" selection-end="37023" vertical-scroll-proportion="0.26050422" vertical-offset="14456" max-vertical-offset="18785">
+          <folding />
         </state>
       </provider>
     </entry>
