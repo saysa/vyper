@@ -158,6 +158,26 @@ $routes = array(
 				"action" 	 => "showArtists"
 		),
 
+    // Admin Disco
+    array(
+        "name" 		 => "admin_add_disco",
+        "pattern"    => "_admin_/disco/add",
+        "controller" => "admin_disco",
+        "action" 	 => "addDisco"
+    ),
+    array(
+        "name" 		 => "admin_update_disco",
+        "pattern" 	 => "_admin_/disco/update/:id",
+        "controller" => "admin_disco",
+        "action" 	 => "updateDisco"
+    ),
+    array(
+        "name" 		 => "admin_show_discos",
+        "pattern"    => "_admin_/discos",
+        "controller" => "admin_disco",
+        "action" 	 => "showDiscos"
+    ),
+
         // Admin album
         array(
             "name" 		 => "admin_update_album",

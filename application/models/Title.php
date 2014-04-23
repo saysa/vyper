@@ -23,6 +23,16 @@ class Title extends Model {
      * @column
      * @readwrite
      * @type text
+     * @length 5
+     *
+     * @validate required
+     */
+    protected $_number; // text 01, 02, 03
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
      * @length 255
      *
      * @validate required

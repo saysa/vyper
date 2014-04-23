@@ -51,7 +51,7 @@
 				      <span class="icon-bar"></span>
 				      <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><span>Vyper Jmusic</span></a>
+				<a class="navbar-brand" href="index.html"><span>Vyper Japanese Music</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -311,6 +311,7 @@
 						<li{% if active_article %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_article }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
 						<li{% if active_picture %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_picture }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
 						<li{% if active_artist %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_artist }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
+                        <li{% if active_disco %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_disco }}"><i class="icon-star"></i><span class="hidden-sm"> Disco</span></a></li>
 						<li{% if active_tour %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_tour }}"><i class="icon-star"></i><span class="hidden-sm"> Tours</span></a></li>
 						<li{% if active_event %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_event }}"><i class="icon-star"></i><span class="hidden-sm"> Events</span></a></li>
 						<li{% if active_location %} class="active"{% endif %}><a href="{{ base_url ~ link_admin_show_location }}"><i class="icon-star"></i><span class="hidden-sm"> Locations</span></a></li>
