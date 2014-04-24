@@ -26,13 +26,13 @@
 								</div>
 							</div>
 							<div class="col-lg-4">
-								<!-- Real title -->
+								<!-- Title real -->
 								<div class="row">
-									<div class="form-group col-lg-9{%if error_real_title %} has-error{% endif %}">
-										<label class="control-label" for="real_title">Title real</label>
+									<div class="form-group col-lg-9{%if error_title_real %} has-error{% endif %}">
+										<label class="control-label" for="title_real">Title real</label>
 										<div class="controls">
-										  <input class="form-control focused" id="real_title" name="real_title" type="text" placeholder="Real title" value="{{ post_real_title }}">
-										  {{ error_real_title }}
+										  <input class="form-control focused" id="title_real" name="title_real" type="text" placeholder="Title Real" value="{{ post_title_real }}">
+										  {{ error_title_real }}
 										</div>
 									</div>
 								</div>
@@ -87,6 +87,18 @@
 								</div>
 							</div>
 							<div class="col-lg-4">
+
+								<!-- Date -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_date %} has-error{% endif %}">
+										<label class="control-label" for="date">Date</label>
+										<div class="controls">
+										  <input class="form-control datepicker" id="date" name="date" type="text" value="{{ post_date }}">
+										  {{ error_date }}
+										</div>
+									</div>
+								</div>
+
 								
 							</div>
 						</div>
@@ -98,42 +110,42 @@
 						
 						<div class="row">
 							<div class="col-lg-4">
-								<!-- Description -->
+								<!-- Details -->
 								<div class="row">
-									<div class="form-group col-lg-9{%if error_description %} has-error{% endif %}">
-										<label class="control-label" for="description">Description</label>
+									<div class="form-group col-lg-9{%if error_details %} has-error{% endif %}">
+										<label class="control-label" for="description">Details</label>
 										<div class="controls">
-										  <textarea class="form-control" name="description" id="description" rows="3" placeholder="Description">{{ post_description }}</textarea>
-										  {{ error_description }}
+										  <textarea class="form-control" name="details" id="details" rows="3" placeholder="Details">{{ post_details }}</textarea>
+										  {{ error_details }}
 										</div>
 									</div>
 								</div>	
 							</div>
 							<div class="col-lg-4">
-								<!-- Description Real -->
+								<!-- Label -->
 								<div class="row">
-									<div class="form-group col-lg-9{%if error_description_real %} has-error{% endif %}">
-										<label class="control-label" for="description">Description real</label>
+									<div class="form-group col-lg-9{%if error_label %} has-error{% endif %}">
+										<label class="control-label" for="label">Label</label>
 										<div class="controls">
-										  <textarea class="form-control" name="description_real" id="description_real" rows="3" placeholder="Description Real">{{ post_description_real }}</textarea>
-										  {{ error_description_real }}
+										  <input class="form-control focused" id="label" name="label" type="text" placeholder="Label" value="{{ post_label }}">
+										  {{ error_label }}
 										</div>
 									</div>
-								</div>	
+								</div>
 							</div>
 						</div>
 						
 							
 						<div class="row">
 							<div class="col-lg-4">
-								<!-- Location -->
+								<!-- Country -->
 								<div class="row">
 									<div class="form-group col-lg-9">
-										<label class="control-label" for="location">Location</label>
+										<label class="control-label" for="country">Country</label>
 										<div class="controls">
-											<select id="location" name="location" class="form-control" data-rel="chosen">
-												{% for location in locations %}
-													<option value="{{ location.getId }}"{% if location.getId==post_location %} selected="selected"{% endif %}>{{ location.getName }}</option>
+											<select id="country" name="country" class="form-control" data-rel="chosen">
+												{% for country in countries %}
+													<option value="{{ country.getId }}"{% if country.getId==post_country %} selected="selected"{% endif %}>{{ country.getName }}</option>
 												{% endfor %}
 										  	</select>
 										</div>
@@ -141,63 +153,14 @@
 								</div>
 							</div>
 							<div class="col-lg-4">
-								
-							</div>
-						</div>
-						
-						
-						
-						
-						
-						
-						<div class="row">
-							<!-- Release Date -->
-							<div class="form-group col-lg-2{%if error_date %} has-error{% endif %}">
-							  <label class="control-label" for="date">Date *</label>
-							  <div class="controls">
-								<input type="text" class="form-control datepicker" id="date" name="date" value="{{ post_date }}">
-								{{ error_date }}
-							  </div>
-							</div>
-							<div class="form-group col-lg-1">
-							</div>
-							<!-- Release Time -->
-							<div class="form-group col-lg-2{%if error_time %} has-error{% endif %}">
-							  <label class="control-label" for="time">Time</label>
-							  <div class="controls">
-								<input type="text" class="form-control timepicker" id="time" name="time" value="{{ post_time }}">
-								{{ error_time }}
-							  </div>
-							</div>
-						</div>
-
-
-						<div class="row">
-							<div class="col-lg-4">
-								<!-- Type -->
+								<!-- Continent -->
 								<div class="row">
 									<div class="form-group col-lg-9">
-										<label class="control-label" for="type">Type *</label>
+										<label class="control-label" for="continent">Continent</label>
 										<div class="controls">
-											<select id="type" name="type" class="form-control" data-rel="chosen">
-												{% for eventType in eventTypes %}
-													<option value="{{ eventType.getId }}"{% if eventType.getId==post_type %} selected="selected"{% endif %}>{{ eventType.getName }}</option>
-												{% endfor %}
-										  	</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<!-- Related tour -->
-								<div class="row">
-									<div class="form-group col-lg-9">
-										<label class="control-label" for="related_tour">Related tour *</label>
-										<div class="controls">
-											<select id="related_tour" name="related_tour" class="form-control" data-rel="chosen">
-												<option value="-1">none</option>
-												{% for tour in tours %}
-													<option value="{{ tour.getId }}"{% if tour.getId==post_related_tour %} selected="selected"{% endif %}>{{ tour.getTitle }}</option>
+											<select id="continent" name="continent" class="form-control" data-rel="chosen">
+												{% for continent in continents %}
+													<option value="{{ continent.getId }}"{% if continent.getId==post_continent %} selected="selected"{% endif %}>{{ continent.getName }}</option>
 												{% endfor %}
 										  	</select>
 										</div>
@@ -205,42 +168,23 @@
 								</div>
 							</div>
 						</div>
-
-						<div class="row">
-							<div class="col-lg-4">
-								
-								<!-- Price + devise -->
-								<div class="row">
-									<div class="form-group col-lg-9{%if error_price %} has-error{% endif %}">
-										<label class="control-label" for="price">Price</label>
-										<div class="controls">
-										  <input class="form-control focused" id="price" name="price" type="text" placeholder="Price and Currency" value="{{ post_price }}">
-										  {{ error_price }}
-										</div>
-									</div>
-								</div>
-
-								
-							</div>
-							<div class="col-lg-4">
-							</div>
-						</div>
+						
 						
 						<div class="row">
 							<!-- Related Picture -->
 							<div class="form-group col-lg-3">
-								<label class="control-label" for="related_picture">Related Picture</label>
+								<label class="control-label" for="file">Related Picture</label>
 								<div class="controls">
-								  <input class="form-control" id="related_picture" name="related_picture" type="text" placeholder="Related Picture" value="{{ post_related_picture }}"> <a href="/_admin_/pictures" target="_blank">View Pictures</a>
-								  {{ error_related_picture }}
+								  <input class="form-control" id="file" name="file" type="text" placeholder="Related Picture" value="{{ post_file }}"> <a href="/_admin_/pictures" target="_blank">View Pictures</a>
+								  {{ error_file }}
 								</div>
 							</div>
 						</div>
 						
 						<div class="form-actions">
 						  <input type="hidden" name="add" value="add">
-						  <button type="submit" class="btn btn-primary">Save event</button>
-						  <button type="reset" class="btn">Cancel</button>
+						  <button type="submit" class="btn btn-primary">Save disco</button>
+						 
 						</div>
 						
 					</fieldset>

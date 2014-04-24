@@ -26,26 +26,24 @@
 			<th>ID</th>
 			<th>Title</th>
 			<th>Type</th>
-			<th>Start</th>
-			<th>End</th>
-			<th>Preview</th>
+			<th>Release Date</th>
+
 			<th>Modify</th>
 			<th>Delete</th>
 		</tr>
 	</thead>
 	
 	<tbody>
-		{% for tour in tours %}
+		{% for disco in discos %}
 		<tr>
-			<td>{{ tour.getId }}</td>
-			<td>{{ tour.getTitle }}</td>
-			<td>{{ tour.getType }}</td>
-			<td>{{ tour.getStart|date('Y-m-d') }}</td>
-			<td>{{ tour.getEnd|date('Y-m-d') }}</td>
-			
-			<td><a class="btn btn-success" href="{{ base_url }}"><i class="icon-zoom-in "></i></a></td>
-			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_tour ~ tour.getId }}"><i class="icon-edit "></i></a></td>
-			<td><a class="btn btn-danger" href="{{ base_url ~ link_admin_delete_tour ~ tour.getId }}"><i class="icon-trash "></i> </a></td>
+			<td>{{ disco.getId }}</td>
+			<td>{{ disco.getTitle }}</td>
+			<td>{{ disco.getTypeName(disco.getId) }}</td>
+			<td>{{ disco.getDate|date('Y-m-d') }}</td>
+
+
+			<td><a class="btn btn-info" href="{{ base_url ~ link_admin_update_disco ~ disco.getId }}"><i class="icon-edit "></i></a></td>
+			<td><a class="btn btn-danger" href="{{ base_url ~ link_admin_delete_disco ~ disco.getId }}"><i class="icon-trash "></i> </a></td>
 		</tr>
 		{% endfor %}
 	</tbody>

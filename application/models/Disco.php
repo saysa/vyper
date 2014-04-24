@@ -115,5 +115,11 @@ class Disco extends Model {
      * @related Picture
      */
 	protected $_file; // id jaquette
+
+    public function getTypeName($id)
+    {
+        $disco = Disco::first(array("id=?"=>$id));
+        return DiscoType::first(array("id=?" => $disco->type))->name;
+    }
 }
 

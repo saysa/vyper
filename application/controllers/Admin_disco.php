@@ -2,9 +2,11 @@
 
 namespace application\controllers;
 
+use application\models\Country;
 use application\models\Disco;
 use application\models\DiscoType;
 use application\models\Medium;
+use application\models\Picture;
 use Framework\RequestMethods;
 
 use application\models\Tour;
@@ -52,50 +54,61 @@ class Admin_disco extends Admin_common {
 
 		if (RequestMethods::post("add"))
 		{
-			$tour = new Tour(array(
-					"title" => RequestMethods::post("title"),
-					"realTitle" => RequestMethods::post("real_title"),
-					"description" => RequestMethods::post("description"),
-					"descriptionLocal" => RequestMethods::post("description_local"),
-					"type" => RequestMethods::post("type"),
+			$disco = new Disco(array(
+					"title"     => RequestMethods::post("title"),
+					"titleReal" => RequestMethods::post("title_real"),
+					"cdJapan"   => RequestMethods::post("cd_japan"),
+					"medium"    => RequestMethods::post("medium"),
+					"type"      => RequestMethods::post("type"),
+                    "date"      => RequestMethods::post("date"),
+                    "label"     => RequestMethods::post("label"),
+                    "details"   => RequestMethods::post("details"),
+                    "country"   => RequestMethods::post("country"),
 					"continent" => RequestMethods::post("continent"),
-					"start" => RequestMethods::post("start"),
-					"end" => RequestMethods::post("end")
+                    "file"      => RequestMethods::post("file")
 			));
 		
-			if ($tour->validate())
+			if ($disco->validate())
 			{
-				$tour->save();
-                self::redirect("admin_show_tours");
+                $disco->save();
+                self::redirect("admin_show_discos");
 			}
 		
 			$view
-			->set("error_title",     \Framework\Shared\Markup::errors($tour->getErrors(), "title"))
-			->set("error_real_title",     \Framework\Shared\Markup::errors($tour->getErrors(), "real_title"))
-			->set("error_description", \Framework\Shared\Markup::errors($tour->getErrors(), "description"))
-			->set("error_description_local", \Framework\Shared\Markup::errors($tour->getErrors(), "description_local"))
-			->set("error_type", \Framework\Shared\Markup::errors($tour->getErrors(), "type"))
-			->set("error_continent", \Framework\Shared\Markup::errors($tour->getErrors(), "continent"))
-			->set("error_start", \Framework\Shared\Markup::errors($tour->getErrors(), "start"))
-			->set("error_end", \Framework\Shared\Markup::errors($tour->getErrors(), "end"))
+			->set("error_title",     \Framework\Shared\Markup::errors($disco->getErrors(), "title"))
+			->set("error_title_real",     \Framework\Shared\Markup::errors($disco->getErrors(), "title_real"))
+			->set("error_cd_japan", \Framework\Shared\Markup::errors($disco->getErrors(), "cd_japan"))
+			->set("error_medium", \Framework\Shared\Markup::errors($disco->getErrors(), "medium"))
+			->set("error_type", \Framework\Shared\Markup::errors($disco->getErrors(), "type"))
+			->set("error_date", \Framework\Shared\Markup::errors($disco->getErrors(), "date"))
+			->set("error_label", \Framework\Shared\Markup::errors($disco->getErrors(), "label"))
+			->set("error_details", \Framework\Shared\Markup::errors($disco->getErrors(), "details"))
+            ->set("error_country", \Framework\Shared\Markup::errors($disco->getErrors(), "country"))
+            ->set("error_continent", \Framework\Shared\Markup::errors($disco->getErrors(), "continent"))
+            ->set("error_file", \Framework\Shared\Markup::errors($disco->getErrors(), "file"))
 				
 			->set("post_title",     RequestMethods::post("title"))
-			->set("post_real_title", RequestMethods::post("real_title"))
-			->set("post_description", RequestMethods::post("description"))
-			->set("post_description_local", RequestMethods::post("description_local"))
+			->set("post_title_real", RequestMethods::post("title_real"))
+			->set("post_cd_japan", RequestMethods::post("cd_japan"))
+			->set("post_medium", RequestMethods::post("medium"))
 			->set("post_type", RequestMethods::post("type"))
-			->set("post_continent", RequestMethods::post("continent"))
-			->set("post_start", RequestMethods::post("start"))
-			->set("post_end", RequestMethods::post("end"))
+			->set("post_date", RequestMethods::post("date"))
+			->set("post_label", RequestMethods::post("label"))
+			->set("post_details", RequestMethods::post("details"))
+            ->set("post_country", RequestMethods::post("country"))
+            ->set("post_continent", RequestMethods::post("continent"))
+            ->set("post_file", RequestMethods::post("file"))
 			;
 		}
 
+        $countries = Country::all();
 		$continents = Continent::all();
         $mediums = Medium::all();
         $discotypes = DiscoType::all();
 
 		// view
 		$view
+        ->set("countries", $countries)
 		->set("continents", $continents)
         ->set("mediums", $mediums)
         ->set("discotypes", $discotypes)
@@ -114,58 +127,72 @@ class Admin_disco extends Admin_common {
 		$view = $this-> getActionView();
 	
 	
-		$tour = Tour::first(array("id=?" => $id));
+		$disco = Disco::first(array("id=?" => $id));
 	
-		if (!$tour)
+		if (!$disco)
 		{
-			self::redirect("admin_show_tours");
+			self::redirect("admin_show_discos");
 		}
 	
 	
 		if (RequestMethods::post("update"))
 		{
-	
-			$tour->title = RequestMethods::post("title");
-			$tour->realTitle = RequestMethods::post("real_title");
-			$tour->description = RequestMethods::post("description");
-			$tour->descriptionLocal = RequestMethods::post("description_local");
-			$tour->type = RequestMethods::post("type");
-			$tour->continent = RequestMethods::post("continent");
-			$tour->start = RequestMethods::post("start");
-			$tour->end = RequestMethods::post("end");
-				
-			if ($tour->validate())
+            $disco->title = RequestMethods::post("title");
+            $disco->titleReal = RequestMethods::post("title_real");
+            $disco->cdJapan = RequestMethods::post("cd_japan");
+            $disco->medium = RequestMethods::post("medium");
+            $disco->type = RequestMethods::post("type");
+            $disco->date = RequestMethods::post("date");
+            $disco->label = RequestMethods::post("label");
+            $disco->details = RequestMethods::post("details");
+            $disco->country = RequestMethods::post("country");
+            $disco->continent = RequestMethods::post("continent");
+            $disco->file = RequestMethods::post("file");
+
+			if ($disco->validate())
 			{
-				$tour->save();
+                $disco->save();
 			}
 	
 			$view
-			->set("error_title",       		\Framework\Shared\Markup::errors($tour->getErrors(), "title"))
-			->set("error_real_title",  		\Framework\Shared\Markup::errors($tour->getErrors(), "real_title"))
-			->set("error_description", 		\Framework\Shared\Markup::errors($tour->getErrors(), "description"))
-			->set("error_description_local", \Framework\Shared\Markup::errors($tour->getErrors(), "description_local"))
-			->set("error_type", 	   		\Framework\Shared\Markup::errors($tour->getErrors(), "type"))
-			->set("error_continent", 	   		\Framework\Shared\Markup::errors($tour->getErrors(), "continent"))
-			->set("error_start", 	   		\Framework\Shared\Markup::errors($tour->getErrors(), "start"))
-			->set("error_end", 	\Framework\Shared\Markup::errors($tour->getErrors(), "end"))
+			->set("error_title",       		\Framework\Shared\Markup::errors($disco->getErrors(), "title"))
+			->set("error_title_real",  		\Framework\Shared\Markup::errors($disco->getErrors(), "title_real"))
+			->set("error_cd_japan", 		\Framework\Shared\Markup::errors($disco->getErrors(), "cd_japan"))
+			->set("error_medium", \Framework\Shared\Markup::errors($disco->getErrors(), "medium"))
+			->set("error_type", 	   		\Framework\Shared\Markup::errors($disco->getErrors(), "type"))
+			->set("error_date", 	   		\Framework\Shared\Markup::errors($disco->getErrors(), "date"))
+			->set("error_label", 	   		\Framework\Shared\Markup::errors($disco->getErrors(), "label"))
+			->set("error_details", 	\Framework\Shared\Markup::errors($disco->getErrors(), "details"))
+            ->set("error_country", 	\Framework\Shared\Markup::errors($disco->getErrors(), "country"))
+            ->set("error_continent", 	\Framework\Shared\Markup::errors($disco->getErrors(), "continent"))
+            ->set("error_file", 	\Framework\Shared\Markup::errors($disco->getErrors(), "file"))
 	
 			;
 	
 		}
-		
-		$typeTours  = TourType::all();
+
 		$continents = Continent::all();
-		
+        $countries = Country::all();
+        $mediums = Medium::all();
+        $discotypes = DiscoType::all();
 		
 		// view
 		$view
-		->set("typeTours", $typeTours)
 		->set("continents", $continents)
-		->set("tour", $tour)
+        ->set("countries", $countries)
+        ->set("mediums", $mediums)
+		->set("disco", $disco)
+        ->set("discotypes", $discotypes)
 		;
+
+        if ($disco->file)
+        {
+            $image_path = Picture::get_path($disco->file);
+            $view->set("current_image", $image_path . Picture::first(array("id=?"=>$disco->file))->filename);
+        }
 	
 		// layout
 		$layout = $this-> getLayoutView();
-		$layout->set("active_tour", true);
+		$layout->set("active_disco", true);
 	}
 }

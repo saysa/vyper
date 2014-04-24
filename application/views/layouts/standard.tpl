@@ -1032,6 +1032,7 @@
                                     <li><a href="http://www.japanfm.fr/radio/"><img src="{{ path_img }}partners/japan-fm.jpg" alt="japan fm" /></a></li>
 
                                     <li><a href="http://ramenevents.wordpress.com/"><img src="{{ path_img }}partners/ramen-events.jpg" alt="ramen events" /></a></li>
+                                    <li><a href="http://www.demented-show.com/"><img src="{{ path_img }}partners/demented.jpg" alt="demented show" /></a></li>
                                     <li><a href="https://hollyhockya.wordpress.com/"><img src="{{ path_img }}partners/hollyhock-ya.jpg" alt="hollyhock ya" /></a></li>
                                     <li><a href="http://www.giza-shoko.net/"><img src="{{ path_img }}partners/gizashoko.jpg" alt="gizashoko" /></a></li>
 
