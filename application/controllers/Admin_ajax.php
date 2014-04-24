@@ -16,7 +16,7 @@ use application\models\Artist;
 
 
 class Admin_ajax extends Controller {
-	
+
 	public function eventArtistLinkDelete()
 	{
 		$this->_willRenderLayoutView = false;
@@ -38,6 +38,14 @@ class Admin_ajax extends Controller {
         $this->_willRenderLayoutView = false;
 
         $relation = RelArtistItem::first(array("type=?" => "album",  "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
+        $relation->delete();
+    }
+
+    public function discoArtistLinkDelete()
+    {
+        $this->_willRenderLayoutView = false;
+
+        $relation = RelArtistItem::first(array("type=?" => "disco",  "idArtist=?" => $_POST['artist_id'], "idItem=?" => $_POST['item_id']));
         $relation->delete();
     }
 	
@@ -62,6 +70,13 @@ class Admin_ajax extends Controller {
         $this->_defaultContentType = "application/json";
         $this->itemArtistLink("album");
 
+    }
+
+    public function discoArtistLink()
+    {
+        $this->_willRenderLayoutView = false;
+        $this->_defaultContentType = "application/json";
+        $this->itemArtistLink("disco");
     }
 
     public function itemArtistLink($type)

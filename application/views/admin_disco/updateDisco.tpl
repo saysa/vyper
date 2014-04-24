@@ -320,11 +320,11 @@ $(document).ready(function() {
         
         $.ajax({
 	            type: "POST",
-	            url: "/_admin_/ajax/event_artist_link_delete", 
+	            url: "/_admin_/ajax/disco_artist_link_delete", 
 	            
 	            data:{
 	            	artist_id : artistID,
-	            	item_id : '{{ event.getId }}'
+	            	item_id : '{{ disco.getId }}'
 	            },
 	            success: function(data){
 					 console.log('je suis delete success :' + data);      
@@ -343,11 +343,11 @@ $(document).ready(function() {
 		
 		$.ajax({
 	            type: "POST",
-	            url: "/_admin_/ajax/event_artist_link", 
+	            url: "/_admin_/ajax/disco_artist_link", 
 	            dataType: "json",
 	            data:{
 	            	artist_id : $('#artists_to_link').val(),
-	            	item_id : '{{ event.getId }}'
+	            	item_id : '{{ disco.getId }}'
 	            },
                 success: function(data){
 					 $('#relArtistLinkTable tr:last').after('<tr id="'+ data.artist.id +'"><td>' + data.artist.id + '</td><td>' + data.artist.name + '</td><td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td></tr>');

@@ -2,11 +2,13 @@
 
 namespace application\controllers;
 
+use application\models\Artist;
 use application\models\Country;
 use application\models\Disco;
 use application\models\DiscoType;
 use application\models\Medium;
 use application\models\Picture;
+use application\models\RelArtistItem;
 use Framework\RequestMethods;
 
 use application\models\Tour;
@@ -171,6 +173,9 @@ class Admin_disco extends Admin_common {
 	
 		}
 
+        $artists = Artist::all(array("deleted=?"=>false));
+
+        $relArtists = RelArtistItem::all(array("type=?" => "disco", "idItem=?" => $id));
 		$continents = Continent::all();
         $countries = Country::all();
         $mediums = Medium::all();
@@ -178,6 +183,8 @@ class Admin_disco extends Admin_common {
 		
 		// view
 		$view
+        ->set("artists", $artists)
+        ->set("relArtists", $relArtists)
 		->set("continents", $continents)
         ->set("countries", $countries)
         ->set("mediums", $mediums)

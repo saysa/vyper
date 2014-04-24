@@ -42,6 +42,12 @@ $routes = array(
             "controller" => "admin_ajax",
             "action" 	 => "albumArtistLink"
         ),
+    array(
+        "name" 		 => "admin_disco_artist_link",
+        "pattern"    => "_admin_/ajax/disco_artist_link",
+        "controller" => "admin_ajax",
+        "action" 	 => "discoArtistLink"
+    ),
 
 
 		array(
@@ -62,6 +68,12 @@ $routes = array(
             "controller" => "admin_ajax",
             "action" 	 => "albumArtistLinkDelete"
         ),
+    array(
+        "name" 		 => "admin_disco_artist_link_delete",
+        "pattern"    => "_admin_/ajax/disco_artist_link_delete",
+        "controller" => "admin_ajax",
+        "action" 	 => "discoArtistLinkDelete"
+    ),
 
         array(
 
