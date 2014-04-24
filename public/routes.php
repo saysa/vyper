@@ -88,6 +88,20 @@ $routes = array(
         "controller" => "admin_ajax",
         "action" 	 => "switchThemeShowInMenu"
     ),
+        array(
+
+            "pattern"    => "_admin_/ajax/add_title_to_disco",
+            "controller" => "admin_ajax",
+            "action" 	 => "addTitleDisco"
+        ),
+    array(
+
+        "pattern"    => "_admin_/ajax/delete_title_from_disco",
+        "controller" => "admin_ajax",
+        "action" 	 => "deleteTitleDisco"
+    ),
+
+
 
 		
 		

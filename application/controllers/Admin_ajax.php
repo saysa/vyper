@@ -5,6 +5,7 @@ namespace application\controllers;
 use application\models\Article;
 use application\models\RelArtistItem;
 use application\models\Theme;
+use application\models\Title;
 use Framework\RequestMethods;
 
 
@@ -143,5 +144,33 @@ class Admin_ajax extends Controller {
         }
 
         $theme->save();
+    }
+
+    public function addTitleDisco()
+    {
+        $this->_willRenderLayoutView = false;
+        $this->_defaultContentType = "application/json";
+
+        $title = new Title(array(
+            "discoId" => RequestMethods::post("disco_id"),
+            "number" => RequestMethods::post("title_number"),
+            "title" => RequestMethods::post("title_title"),
+            "titleReal" => RequestMethods::post("title_title_real")
+        ));
+
+        if ($title->validate())
+        {
+            $title->save();
+            $array = array("title" => array("number" => RequestMethods::post("title_number"), "title" => RequestMethods::post("title_title"), "title_real" => RequestMethods::post("title_title_real")));
+            echo json_encode($array);
+        }
+    }
+
+    public function deleteTitleDisco()
+    {
+        $this->_willRenderLayoutView = false;
+
+        $title = Title::first(array("id=?"=>$_POST['title_id']));
+        $title->delete();
     }
 }

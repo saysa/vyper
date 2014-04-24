@@ -213,7 +213,87 @@
 
 
 
+<div class="row">
+	<div class="col-lg-12">
+		<div class="box">
+			<div class="box-header">
+				<h2><i class="icon-edit"></i>Titles list</h2>
+				<div class="box-icon">
+					<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+					<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+				</div>
+			</div>
+			<div class="box-content">
+				<form class="form-horizontal" method="post">
+					<fieldset class="col-sm-12">
+						
+						
+						<div class="row">
+							<!-- Gauche -->
+							<div class="form-group col-lg-6">
+								<div class="form-group col-lg-2">
+									<label class="control-label" for="title_number">Number </label>
+									<div class="controls">
+										<input class="form-control focused" id="title_number" name="title_number" type="text" />
+									</div>
+								</div>
+								<div class="form-group col-lg-1">
+								</div>
+								<div class="form-group col-lg-4">
+									<label class="control-label" for="title_title">Title </label>
+									<div class="controls">
+										<input class="form-control focused" id="title_title" name="title_title" type="text" />
+									</div>
+								</div>
+								<div class="form-group col-lg-1">
+								</div>
+								<div class="form-group col-lg-4">
+									<label class="control-label" for="title_title_real">Title Real </label>
+									<div class="controls">
+										<input class="form-control focused" id="title_title_real" name="title_title_real" type="text" />
+									</div>
+								</div>
 
+								<div>
+									<button type="button" class="btn btn-primary" id="add_title_button">Add the title</button>
+								</div>
+								  	
+							</div>
+							<div class="form-group col-lg-1">
+							</div>
+							<!-- Droite -->
+							<div class="form-group col-lg-5">
+								<table class="table table-striped table-bordered bootstrap-datatable" id="titleListTable">
+									<thead>
+										<tr>
+											<th>Number</th>
+											<th>Title</th>
+											<th>Real</th>
+											<th>Delete</th>
+										</tr>
+									</thead>
+	
+									<tbody>
+										{% for title in titles %}
+										<tr id="{{ title.getId }}">
+											<td>{{ title.getNumber }}</td>
+											<td>{{ title.getTitle }}</td>
+											<td>{{ title.getTitleReal }}</td>
+											<td><a class="btn btn-danger deleteTitle" href="#"><i class="icon-trash "></i> </a></td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+							
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -355,6 +435,56 @@ $(document).ready(function() {
 	    });
 		
 	});
+
+	$("#titleListTable").on("click", ".deleteTitle", function() {
+        var tr = $(this).closest('tr');
+        var titleID = tr.attr('id');
+        
+        console.log("boucle supp ? titleID est " + titleID);
+        
+        $.ajax({
+	            type: "POST",
+	            url: "/_admin_/ajax/delete_title_from_disco", 
+	            
+	            data:{
+	            	title_id : titleID
+	            },
+	            success: function(data){
+					 console.log('je suis delete success :' + data);      
+	            }
+	    });
+        
+        tr.css("background-color","#FF3700");
+
+        tr.fadeOut(400, function(){
+            tr.remove();
+        });
+      	return false;
+      	
+    });
+
+	$( "#add_title_button" ).on("click", function() {
+		
+		console.log($('#title_number').val());
+
+		$.ajax({
+	            type: "POST",
+	            url: "/_admin_/ajax/add_title_to_disco", 
+	            dataType: "json",
+	            data:{
+	            	title_number : $('#title_number').val(),
+	            	title_title : $('#title_title').val(),
+	            	title_title_real : $('#title_title_real').val(),
+	            	disco_id : '{{ disco.getId }}'
+	            },
+                success: function(data){
+					 $('#titleListTable tr:last').after('<tr><td>' + data.title.number + '</td><td>' + data.title.title + '</td><td>' + data.title.title_real + '</td><td></td></tr>');
+	            }
+	    });
+	
+	});	
+
+
 
 });
 

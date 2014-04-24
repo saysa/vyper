@@ -9,6 +9,7 @@ use application\models\DiscoType;
 use application\models\Medium;
 use application\models\Picture;
 use application\models\RelArtistItem;
+use application\models\Title;
 use Framework\RequestMethods;
 
 use application\models\Tour;
@@ -128,7 +129,6 @@ class Admin_disco extends Admin_common {
 	{
 		$view = $this-> getActionView();
 	
-	
 		$disco = Disco::first(array("id=?" => $id));
 	
 		if (!$disco)
@@ -174,16 +174,26 @@ class Admin_disco extends Admin_common {
 		}
 
         $artists = Artist::all(array("deleted=?"=>false));
+        $titles = Title::all(array("deleted=?"=>false, "discoId=?"=>$id));
 
         $relArtists = RelArtistItem::all(array("type=?" => "disco", "idItem=?" => $id));
 		$continents = Continent::all();
         $countries = Country::all();
         $mediums = Medium::all();
         $discotypes = DiscoType::all();
+
+        // Set relation
+        foreach ($relArtists as $relArtist)
+        {
+            $artist = Artist::first(array("id=?"=>$relArtist->idArtist))->name;
+            $relArtist->id = $relArtist->idArtist;
+            $relArtist->idArtist = $artist;
+        }
 		
 		// view
 		$view
         ->set("artists", $artists)
+        ->set("titles", $titles)
         ->set("relArtists", $relArtists)
 		->set("continents", $continents)
         ->set("countries", $countries)

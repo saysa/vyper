@@ -22,6 +22,13 @@ class Title extends Model {
     /**
      * @column
      * @readwrite
+     * @type integer
+     */
+    protected $_discoId;
+
+    /**
+     * @column
+     * @readwrite
      * @type text
      * @length 5
      *
