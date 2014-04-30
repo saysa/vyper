@@ -380,6 +380,13 @@ $routes = array(
 				"action" => "showEvent"
 		),
 
+    // disco pattern
+    array(
+        "pattern" => "disco/:id/:p.html",
+        "controller" => "disco",
+        "action" => "showDisco"
+    ),
+
         // artist pattern
         array(
             "pattern" => "artist/:id/:p.html",

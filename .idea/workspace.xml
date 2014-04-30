@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/images/tip_cloud_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Artist.php" afterPath="$PROJECT_DIR$/application/controllers/Artist.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Disco.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/disco/showDisco.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Disco.php" afterPath="$PROJECT_DIR$/application/models/Disco.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/StringMethods.php" afterPath="$PROJECT_DIR$/Framework/StringMethods.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/portal.css" afterPath="$PROJECT_DIR$/public/assets/css/portal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/routes.php" afterPath="$PROJECT_DIR$/public/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/artist/showArtist.tpl" afterPath="$PROJECT_DIR$/application/views/artist/showArtist.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,7 +35,7 @@
       <file leaf-file-name="StringMethods.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="4" selection-start="3944" selection-end="3944" vertical-scroll-proportion="0.115384616" vertical-offset="3233" max-vertical-offset="5355">
+            <state line="230" column="14" selection-start="4776" selection-end="4776" vertical-scroll-proportion="25.115385" vertical-offset="4563" max-vertical-offset="5372">
               <folding />
             </state>
           </provider>
@@ -50,20 +52,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="5" selection-start="1599" selection-end="1858" vertical-scroll-proportion="-6.423077" vertical-offset="2145" max-vertical-offset="3145">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Disco.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Disco.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="38" selection-start="2520" selection-end="2520" vertical-scroll-proportion="-14.923077" vertical-offset="1958" max-vertical-offset="2516">
-              <folding />
+            <state line="161" column="34" selection-start="3158" selection-end="3172" vertical-scroll-proportion="-15.576923" vertical-offset="2332" max-vertical-offset="2975">
+              <folding>
+                <element signature="e#38#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,25 +66,47 @@
       <file leaf-file-name="showArtist.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/artist/showArtist.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="21" selection-start="6900" selection-end="6900" vertical-scroll-proportion="-7.5" vertical-offset="3214" max-vertical-offset="4913">
+            <state line="212" column="21" selection-start="6980" selection-end="6980" vertical-scroll-proportion="-7.5" vertical-offset="3214" max-vertical-offset="4913">
               <folding>
-                <marker date="1398843691297" expanded="true" signature="868:1177" placeholder="{...}" />
-                <marker date="1398843691297" expanded="true" signature="1888:2148" placeholder="{...}" />
-                <marker date="1398843691297" expanded="true" signature="2931:3900" placeholder="{...}" />
-                <marker date="1398843691297" expanded="true" signature="5624:6563" placeholder="{...}" />
-                <marker date="1398843691297" expanded="true" signature="6598:6926" placeholder="{...}" />
-                <marker date="1398843691297" expanded="true" signature="6948:7018" placeholder="{...}" />
-                <marker date="1398843691297" expanded="true" signature="7279:8484" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="868:1177" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="1888:2148" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="3011:3980" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="5704:6643" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="6678:7006" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="7028:7098" placeholder="{...}" />
+                <marker date="1398845080403" expanded="true" signature="7359:8564" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateDisco.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin_disco/updateDisco.tpl">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="438" column="4" selection-start="13149" selection-end="13210" vertical-scroll-proportion="-3.3076923" vertical-offset="7360" max-vertical-offset="8449">
+            <state line="386" column="30" selection-start="10193" selection-end="10193" vertical-scroll-proportion="-5.230769" vertical-offset="6426" max-vertical-offset="9673">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Disco.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Disco.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="8" selection-start="707" selection-end="707" vertical-scroll-proportion="-13.730769" vertical-offset="187" max-vertical-offset="799">
+              <folding>
+                <element signature="e#43#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showDisco.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/disco/showDisco.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="0" selection-start="2607" selection-end="2607" vertical-scroll-proportion="-11.115385" vertical-offset="595" max-vertical-offset="1649">
+              <folding>
+                <marker date="1398861013907" expanded="true" signature="30:79" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +114,7 @@
       <file leaf-file-name="portal.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3129" column="20" selection-start="48723" selection-end="48726" vertical-scroll-proportion="0.59090906" vertical-offset="52881" max-vertical-offset="55454">
+            <state line="3156" column="18" selection-start="49281" selection-end="49281" vertical-scroll-proportion="0.4943182" vertical-offset="53391" max-vertical-offset="55913">
               <folding />
             </state>
           </provider>
@@ -106,27 +123,7 @@
       <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="258" column="36" selection-start="3744" selection-end="3744" vertical-scroll-proportion="-15.576923" vertical-offset="3964" max-vertical-offset="4505">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Framework/Shared/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="5" selection-start="3864" selection-end="3869" vertical-scroll-proportion="-3.2115386" vertical-offset="2230" max-vertical-offset="6052">
-              <folding>
-                <marker date="1398106693694" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="8" selection-start="1016" selection-end="1108" vertical-scroll-proportion="-3.6923077" vertical-offset="601" max-vertical-offset="2924">
+            <state line="253" column="5" selection-start="3432" selection-end="3592" vertical-scroll-proportion="-12.307693" vertical-offset="3964" max-vertical-offset="4505">
               <folding />
             </state>
           </provider>
@@ -145,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/Admin_location.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin_artist.php" />
         <option value="$PROJECT_DIR$/application/models/Theme.php" />
         <option value="$PROJECT_DIR$/application/views/admin_article/showArticles.tpl" />
         <option value="$PROJECT_DIR$/application/models/Event.php" />
@@ -178,7 +173,6 @@
         <option value="$PROJECT_DIR$/application/views/article/showArticle.tpl" />
         <option value="$PROJECT_DIR$/application/models/Artist.php" />
         <option value="$PROJECT_DIR$/application/views/artist/showAll.tpl" />
-        <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
         <option value="$PROJECT_DIR$/application/models/Album.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_article.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_common.php" />
@@ -189,12 +183,15 @@
         <option value="$PROJECT_DIR$/application/views/admin_disco/updateEvent.tpl" />
         <option value="$PROJECT_DIR$/application/views/admin_disco/updateDisco.tpl" />
         <option value="$PROJECT_DIR$/application/models/Title.php" />
-        <option value="$PROJECT_DIR$/public/routes.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_ajax.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin_disco.php" />
-        <option value="$PROJECT_DIR$/application/models/Disco.php" />
         <option value="$PROJECT_DIR$/application/views/artist/showArtist.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/Artist.php" />
+        <option value="$PROJECT_DIR$/Framework/StringMethods.php" />
+        <option value="$PROJECT_DIR$/public/routes.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Disco.php" />
+        <option value="$PROJECT_DIR$/application/views/disco/showDisco.tpl" />
+        <option value="$PROJECT_DIR$/application/models/Disco.php" />
         <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
       </list>
     </option>
@@ -250,6 +247,132 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="disco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="album" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -268,11 +391,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\vyper\application\views\disco" />
+      <recent name="C:\wamp\www\vyper\application\controllers" />
       <recent name="C:\wamp\www\vyper\public\assets\css\images" />
       <recent name="C:\wamp\www\vyper\application\views\admin_disco" />
       <recent name="C:\wamp\www\vyper\public\assets\img\partners" />
-      <recent name="C:\wamp\www\vyper\public" />
-      <recent name="C:\wamp\www\vyper\public\assets\img" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Article.php">
@@ -378,21 +501,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/errors/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/statique/page404.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="136" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Framework/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="7" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="3230" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="42" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2227" />
@@ -594,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="41" selection-start="3102" selection-end="3118" vertical-scroll-proportion="-6.3076925" vertical-offset="1372" max-vertical-offset="9554">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin_ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="171" column="0" selection-start="4930" selection-end="4930" vertical-scroll-proportion="-13.115385" vertical-offset="2396" max-vertical-offset="2924">
@@ -638,27 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="36" selection-start="3744" selection-end="3744" vertical-scroll-proportion="-15.576923" vertical-offset="3964" max-vertical-offset="4505">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="4" selection-start="3944" selection-end="3944" vertical-scroll-proportion="0.115384616" vertical-offset="3233" max-vertical-offset="5355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Disco.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="38" selection-start="2520" selection-end="2520" vertical-scroll-proportion="-14.923077" vertical-offset="1958" max-vertical-offset="2516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin_disco/updateDisco.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="438" column="4" selection-start="13149" selection-end="13210" vertical-scroll-proportion="-3.3076923" vertical-offset="7360" max-vertical-offset="8449">
@@ -670,7 +750,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="153" column="5" selection-start="3864" selection-end="3869" vertical-scroll-proportion="-3.2115386" vertical-offset="2230" max-vertical-offset="6052">
           <folding>
-            <marker date="1398106693694" expanded="true" signature="3761:3951" placeholder="SELECT artic..article..." />
+            <marker date="1398106693694" expanded="true" signature="-1:-1" placeholder="SELECT artic..article..." />
           </folding>
         </state>
       </provider>
@@ -684,15 +764,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/artist/showArtist.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="21" selection-start="6900" selection-end="6900" vertical-scroll-proportion="-7.5" vertical-offset="3214" max-vertical-offset="4913">
+        <state line="212" column="21" selection-start="6980" selection-end="6980" vertical-scroll-proportion="-7.5" vertical-offset="3214" max-vertical-offset="4913">
           <folding>
-            <marker date="1398843691297" expanded="true" signature="868:1177" placeholder="{...}" />
-            <marker date="1398843691297" expanded="true" signature="1888:2148" placeholder="{...}" />
-            <marker date="1398843691297" expanded="true" signature="2931:3900" placeholder="{...}" />
-            <marker date="1398843691297" expanded="true" signature="5624:6563" placeholder="{...}" />
-            <marker date="1398843691297" expanded="true" signature="6598:6926" placeholder="{...}" />
-            <marker date="1398843691297" expanded="true" signature="6948:7018" placeholder="{...}" />
-            <marker date="1398843691297" expanded="true" signature="7279:8484" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="868:1177" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="1888:2148" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="3011:3980" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="5704:6643" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="6678:7006" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="7028:7098" placeholder="{...}" />
+            <marker date="1398845080403" expanded="true" signature="7359:8564" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -706,9 +786,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="5" selection-start="3432" selection-end="3592" vertical-scroll-proportion="-12.307693" vertical-offset="3964" max-vertical-offset="4505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/StringMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="14" selection-start="4776" selection-end="4776" vertical-scroll-proportion="25.115385" vertical-offset="4563" max-vertical-offset="5372">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="386" column="30" selection-start="10193" selection-end="10193" vertical-scroll-proportion="-5.230769" vertical-offset="6426" max-vertical-offset="9673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/disco/showDisco.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="0" selection-start="2607" selection-end="2607" vertical-scroll-proportion="-11.115385" vertical-offset="595" max-vertical-offset="1649">
+          <folding>
+            <marker date="1398861013907" expanded="true" signature="30:79" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Disco.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="8" selection-start="707" selection-end="707" vertical-scroll-proportion="-13.730769" vertical-offset="187" max-vertical-offset="799">
+          <folding>
+            <element signature="e#43#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Disco.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="34" selection-start="3158" selection-end="3172" vertical-scroll-proportion="-15.576923" vertical-offset="2332" max-vertical-offset="2975">
+          <folding>
+            <element signature="e#38#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/portal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3129" column="20" selection-start="48723" selection-end="48726" vertical-scroll-proportion="0.59090906" vertical-offset="52881" max-vertical-offset="55454">
+        <state line="3156" column="18" selection-start="49281" selection-end="49281" vertical-scroll-proportion="0.4943182" vertical-offset="53391" max-vertical-offset="55913">
           <folding />
         </state>
       </provider>

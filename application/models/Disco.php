@@ -2,7 +2,9 @@
 
 namespace application\models;
 
+use Framework\Model\Exception\Type;
 use Framework\Shared\Model;
+use Framework\StringMethods;
 
 /**
  * Album 
@@ -138,5 +140,30 @@ class Disco extends Model {
         $day = substr($date, 8, 2);
         return "{$day}/{$month}/{$year}";
     }
+
+    public function getStringUrl($id)
+    {
+        $disco = Disco::first(array("id=?" => $id));
+        return StringMethods::filterURL($disco->title);
+    }
+
+    public function getOneArtist($id)
+    {
+        $relArtist = RelArtistItem::first(array("idItem=?"=>$id, "type=?"=>"disco"));
+        return Artist::first(array("id=?"=>$relArtist->idArtist))->name;
+    }
+
+    public function getMediumName($id)
+    {
+        $disco = Disco::first(array("id=?" => $id));
+        return Medium::first(array("id=?"=>$disco->medium))->name;
+    }
+
+    public function getCountryName($id)
+    {
+        $disco = Disco::first(array("id=?" => $id));
+        return Country::first(array("id=?"=>$disco->country))->name;
+    }
+
 }
 

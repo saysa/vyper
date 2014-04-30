@@ -3115,8 +3115,20 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     margin-right: 20px;
 }
 
-.one-fourth {
+.column .one-fourth {
     width: 240px;
+}
+
+.box-effect {
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 1.5em;
 }
 
 .release-thumbnail {
@@ -3142,7 +3154,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     font-size: 1.2em;
 }
 
-.release-thumbnail h4 {
+.releases-listing .release-thumbnail h4 {
     display: block;
     -webkit-margin-before: 1.33em;
     -webkit-margin-after: 1.33em;
@@ -3250,6 +3262,21 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     float: right;
     line-height: 2.2em;
     color: #888;
+}
+
+.track-list .track-number {
+    padding-right: 5px;
+    color: #888;
+}
+
+.track-list table td {
+    padding: 0.5em 0;
+    border-width: 0;
+    border-bottom: 1px dotted #d7d7d7;
+}
+
+.track-list table tr:first-child td {
+    padding-top: 0;
 }
 
 .clear {

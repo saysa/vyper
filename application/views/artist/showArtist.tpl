@@ -87,7 +87,7 @@
 				<div class="one-fourth column{% if iterate==2 %} last{% set iterate = -1 %}{% endif %}">
 					<div class="release-thumbnail">
 						<div class="release-cover">
-							<a href="#"><img src="{{ base_url }}uploads/pic/{{ disco.getRawFile(disco.getId) }}" class="fullwidth" alt=""></a>
+							<a href="{{ base_url }}disco/{{ disco.getId }}/{{ disco.getStringUrl(disco.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ disco.getRawFile(disco.getId) }}" class="fullwidth" alt=""></a>
 						</div>
 					
 						<h4 class="release-title"><a href="#">{{ disco.getTitle }}</a></h4>
