@@ -121,5 +121,22 @@ class Disco extends Model {
         $disco = Disco::first(array("id=?"=>$id));
         return DiscoType::first(array("id=?" => $disco->type))->name;
     }
+
+    public function getRawFile($id)
+    {
+        $disco = Disco::first(array("id=?" => $id));
+        $image_path = Picture::get_path($disco->file);
+        return $image_path . Picture::first(array("id=?"=>$disco->file))->filename;
+
+    }
+
+    public function getDateRelease($id)
+    {
+        $date = Disco::first(array("id=?" => $id))->date;
+        $year = substr($date, 0, 4);
+        $month = substr($date, 5, 2);
+        $day = substr($date, 8, 2);
+        return "{$day}/{$month}/{$year}";
+    }
 }
 

@@ -6,6 +6,7 @@ use application\models\Album;
 use application\models\Article;
 use application\models\Artist as model_Artist;
 use application\models\ArticleVisite;
+use application\models\Disco;
 use application\models\Event;
 use application\models\Picture;
 use application\models\RelArtistItem;
@@ -29,6 +30,7 @@ class Artist extends \Framework\Shared\Controller {
         $albums = null;
         $articles = null;
         $events = null;
+        $discos = null;
 
         /* Incremented visit counter */
         $this->incrementeVisite("artist", $id);
@@ -115,6 +117,29 @@ class Artist extends \Framework\Shared\Controller {
             }
         }
 
+        /**
+         * Discography ?
+         */
+        $relDiscos = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "disco"), array("*"), "created", "desc");
+        if ($relDiscos)
+        {
+            $disco_id = array();
+            foreach ($relDiscos as $rel)
+            {
+                $disco_id[] = $rel->idItem;
+            }
+
+            $comma_separated = implode(",", $disco_id);
+            $discos = Disco::all(array("deleted=?" => false, "id ?" => "expressionIN ({$comma_separated})"), array("*"), "date", "desc");
+
+        }
+
+        /*
+         * code html pour plusieurs brands
+         * lien javascript void + class buy est la clé
+         * <a href="javascript: void(0);" class="button small buy"><span>Acheter</span></a>
+         */
+
         $layout = $this->getLayoutView();
 		$layout
 		->set("artist", $artist)
@@ -127,6 +152,7 @@ class Artist extends \Framework\Shared\Controller {
         ->set("albums", $albums)
         ->set("articles", $articles)
         ->set("events", $events)
+        ->set("discos", $discos)
 		->set("server_request_uri", $_SERVER['REQUEST_URI'])
 		;
 		

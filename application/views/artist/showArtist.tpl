@@ -69,6 +69,60 @@
 
 <!-- /entry-content -->
 
+{% if discos %}
+    <div class="cat-header">
+        <div class="cat-title second-color-bg">
+            <div class="cat-icon">
+                <i class="icon-rocket"></i>
+            </div>
+            <h4>Discographie</h4>
+        </div>
+    </div>
+
+    <div class="column">
+	<div class="listing-block">
+		<div class="releases-listing">
+            {% set iterate = 0 %}
+			{% for key, disco in discos %}
+				<div class="one-fourth column{% if iterate==2 %} last{% set iterate = -1 %}{% endif %}">
+					<div class="release-thumbnail">
+						<div class="release-cover">
+							<a href="#"><img src="{{ base_url }}uploads/pic/{{ disco.getRawFile(disco.getId) }}" class="fullwidth" alt=""></a>
+						</div>
+					
+						<h4 class="release-title"><a href="#">{{ disco.getTitle }}</a></h4>
+						<h6 class="release-artist">{{ artist.getName }}</h6>
+						<div class="release-meta">
+							{% if disco.getCdJapan %}
+							<div class="button-container tip-container">
+								<a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" class="button small" target="_blank"><span>Acheter</span></a>
+								<div class="tip-cloud">
+									<div class="tip-corner"></div>
+									<div class="tip-content">
+										<ul>
+											<li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							{% endif %}
+							<div class="release-info">{{ disco.getDateRelease(disco.getId) }}</div>
+							<div class="clear"></div>
+
+						</div>
+					</div>
+				</div>
+                    {% set iterate = iterate+1 %}
+                {% endfor %}
+
+
+                <div class="clear"></div>
+            </div>
+
+    </div><!--/ listing block-->
+    </div>
+{% endif %}
+<div class="clear"></div>
 {% if events %}
     <div class="cat-header">
         <div class="cat-title second-color-bg">
@@ -175,38 +229,56 @@
 {% endif %}
 
 
-                    <div class="add_468">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- un_artist -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:468px;height:60px"
-     data-ad-client="ca-pub-3070362287154347"
-     data-ad-slot="6183315514"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                    </div>
 
 
-
-
-
-
-
-            <div id="comments">
-                <div class="cat-header">
-                    <div class="cat-title second-color-bg">
-                        <div class="cat-icon">
-                            <i class="icon-rocket"></i>
+                        <div class="add_468">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- un_artist -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:468px;height:60px"
+         data-ad-client="ca-pub-3070362287154347"
+         data-ad-slot="6183315514"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
                         </div>
-                        <h4>Donnez votre avis</h4>
+
+
+
+
+
+
+
+                <div id="comments">
+                    <div class="cat-header">
+                        <div class="cat-title second-color-bg">
+                            <div class="cat-icon">
+                                <i class="icon-rocket"></i>
+                            </div>
+                            <h4>Donnez votre avis</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- /comments -->
+                <!-- /comments -->
 
 
 
-            <div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
+                <div class="fb-comments" data-href="{{ base_url }}{{ server_request_uri }}" data-numposts="15" data-colorscheme="light" data-width="780"></div>
+
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                        <script>
+
+                $(document).ready(function() {
+
+                    $(".tip-container").on("click", ".buy", function() {
+                        $(".tip-cloud").hide();
+                        var tipcloud = $(this).next();
+                        tipcloud.show();
+                    });
 
 
+
+                });
+
+
+                </script>
