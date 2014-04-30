@@ -127,8 +127,18 @@ class Disco extends Model {
     public function getRawFile($id)
     {
         $disco = Disco::first(array("id=?" => $id));
-        $image_path = Picture::get_path($disco->file);
-        return $image_path . Picture::first(array("id=?"=>$disco->file))->filename;
+
+
+        if ($disco->file == "0")
+        {
+            return "no_cd.png";
+        }
+        else
+        {
+            $image_path = Picture::get_path($disco->file);
+            return $image_path . Picture::first(array("id=?"=>$disco->file))->filename;
+        }
+
 
     }
 
