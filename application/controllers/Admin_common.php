@@ -5,6 +5,7 @@ namespace application\controllers;
 use application\models\Album;
 use application\models\Article;
 use application\models\Artist;
+use application\models\Disco;
 use application\models\Event;
 use application\models\Theme;
 use Framework\Registry;
@@ -221,6 +222,17 @@ class Admin_common extends \Framework\Shared\Controller {
         foreach($albums as $album)
         {
             $loc = BASE_URL . "album/" . $album->id . "/" . $album->getTitleUrlFormat($album->id);
+            $xml .= "<url>\n";
+            $xml .= "<loc>".$loc."</loc>\n";
+            $xml .= "<changefreq>monthly</changefreq>\n";
+            $xml .= "<priority>0.7</priority>\n";
+            $xml .= "</url>\n";
+        }
+
+        $discos = Disco::all(array("deleted=?"=>false));
+        foreach($discos as $disco)
+        {
+            $loc = BASE_URL . "disco/" . $disco->id . "/" . $disco->getStringUrl($disco->id) . ".html";
             $xml .= "<url>\n";
             $xml .= "<loc>".$loc."</loc>\n";
             $xml .= "<changefreq>monthly</changefreq>\n";
