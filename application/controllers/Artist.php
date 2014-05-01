@@ -16,6 +16,38 @@ use Pagination\Pagination;
 
 class Artist extends \Framework\Shared\Controller {
 	
+    public function showDisco($id)
+    {
+        $view = $this->getActionView();
+        $artist = model_Artist::first(array("id=?"=>$id));
+
+        if (!$artist)
+        {
+            self::redirect("home");
+        }
+
+        /**
+         * Discography ?
+         */
+        $relDiscos = RelArtistItem::all(array("idArtist=?" => $id, "type=?" => "disco"), array("*"), "created", "desc");
+        if ($relDiscos)
+        {
+            $disco_id = array();
+            foreach ($relDiscos as $rel)
+            {
+                $disco_id[] = $rel->idItem;
+            }
+
+            $comma_separated = implode(",", $disco_id);
+            $discos = Disco::all(array("deleted=?" => false, "id ?" => "expressionIN ({$comma_separated})"), array("*"), "date", "desc");
+
+        }
+
+        $view
+            ->set("artist", $artist)
+            ->set("discos", $discos)
+        ;
+    }
 
 	public function showArtist($id)
 	{

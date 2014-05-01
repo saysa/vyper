@@ -393,6 +393,11 @@ $routes = array(
             "controller" => "artist",
             "action" => "showArtist"
         ),
+    array(
+        "pattern" => "artist-discography/:id/:p.html",
+        "controller" => "artist",
+        "action" => "showDisco"
+    ),
 
         // artist all
         array(
