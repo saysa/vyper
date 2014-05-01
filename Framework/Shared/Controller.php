@@ -154,7 +154,7 @@ INNER JOIN itemvisite ON article.id = itemvisite.itemId
 WHERE itemvisite.type = 'article'
 GROUP BY itemvisite.itemId
 ORDER BY nb DESC
-LIMIT 0,5");
+LIMIT 0,10");
             $rows = array();
             for ($i=0; $i<$stmt->rowCount();$i++)
             {
@@ -254,7 +254,7 @@ LIMIT 0,9");
             /**
 			 * Side recent articles
 			 */
-			$recent_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,5");
+			$recent_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,10");
 			foreach ($recent_articles as $article)
 			{
 				/* Set front Release Date */
