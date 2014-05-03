@@ -162,7 +162,7 @@ class Artist extends \Framework\Shared\Controller {
             }
 
             $comma_separated = implode(",", $disco_id);
-            $discos = Disco::all(array("deleted=?" => false, "id ?" => "expressionIN ({$comma_separated})"), array("*"), "date", "desc");
+            $discos = Disco::all(array("deleted=?" => false, "id ?" => "expressionIN ({$comma_separated})"), array("*"), "date", "desc", "0,3");
 
         }
 
