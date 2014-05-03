@@ -62,7 +62,7 @@ class Index extends \Framework\Shared\Controller {
         /**
          * Mini Carousel
          */
-        $mini_carousel = Article::all(array("deleted=?" => false, "type ?" => 'expressionIN (8)'), array("*"), "releaseDate", "desc", "0,10");
+        $mini_carousel = Article::all(array("deleted=?" => false, "type ?" => 'expressionIN (8)'), array("*"), "created", "desc", "0,10");
         foreach ($mini_carousel as $article)
         {
 
@@ -154,7 +154,7 @@ class Index extends \Framework\Shared\Controller {
         /**
          * Latest news
          */
-        $latests_news = Article::all(array("deleted=?"=>false, "type=?" => "8"), array("*"), "releaseDate", "desc", "0,5");
+        $latests_news = Article::all(array("deleted=?"=>false, "type=?" => "8"), array("*"), "created", "desc", "0,5");
         foreach ($latests_news as $article)
         {
             /* Set front Release Date */

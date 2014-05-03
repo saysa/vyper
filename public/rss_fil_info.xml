@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>vyper-jmusic.com</title>
+<title>Vyper Japanese Music</title>
 <link>http://www.vyper-jmusic.com</link>
 <description>Toutes les news de vyper-jmusic.com</description>
 <language>fr</language>
@@ -10,124 +10,181 @@
 	<url>http://vyper.dev/assets/img/logo.png</url>
 	<link>http://vyper.dev/</link>
 </image>
+<atom:link href="http://vyper.dev/rss_fil_info.xml" rel="self" type="application/rss+xml" />
 <item>
-<title>D.I.D annonce son troisième single</title>
-<link>http://vyper.dev/articles/16/DID-annonce-son-troisieme-single.html</link>
-<pubDate>Thu, 3 Apr 2014 10:30:52 +0200</pubDate>
-<description>C'est en Octobre dernier que le quintette D.I.D continuait son ascension dans le monde du visual-kei avec un second single. Aujourd'hui, la formation nous revient avec l'annonce d'un troisième single.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/9528-1396513753.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/16/DID-annonce-son-troisieme-single.html</guid>
+<title>news 1</title>
+<link>http://vyper.dev/articles/128/news-1.html</link>
+<pubDate>Sat, 3 May 2014 11:47:32 +0200</pubDate>
+<description>Je suis la news 1&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/05/1020-1398899118.jpg&quot; alt=&quot;&quot;  width=&quot;81&quot; height=&quot;80&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/128/news-1.html</guid>
 </item>
 <item>
-<title>Miyavi enflamme l'olympia !</title>
-<link>http://vyper.dev/articles/5/Miyavi-enflamme-l-olympia-.html</link>
-<pubDate>Tue, 1 Apr 2014 10:42:58 +0200</pubDate>
-<description>dqsdqsdq&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/03/730-1395912004.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/5/Miyavi-enflamme-l-olympia-.html</guid>
+<title>Récap' Semaine 16</title>
+<link>http://vyper.dev/articles/126/Recap--Semaine-16.html</link>
+<pubDate>Mon, 21 Apr 2014 22:54:11 +0200</pubDate>
+<description>Les bonnes nouvelles s'enchaînent, les calendriers concerts se remplissent... Retour sur une semaine dont votre porte-monnaie se souviendra peut-être !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6738-1397851632.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/126/Recap--Semaine-16.html</guid>
 </item>
 <item>
-<title>L'Arc~En~Ciel dévoile [son nouveau] single</title>
-<link>http://vyper.dev/articles/17/L-Arc-En-Ciel-devoile-son-nouveau-single.html</link>
-<pubDate>Sat, 12 Apr 2014 09:15:07 +0200</pubDate>
-<description>A leur concert tenu ce 21 Mars dernier au Kokuritsu Kyogijyo, le groupe avait surpris ses fans en jouant une musique encore inconnue de tous. Aujourd'hui, L'Arc~En~Ciel se décide à donner plus de détails sur cette musique, qui est en fait l'une des track du nouveau single.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/3895-1396514301.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/17/L-Arc-En-Ciel-devoile-son-nouveau-single.html</guid>
+<title>Nouveau single pour kameleo !</title>
+<link>http://vyper.dev/articles/127/Nouveau-single-pour-kameleo-.html</link>
+<pubDate>Tue, 22 Apr 2014 22:38:15 +0200</pubDate>
+<description>Quelques semaines après la sortie de son dernier single, kameleo nous annonce une nouvelle sortie...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8211-1398198542.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/127/Nouveau-single-pour-kameleo-.html</guid>
 </item>
 <item>
-<title>REVIEW - KAMIJO "SYMPHONY OF THE VAMPIRE"</title>
-<link>http://vyper.dev/articles/4/REVIEW---KAMIJO-SYMPHONY-OF-THE-VAMPIRE.html</link>
-<pubDate>Fri, 28 Mar 2014 11:25:36 +0200</pubDate>
-<description>Réellement découvert grâce au groupe de VisualKei LaReine, KAMIJO a su s’imposer sur la scène musicale japonaise grâce à son ancien groupe Versailles. Détenteur d’une voix que l’on pourrait attribuer aux plus grands chanteurs lyriques, ce Vampire nous revient avec une carrière solo des plus surprenantes.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/03/1154-1396002246.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/4/REVIEW---KAMIJO-SYMPHONY-OF-THE-VAMPIRE.html</guid>
+<title>Nouvel album pour SCREW</title>
+<link>http://vyper.dev/articles/123/Nouvel-album-pour-SCREW.html</link>
+<pubDate>Mon, 21 Apr 2014 21:27:35 +0200</pubDate>
+<description>SCREW nous offre un nouvel album pour fêter dignement ses huit ans de carrière...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/3062-1398108415.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/123/Nouvel-album-pour-SCREW.html</guid>
 </item>
 <item>
-<title>Yeti dévoile les détails sur le nouveau mini-album</title>
-<link>http://vyper.dev/articles/3/Yeti-devoile-les-details-sur-le-nouveau-mini-album.html</link>
-<pubDate>Wed, 2 Apr 2014 12:08:49 +0200</pubDate>
-<description>Il n'y a pas longtemps, le groupe avait annoncé la sortie d'un nouveau mini-album intitulé "<em>satou to shio</em>" qui sera dans les bacs  pour le 30 Avril prochain.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/03/4812-1395996423.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/3/Yeti-devoile-les-details-sur-le-nouveau-mini-album.html</guid>
+<title>Un maxi-single pour Fest Vainqueur !</title>
+<link>http://vyper.dev/articles/124/Un-maxi-single-pour-Fest-Vainqueur-.html</link>
+<pubDate>Mon, 21 Apr 2014 21:39:00 +0200</pubDate>
+<description>Après un premier full-album, Fest Vainqueur ne s'arrête plus...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8546-1398109123.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/124/Un-maxi-single-pour-Fest-Vainqueur-.html</guid>
 </item>
 <item>
-<title>Nouveau single pour Memento-Mori</title>
-<link>http://vyper.dev/articles/1/Nouveau-single-pour-Memento-Mori.html</link>
-<pubDate>Mon, 7 Apr 2014 10:56:58 +0200</pubDate>
-<description>Le 12 Décembre dernier sortait le single "冬将軍" et depuis seulement un DVD était sorti au mois de Janvier. Aujourd'hui, le groupe revient avec un nouvel opus.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/03/9727-1395925874.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/1/Nouveau-single-pour-Memento-Mori.html</guid>
+<title>ALIVE lève le voile sur son prochain single</title>
+<link>http://vyper.dev/articles/125/ALIVE-leve-le-voile-sur-son-prochain-single.html</link>
+<pubDate>Mon, 21 Apr 2014 21:57:15 +0200</pubDate>
+<description>Enfin plus de détails sur la prochaine sortie du groupe ALIVE !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/9321-1398110215.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/125/ALIVE-leve-le-voile-sur-son-prochain-single.html</guid>
 </item>
 <item>
-<title>landz. annonce la sortie d’un nouveau single</title>
-<link>http://vyper.dev/articles/2/landz-annonce-la-sortie-dun-nouveau-single.html</link>
-<pubDate>Fri, 28 Mar 2014 09:56:56 +0200</pubDate>
-<description>Lors d'un live le groupe a annoncé la sortie d'un nouvel opus qui sera disponible dans les bacs pour 21 Mai prochain.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/03/258-1395996213.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/2/landz-annonce-la-sortie-dun-nouveau-single.html</guid>
+<title>Annonce à double tranchant pour Awoi !</title>
+<link>http://vyper.dev/articles/122/Annonce-a-double-tranchant-pour-Awoi-.html</link>
+<pubDate>Sat, 19 Apr 2014 22:46:44 +0200</pubDate>
+<description>Deux bonnes et une mauvaise nouvelles pour les fans du groupe Awoi...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8340-1397940391.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/122/Annonce-a-double-tranchant-pour-Awoi-.html</guid>
 </item>
 <item>
-<title>MIKARU, ce vampire qui aimait l'art !</title>
-<link>http://vyper.dev/articles/11/MIKARU-ce-vampire-qui-aimait-l-art-.html</link>
-<pubDate>Wed, 2 Apr 2014 12:20:31 +0200</pubDate>
-<description>On le connait depuis 2006 avec le groupe de visual-kei Dio – Distraught Overlord, puis, après une séparation en 2010, le chanteur nous revient avec une nouvelle formation.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/5906-1396433925.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/11/MIKARU-ce-vampire-qui-aimait-l-art-.html</guid>
+<title>Moi Dix Mois au Kubana Festival !</title>
+<link>http://vyper.dev/articles/120/Moi-Dix-Mois-au-Kubana-Festival-.html</link>
+<pubDate>Fri, 18 Apr 2014 21:48:51 +0200</pubDate>
+<description>Du beau monde au plus grand festival rock de Russie pour cette édition 2014 !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8227-1397850492.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/120/Moi-Dix-Mois-au-Kubana-Festival-.html</guid>
 </item>
 <item>
-<title>Rencontre avec EAT YOU ALIVE</title>
-<link>http://vyper.dev/articles/9/Rencontre-avec-EAT-YOU-ALIVE.html</link>
-<pubDate>Wed, 2 Apr 2014 12:04:19 +0200</pubDate>
-<description>Quelques jours avant le début de sa première et dernière tournée européenne, le quintet EAT YOU ALIVE a accepté de répondre à nos quelques questions.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/9692-1396432959.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/9/Rencontre-avec-EAT-YOU-ALIVE.html</guid>
+<title>Deux invités d'honneur musique pour JapanExpo 2014 !</title>
+<link>http://vyper.dev/articles/121/Deux-invites-d-honneur-musique-pour-JapanExpo-2014-.html</link>
+<pubDate>Fri, 18 Apr 2014 22:08:47 +0200</pubDate>
+<description>Cette année, à l'occasion de son quinzième anniversaire, Japan Expo accueille non pas un mais bien deux invités d'honneur musique !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6738-1397851632.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/121/Deux-invites-d-honneur-musique-pour-JapanExpo-2014-.html</guid>
 </item>
 <item>
-<title>KEISHO OHNO : Un voyage aux saveurs traditionnelles</title>
-<link>http://vyper.dev/articles/10/KEISHO-OHNO--Un-voyage-aux-saveurs-traditionnelles.html</link>
-<pubDate>Wed, 2 Apr 2014 12:07:51 +0200</pubDate>
-<description>Pratiquant du Tsugaru Shamisen depuis son plus jeune âge, Keisho Ohno a accepté de nous recevoir à la veille de sa dernière représentation parisienne pour cette année. Retour sur une interview et un concert aux allures de voyage culturel.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8368-1396433169.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/10/KEISHO-OHNO--Un-voyage-aux-saveurs-traditionnelles.html</guid>
+<title>Fin d'aventure pour AMARANYX et PSYCHE</title>
+<link>http://vyper.dev/articles/117/Fin-d-aventure-pour-AMARANYX-et-PSYCHE.html</link>
+<pubDate>Thu, 17 Apr 2014 18:52:51 +0200</pubDate>
+<description>Les deux groupes cesseront officiellement leurs activités le 29 Juin prochain...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6329-1397753527.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/117/Fin-d-aventure-pour-AMARANYX-et-PSYCHE.html</guid>
 </item>
 <item>
-<title>Rencontre en tout simplicité avec LOVERIN TAMBURIN</title>
-<link>http://vyper.dev/articles/8/Rencontre-en-tout-simplicite-avec-LOVERIN-TAMBURIN.html</link>
-<pubDate>Wed, 2 Apr 2014 12:01:50 +0200</pubDate>
-<description>De passage à Nantes pour le festival Art To Play, le groupe LOVERIN TAMBURIN nous a accordé quelques minutes afin de discuter en toute simplicité.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6809-1396432669.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/8/Rencontre-en-tout-simplicite-avec-LOVERIN-TAMBURIN.html</guid>
+<title>PERFUME annule son concert sud-coréen !</title>
+<link>http://vyper.dev/articles/118/PERFUME-annule-son-concert-sud-coreen-.html</link>
+<pubDate>Thu, 17 Apr 2014 19:53:35 +0200</pubDate>
+<description>A deux jours de sa performance sud-coréenne, le trio PERFUME vient d'annuler le concert...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6784-1397757168.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/118/PERFUME-annule-son-concert-sud-coreen-.html</guid>
 </item>
 <item>
-<title>Les confidences de VAMPS</title>
-<link>http://vyper.dev/articles/7/Les-confidences-de-VAMPS.html</link>
-<pubDate>Wed, 2 Apr 2014 11:55:52 +0200</pubDate>
-<description>Confidences d'un duo pour qui le public international occupe une grande place.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/3491-1396432410.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/7/Les-confidences-de-VAMPS.html</guid>
+<title>TOP ORICON N°14</title>
+<link>http://vyper.dev/articles/119/TOP-ORICON-N14.html</link>
+<pubDate>Thu, 17 Apr 2014 22:03:44 +0200</pubDate>
+<description>Récapitulatif des ventes de la semaine passée.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6322-1397568020.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/119/TOP-ORICON-N14.html</guid>
 </item>
 <item>
-<title>POLYSICS enflamme la scène du SCOPITONE à Nantes</title>
-<link>http://vyper.dev/articles/15/POLYSICS-enflamme-la-scene-du-SCOPITONE-a-Nantes.html</link>
-<pubDate>Wed, 2 Apr 2014 14:22:49 +0200</pubDate>
-<description>Hier soir, le 17 septembre 2013, POLYSICS se produisait sur la scène du festival SCOPITONE à Nantes pour la quatrième date de sa tournée européenne 2013.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/24-1396441258.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/15/POLYSICS-enflamme-la-scene-du-SCOPITONE-a-Nantes.html</guid>
+<title>Quinzième single pour NICO TOUCHES THE WALL</title>
+<link>http://vyper.dev/articles/116/Quinzieme-single-pour-NICO-TOUCHES-THE-WALL.html</link>
+<pubDate>Wed, 16 Apr 2014 19:31:31 +0200</pubDate>
+<description>Après une année 2013 plutôt faible en sortie, NICO TOUCHES THE WALL entame le second trimestre 2014 avec une nouvelle sortie...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/2348-1397669475.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/116/Quinzieme-single-pour-NICO-TOUCHES-THE-WALL.html</guid>
 </item>
 <item>
-<title>Rapport de l'avant dernier Live de Sadie à Tokyo le 13 juillet 2013</title>
-<link>http://vyper.dev/articles/14/Rapport-de-l-avant-dernier-Live-de-Sadie-a-Tokyo-le-13-juillet-2013.html</link>
-<pubDate>Wed, 2 Apr 2014 14:19:22 +0200</pubDate>
-<description>Pour la première partie de son final live réparti en deux jours, "Sadie" se produisait au Shinjuku Blaze en ce samedi 13 juillet.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/1390-1396441039.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/14/Rapport-de-l-avant-dernier-Live-de-Sadie-a-Tokyo-le-13-juillet-2013.html</guid>
+<title>BABYMETAL part à la conquête de l'Europe !</title>
+<link>http://vyper.dev/articles/101/BABYMETAL-part-a-la-conquete-de-l-Europe-.html</link>
+<pubDate>Tue, 15 Apr 2014 11:37:41 +0200</pubDate>
+<description>Annoncée en Mars dernier, la volonté de conquérir l'étranger se concrétise pour BABYMETAL !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/2448-1397554649.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/101/BABYMETAL-part-a-la-conquete-de-l-Europe-.html</guid>
 </item>
 <item>
-<title>Rencontre avec KAO=S</title>
-<link>http://vyper.dev/articles/6/Rencontre-avec-KAOS.html</link>
-<pubDate>Wed, 2 Apr 2014 11:49:02 +0200</pubDate>
-<description>Retour sur une rencontre en toute simplicité lors de ce quatorzième impact de Japan Expo.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/9011-1396431954.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/6/Rencontre-avec-KAOS.html</guid>
+<title>Nouveau single pour Moumoon !</title>
+<link>http://vyper.dev/articles/102/Nouveau-single-pour-Moumoon-.html</link>
+<pubDate>Tue, 15 Apr 2014 13:19:30 +0200</pubDate>
+<description>Après un début d'année chargée pour le duo, celui-ci revient avec un nouveau single...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/3979-1397001466.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/102/Nouveau-single-pour-Moumoon-.html</guid>
 </item>
 <item>
-<title>Retour sur la performance de Dir En Grey à la Cigale</title>
-<link>http://vyper.dev/articles/12/Retour-sur-la-performance-de-Dir-En-Grey-a-la-Cigale.html</link>
-<pubDate>Wed, 2 Apr 2014 12:27:56 +0200</pubDate>
-<description>Pour son passage dans la capitale française, le quintette a su enflammer ses fans.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8253-1396434379.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/12/Retour-sur-la-performance-de-Dir-En-Grey-a-la-Cigale.html</guid>
+<title>Récap' Semaine 15</title>
+<link>http://vyper.dev/articles/100/Recap--Semaine-15.html</link>
+<pubDate>Mon, 14 Apr 2014 13:05:34 +0200</pubDate>
+<description>Nouveau site, nouveau départ... Nouveaux articles ! VYPER Japanese Music vous fait revivre les événements marquants des sept derniers jours !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/2045-1397473498.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/100/Recap--Semaine-15.html</guid>
 </item>
 <item>
-<title>Satsuki à la Boule Noire pour son "Scene Of Luminous"</title>
-<link>http://vyper.dev/articles/13/Satsuki-a-la-Boule-Noire-pour-son-Scene-Of-Luminous.html</link>
-<pubDate>Wed, 2 Apr 2014 12:34:54 +0200</pubDate>
-<description>Pour son second passage cette année, le chanteur a illuminé la scène de la Boule Noire.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/5834-1396434796.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</description>
-<guid>http://vyper.dev/articles/13/Satsuki-a-la-Boule-Noire-pour-son-Scene-Of-Luminous.html</guid>
+<title>Le grand retour de PIERROT !</title>
+<link>http://vyper.dev/articles/99/Le-grand-retour-de-PIERROT-.html</link>
+<pubDate>Sun, 13 Apr 2014 13:23:58 +0200</pubDate>
+<description>Après huit ans d'absence, PIERROT revient avec de bonnes nouvelles...&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/4540-1397387646.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/99/Le-grand-retour-de-PIERROT-.html</guid>
+</item>
+<item>
+<title>La Nyappy-Attitude envahit le Trabendo !</title>
+<link>http://vyper.dev/articles/97/La-Nyappy-Attitude-envahit-le-Trabendo-.html</link>
+<pubDate>Sun, 13 Apr 2014 10:19:54 +0200</pubDate>
+<description>Il a un peu plus d’un mois, An Cafe foulait à nouveau le sol français pour deux dates consécutives. Pour sa quatrième tournée, le groupe n’oublie pas son Red Car, bien connu des fans, et surtout de faire deux dates pour permettre aux fans d’assister à ses lives.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6570-1397323108.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/97/La-Nyappy-Attitude-envahit-le-Trabendo-.html</guid>
+</item>
+<item>
+<title>Flumpool en dit plus sur une prochaine sortie !</title>
+<link>http://vyper.dev/articles/98/Flumpool-en-dit-plus-sur-une-prochaine-sortie-.html</link>
+<pubDate>Sat, 12 Apr 2014 21:16:29 +0200</pubDate>
+<description>Album Best-Of en cours de préparation !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/8776-1397329954.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/98/Flumpool-en-dit-plus-sur-une-prochaine-sortie-.html</guid>
+</item>
+<item>
+<title>Nouveau single pour Matenrou Opera !</title>
+<link>http://vyper.dev/articles/92/Nouveau-single-pour-Matenrou-Opera-.html</link>
+<pubDate>Fri, 11 Apr 2014 21:10:08 +0200</pubDate>
+<description>Bonne nouvelle pour les fans !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6351-1397159964.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/92/Nouveau-single-pour-Matenrou-Opera-.html</guid>
+</item>
+<item>
+<title>Yukimi annonce son départ de UNiTE !</title>
+<link>http://vyper.dev/articles/93/Yukimi-annonce-son-depart-de-UNiTE-.html</link>
+<pubDate>Fri, 11 Apr 2014 21:24:09 +0200</pubDate>
+<description>Triste nouvelle pour les fans !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/3156-1397244028.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/93/Yukimi-annonce-son-depart-de-UNiTE-.html</guid>
+</item>
+<item>
+<title>KAMIJO enchaîne les annonces !</title>
+<link>http://vyper.dev/articles/94/KAMIJO-enchaine-les-annonces-.html</link>
+<pubDate>Fri, 11 Apr 2014 21:47:21 +0200</pubDate>
+<description>Après un premier mini-album, le Vampire enchaîne les sorties !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/9896-1396999874.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/94/KAMIJO-enchaine-les-annonces-.html</guid>
+</item>
+<item>
+<title>Nouveau single pour NOCTURNAL BLOODLUST</title>
+<link>http://vyper.dev/articles/95/Nouveau-single-pour-NOCTURNAL-BLOODLUST.html</link>
+<pubDate>Fri, 11 Apr 2014 22:58:26 +0200</pubDate>
+<description>La formation continue avec ses trois sorties consécutives !&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/7495-1397249879.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/95/Nouveau-single-pour-NOCTURNAL-BLOODLUST.html</guid>
+</item>
+<item>
+<title>Un album Best-Of pour WEAVER</title>
+<link>http://vyper.dev/articles/89/Un-album-Best-Of-pour-WEAVER.html</link>
+<pubDate>Thu, 10 Apr 2014 17:19:07 +0200</pubDate>
+<description>Bonne nouvelle pour les fans&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/7506-1397128584.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/89/Un-album-Best-Of-pour-WEAVER.html</guid>
+</item>
+<item>
+<title>Alexandros annonce un nouveau single et un DVD</title>
+<link>http://vyper.dev/articles/90/Alexandros-annonce-un-nouveau-single-et-un-DVD.html</link>
+<pubDate>Thu, 10 Apr 2014 17:18:24 +0200</pubDate>
+<description>Rappelez-vous, [Alexandros] était il n'y a pas longtemps sous le nom de Champagne.&lt;p&gt;&lt;img src=&quot;http://vyper.dev/uploads/pic/2014/04/6164-1397128765.jpg&quot; alt=&quot;&quot;  width=&quot;150&quot; height=&quot;77&quot; /&gt;&lt;/p&gt;</description>
+<guid>http://vyper.dev/articles/90/Alexandros-annonce-un-nouveau-single-et-un-DVD.html</guid>
 </item>
 </channel>
 </rss>

@@ -254,7 +254,7 @@ LIMIT 0,9");
             /**
 			 * Side recent articles
 			 */
-			$recent_articles = Article::all(array("deleted=?"=>false), array("*"), "releaseDate", "desc", "0,10");
+			$recent_articles = Article::all(array("deleted=?"=>false), array("*"), "created", "desc", "0,10");
 			foreach ($recent_articles as $article)
 			{
 				/* Set front Release Date */

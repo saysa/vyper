@@ -115,7 +115,7 @@ class Article extends \Framework\Shared\Controller {
 		 */
         $from = (string) ($current_page-1)*$posts_per_page;
 		if ($current_page == null || $from == "0") {$from = "0";}
-		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "releaseDate", "desc", $from, $posts_per_page);
+		$articles = model_Article::all(array("type=?" => $articleTypeId), array("*"), "created", "desc", $from, $posts_per_page);
 		
 		if (sizeof($articles) == 0)
 		{
