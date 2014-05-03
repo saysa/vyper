@@ -121,6 +121,11 @@
 
     </div><!--/ listing block-->
     </div>
+
+<p class="seemore-button">
+    <a href="{{ base_url }}artist-discography/{{ artist.getId }}/{{ artist.getStringUrl(artist.getId) }}.html"><i class="icon-plus"></i> Toute la discographie</a>
+</p>
+
 {% endif %}
 <div class="clear"></div>
 {% if events %}

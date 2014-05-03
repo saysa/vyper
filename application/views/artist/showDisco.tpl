@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="column">
+   
 	<div class="listing-block">
 		<div class="releases-listing">
             {% set iterate = 0 %}
@@ -85,47 +85,11 @@
             </div>
 
     </div><!--/ listing block-->
-    </div>
+  
 {% endif %}
 <div class="clear"></div>
-{% if events %}
-    <div class="cat-header">
-        <div class="cat-title second-color-bg">
-            <div class="cat-icon">
-                <i class="icon-rocket"></i>
-            </div>
-            <h4>événements</h4>
-        </div>
-    </div>
-
-    <ul class="list">
-
-        {% for key, event in events %}
-            <li class="one-third{% if key==2 %} last{% endif %}">
-                <div class="thumbnail">
-                        <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">
-                            <img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp239_130 wp-post-image" alt="">									</a>
-                    </div>
-
-                <h5>
-                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">
-                        {{ event.getTitle }}
-                    </a>
-                </h5>
-
-                <div class="entry-meta">
-                    <span class="date">
-                        <i class="icon-calendar"></i>
-                        {{ event.getDate }}
-                    </span>
-                </div>
-            </li>
-        {% endfor %}
 
 
-								</ul>
-
-{% endif %}
 
 
 

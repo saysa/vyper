@@ -3220,9 +3220,12 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 .button span {
     display: block;
-    background: url(images/button_bg.png) 0 0 repeat-x;
     overflow: hidden;
     line-height: 2.4em;
+}
+
+.button:hover {
+    background: #D35F5F;
 }
 
 .tip-cloud {
@@ -3277,6 +3280,31 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 .track-list table tr:first-child td {
     padding-top: 0;
+}
+
+
+p.seemore-button {
+
+    margin: 30px 18px 55px;
+    text-align: right;
+}
+p.seemore-button a {
+
+    border: none;
+    background: #D35F5F;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 4px 0 #A60000;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: inherit;
+    padding: 8px 15px;
+    margin: 5px 0;
+    text-align: center;
+
+}
+
+p.seemore-button a:hover {
+    background: #A60000;
 }
 
 .clear {
