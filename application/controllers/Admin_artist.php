@@ -55,6 +55,7 @@ class Admin_artist extends Admin_common {
 		{
 			$artist = new Artist(array(
 					"name"           => RequestMethods::post("name"),
+                    "realName"      => RequestMethods::post("real_name"),
                     "profile"        => RequestMethods::post("profile"),
                     "biography"      => RequestMethods::post("biography"),
                     "author"         => RequestMethods::post("author"),
@@ -70,10 +71,12 @@ class Admin_artist extends Admin_common {
 			}
 		
 			$view
-			->set("error_name",     \Framework\Shared\Markup::errors($artist->getErrors(), "name"))
-			->set("error_keywords", \Framework\Shared\Markup::errors($artist->getErrors(), "keywords"))
+			->set("error_name",      \Framework\Shared\Markup::errors($artist->getErrors(), "name"))
+            ->set("error_real_name", \Framework\Shared\Markup::errors($artist->getErrors(), "real_name"))
+			->set("error_keywords",  \Framework\Shared\Markup::errors($artist->getErrors(), "keywords"))
 				
 			->set("post_name",     RequestMethods::post("name"))
+            ->set("post_real_name",     RequestMethods::post("real_name"))
 			->set("post_profile", RequestMethods::post("profile"))
             ->set("post_biography",     RequestMethods::post("biography"))
             ->set("post_author", RequestMethods::post("author"))
@@ -109,6 +112,7 @@ class Admin_artist extends Admin_common {
 		{
 	
 			$artist->name = RequestMethods::post("name");
+            $artist->realName = RequestMethods::post("real_name");
             $artist->profile = RequestMethods::post("profile");
             $artist->biography = RequestMethods::post("biography");
             $artist->author = RequestMethods::post("author");
@@ -123,6 +127,7 @@ class Admin_artist extends Admin_common {
 	
 			$view
 			->set("error_name",       		\Framework\Shared\Markup::errors($artist->getErrors(), "name"))
+            ->set("error_real_name",       	\Framework\Shared\Markup::errors($artist->getErrors(), "real_name"))
 			->set("error_keywords",  		\Framework\Shared\Markup::errors($artist->getErrors(), "keywords"))
             ->set("error_related_picture",  \Framework\Shared\Markup::errors($artist->getErrors(), "relatedPicture"))
 			;

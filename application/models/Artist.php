@@ -37,6 +37,14 @@ class Artist extends Model {
      * @column
      * @readwrite
      * @type text
+     * @length 255
+     */
+    protected $_realName;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
      */
     protected $_profile;
 

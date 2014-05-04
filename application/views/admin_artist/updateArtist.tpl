@@ -29,13 +29,13 @@
 							</div>
 							<div class="col-lg-4">
 								
-								<!-- Keywords -->
+								<!-- Real Name -->
 								<div class="row">
-									<div class="form-group col-lg-9{%if error_keywords %} has-error{% endif %}">
-										<label class="control-label" for="keywords">Keywords</label>
+									<div class="form-group col-lg-9{%if error_real_name %} has-error{% endif %}">
+										<label class="control-label" for="real_name">Real Name</label>
 										<div class="controls">
-										  <input class="form-control focused" id="keywords" name="keywords" type="text" placeholder="Keywords" value="{{ artist.getKeywords }}">
-										  {{ error_keywords }}
+										  <input class="form-control" id="real_name" name="real_name" type="text" placeholder="Real Name" value="{{ artist.getRealName }}">
+										  {{ error_real_name }}
 										</div>
 									</div>
 								</div>
@@ -90,6 +90,20 @@
 								<div class="controls">
 								  <input class="form-control" id="related_picture" name="related_picture" type="text" placeholder="Related Picture" value="{{ artist.getRelatedPicture }}"> <a href="/_admin_/pictures" target="_blank">View Pictures</a>
 								  {{ error_related_picture }}
+								</div>
+							</div>
+							<div class="form-group col-lg-1">
+							</div>
+							<div class="form-group col-lg-4">
+								<!-- Keywords -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_keywords %} has-error{% endif %}">
+										<label class="control-label" for="keywords">Keywords</label>
+										<div class="controls">
+										  <input class="form-control focused" id="keywords" name="keywords" type="text" placeholder="Keywords" value="{{ artist.getKeywords }}">
+										  {{ error_keywords }}
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

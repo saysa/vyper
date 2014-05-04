@@ -12,16 +12,34 @@
 				<form class="form-horizontal" method="post">
 					<fieldset class="col-sm-12">
 						
-						<!-- Name -->
 						<div class="row">
-							<div class="form-group col-lg-9{%if error_name %} has-error{% endif %}">
-								<label class="control-label" for="name">Name *</label>
-								<div class="controls">
-								  <input class="form-control focused" id="name" name="name" type="text" placeholder="Name" value="{{ post_name }}">
-								  {{ error_name }}
+							<div class="col-lg-4">
+								<!-- Name -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_name %} has-error{% endif %}">
+										<label class="control-label" for="name">Name *</label>
+										<div class="controls">
+										  <input class="form-control focused" id="name" name="name" type="text" placeholder="Name" value="{{ post_name }}">
+										  {{ error_name }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<!-- Real Name -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_real_name %} has-error{% endif %}">
+										<label class="control-label" for="real_name">Real Name</label>
+										<div class="controls">
+										  <input class="form-control" id="real_name" name="real_name" type="text" placeholder="Real Name" value="{{ post_real_name }}">
+										  {{ error_real_name }}
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+
+						
 
                         <!-- Profile -->
                         <div class="row">
