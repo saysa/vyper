@@ -172,11 +172,18 @@ class Artist extends \Framework\Shared\Controller {
          * <a href="javascript: void(0);" class="button small buy"><span>Acheter</span></a>
          */
 
+        $soe_artist = $artist->name;
+        if ($artist->realName)
+        {
+            $soe_artist.= " - " . $artist->realName;
+        }
+        
+
         $layout = $this->getLayoutView();
 		$layout
 		->set("artist", $artist)
         ->set("current_artist", "true")
-        ->set("soe_title", $artist->name)
+        ->set("soe_title", $soe_artist)
 		;
 		
 		$view
