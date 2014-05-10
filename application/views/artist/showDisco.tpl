@@ -49,7 +49,7 @@
 		<div class="releases-listing">
             {% set iterate = 0 %}
 			{% for key, disco in discos %}
-				<div class="one-fourth column{% if iterate==2 %} last{% set iterate = -1 %}{% endif %}">
+				<div class="one-fourth column{% if iterate==3 %} last{% set iterate = -1 %}{% endif %}">
 					<div class="release-thumbnail">
 						<div class="release-cover">
 							<a href="{{ base_url }}disco/{{ disco.getId }}/{{ disco.getStringUrl(disco.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ disco.getRawFile(disco.getId) }}" class="fullwidth" alt=""></a>
