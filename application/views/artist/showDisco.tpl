@@ -58,14 +58,22 @@
 						<h4 class="release-title"><a href="#">{{ disco.getTitle }}</a></h4>
 						<h6 class="release-artist">{{ artist.getName }}</h6>
 						<div class="release-meta">
-							{% if disco.getCdJapan %}
+							{% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
 							<div class="button-container tip-container">
-								<a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" class="button small" target="_blank"><span>Acheter</span></a>
+								<a href="javascript: void(0);" class="button small buy" target="_blank"><span>Acheter</span></a>
 								<div class="tip-cloud">
 									<div class="tip-corner"></div>
 									<div class="tip-content">
 										<ul>
-											<li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+											{% if disco.getCdJapan %}
+                                            <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                            {% endif %}
+                                            {% if disco.getItunes %}
+                                            <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                            {% endif %}
+                                            {% if disco.getAmazon %}
+                                            <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                            {% endif %}
 										</ul>
 									</div>
 								</div>
@@ -88,7 +96,6 @@
   
 {% endif %}
 <div class="clear"></div>
-
 
 
 

@@ -56,6 +56,22 @@ class Disco extends Model {
     /**
      * @column
      * @readwrite
+     * @type text
+     * @length 255
+     */
+    protected $_itunes;
+
+    /**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 255
+     */
+    protected $_amazon;
+
+    /**
+     * @column
+     * @readwrite
      * @type integer
      *
      * @validate required

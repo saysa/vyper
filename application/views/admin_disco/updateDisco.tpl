@@ -57,6 +57,33 @@
 								</div>
 							</div>
 							<div class="col-lg-4">
+								<!-- itunes -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_itunes %} has-error{% endif %}">
+										<label class="control-label" for="itunes">iTunes</label>
+										<div class="controls">
+										  <input class="form-control focused" id="itunes" name="itunes" type="text" placeholder="iTunes" value="{{ disco.getItunes }}">
+										  {{ error_itunes }}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-4">
+								<!-- amazon -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_amazon %} has-error{% endif %}">
+										<label class="control-label" for="amazon">Amazon</label>
+										<div class="controls">
+										  <input class="form-control focused" id="amazon" name="amazon" type="text" placeholder="Amazon" value="{{ disco.getAmazon }}">
+										  {{ error_amazon }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
 								<!-- Medium -->
 								<div class="row">
 									<div class="form-group col-lg-9">

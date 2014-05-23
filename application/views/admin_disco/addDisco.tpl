@@ -39,7 +39,6 @@
 							</div>
 						</div>
 
-
 						<div class="row">
 							<div class="col-lg-4">
 								<!-- CDJapan -->
@@ -49,6 +48,34 @@
 										<div class="controls">
 										  <input class="form-control focused" id="cd_japan" name="cd_japan" type="text" placeholder="CDJapan" value="{{ post_cd_japan }}">
 										  {{ error_cd_japan }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<!-- iTunes -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_itunes %} has-error{% endif %}">
+										<label class="control-label" for="itunes">iTunes</label>
+										<div class="controls">
+										  <input class="form-control focused" id="itunes" name="itunes" type="text" placeholder="iTunes" value="{{ post_itunes }}">
+										  {{ error_itunes }}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-lg-4">
+								<!-- Amazon -->
+								<div class="row">
+									<div class="form-group col-lg-9{%if error_amazon %} has-error{% endif %}">
+										<label class="control-label" for="amazon">Amazon</label>
+										<div class="controls">
+										  <input class="form-control focused" id="amazon" name="amazon" type="text" placeholder="Amazon" value="{{ post_amazon }}">
+										  {{ error_amazon }}
 										</div>
 									</div>
 								</div>

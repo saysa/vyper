@@ -61,6 +61,8 @@ class Admin_disco extends Admin_common {
 					"title"     => RequestMethods::post("title"),
 					"titleReal" => RequestMethods::post("title_real"),
 					"cdJapan"   => RequestMethods::post("cd_japan"),
+                    "itunes"    => RequestMethods::post("itunes"),
+                    "amazon"    => RequestMethods::post("amazon"),
 					"medium"    => RequestMethods::post("medium"),
 					"type"      => RequestMethods::post("type"),
                     "date"      => RequestMethods::post("date"),
@@ -81,6 +83,8 @@ class Admin_disco extends Admin_common {
 			->set("error_title",     \Framework\Shared\Markup::errors($disco->getErrors(), "title"))
 			->set("error_title_real",     \Framework\Shared\Markup::errors($disco->getErrors(), "title_real"))
 			->set("error_cd_japan", \Framework\Shared\Markup::errors($disco->getErrors(), "cd_japan"))
+            ->set("error_itunes", \Framework\Shared\Markup::errors($disco->getErrors(), "itunes"))
+            ->set("error_amazon", \Framework\Shared\Markup::errors($disco->getErrors(), "amazon"))
 			->set("error_medium", \Framework\Shared\Markup::errors($disco->getErrors(), "medium"))
 			->set("error_type", \Framework\Shared\Markup::errors($disco->getErrors(), "type"))
 			->set("error_date", \Framework\Shared\Markup::errors($disco->getErrors(), "date"))
@@ -93,6 +97,8 @@ class Admin_disco extends Admin_common {
 			->set("post_title",     RequestMethods::post("title"))
 			->set("post_title_real", RequestMethods::post("title_real"))
 			->set("post_cd_japan", RequestMethods::post("cd_japan"))
+            ->set("post_itunes", RequestMethods::post("itunes"))
+            ->set("post_amazon", RequestMethods::post("amazon"))
 			->set("post_medium", RequestMethods::post("medium"))
 			->set("post_type", RequestMethods::post("type"))
 			->set("post_date", RequestMethods::post("date"))
@@ -142,6 +148,8 @@ class Admin_disco extends Admin_common {
             $disco->title = RequestMethods::post("title");
             $disco->titleReal = RequestMethods::post("title_real");
             $disco->cdJapan = RequestMethods::post("cd_japan");
+            $disco->itunes = RequestMethods::post("itunes");
+            $disco->amazon = RequestMethods::post("amazon");
             $disco->medium = RequestMethods::post("medium");
             $disco->type = RequestMethods::post("type");
             $disco->date = RequestMethods::post("date");
@@ -160,6 +168,8 @@ class Admin_disco extends Admin_common {
 			->set("error_title",       		\Framework\Shared\Markup::errors($disco->getErrors(), "title"))
 			->set("error_title_real",  		\Framework\Shared\Markup::errors($disco->getErrors(), "title_real"))
 			->set("error_cd_japan", 		\Framework\Shared\Markup::errors($disco->getErrors(), "cd_japan"))
+            ->set("error_itunes", 		\Framework\Shared\Markup::errors($disco->getErrors(), "itunes"))
+            ->set("error_amazon", 		\Framework\Shared\Markup::errors($disco->getErrors(), "amazon"))
 			->set("error_medium", \Framework\Shared\Markup::errors($disco->getErrors(), "medium"))
 			->set("error_type", 	   		\Framework\Shared\Markup::errors($disco->getErrors(), "type"))
 			->set("error_date", 	   		\Framework\Shared\Markup::errors($disco->getErrors(), "date"))
