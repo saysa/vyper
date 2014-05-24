@@ -872,6 +872,9 @@
                         </aside>
 
 
+
+
+
 					<aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">		
 						<script>
 							jQuery(document).ready(function($) {				
@@ -959,6 +962,13 @@
 						</div><!-- /tiles -->
 	   				</aside>
 
+                        <aside class="widget">
+                        <div class="widget-title"><h4>Japan FM</h4></div>
+
+                        <iframe src="//www.radioking.fr/player-radio?k=8520537ef249c6e56&f=mini" width="250" height="196"></iframe>
+
+                        </aside>
+
                     <aside class="widget">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- sidebar -->
@@ -1041,6 +1051,8 @@
 
 
                         </aside>
+
+
 	   				
 				</div>	
 				<!-- /sidebar -->
