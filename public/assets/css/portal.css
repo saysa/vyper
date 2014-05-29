@@ -3307,6 +3307,10 @@ p.seemore-button a:hover {
     background: #A60000;
 }
 
+*::-moz-selection { background:#A60000; color:#FFF; }
+*::-webkit-selection { background:#A60000; color:#FFF; }
+*::selection { background:#A60000; color:#FFF; }
+
 .clear {
     clear: both;
 }
