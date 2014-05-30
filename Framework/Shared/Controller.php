@@ -217,7 +217,7 @@ LIMIT 0,5");
             $queryPdo = $database->query();
             $stmt = $queryPdo->connector->execute("SELECT picture.id FROM picture
 INNER JOIN album ON album.id = picture.album
-WHERE album.category = '1'
+WHERE album.category = '1' ORDER BY picture.id DESC
 LIMIT 0,9");
             $rows = array();
             for ($i=0; $i<$stmt->rowCount();$i++)
