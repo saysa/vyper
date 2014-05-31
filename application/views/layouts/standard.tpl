@@ -1044,7 +1044,8 @@
                                     <li><a href="http://ramenevents.wordpress.com/"><img src="{{ path_img }}partners/ramen-events.jpg" alt="ramen events" /></a></li>
                                     <li><a href="http://www.demented-show.com/"><img src="{{ path_img }}partners/demented.jpg" alt="demented show" /></a></li>
                                     <li><a href="http://nipponnoradio.fr/"><img src="{{ path_img }}partners/nipponnoradio.png" alt="nippon no radio" /></a></li>
-                                        <li><a href="https://hollyhockya.wordpress.com/"><img src="{{ path_img }}partners/hollyhock-ya.jpg" alt="hollyhock ya" /></a></li>
+            <li><a href="http://xzzlixxzzx.blogspot.ca/"><img src="{{ path_img }}partners/bannliz.jpg" alt="Lixx" /></a></li>
+                                    <li><a href="https://hollyhockya.wordpress.com/"><img src="{{ path_img }}partners/hollyhock-ya.jpg" alt="hollyhock ya" /></a></li>
                                     <li><a href="http://www.giza-shoko.net/"><img src="{{ path_img }}partners/gizashoko.jpg" alt="gizashoko" /></a></li>
 
                                     <li><a href="https://www.facebook.com/GazettEFrance"><img src="{{ path_img }}partners/the-gazette-france.jpg" alt="the gazette france" /></a></li>
