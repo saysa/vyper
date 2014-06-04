@@ -244,6 +244,8 @@
                         </ul>
                     </li>
                     {% endif %}
+
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-001" title="Magazine">Magazine</a></li>
 				</ul>							
 			</div>
 			</nav>
@@ -858,6 +860,23 @@
                         </li><!-- /facebook -->
 
 
+                        <li class="twitter">
+                                <div class="icon"><i class="icon-twitter"></i></div>
+                        <div class="right">
+                                <div class="subscribe"><h4><a target="_blank" href="{{ vyper_twitter }}">166{{ tw_followers }}</a></h4></div>
+                        <div class="text">Followers</div>
+                        </div>
+                        </li>
+
+                        <li class="magazine">
+                                <div class="icon"><i class="icon-book"></i></div>
+                        <div class="right">
+                                <div class="subscribe"><h4><a target="_blank" href="{{ base_url }}vyper-magazine-vol-001">Le mag</a></h4></div>
+                        <div class="text">Commander</div>
+                        </div>
+                        </li>
+
+
                         <li class="rss">
                                 <div class="icon"><i class="icon-rss"></i></div>
                         <div class="right">
@@ -865,6 +884,7 @@
                         <div class="text">S'abonner</div>
                         </div>
                         </li>
+
 
                         </ul>
 

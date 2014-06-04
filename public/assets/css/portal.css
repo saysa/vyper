@@ -1969,6 +1969,11 @@ h6{
 	background: linear-gradient(to bottom, #FFB54D 70%, #FF994D 100%);
 }
 
+.widget_social_counter ul li.magazine{
+    background: #A60000;
+    background: linear-gradient(to bottom, #A60000 70%, #A60000 100%);
+}
+
 .widget_social_counter .icon{
 	float: left;
 	margin-right: 10px;

@@ -541,6 +541,12 @@ $routes = array(
         "action" 	 => "googleResults"
     ),
     array(
+        "name" 		 => "preco",
+        "pattern" 	 => "vyper-magazine-vol-001",
+        "controller" => "statique",
+        "action" 	 => "preco"
+    ),
+    array(
         "name" 		 => "page404",
         "pattern" 	 => "page404",
         "controller" => "statique",
