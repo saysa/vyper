@@ -151,6 +151,20 @@ class Index extends \Framework\Shared\Controller {
         }
         $layout->set("latest_live_reports", $latests_live_reports);
 
+
+        /**
+         * Latest chroniques
+         */
+        $latests_chroniques = Article::all(array("deleted=?"=>false, "type=?" => "2"), array("*"), "releaseDate", "desc", "0,5");
+        foreach ($latests_chroniques as $article)
+        {
+            /* Set front Release Date */
+            $article->relatedTheme = \application\models\Theme::first(array("id=?" => $article->relatedTheme));
+
+        }
+        $layout->set("latest_chroniques", $latests_chroniques);
+
+
         /**
          * Latest news
          */
