@@ -22,6 +22,21 @@
         {% else %}
             <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
         {% endif %}
+
+        {% if article %}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@VYPER_JMusic" />
+            <meta name="twitter:image" content="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" />
+            <meta name="twitter:description" content="{{ google_description|escape }}" />
+
+            <meta property="og:title" content="{{ article.getTitle }}" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" />
+            <meta property="og:site_name" content="Vyper Japanese Music" />
+            <meta property="og:image" content="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" />
+            <meta property="og:description" content="{{ google_description|escape }}" />
+        {% endif %}
+
 		<meta name="author" content="vyper-jmusic.com" />
 		<meta name="ROBOTS" content="index,follow" />
 
