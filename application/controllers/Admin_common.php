@@ -65,9 +65,9 @@ class Admin_common extends \Framework\Shared\Controller {
         $xml .= "<language>fr</language>\n";
         $xml .= "<copyright>$copy</copyright>\n";
         $xml .= "<image>\n";
-        $xml .= "	<title>vyper-jmusic.com</title>\n";
+        $xml .= "	<title>Vyper Japanese Music</title>\n";
         $xml .= "	<url>". BASE_URL ."assets/img/logo.png</url>\n";
-        $xml .= "	<link>" . BASE_URL . "</link>\n";
+        $xml .= "	<link>http://www.vyper-jmusic.com</link>\n";
         $xml .= "</image>\n";
         $xml .= "<atom:link href=\"" . BASE_URL . "rss_fil_info.xml\" rel=\"self\" type=\"application/rss+xml\" />\n";
 
@@ -94,8 +94,10 @@ class Admin_common extends \Framework\Shared\Controller {
 
             $art .= "&lt;/p&gt;";
 
+            $title = str_replace("&", "&amp;", $article->title);
+
             $xml .= "<item>\n";
-            $xml .= "<title>" . $article->title . "</title>\n";
+            $xml .= "<title>" . $title . "</title>\n";
             $xml .= "<link>" . $loc . "</link>\n";
             $xml .= "<pubDate>" . $date . "</pubDate>\n";
             $xml .= "<description>" . $art . "</description>\n";
