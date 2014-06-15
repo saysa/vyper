@@ -2,6 +2,8 @@
 
 namespace Framework\Shared;
 
+use application\models\Artist;
+use application\models\Disco;
 use application\models\ItemVisite;
 use application\models\Theme;
 use application\models\User;
@@ -188,6 +190,51 @@ LIMIT 0,5");
                 $popular_events[] = Event::first(array("id=?" => $oResult->id));
             }
             $layout->set("popular_events", $popular_events);
+
+            /**
+             * popular artists
+             */
+            $queryPdo = $database->query();
+            $stmt = $queryPdo->connector->execute("SELECT artist.id, count(*) AS nb FROM artist
+INNER JOIN itemvisite ON artist.id = itemvisite.itemId
+WHERE itemvisite.type = 'artist'
+GROUP BY itemvisite.itemId
+ORDER BY nb DESC
+LIMIT 0,5");
+            $rows = array();
+            for ($i=0; $i<$stmt->rowCount();$i++)
+            {
+                $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+            }
+            $popular_artists = array();
+            foreach($rows as $oResult)
+            {
+                $popular_artists[] = Artist::first(array("id=?" => $oResult->id));
+            }
+            $layout->set("popular_artists", $popular_artists);
+
+            /**
+             * popular discos
+             */
+            $queryPdo = $database->query();
+            $stmt = $queryPdo->connector->execute("SELECT disco.id, count(*) AS nb FROM disco
+INNER JOIN itemvisite ON disco.id = itemvisite.itemId
+WHERE itemvisite.type = 'disco'
+GROUP BY itemvisite.itemId
+ORDER BY nb DESC
+LIMIT 0,5");
+            $rows = array();
+            for ($i=0; $i<$stmt->rowCount();$i++)
+            {
+                $rows[]=$stmt->fetch(\PDO::FETCH_OBJ);
+            }
+            $popular_discos = array();
+            foreach($rows as $oResult)
+            {
+                $popular_discos[] = Disco::first(array("id=?" => $oResult->id));
+            }
+            $layout->set("popular_discos", $popular_discos);
+
 
             /**
 			 * Side Next Event

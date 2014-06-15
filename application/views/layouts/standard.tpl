@@ -1218,15 +1218,68 @@
         <footer id="footer">
         	<div class="footer-widgets main-color-bg">
                 <div class="content-wrap">
-                    <a href="{{ base_url }}recrutement">Recrutement</a> -
-                    <a href="{{ base_url }}partenariat">Partenariat</a> -
-                    <a href="{{ base_url }}conditions_utilisation">Conditions d'utilisation</a>
+                    <div class="one-fourth">
+                        <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Artistes</h4></div>		<ul>
+
+
+                                {% for key, article in recent_articles %}
+                                {% if key<5 %}
+                                <li>
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                                </ul>
+                                </aside>
+                    </div>
+                    <div class="one-fourth">
+                        <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Artistes</h4></div>		<ul>
+
+                                {% for artist in popular_artists %}
+                                <li>
+                                    <a href="{{ base_url }}artist/{{ artist.getId }}/{{ artist.getStringUrl(artist.getId) }}.html" title="{{ artist.getName }}">{{ artist.getName }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="one-fourth">
+                        <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Discos</h4></div>		<ul>
+
+                        {% for disco in popular_discos %}
+                        <li>
+                        <a href="{{ base_url }}disco/{{ disco.getId }}/{{ disco.getStringUrl(disco.getId) }}.html" title="{{ disco.getTitle }}">{{ disco.getTitle }}</a>
+                        </li>
+                        {% endfor %}
+                        </ul>
+                        </aside>
+                    </div>
+                    <div class="one-fourth last">
+                        <aside class="widget">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- footer_carre -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:250px;height:250px"
+                                 data-ad-client="ca-pub-3070362287154347"
+                                 data-ad-slot="2409029915"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </aside>
+                    </div>
+                                <div>
+                                <a href="{{ base_url }}recrutement">Recrutement</a> -
+                                <a href="{{ base_url }}partenariat">Partenariat</a> -
+                                <a href="{{ base_url }}conditions_utilisation">Conditions d'utilisation</a>
+                                </div>
+
                 </div>
 
             </div>
         	<!-- /footer-widgets -->
         	<div class="footer-info">
         		<div class="content-wrap">
+
         			<div class="footer-left">©2014 Vyper Japanese Music</div>
         			<div class="footer-right">
         				<ul class="list">
