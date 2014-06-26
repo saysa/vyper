@@ -216,7 +216,7 @@
 				</div>
 				
 				<div class="banner">
-                <img src="{{ path_img }}banner.jpg" />
+                <a href="https://www.facebook.com/events/645068022244724/" title="Séance de dédicaces de G.L.A.M.S"><img src="{{ path_img }}banner.jpg" alt="Séance de dédicaces de G.L.A.M.S" /></a>
                         
 				</div>
 						
