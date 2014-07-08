@@ -216,8 +216,15 @@
 				</div>
 				
 				<div class="banner">
-                <a href="https://www.facebook.com/events/645068022244724/" title="Séance de dédicaces de G.L.A.M.S"><img src="{{ path_img }}banner.jpg" alt="Séance de dédicaces de G.L.A.M.S" /></a>
-                        
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- mega bannière -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:728px;height:90px"
+                                 data-ad-client="ca-pub-3070362287154347"
+                                 data-ad-slot="6322916319"></ins>
+                            <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+ </script>
 				</div>
 						
 			</div>
