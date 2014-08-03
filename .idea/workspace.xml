@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b672acc-ad29-447a-9c64-e4197101f1cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/statique/preco.tpl" afterPath="$PROJECT_DIR$/application/views/statique/preco.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Admin_common.php" afterPath="$PROJECT_DIR$/application/controllers/Admin_common.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vyper.iws" />
@@ -29,16 +29,16 @@
       <file leaf-file-name="standard.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1225" column="38" selection-start="54633" selection-end="54633" vertical-scroll-proportion="-13.730769" vertical-offset="20468" max-vertical-offset="22559">
+            <state line="1225" column="38" selection-start="54633" selection-end="54633" vertical-scroll-proportion="0.0" vertical-offset="20468" max-vertical-offset="22559">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preco.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="preco.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/statique/preco.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="0.4294606" vertical-offset="133" max-vertical-offset="1921">
+            <state line="20" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="-7.9615383" vertical-offset="133" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
@@ -65,7 +65,7 @@
       <file leaf-file-name="Admin_ajax.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin_ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="0" selection-start="4930" selection-end="4930" vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="3094">
+            <state line="171" column="0" selection-start="4930" selection-end="4930" vertical-scroll-proportion="-22.615385" vertical-offset="2149" max-vertical-offset="2924">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin_common.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Admin_common.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin_common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="106" selection-start="8083" selection-end="8170" vertical-scroll-proportion="0.0" vertical-offset="3451" max-vertical-offset="4403">
+            <state line="78" column="61" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0647986" vertical-offset="1187" max-vertical-offset="4318">
               <folding />
             </state>
           </provider>
@@ -176,19 +176,19 @@
         <option value="$PROJECT_DIR$/public/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/application/controllers/Index.php" />
         <option value="$PROJECT_DIR$/application/controllers/Article.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin_common.php" />
         <option value="$PROJECT_DIR$/Framework/Shared/Controller.php" />
         <option value="$PROJECT_DIR$/application/views/layouts/standard.tpl" />
         <option value="$PROJECT_DIR$/application/views/statique/preco.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin_common.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
-    <option name="y" value="7" />
-    <option name="width" value="1618" />
-    <option name="height" value="1014" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -713,18 +713,23 @@
       <created>1395660028337</created>
       <updated>1395660028337</updated>
     </task>
+    <task id="LOCAL-00001" summary="Vol 00 magazine: remove Japan Expo retrait">
+      <created>1407082270467</created>
+      <updated>1407082270467</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="7" width="1618" height="1014" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295711" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31465518" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12990937" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17179488" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15705128" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14270501" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13205537" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -732,12 +737,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18857759" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -752,6 +757,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Vol 00 magazine: remove Japan Expo retrait" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vol 00 magazine: remove Japan Expo retrait" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,11 +867,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="601" selection-end="767" vertical-scroll-proportion="0.5595668" vertical-offset="11" max-vertical-offset="867" />
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="601" selection-end="767" vertical-scroll-proportion="0.5595668" vertical-offset="11" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin_artist.php">
@@ -964,9 +971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="22" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="2856">
-          <folding />
-        </state>
+        <state line="52" column="22" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="2856" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/article/showArticle.tpl">
@@ -986,20 +991,6 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="43" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="3553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="0" selection-start="4930" selection-end="4930" vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="3094">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="106" selection-start="8083" selection-end="8170" vertical-scroll-proportion="0.0" vertical-offset="3451" max-vertical-offset="4403">
           <folding />
         </state>
       </provider>
@@ -1027,14 +1018,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layouts/standard.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1225" column="38" selection-start="54633" selection-end="54633" vertical-scroll-proportion="-13.730769" vertical-offset="20468" max-vertical-offset="22559">
+        <state line="1225" column="38" selection-start="54633" selection-end="54633" vertical-scroll-proportion="0.0" vertical-offset="20468" max-vertical-offset="22559">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/statique/preco.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="0.4294606" vertical-offset="133" max-vertical-offset="1921">
+        <state line="20" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="-7.9615383" vertical-offset="133" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="0" selection-start="4930" selection-end="4930" vertical-scroll-proportion="-22.615385" vertical-offset="2149" max-vertical-offset="2924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin_common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="61" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0647986" vertical-offset="1187" max-vertical-offset="4318">
           <folding />
         </state>
       </provider>

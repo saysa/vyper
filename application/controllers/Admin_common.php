@@ -77,7 +77,7 @@ class Admin_common extends \Framework\Shared\Controller {
             $loc = BASE_URL . "articles/" . $article->id . "/" . $article->getStringUrl($article->id) . ".html";
             $timestamp = strtotime($article->modified);
             $date = date("D, j M Y H:i:s +0200", $timestamp);
-            $art = $article->description;
+            $art = str_replace("&", "&amp;", $article->description);
 
             $art .= "&lt;p&gt;";
 
@@ -94,7 +94,8 @@ class Admin_common extends \Framework\Shared\Controller {
 
             $art .= "&lt;/p&gt;";
 
-            $title = str_replace("&", "&amp;", $article->title);
+            $title  = str_replace("&", "&amp;", $article->title);
+
 
             $xml .= "<item>\n";
             $xml .= "<title>" . $title . "</title>\n";
