@@ -19,22 +19,7 @@
                 </div>
                 </div>
 
-        <div class="three-fourth column last">
-            <div class="box-effect">
-                <h4>Retrait à JapanExpo</h4>
 
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="LZH3ZEBWEBUB4">
-                    <table>
-                        <tr><td><input type="hidden" name="on0" value="Jour de retrait :">Jour de retrait :</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-                    </table>
-                    <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                </form>
-
-            </div>
-        </div>
 
                 <div class="three-fourth column last">
                 <div class="box-effect">
