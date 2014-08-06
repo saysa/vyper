@@ -1,5 +1,5 @@
 <header class="archive-header">
-    <h2 class="archive-title">VYPER Japanese Music Vol.01 - pré-commande</h2>
+    <h2 class="archive-title">VYPER Japanese Music Vol.00 - pré-commande</h2>
 </header><!-- /archive-header -->
 
 <div class="entry-content-wrap">
@@ -9,12 +9,12 @@
             <div class="release-thumbnail">
                 <div class="release-cover">
 
-                    <a rel="lightbox[cover]" href="{{ path_img }}magazine/n0001.jpg" title=""><img src="{{ path_img }}magazine/n0001.jpg" class="fullwidth" alt=""></a>
+                    <a rel="lightbox[cover]" href="{{ path_img }}magazine/n0000.jpg" title=""><img src="{{ path_img }}magazine/n0000.jpg" class="fullwidth" alt=""></a>
 
                 </div>
 
                 <h4 class="release-title">VYPER Magazine</h4>
-                <h6 class="release-artist">Vol.01</h6>
+                <h6 class="release-artist">Vol.00</h6>
 
                 </div>
                 </div>
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="box-effect">
+        <div class="box-effect clear">
             <h4>Contenu</h4>
 <hr />
             <b>Couverture</b>

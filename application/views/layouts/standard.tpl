@@ -259,8 +259,12 @@
                         </ul>
                     </li>
                     {% endif %}
-
-                    <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-001" title="Magazine">Magazine</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="#" title="Magazine">Magazine<span class="sf-sub-indicator"> »</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-000">Volume 000</a></li>
+                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-001">Volume 001</a></li>
+                        </ul>
+                    </li>
 				</ul>							
 			</div>
 			</nav>
