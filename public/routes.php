@@ -553,6 +553,12 @@ $routes = array(
         "action" 	 => "preco01"
     ),
     array(
+        "name" 		 => "preco02",
+        "pattern" 	 => "vyper-magazine-vol-002",
+        "controller" => "statique",
+        "action" 	 => "preco02"
+    ),
+    array(
         "name" 		 => "page404",
         "pattern" 	 => "page404",
         "controller" => "statique",

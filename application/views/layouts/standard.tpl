@@ -255,6 +255,7 @@
                         <ul class="sub-menu">
                             <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-000">Volume 000</a></li>
                             <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-001">Volume 001</a></li>
+                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-002">Volume 002</a></li>
                         </ul>
                     </li>
 				</ul>							
@@ -1000,7 +1001,7 @@
                         <li class="magazine">
                                 <div class="icon"><i class="icon-book"></i></div>
                         <div class="right">
-                                <div class="subscribe"><h4><a target="_blank" href="{{ base_url }}vyper-magazine-vol-001">Le mag</a></h4></div>
+                                <div class="subscribe"><h4><a target="_blank" href="{{ base_url }}vyper-magazine-vol-002">Le mag</a></h4></div>
                         <div class="text">Commander</div>
                         </div>
                         </li>

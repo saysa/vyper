@@ -47,6 +47,12 @@ class Statique extends \Framework\Shared\Controller {
         $layout->set("soe_title", "VYPER Magazine Vol.01");
     }
 
+    public function preco02()
+    {
+        $layout = $this->getLayoutView();
+        $layout->set("soe_title", "VYPER Magazine Vol.02");
+    }
+
     public function googleResults()
     {
         $layout = $this->getLayoutView();
