@@ -216,7 +216,7 @@
 				</div>
 				
             <div class="banner">
-                <a href="http://www.asiexpo.com/japantouch2014/"><img src="{{ base_url }}/assets/img/japan-touch.jpg" alt="Japan Touch"></a>
+                <a href="http://www.b7klan.com"><img src="{{ base_url }}/assets/img/banners/b7klan.jpg" alt="B7klan"></a>
 		    </div>
 						
 			</div>
